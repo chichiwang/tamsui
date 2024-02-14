@@ -1,0 +1,25 @@
+{
+  "name": "exercise-js",
+  "version": "0.0.0",
+  "description": "Exercises for JavaScript and Node",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chichiwang/exercise-js.git"
+  },
+  "keywords": [
+    "javaScript",
+    "react",
+    "developer",
+    "katas",
+  ],
+  "author": "Chi-chi Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chichiwang/exercise-js/issues"
+  },
+  "homepage": "https://github.com/chichiwang/exercise-js#readme"
+}
