@@ -4,7 +4,8 @@
   "description": "Exercises for JavaScript and Node",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -14,12 +15,15 @@
     "javaScript",
     "react",
     "developer",
-    "katas",
+    "katas"
   ],
   "author": "Chi-chi Wang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/chichiwang/exercise-js/issues"
   },
-  "homepage": "https://github.com/chichiwang/exercise-js#readme"
+  "homepage": "https://github.com/chichiwang/exercise-js#readme",
+  "devDependencies": {
+    "express": "^4.18.2"
+  }
 }
