@@ -1,4 +1,6 @@
 {
+  "collectCoverage": true,
+  "coverageDirectory": "__coverage__",
   "transform": {
     "\\.[jt]sx?$": "babel-jest",
     "\\.mjs?$": "babel-jest"
