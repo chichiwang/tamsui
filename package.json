@@ -4,8 +4,9 @@
   "description": "Exercises for JavaScript and Node",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "start": "nodemon server/index.mjs"
+    "lint": "eslint .",
+    "start": "nodemon server/index.mjs",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,9 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-jest": "^27.9.0",
     "jest": "^29.7.0",
     "nodemon": "^3.0.3"
   },
