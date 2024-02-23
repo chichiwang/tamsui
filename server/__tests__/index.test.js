@@ -1,3 +1,5 @@
+/* eslint global-require: 0 */
+
 import express from 'express';
 
 jest.mock('express');
