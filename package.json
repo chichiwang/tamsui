@@ -4,7 +4,7 @@
   "description": "Exercises for JavaScript and Node",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "nodemon server/index.mjs",
     "test": "jest"
   },
