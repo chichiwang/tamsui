@@ -9,5 +9,12 @@ module.exports = {
   },
   rules: {
     'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
   },
+  overrides: [{
+    files: ['server/**/*.*'],
+    rules: {
+      'no-console': 'off',
+    },
+  }],
 };
