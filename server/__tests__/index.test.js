@@ -23,7 +23,7 @@ beforeAll(() => {
 beforeEach(() => {
   jest.clearAllMocks();
   jest.isolateModules(() => {
-    require('../index.mjs');
+    require('../index.ts');
   });
 });
 
