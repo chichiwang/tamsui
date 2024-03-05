@@ -4,7 +4,7 @@
   "description": "Exercises for JavaScript and Node",
   "main": "index.js",
   "scripts": {
-    "build:server": "tsc --project tsconfig.server.json",
+    "build:server": "npm run clean && tsc --project tsconfig.server.json",
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "nodemon server/index.mjs",
