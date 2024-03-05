@@ -7,14 +7,19 @@ module.exports = {
     browser: true,
     node: true,
   },
-  rules: {
-    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
-    'no-console': ['error', { allow: ['warn', 'error'] }],
-  },
   overrides: [{
     files: ['server/**/*.*'],
     rules: {
       'no-console': 'off',
     },
+  }, {
+    files: ['*.ts', '*.tsx'],
+    parser: '@typescript-eslint/parser',
+    plugins: ['@typescript-eslint'],
   }],
+  ignorePatterns: ['dist/**/*.*'],
+  rules: {
+    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+  },
 };
