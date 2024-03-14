@@ -4,21 +4,18 @@ const path = require('path');
 const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
-const outputDir = path.resolve(__dirname, 'dist');
+const projectRootDir = __dirname;
+const outputDir = path.resolve(projectRootDir, 'dist');
+const outputScriptsDir = path.resolve(outputDir, 'scripts');
 
-const serverDir = path.resolve(__dirname, 'server');
-const serverRootFile = path.resolve(serverDir, 'index.ts');
+const clientDir = path.resolve(projectRootDir, 'client');
+const clientRootFile = path.resolve(clientDir, 'entry.tsx');
 
-module.exports = {
+const serverDir = path.resolve(projectRootDir, 'server');
+const serverRootFile = path.resolve(serverDir, 'index.tsx');
+
+const baseConfig = {
   mode: 'development',
-  entry: serverRootFile,
-  target: 'node',
-  externalsPresets: {
-    node: true,
-  },
-  externals: [
-    nodeExternals(),
-  ],
   module: {
     rules: [{
       test: /\.tsx?$/,
@@ -28,17 +25,46 @@ module.exports = {
       },
     }],
   },
+  resolve: {
+    extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
+    alias: {
+      client: clientDir,
+    },
+  },
+};
+
+const clientConfig = {
+  ...baseConfig,
+  name: 'client',
+  entry: clientRootFile,
+  output: {
+    path: outputScriptsDir,
+    filename: 'app.js',
+  },
+};
+
+const serverConfig = {
+  ...baseConfig,
+  name: 'server',
+  dependencies: ['client'],
+  entry: serverRootFile,
+  target: 'node',
+  externalsPresets: {
+    node: true,
+  },
+  externals: [
+    nodeExternals(),
+  ],
   output: {
     path: outputDir,
     filename: 'index.js',
   },
   plugins: [
     new NodemonPlugin({
-      watch: serverDir,
+      watch: [clientDir, serverDir],
       ignore: ['/__tests__/', '**.test.*'],
     }),
   ],
-  resolve: {
-    extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
-  },
 };
+
+module.exports = [clientConfig, serverConfig];

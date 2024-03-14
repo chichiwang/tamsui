@@ -19,7 +19,42 @@ module.exports = {
   }],
   ignorePatterns: ['dist/**/*.*'],
   rules: {
-    'prefer-arrow-callback': ['error', { allowNamedFunctions: true }],
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    ],
+    'prefer-arrow-callback': [
+      'error',
+      { allowNamedFunctions: true },
+    ],
+    'no-console': [
+      'error',
+      { allow: ['warn', 'error'] },
+    ],
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        ts: 'never',
+        jsx: 'never',
+        tsx: 'never',
+      },
+    ],
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.ts', '.jsx', '.tsx'],
+      },
+      alias: {
+        map: [
+          ['client', './client'],
+        ],
+        extensions: ['.js', '.ts', '.jsx', '.tsx'],
+      },
+    },
   },
 };

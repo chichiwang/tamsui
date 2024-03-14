@@ -11,6 +11,9 @@
     "sourceMap": true,
     "moduleResolution": "node16",
     "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "client/*": ["./client/*"]
+    }
   }
 }
