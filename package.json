@@ -8,7 +8,8 @@
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "webpack --config webpack-config.js --watch",
-    "test": "jest"
+    "test": "jest",
+    "test:snapshot": "jest --updateSnapshot"
   },
   "repository": {
     "type": "git",
