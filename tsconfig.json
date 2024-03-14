@@ -13,7 +13,7 @@
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "client/*": ["./client/*"]
+      "app/*": ["./app/*"]
     }
   }
 }
