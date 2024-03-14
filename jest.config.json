@@ -12,5 +12,8 @@
   "transform": {
     "\\.[jt]sx?$": "babel-jest",
     "\\.mjs?$": "babel-jest"
+  },
+  "moduleNameMapper": {
+    "^client/(.*)$": "<rootDir>/client/$1"
   }
 }
