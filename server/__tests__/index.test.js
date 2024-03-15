@@ -2,7 +2,7 @@
 import express from 'express';
 import { renderToPipeableStream } from 'react-dom/server';
 import React from 'react';
-import App from 'client/app';
+import App from 'app/index';
 
 jest.mock('express');
 jest.mock('react-dom/server');

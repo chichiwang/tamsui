@@ -4,7 +4,7 @@ import express, { Express, Request, Response } from 'express';
 import React from 'react';
 import { renderToPipeableStream } from 'react-dom/server';
 
-import App from 'client/app';
+import App from 'app/index';
 
 const app: Express = express();
 const port: Number = 8080;

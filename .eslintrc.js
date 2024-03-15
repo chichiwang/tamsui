@@ -51,7 +51,7 @@ module.exports = {
       },
       alias: {
         map: [
-          ['client', './client'],
+          ['app', './app'],
         ],
         extensions: ['.js', '.ts', '.jsx', '.tsx'],
       },

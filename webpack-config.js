@@ -8,6 +8,8 @@ const projectRootDir = __dirname;
 const outputDir = path.resolve(projectRootDir, 'dist');
 const outputScriptsDir = path.resolve(outputDir, 'scripts');
 
+const appDir = path.resolve(projectRootDir, 'app');
+
 const clientDir = path.resolve(projectRootDir, 'client');
 const clientRootFile = path.resolve(clientDir, 'entry.tsx');
 
@@ -28,7 +30,7 @@ const baseConfig = {
   resolve: {
     extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
     alias: {
-      client: clientDir,
+      app: appDir,
     },
   },
 };
@@ -61,7 +63,7 @@ const serverConfig = {
   },
   plugins: [
     new NodemonPlugin({
-      watch: [clientDir, serverDir],
+      watch: [clientDir, appDir, serverDir],
       ignore: ['/__tests__/', '**.test.*'],
     }),
   ],

@@ -14,6 +14,6 @@
     "\\.mjs?$": "babel-jest"
   },
   "moduleNameMapper": {
-    "^client/(.*)$": "<rootDir>/client/$1"
+    "^app/(.*)$": "<rootDir>/app/$1"
   }
 }
