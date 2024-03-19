@@ -9,6 +9,7 @@
       "statements": 100
     }
   },
+  "testEnvironment": "jsdom",
   "transform": {
     "\\.[jt]sx?$": "babel-jest",
     "\\.mjs?$": "babel-jest"

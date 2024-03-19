@@ -1,6 +1,12 @@
 import React from 'react';
 import { hydrateRoot } from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from 'app/index';
+import App from 'app/App';
 
-hydrateRoot(document, <App />);
+hydrateRoot(
+  document,
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+);
