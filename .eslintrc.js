@@ -43,6 +43,11 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    'wrap-iife': [
+      'error',
+      'inside',
+      { functionPrototypeMethods: true },
+    ],
   },
   settings: {
     'import/resolver': {
