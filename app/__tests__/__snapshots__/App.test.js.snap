@@ -10,9 +10,11 @@ exports[`App Component matches snapshot 1`] = `
     </title>
   </head>
   <body>
-    <h1>
-      Hello, React SSR!
-    </h1>
+    <main>
+      <h1>
+        Totally Kickass Website
+      </h1>
+    </main>
   </body>
 </html>
 `;

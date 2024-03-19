@@ -1,11 +1,23 @@
+/**
+ * @jest-environment node
+ */
+
 /* eslint global-require: 0 */
 import express from 'express';
 import { renderToPipeableStream } from 'react-dom/server';
 import React from 'react';
-import App from 'app/index';
+import App from 'app/App';
+import { StaticRouter } from 'react-router-dom/server';
 
 jest.mock('express');
 jest.mock('react-dom/server');
+jest.mock('react-router-dom/server');
+
+function mockStaticRouter({ children }) {
+  return (
+    <div>{children}</div>
+  );
+}
 
 const mockAppGet = jest.fn();
 const mockAppListen = jest.fn();
@@ -26,10 +38,14 @@ const mockRes = {
   },
   setHeader: mockResSetHeader,
 };
+const mockReq = {
+  url: '/sfw',
+};
 
 const mockPipe = jest.fn();
 
 beforeAll(() => {
+  StaticRouter.mockImplementation(mockStaticRouter);
   express.mockImplementation(() => mockExpressApp);
   express.static.mockImplementation((arg) => arg);
   renderToPipeableStream.mockImplementation(() => ({ pipe: mockPipe }));
@@ -74,16 +90,16 @@ describe('static asset routes', () => {
 });
 
 describe('app routes', () => {
-  test('app.get routes root /', () => {
+  test('app.get routes *', () => {
     expect(mockAppGet).toHaveBeenCalledTimes(1);
-    expect(mockAppGet).toHaveBeenCalledWith('/', expect.any(Function));
+    expect(mockAppGet).toHaveBeenCalledWith('*', expect.any(Function));
   });
 
   test('callback logs an error when a socket error occurs', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     const appGetCallback = mockAppGet.mock.calls[0][1];
-    appGetCallback({}, mockRes);
+    appGetCallback(mockReq, mockRes);
 
     expect(mockResSocketOn).toHaveBeenCalledWith('error', expect.any(Function));
 
@@ -99,7 +115,7 @@ describe('app routes', () => {
 
   test('renders React app to pipeable stream', () => {
     const appGetCallback = mockAppGet.mock.calls[0][1];
-    appGetCallback({}, mockRes);
+    appGetCallback(mockReq, mockRes);
 
     expect(renderToPipeableStream).toHaveBeenCalledWith(
       expect.any(Object),
@@ -111,14 +127,18 @@ describe('app routes', () => {
     );
 
     const appComponent = renderToPipeableStream.mock.calls[0][0];
-    const expectedComponent = <App />;
+    const expectedComponent = (
+      <StaticRouter location={mockReq.url}>
+        <App />
+      </StaticRouter>
+    );
 
     expect(JSON.stringify(appComponent)).toEqual(JSON.stringify(expectedComponent));
   });
 
   test('onShellReady: sends the response with a 200 to the stream pipe', () => {
     const appGetCallback = mockAppGet.mock.calls[0][1];
-    appGetCallback({}, mockRes);
+    appGetCallback(mockReq, mockRes);
 
     const { onShellReady } = renderToPipeableStream.mock.calls[0][1];
     onShellReady();
@@ -132,7 +152,7 @@ describe('app routes', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     const appGetCallback = mockAppGet.mock.calls[0][1];
-    appGetCallback({}, mockRes);
+    appGetCallback(mockReq, mockRes);
 
     const { onError } = renderToPipeableStream.mock.calls[0][1];
     const mockErr = 'App has exploded';
@@ -147,7 +167,7 @@ describe('app routes', () => {
     const mockConsoleError = jest.spyOn(console, 'error').mockImplementation(() => {});
 
     const appGetCallback = mockAppGet.mock.calls[0][1];
-    appGetCallback({}, mockRes);
+    appGetCallback(mockReq, mockRes);
 
     const { onShellReady, onError } = renderToPipeableStream.mock.calls[0][1];
     const mockErr = 'App is an onion';

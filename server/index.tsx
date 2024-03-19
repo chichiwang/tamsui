@@ -3,15 +3,16 @@ import path from 'path';
 import express, { Express, Request, Response } from 'express';
 import React from 'react';
 import { renderToPipeableStream } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom/server';
 
-import App from 'app/index';
+import App from 'app/App';
 
 const app: Express = express();
 const port: Number = 8080;
 
 app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
 
-app.get('/', function handleRoot(req: Request, res: Response) {
+app.get('*', function handleRoot(req: Request, res: Response) {
   res.socket?.on('error', function responseErr(err) {
     console.error('Fatal:', err);
   });
@@ -19,7 +20,9 @@ app.get('/', function handleRoot(req: Request, res: Response) {
   let errored = false;
 
   const { pipe } = renderToPipeableStream(
-    <App />,
+    <StaticRouter location={req.url}>
+      <App />
+    </StaticRouter>,
     {
       bootstrapScripts: ['scripts/app.js'],
       onShellReady() {
