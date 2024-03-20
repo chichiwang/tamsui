@@ -8,6 +8,7 @@ const paths = (function definePaths() {
     root: projectRoot,
     app: path.resolve(projectRoot, 'app'),
     client: path.resolve(projectRoot, 'client'),
+    pages: path.resolve(projectRoot, 'pages'),
     server: path.resolve(projectRoot, 'server'),
   };
 

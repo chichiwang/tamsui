@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 
 import Routes from '../index';
 
-jest.mock('app/Home', function mockHome() {
+jest.mock('pages/Home', function mockHome() {
   return function mockedHome() {
     return (
       <main>

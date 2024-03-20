@@ -15,6 +15,7 @@ const baseConfig = {
     extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
     alias: {
       app: paths.project.app,
+      pages: paths.project.pages,
     },
   },
 };
