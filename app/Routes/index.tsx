@@ -1,12 +1,12 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes as RouterRoutes } from 'react-router-dom';
 
 import Home from 'app/Home';
 
-export default function AppRoutes() {
+export default function Routes() {
   return (
-    <Routes>
+    <RouterRoutes>
       <Route path="/" element={<Home />} />
-    </Routes>
+    </RouterRoutes>
   );
 }
