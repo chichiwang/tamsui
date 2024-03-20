@@ -1,6 +1,6 @@
 import React from 'react';
 
-import AppRoutes from './AppRoutes';
+import Routes from 'app/Routes';
 
 export default function App(): React.ReactElement {
   return (
@@ -10,7 +10,7 @@ export default function App(): React.ReactElement {
           <title>Hello, React SSR!</title>
         </head>
         <body>
-          <AppRoutes />
+          <Routes />
         </body>
       </html>
     </React.StrictMode>

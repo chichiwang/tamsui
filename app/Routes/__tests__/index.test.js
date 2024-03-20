@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 
-import AppRoutes from '../AppRoutes';
+import Routes from '../index';
 
-jest.mock('../Home', function mockHome() {
+jest.mock('app/Home', function mockHome() {
   return function mockedHome() {
     return (
       <main>
@@ -15,9 +15,9 @@ jest.mock('../Home', function mockHome() {
   };
 });
 
-describe('AppRoutes', () => {
+describe('Routes', () => {
   test('renders the Home Component at the root route', () => {
-    render(<AppRoutes />, { wrapper: BrowserRouter });
+    render(<Routes />, { wrapper: BrowserRouter });
 
     expect(screen.getByText(/Home Route/)).toBeInTheDocument();
   });
@@ -28,7 +28,7 @@ describe('AppRoutes', () => {
     test('renders the Home Component', () => {
       render(
         <MemoryRouter initialEntries={[path]}>
-          <AppRoutes />
+          <Routes />
         </MemoryRouter>,
       );
 

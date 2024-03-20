@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import Home from '../Home';
+import Home from '../index';
 
 describe('Home Component', () => {
   test('matches snapshot', () => {
