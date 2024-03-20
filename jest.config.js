@@ -5,6 +5,7 @@ const sharedConfigs = {
   },
   moduleNameMapper: {
     '^app/(.*)$': '<rootDir>/app/$1',
+    '^pages/(.*)$': '<rootDir>/pages/$1',
   },
 };
 
@@ -13,6 +14,8 @@ const appConfig = {
   testMatch: [
     '<rootDir>/app/**/__tests__/**/*.[jt]s?(x)',
     '<rootDir>/app/**/?(*.)+(spec|test).[jt]s?(x)',
+    '<rootDir>/pages/**/__tests__/**/*.[jt]s?(x)',
+    '<rootDir>/pages/**/?(*.)+(spec|test).[jt]s?(x)',
   ],
   testEnvironment: 'jsdom',
   ...sharedConfigs,
