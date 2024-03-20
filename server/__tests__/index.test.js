@@ -1,7 +1,3 @@
-/**
- * @jest-environment node
- */
-
 /* eslint global-require: 0 */
 import express from 'express';
 import { renderToPipeableStream } from 'react-dom/server';
