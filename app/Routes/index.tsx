@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import Home from './Home';
+import Home from 'app/Home';
 
 export default function AppRoutes() {
   return (

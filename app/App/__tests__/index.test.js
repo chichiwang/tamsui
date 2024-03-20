@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import App from '../App';
+import App from '../index';
 
-jest.mock('../AppRoutes', function mockAppRoutes() {
+jest.mock('app/Routes', function mockAppRoutes() {
   return function mockedAppRoutes() {
     return (
       <main>

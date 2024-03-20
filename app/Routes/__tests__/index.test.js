@@ -3,9 +3,9 @@ import { render, screen } from '@testing-library/react';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom';
 
-import AppRoutes from '../AppRoutes';
+import AppRoutes from '../index';
 
-jest.mock('../Home', function mockHome() {
+jest.mock('app/Home', function mockHome() {
   return function mockedHome() {
     return (
       <main>
