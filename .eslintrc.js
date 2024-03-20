@@ -1,13 +1,22 @@
 module.exports = {
   root: true,
   extends: ['airbnb'],
-  plugins: ['jest'],
+  plugins: [
+    'jest',
+    'filenames',
+  ],
   env: {
     'jest/globals': true,
     browser: true,
     node: true,
   },
   overrides: [{
+    files: ['*.js', 'webpack-config/**/*.js'],
+    rules: {
+      'filenames/match-regex': 0,
+      'filenames/match-exported': 0,
+    },
+  }, {
     files: ['server/**/*.*'],
     rules: {
       'no-console': 'off',
@@ -19,20 +28,8 @@ module.exports = {
   }],
   ignorePatterns: ['dist/**/*.*'],
   rules: {
-    'react/jsx-filename-extension': [
-      2,
-      {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-    ],
-    'prefer-arrow-callback': [
-      'error',
-      { allowNamedFunctions: true },
-    ],
-    'no-console': [
-      'error',
-      { allow: ['warn', 'error'] },
-    ],
+    'filenames/match-regex': 2,
+    'filenames/match-exported': 2,
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -41,6 +38,20 @@ module.exports = {
         ts: 'never',
         jsx: 'never',
         tsx: 'never',
+      },
+    ],
+    'no-console': [
+      'error',
+      { allow: ['warn', 'error'] },
+    ],
+    'prefer-arrow-callback': [
+      'error',
+      { allowNamedFunctions: true },
+    ],
+    'react/jsx-filename-extension': [
+      2,
+      {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
     'wrap-iife': [
