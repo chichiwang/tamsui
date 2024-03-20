@@ -1,6 +1,7 @@
 import path from 'path';
 
 import express, { Express, Request, Response } from 'express';
+import pino from 'pino-http';
 import React from 'react';
 import { renderToPipeableStream } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom/server';
@@ -8,7 +9,10 @@ import { StaticRouter } from 'react-router-dom/server';
 import App from 'app/App';
 
 const app: Express = express();
+const logger = pino();
 const port: Number = 8080;
+
+app.use(logger);
 
 app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
 

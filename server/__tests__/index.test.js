@@ -1,5 +1,6 @@
 /* eslint global-require: 0 */
 import express from 'express';
+import pino from 'pino-http';
 import { renderToPipeableStream } from 'react-dom/server';
 import React from 'react';
 import App from 'app/App';
@@ -8,6 +9,7 @@ import { StaticRouter } from 'react-router-dom/server';
 jest.mock('express');
 jest.mock('react-dom/server');
 jest.mock('react-router-dom/server');
+jest.mock('pino-http');
 
 function mockStaticRouter({ children }) {
   return (
@@ -23,6 +25,8 @@ const mockExpressApp = {
   listen: mockAppListen,
   use: mockAppUse,
 };
+
+const mockLogger = 'Finest logger in the business';
 
 const mockResSend = jest.fn();
 const mockResSocketOn = jest.fn();
@@ -44,6 +48,7 @@ beforeAll(() => {
   StaticRouter.mockImplementation(mockStaticRouter);
   express.mockImplementation(() => mockExpressApp);
   express.static.mockImplementation((arg) => arg);
+  pino.mockImplementation(() => mockLogger);
   renderToPipeableStream.mockImplementation(() => ({ pipe: mockPipe }));
 });
 
@@ -55,27 +60,39 @@ beforeEach(() => {
   delete mockRes.statusCode;
 });
 
-test('express is invoked once', () => {
-  expect(express).toHaveBeenCalledTimes(1);
+describe('server functionality', () => {
+  test('express is invoked once', () => {
+    expect(express).toHaveBeenCalledTimes(1);
+  });
+
+  test('app.listen is invoked once', () => {
+    expect(mockAppListen).toHaveBeenCalledTimes(1);
+  });
+
+  test('app.listen is called with port 8080', () => {
+    expect(mockAppListen).toHaveBeenCalledWith(8080, expect.any(Function));
+  });
+
+  test('app.listen is passed a callback that logs out the port the app is listening on', () => {
+    const callback = mockAppListen.mock.calls[0][1];
+    const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
+
+    callback();
+
+    expect(mockConsoleLog).toHaveBeenCalledWith(expect.stringContaining('8080'));
+
+    mockConsoleLog.mockRestore();
+  });
 });
 
-test('app.listen is invoked once', () => {
-  expect(mockAppListen).toHaveBeenCalledTimes(1);
-});
+describe('server middleware', () => {
+  test('pino-http is invoked to create a logger', () => {
+    expect(pino).toHaveBeenCalledTimes(1);
+  });
 
-test('app.listen is called with port 8080', () => {
-  expect(mockAppListen).toHaveBeenCalledWith(8080, expect.any(Function));
-});
-
-test('app.listen is passed a callback that logs out the port the app is listening on', () => {
-  const callback = mockAppListen.mock.calls[0][1];
-  const mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
-
-  callback();
-
-  expect(mockConsoleLog).toHaveBeenCalledWith(expect.stringContaining('8080'));
-
-  mockConsoleLog.mockRestore();
+  test('logger is passed to express as middleware', () => {
+    expect(mockAppUse).toHaveBeenCalledWith(mockLogger);
+  });
 });
 
 describe('static asset routes', () => {
