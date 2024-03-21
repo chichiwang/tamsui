@@ -15,6 +15,16 @@ jest.mock('pages/Home', function mockHome() {
   };
 });
 
+jest.mock('pages/Counter', function mockCounter() {
+  return function mockedCounter() {
+    return (
+      <main>
+        <h1>Counter Route</h1>
+      </main>
+    );
+  };
+});
+
 describe('Routes', () => {
   test('renders the Home Component at the root route', () => {
     render(<Routes />, { wrapper: BrowserRouter });
@@ -33,6 +43,20 @@ describe('Routes', () => {
       );
 
       expect(screen.getByText(/Home Route/)).toBeInTheDocument();
+    });
+  });
+
+  describe('/counter', () => {
+    const path = '/counter';
+
+    test('renders the Counter Component', () => {
+      render(
+        <MemoryRouter initialEntries={[path]}>
+          <Routes />
+        </MemoryRouter>,
+      );
+
+      expect(screen.getByText(/Counter Route/)).toBeInTheDocument();
     });
   });
 });

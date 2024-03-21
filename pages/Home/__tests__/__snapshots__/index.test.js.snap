@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Component matches snapshot 1`] = `
+<main>
+  <h1>
+    Hello, React SSR!
+  </h1>
+  <a
+    href="/counter"
+    onClick={[Function]}
+  >
+    React Counter
+  </a>
+</main>
+`;

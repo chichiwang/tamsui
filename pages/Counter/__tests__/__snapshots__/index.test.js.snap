@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter Component matches snapshot 1`] = `
+<main>
+  <h1>
+    React Counter
+  </h1>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    Back to home
+  </a>
+</main>
+`;
