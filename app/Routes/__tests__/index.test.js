@@ -15,8 +15,8 @@ jest.mock('pages/Home', function mockHome() {
   };
 });
 
-jest.mock('pages/Counter', function mockHome() {
-  return function mockedHome() {
+jest.mock('pages/Counter', function mockCounter() {
+  return function mockedCounter() {
     return (
       <main>
         <h1>Counter Route</h1>
@@ -49,7 +49,7 @@ describe('Routes', () => {
   describe('/counter', () => {
     const path = '/counter';
 
-    test('renders the Home Component', () => {
+    test('renders the Counter Component', () => {
       render(
         <MemoryRouter initialEntries={[path]}>
           <Routes />
