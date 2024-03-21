@@ -25,6 +25,16 @@ jest.mock('pages/Counter', function mockCounter() {
   };
 });
 
+jest.mock('pages/NotFound', function mockCounter() {
+  return function mockedCounter() {
+    return (
+      <main>
+        <h1>404 Route</h1>
+      </main>
+    );
+  };
+});
+
 describe('Routes', () => {
   test('renders the Home Component at the root route', () => {
     render(<Routes />, { wrapper: BrowserRouter });
@@ -57,6 +67,31 @@ describe('Routes', () => {
       );
 
       expect(screen.getByText(/Counter Route/)).toBeInTheDocument();
+    });
+  });
+
+  describe('404', () => {
+    const undefinedRoute1 = '/foobar';
+    const undefinedRoute2 = '/doesntexist';
+
+    test('renders the NotFound Component on an undefined path', () => {
+      render(
+        <MemoryRouter initialEntries={[undefinedRoute1]}>
+          <Routes />
+        </MemoryRouter>,
+      );
+
+      expect(screen.getByText(/404 Route/)).toBeInTheDocument();
+    });
+
+    test('renders the NotFound Component on another undefined path', () => {
+      render(
+        <MemoryRouter initialEntries={[undefinedRoute2]}>
+          <Routes />
+        </MemoryRouter>,
+      );
+
+      expect(screen.getByText(/404 Route/)).toBeInTheDocument();
     });
   });
 });
