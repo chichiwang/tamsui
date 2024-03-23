@@ -3,19 +3,25 @@ import renderer from 'react-test-renderer';
 
 import App from '../index';
 
-jest.mock('app/Routes', function mockAppRoutes() {
-  return function mockedAppRoutes() {
-    return (
-      <main>
-        <h1>Totally Kickass Website</h1>
-      </main>
-    );
-  };
-});
+function ChildComponent() {
+  return (
+    <h1>App Child Component</h1>
+  );
+}
 
 describe('App Component', () => {
-  test('matches snapshot', () => {
+  test('matches no-child snapshot', () => {
     const tree = renderer.create(<App />).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('matches child snapshot', () => {
+    const tree = renderer.create(
+      <App>
+        <ChildComponent />
+      </App>,
+    ).toJSON();
 
     expect(tree).toMatchSnapshot();
   });

@@ -44,6 +44,7 @@ module.exports = {
       'error',
       { allow: ['warn', 'error'] },
     ],
+    'no-restricted-syntax': 'off',
     'prefer-arrow-callback': [
       'error',
       { allowNamedFunctions: true },

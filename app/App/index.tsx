@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Routes from 'app/Routes';
+type AppProps = React.PropsWithChildren;
 
-export default function App(): React.ReactElement {
+export default function App({ children }: AppProps): React.ReactElement {
   return (
     <React.StrictMode>
       <html lang="en">
@@ -10,7 +10,7 @@ export default function App(): React.ReactElement {
           <title>Hello, React SSR!</title>
         </head>
         <body>
-          <Routes />
+          { children }
         </body>
       </html>
     </React.StrictMode>
