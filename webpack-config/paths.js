@@ -14,7 +14,7 @@ const paths = (function definePaths() {
 
   const entries = {
     client: path.resolve(project.client, 'entry.tsx'),
-    server: path.resolve(project.server, 'index.tsx'),
+    server: path.resolve(project.server, 'index.ts'),
   };
 
   const outputs = {

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Component matches snapshot 1`] = `
+exports[`App Component matches child snapshot 1`] = `
 <html
   lang="en"
 >
@@ -10,11 +10,22 @@ exports[`App Component matches snapshot 1`] = `
     </title>
   </head>
   <body>
-    <main>
-      <h1>
-        Totally Kickass Website
-      </h1>
-    </main>
+    <h1>
+      App Child Component
+    </h1>
   </body>
+</html>
+`;
+
+exports[`App Component matches no-child snapshot 1`] = `
+<html
+  lang="en"
+>
+  <head>
+    <title>
+      Hello, React SSR!
+    </title>
+  </head>
+  <body />
 </html>
 `;
