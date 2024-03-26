@@ -2,6 +2,7 @@ const paths = require('./paths');
 
 const baseConfig = {
   mode: 'development',
+  devtool: 'eval-source-map', // Use in dev only, different option/remove in prd
   module: {
     rules: [{
       test: /\.tsx?$/,
