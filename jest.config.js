@@ -4,6 +4,7 @@ const sharedConfigs = {
     '\\.mjs?$': 'babel-jest',
   },
   moduleNameMapper: {
+    '\\.(css|scss)$': 'identity-obj-proxy',
     '^app/(.*)$': '<rootDir>/app/$1',
     '^pages/(.*)$': '<rootDir>/pages/$1',
   },
