@@ -10,6 +10,23 @@ const baseConfig = {
       use: {
         loader: 'ts-loader',
       },
+    }, {
+      test: /\.s[ac]ss$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          },
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            sourceMap: true,
+          },
+        },
+      ],
     }],
   },
   resolve: {

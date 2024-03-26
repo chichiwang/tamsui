@@ -1,0 +1,10 @@
+@use "sass:map";
+@use "var.module";
+
+:global a,
+:global a:hover,
+:global a:focus,
+:global a:visited {
+  color: map.get(var.$colors, "link");
+  text-decoration: none;
+}

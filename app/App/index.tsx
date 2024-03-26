@@ -1,4 +1,5 @@
 import React from 'react';
+import 'app/global.module.scss';
 
 type AppProps = React.PropsWithChildren;
 

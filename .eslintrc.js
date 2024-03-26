@@ -28,7 +28,7 @@ module.exports = {
   }],
   ignorePatterns: ['dist/**/*.*'],
   rules: {
-    'filenames/match-regex': 2,
+    'filenames/match-regex': [2, '^[a-zA-Z_.]+$'],
     'filenames/match-exported': 2,
     'import/extensions': [
       'error',
