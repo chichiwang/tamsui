@@ -24,7 +24,9 @@ const serverConfig = {
   },
   plugins: [
     new NodemonPlugin({
-      watch: [paths.project.app, paths.project.client, paths.project.server],
+      watch: [
+        paths.outputs.root,
+      ],
       ignore: ['/__tests__/', '**.test.*'],
     }),
   ],
