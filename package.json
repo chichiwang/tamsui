@@ -7,11 +7,11 @@
     "analyze": "webpack-bundle-analyzer stats.json",
     "build:dev": "npm run clean && webpack --config webpack-config.js --profile --json > stats.json",
     "build:dev:analyze": "npm run clean && npm run build:dev && npm run analyze",
-    "build:dev:run": "npm run build:dev && node dist/index.js | npx pino-pretty -c -S",
+    "build:dev:run": "npm run build:dev && node dist/index.js | pino-pretty -c -S",
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "echo 'TODO: build/build+run production assets'",
-    "watch": "webpack --config webpack-config.js --watch | npx pino-pretty -c -S",
+    "watch": "webpack --config webpack-config.js --watch | pino-pretty -c -S",
     "test": "jest",
     "test:snapshot": "jest --updateSnapshot"
   },
