@@ -51,7 +51,7 @@ export default async function appHandler(req: Request, res: Response) {
       <StaticRouterProvider router={router} context={context} />
     </App>,
     {
-      bootstrapScripts: ['/scripts/app.js'],
+      bootstrapScripts: ['/scripts/vendors.js', '/scripts/app.js'],
       onShellReady() {
         if (errored) {
           res.statusCode = 500;
