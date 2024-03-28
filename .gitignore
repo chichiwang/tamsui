@@ -1,8 +1,9 @@
 # Build
 dist/
 
-# Test Coverage
+# Development Workflow Files
 __coverage__/
+stats.json
 
 # Dependencies
 node_modules/

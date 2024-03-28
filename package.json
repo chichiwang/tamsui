@@ -4,8 +4,10 @@
   "description": "Exercises for JavaScript and Node",
   "main": "index.js",
   "scripts": {
-    "build:dev": "npm run clean && webpack --config webpack-config.js",
-    "build:devRun": "npm run build:dev && node dist/index.js | npx pino-pretty -c -S",
+    "analyze": "webpack-bundle-analyzer stats.json",
+    "build:dev": "npm run clean && webpack --config webpack-config.js --profile --json > stats.json",
+    "build:dev:analyze": "npm run clean && npm run build:dev && npm run analyze",
+    "build:dev:run": "npm run build:dev && node dist/index.js | npx pino-pretty -c -S",
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "echo 'TODO: build/build+run production assets'",
@@ -63,6 +65,7 @@
     "typescript": "^5.3.3",
     "typescript-plugin-css-modules": "^5.1.0",
     "webpack": "^5.90.3",
+    "webpack-bundle-analyzer": "^4.10.1",
     "webpack-cli": "^5.1.4",
     "webpack-node-externals": "^3.0.0"
   },
