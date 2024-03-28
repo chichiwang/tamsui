@@ -109,7 +109,10 @@ describe('appHandler', () => {
     expect(renderToPipeableStream).toHaveBeenCalledWith(
       expect.any(Object),
       expect.objectContaining({
-        bootstrapScripts: expect.arrayContaining(['/scripts/app.js']),
+        bootstrapScripts: expect.arrayContaining([
+          '/scripts/vendors.js',
+          '/scripts/app.js',
+        ]),
         onShellReady: expect.any(Function),
         onError: expect.any(Function),
       }),
