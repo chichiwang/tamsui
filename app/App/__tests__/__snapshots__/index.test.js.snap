@@ -8,6 +8,11 @@ exports[`App Component matches child snapshot 1`] = `
     <title>
       Hello, React SSR!
     </title>
+    <link
+      href="/styles/app.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body>
     <h1>
@@ -25,6 +30,11 @@ exports[`App Component matches no-child snapshot 1`] = `
     <title>
       Hello, React SSR!
     </title>
+    <link
+      href="/styles/app.css"
+      rel="stylesheet"
+      type="text/css"
+    />
   </head>
   <body />
 </html>

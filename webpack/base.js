@@ -1,8 +1,9 @@
 const paths = require('./paths');
+const env = require('./env');
 
 const baseConfig = {
-  mode: 'development',
-  devtool: 'eval-source-map', // Use in dev only, different option/remove in prd
+  mode: env.get(),
+  devtool: env.isProd ? 'source-map' : 'eval-source-map',
   module: {
     rules: [{
       test: /\.tsx?$/,
@@ -10,23 +11,6 @@ const baseConfig = {
       use: {
         loader: 'ts-loader',
       },
-    }, {
-      test: /\.s[ac]ss$/,
-      use: [
-        'style-loader',
-        {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-          },
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
-          },
-        },
-      ],
     }],
   },
   resolve: {
