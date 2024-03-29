@@ -10,7 +10,7 @@
     "build:dev:run": "npm run build:dev && node dist/index.js | pino-pretty -c -S",
     "build:prod": "npm run clean && NODE_ENV=prod webpack --config webpack/config.js --profile --json > stats.json",
     "build:prod:analyze": "npm run build:prod && npm run analyze",
-    "build:prod:run": "npm run build:prod && node dist/index.js | pino-pretty -c -S",
+    "build:prod:run": "npm run build:prod && node dist/index.js",
     "clean": "rm -rf dist",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "start": "echo 'TODO: build/build+run production assets'",
