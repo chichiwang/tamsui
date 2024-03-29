@@ -13,6 +13,7 @@ const port: Number = 8080;
 
 app.use(logger);
 app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
+app.use('/styles', express.static(path.resolve(__dirname, 'styles')));
 
 app.get('*', appHandler);
 

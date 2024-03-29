@@ -3,7 +3,9 @@ const NodemonPlugin = require('nodemon-webpack-plugin');
 const nodeExternals = require('webpack-node-externals');
 
 const paths = require('./paths');
+const env = require('./env');
 const baseConfig = require('./base');
+const sassRules = require('./sassRules');
 const clientConfig = require('./client');
 
 const serverConfig = {
@@ -18,17 +20,24 @@ const serverConfig = {
   externals: [
     nodeExternals(),
   ],
+  module: {
+    ...baseConfig.module,
+    rules: [
+      ...baseConfig.module.rules,
+      sassRules.server,
+    ],
+  },
   output: {
     path: paths.outputs.root,
     filename: 'index.js',
   },
   plugins: [
-    new NodemonPlugin({
+    ...(env.isProd ? [] : [new NodemonPlugin({
       watch: [
         paths.outputs.root,
       ],
       ignore: ['/__tests__/', '**.test.*'],
-    }),
+    })]),
   ],
 };
 

@@ -9,6 +9,7 @@ export default function App({ children }: AppProps): React.ReactElement {
       <html lang="en">
         <head>
           <title>Hello, React SSR!</title>
+          <link rel="stylesheet" type="text/css" href="/styles/app.css" />
         </head>
         <body>
           { children }
