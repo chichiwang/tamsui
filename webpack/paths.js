@@ -19,7 +19,6 @@ const paths = (function definePaths() {
 
   const outputs = {
     root: outputRoot,
-    scripts: path.resolve(outputRoot, 'scripts'),
   };
 
   return {
