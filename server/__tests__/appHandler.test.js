@@ -11,22 +11,26 @@ import App from 'app/App';
 import dataRoutes from 'app/dataRoutes';
 import createFetchRequest from '../createFetchRequest';
 
+const mockedManifest = {
+  'app.js': 'path/to/app.supercomplexhash.js',
+  'vendors.js': 'path/to/vendor.surprisinglysimplehash.js',
+};
+
 jest.mock('react-router-dom/server');
 jest.mock('react-dom/server');
 jest.mock('../createFetchRequest');
+jest.mock('../manifest', () => mockedManifest);
 
-const mockResSend = jest.fn();
-const mockResSocketOn = jest.fn();
-const mockResSetHeader = jest.fn();
-const mockRes = {
-  send: mockResSend,
+const mockedRes = {
+  cookie: jest.fn(),
+  send: jest.fn(),
   socket: {
-    on: mockResSocketOn,
+    on: jest.fn(),
   },
-  setHeader: mockResSetHeader,
+  setHeader: jest.fn(),
 };
 
-const mockReq = {
+const mockedReq = {
   url: '/sfw',
   get: jest.fn(),
 };
@@ -62,7 +66,7 @@ describe('appHandler', () => {
   beforeEach(() => {
     mockConsoleErr = jest.spyOn(console, 'error').mockImplementation(() => {});
 
-    delete mockRes.statusCode;
+    delete mockedRes.statusCode;
 
     jest.isolateModules(() => {
       appHandler = require('../appHandler').default;
@@ -83,11 +87,11 @@ describe('appHandler', () => {
   });
 
   test('logs an error when a socket error occurs', async () => {
-    await appHandler(mockReq, mockRes);
+    await appHandler(mockedReq, mockedRes);
 
-    expect(mockResSocketOn).toHaveBeenCalledWith('error', expect.any(Function));
+    expect(mockedRes.socket.on).toHaveBeenCalledWith('error', expect.any(Function));
 
-    const resSocketOnCallback = mockResSocketOn.mock.calls[0][1];
+    const resSocketOnCallback = mockedRes.socket.on.mock.calls[0][1];
     const mockErr = 'Totally legit error!';
 
     resSocketOnCallback(mockErr);
@@ -96,22 +100,22 @@ describe('appHandler', () => {
   });
 
   test('creates a static router', async () => {
-    await appHandler(mockReq, mockRes);
+    await appHandler(mockedReq, mockedRes);
 
     expect(createStaticRouter).toHaveBeenCalledTimes(1);
     expect(createStaticRouter).toHaveBeenCalledWith(mockedHandler.dataRoutes, mockedContext);
   });
 
   test('renders React app to pipeable stream', async () => {
-    await appHandler(mockReq, mockRes);
+    await appHandler(mockedReq, mockedRes);
 
     expect(renderToPipeableStream).toHaveBeenCalledTimes(1);
     expect(renderToPipeableStream).toHaveBeenCalledWith(
       expect.any(Object),
       expect.objectContaining({
         bootstrapScripts: expect.arrayContaining([
-          '/scripts/vendors.js',
-          '/scripts/app.js',
+          `/${mockedManifest['vendors.js']}`,
+          `/${mockedManifest['app.js']}`,
         ]),
         onShellReady: expect.any(Function),
         onError: expect.any(Function),
@@ -120,7 +124,7 @@ describe('appHandler', () => {
 
     const appComponent = renderToPipeableStream.mock.calls[0][0];
     const expectedComponent = (
-      <App>
+      <App manifest={mockedManifest}>
         <StaticRouterProvider router={mockedStaticRouter} context={mockedContext} />
       </App>
     );
@@ -141,27 +145,37 @@ describe('appHandler', () => {
     };
 
     test('sets the correct response headers', async () => {
-      await appHandler(mockReq, mockRes);
+      await appHandler(mockedReq, mockedRes);
 
       const streamConfig = renderToPipeableStream.mock.calls[0][1];
       streamConfig.onShellReady();
 
-      expect(mockRes.setHeader).toHaveBeenCalledTimes(1);
-      expect(mockRes.setHeader).toHaveBeenCalledWith('content-type', 'text/html');
+      expect(mockedRes.setHeader).toHaveBeenCalledTimes(1);
+      expect(mockedRes.setHeader).toHaveBeenCalledWith('content-type', 'text/html');
+    });
+
+    test('sets a cookie containing the manifest', async () => {
+      await appHandler(mockedReq, mockedRes);
+
+      const streamConfig = renderToPipeableStream.mock.calls[0][1];
+      streamConfig.onShellReady();
+
+      expect(mockedRes.cookie).toHaveBeenCalledTimes(1);
+      expect(mockedRes.cookie).toHaveBeenCalledWith('manifest', JSON.stringify(mockedManifest));
     });
 
     test('pipes the response to the stream', async () => {
-      await appHandler(mockReq, mockRes);
+      await appHandler(mockedReq, mockedRes);
 
       const streamConfig = renderToPipeableStream.mock.calls[0][1];
       streamConfig.onShellReady();
 
       expect(mockPipe).toHaveBeenCalledTimes(1);
-      expect(mockPipe).toHaveBeenCalledWith(mockRes);
+      expect(mockPipe).toHaveBeenCalledWith(mockedRes);
     });
 
     test('sets statusCode to 500 on stream failure', async () => {
-      await appHandler(mockReq, mockRes);
+      await appHandler(mockedReq, mockedRes);
 
       const streamErr = 'Up the creek!';
       const streamConfig = renderToPipeableStream.mock.calls[0][1];
@@ -170,27 +184,27 @@ describe('appHandler', () => {
 
       expect(mockConsoleErr).toHaveBeenCalledTimes(1);
       expect(mockConsoleErr).toHaveBeenCalledWith('Streaming failure:', streamErr);
-      expect(mockRes.statusCode).toBe(500);
+      expect(mockedRes.statusCode).toBe(500);
     });
 
     test('sets statusCode to 404 on when path match not found', async () => {
       mockedHandler.query.mockImplementationOnce(() => Promise.resolve(notFoundContext));
 
-      await appHandler(mockReq, mockRes);
+      await appHandler(mockedReq, mockedRes);
 
       const streamConfig = renderToPipeableStream.mock.calls[0][1];
       streamConfig.onShellReady();
 
-      expect(mockRes.statusCode).toBe(404);
+      expect(mockedRes.statusCode).toBe(404);
     });
 
     test('sets statusCode to match the context object statusCode when match found', async () => {
-      await appHandler(mockReq, mockRes);
+      await appHandler(mockedReq, mockedRes);
 
       const streamConfig = renderToPipeableStream.mock.calls[0][1];
       streamConfig.onShellReady();
 
-      expect(mockRes.statusCode).toBe(mockedContext.statusCode);
+      expect(mockedRes.statusCode).toBe(mockedContext.statusCode);
     });
   });
 });

@@ -15,6 +15,7 @@ import App from 'app/App';
 import dataRoutes from 'app/dataRoutes';
 
 import createFetchRequest from './createFetchRequest';
+import manifest from './manifest';
 
 const handler = createStaticHandler(dataRoutes);
 
@@ -47,11 +48,11 @@ export default async function appHandler(req: Request, res: Response) {
   }, false);
 
   const { pipe } = renderToPipeableStream(
-    <App>
+    <App manifest={manifest}>
       <StaticRouterProvider router={router} context={context} />
     </App>,
     {
-      bootstrapScripts: ['/scripts/vendors.js', '/scripts/app.js'],
+      bootstrapScripts: [`/${manifest['vendors.js']}`, `/${manifest['app.js']}`],
       onShellReady() {
         if (errored) {
           res.statusCode = 500;
@@ -62,6 +63,7 @@ export default async function appHandler(req: Request, res: Response) {
         }
 
         res.setHeader('content-type', 'text/html');
+        res.cookie('manifest', JSON.stringify(manifest));
         pipe(res);
       },
       onError(err) {

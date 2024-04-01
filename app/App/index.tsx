@@ -1,15 +1,19 @@
 import React from 'react';
 import 'app/global.module.scss';
 
-type AppProps = React.PropsWithChildren;
+import { Manifest } from 'app/types';
 
-export default function App({ children }: AppProps): React.ReactElement {
+type AppProps = React.PropsWithChildren<{
+  manifest: Manifest;
+}>;
+
+export default function App({ manifest, children }: AppProps): React.ReactElement {
   return (
     <React.StrictMode>
       <html lang="en">
         <head>
           <title>Hello, React SSR!</title>
-          <link rel="stylesheet" type="text/css" href="/styles/app.css" />
+          <link rel="stylesheet" type="text/css" href={`/${manifest['app.css']}`} />
         </head>
         <body>
           { children }
