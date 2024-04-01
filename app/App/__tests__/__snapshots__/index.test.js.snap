@@ -9,7 +9,7 @@ exports[`App Component matches child snapshot 1`] = `
       Hello, React SSR!
     </title>
     <link
-      href="/styles/app.css"
+      href="/Root CSS module"
       rel="stylesheet"
       type="text/css"
     />
@@ -31,7 +31,7 @@ exports[`App Component matches no-child snapshot 1`] = `
       Hello, React SSR!
     </title>
     <link
-      href="/styles/app.css"
+      href="/Root CSS module"
       rel="stylesheet"
       type="text/css"
     />

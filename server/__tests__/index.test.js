@@ -5,7 +5,7 @@ import appHandler from '../appHandler';
 
 jest.mock('express');
 jest.mock('pino-http');
-jest.mock('../appHandler');
+jest.mock('../appHandler', () => () => 'appHandler');
 
 const mockAppGet = jest.fn();
 const mockAppListen = jest.fn();

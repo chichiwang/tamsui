@@ -9,16 +9,20 @@ function ChildComponent() {
   );
 }
 
+const mockedManifest = {
+  'app.css': 'Root CSS module',
+};
+
 describe('App Component', () => {
   test('matches no-child snapshot', () => {
-    const tree = renderer.create(<App />).toJSON();
+    const tree = renderer.create(<App manifest={mockedManifest} />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
 
   test('matches child snapshot', () => {
     const tree = renderer.create(
-      <App>
+      <App manifest={mockedManifest}>
         <ChildComponent />
       </App>,
     ).toJSON();
