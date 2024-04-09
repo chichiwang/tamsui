@@ -10,6 +10,7 @@ const sassRules = require('./sassRules');
 const clientConfig = {
   ...baseConfig,
   name: 'client',
+  context: paths.project.root,
   entry: {
     app: paths.entries.client,
   },

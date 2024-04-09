@@ -10,6 +10,7 @@ const sassRules = require('./sassRules');
 const serverConfig = {
   ...baseConfig,
   name: 'server',
+  context: paths.project.root,
   entry: paths.entries.server,
   target: 'node',
   externalsPresets: {
