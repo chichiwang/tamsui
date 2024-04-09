@@ -6,12 +6,10 @@ const paths = require('./paths');
 const env = require('./env');
 const baseConfig = require('./base');
 const sassRules = require('./sassRules');
-const clientConfig = require('./client');
 
 const serverConfig = {
   ...baseConfig,
   name: 'server',
-  dependencies: [clientConfig.name],
   entry: paths.entries.server,
   target: 'node',
   externalsPresets: {
