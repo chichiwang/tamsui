@@ -5,7 +5,7 @@ const nodeExternals = require('webpack-node-externals');
 const paths = require('./paths');
 const env = require('./env');
 const baseConfig = require('./base');
-const sassRules = require('./sassRules');
+const sassInline = require('./rules/sass.inline');
 
 const serverConfig = {
   ...baseConfig,
@@ -23,7 +23,7 @@ const serverConfig = {
     ...baseConfig.module,
     rules: [
       ...baseConfig.module.rules,
-      sassRules.server,
+      sassInline,
     ],
   },
   output: {

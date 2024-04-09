@@ -5,7 +5,7 @@ const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 const paths = require('./paths');
 const baseConfig = require('./base');
 const env = require('./env');
-const sassRules = require('./sassRules');
+const sassModules = require('./rules/sass.modules');
 
 const clientConfig = {
   ...baseConfig,
@@ -18,7 +18,7 @@ const clientConfig = {
     ...baseConfig.module,
     rules: [
       ...baseConfig.module.rules,
-      sassRules.client,
+      sassModules,
     ],
   },
   output: {
