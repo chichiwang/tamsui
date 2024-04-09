@@ -3,22 +3,24 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { WebpackManifestPlugin } = require('webpack-manifest-plugin');
 
 const paths = require('./paths');
-const baseConfig = require('./base');
 const env = require('./env');
-const sassModules = require('./rules/sass.modules');
 
-const clientConfig = {
-  ...baseConfig,
+const typescriptRule = require('./rules/typescript');
+const sassModulesRule = require('./rules/sass.modules');
+const resolve = require('./resolve');
+
+const config = {
+  mode: env.get(),
+  devtool: env.isProd ? 'source-map' : 'eval-source-map',
   name: 'client',
   context: paths.project.root,
   entry: {
     app: paths.entries.client,
   },
   module: {
-    ...baseConfig.module,
     rules: [
-      ...baseConfig.module.rules,
-      sassModules,
+      typescriptRule,
+      sassModulesRule,
     ],
   },
   output: {
@@ -46,6 +48,7 @@ const clientConfig = {
       publicPath: '',
     }),
   ],
+  resolve,
 };
 
-module.exports = clientConfig;
+module.exports = config;

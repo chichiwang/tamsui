@@ -4,11 +4,13 @@ const nodeExternals = require('webpack-node-externals');
 
 const paths = require('./paths');
 const env = require('./env');
-const baseConfig = require('./base');
-const sassInline = require('./rules/sass.inline');
 
-const serverConfig = {
-  ...baseConfig,
+const typescriptRule = require('./rules/typescript');
+const sassInlineRule = require('./rules/sass.inline');
+const resolve = require('./resolve');
+
+const config = {
+  mode: env.get(),
   name: 'server',
   context: paths.project.root,
   entry: paths.entries.server,
@@ -20,10 +22,9 @@ const serverConfig = {
     nodeExternals(),
   ],
   module: {
-    ...baseConfig.module,
     rules: [
-      ...baseConfig.module.rules,
-      sassInline,
+      typescriptRule,
+      sassInlineRule,
     ],
   },
   output: {
@@ -38,6 +39,7 @@ const serverConfig = {
       ignore: ['/__tests__/', '**.test.*'],
     })]),
   ],
+  resolve,
 };
 
-module.exports = serverConfig;
+module.exports = config;
