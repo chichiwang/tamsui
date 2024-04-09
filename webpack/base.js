@@ -1,17 +1,12 @@
 const paths = require('./paths');
 const env = require('./env');
+const typescriptRule = require('./rules/typescript');
 
 const baseConfig = {
   mode: env.get(),
   devtool: env.isProd ? 'source-map' : 'eval-source-map',
   module: {
-    rules: [{
-      test: /\.tsx?$/,
-      exclude: /node_modules/,
-      use: {
-        loader: 'ts-loader',
-      },
-    }],
+    rules: [typescriptRule],
   },
   resolve: {
     extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
