@@ -1,5 +1,6 @@
-const paths = require('./paths');
 const env = require('./env');
+
+const resolve = require('./resolve');
 const typescriptRule = require('./rules/typescript');
 
 const baseConfig = {
@@ -8,13 +9,7 @@ const baseConfig = {
   module: {
     rules: [typescriptRule],
   },
-  resolve: {
-    extensions: ['.ts', '.js', '.mjs', '.tsx', '.jsx', '...'],
-    alias: {
-      app: paths.project.app,
-      pages: paths.project.pages,
-    },
-  },
+  resolve,
 };
 
 module.exports = baseConfig;
