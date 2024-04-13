@@ -1,5 +1,5 @@
-# Exercises: JavaScript and React
-Practice exercises for JavaScript and React.
+# Tamsui
+A TypeScript React server-side rendering boilerplate
 
 ## Installation
 Run `npm install` to install dependencies.

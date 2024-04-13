@@ -1,7 +1,7 @@
 {
-  "name": "exercise-js",
+  "name": "tamsui",
   "version": "0.0.0",
-  "description": "Exercises for JavaScript and Node",
+  "description": "A TypeScript React server-side rendering boilerplate",
   "main": "index.js",
   "scripts": {
     "analyze": "webpack-bundle-analyzer stats.json",
@@ -23,20 +23,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chichiwang/exercise-js.git"
+    "url": "git+https://github.com/chichiwang/tamsui.git"
   },
   "keywords": [
     "javaScript",
     "react",
-    "developer",
-    "katas"
+    "typescript"
   ],
   "author": "Chi-chi Wang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chichiwang/exercise-js/issues"
+    "url": "https://github.com/chichiwang/tamsui/issues"
   },
-  "homepage": "https://github.com/chichiwang/exercise-js#readme",
+  "homepage": "https://github.com/chichiwang/tamsui#readme",
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/preset-env": "^7.23.9",
