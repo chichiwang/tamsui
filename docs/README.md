@@ -1,5 +1,10 @@
 # Developer Documentation
 
+* [Installing the Boilerplate](#installing-the-boilerplate)
+* [NPM Scripts](#npm-scripts)
+* [Developing Locally](#developing-locally)
+* [Building for Production](#building-for-production)
+
 ## Installing the Boilerplate
 
 - [] Clone this repository
@@ -101,3 +106,6 @@ The reason for these sections is two-fold:
 **Tamsui** contains a [Github workflow](https://docs.github.com/en/actions/using-workflows/about-workflows) configured to [run the linter and test runner](../.github/workflows/lint-test.yml) on [push events](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push). If this is not desired, [disable the workflow in Github](https://docs.github.com/en/actions/using-workflows/disabling-and-enabling-a-workflow#disabling-a-workflow).
 
 ## Building for Production
+To build for production run `npm build:prod`. The production assets to be deployed live in the `dist/` directory.
+
+To build the production assets and run the Express server in a single command, run `npm start`.
