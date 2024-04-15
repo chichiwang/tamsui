@@ -32,6 +32,13 @@
 
 ## Developing Locally
 
+* [Running the Application](#running-the-application)
+* [Project Directories](#project-directories)
+* [Adding an Application Directory](#adding-an-application-directory)
+* [Testing](#testing)
+* [Pull Request Template](#pull-request-template)
+* [Github Workflow](#github-workflow)
+
 ### Running the Application
 
 Run `npm run watch` to run the development watch server.
@@ -75,7 +82,22 @@ If any directory is removed, or if a new directory needs an alias:
 
 The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config](../jest.config.js).
 
-## Github Tooling
-PR Template/Workflow for Actions
+### Pull Request Template
+
+**Tamsui** contains a [Github Pull Request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) that is intended to provide a scaffold for a thorough pull request. [This template](../.github/pull_request_template.md) provides the following sections:
+
+* `Description`:
+  * Link to a related issue/story - important for documentation of why this change is being made
+  * A prompt to provide a description of the intent of the changes
+* `Changes`: A prompt to list the code changes in the pull request
+* `Steps to QA`: A prompt to provide steps for reviewers to verify the changes achieve their intended result
+
+The reason for these sections is two-fold:
+1. Make it easier for reviewers to review the code changes, with full context of the reasons the changes are being made, in order that the team can produce the best results for the codebase.
+2. Provide a history of documentation in the repository, so that every significant change is documented and vetted. This can be useful in the future to trace changes and intent when debugging or extending the codebase.
+
+### Github Workflow
+
+**Tamsui** contains a [Github workflow](https://docs.github.com/en/actions/using-workflows/about-workflows) configured to [run the linter and test runner](../.github/workflows/lint-test.yml) on [push events](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push). If this is not desired, [disable the workflow in Github](https://docs.github.com/en/actions/using-workflows/disabling-and-enabling-a-workflow#disabling-a-workflow).
 
 ## Building for Production
