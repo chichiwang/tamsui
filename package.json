@@ -11,7 +11,7 @@
     "build:dev": "webpack --config webpack/config.js --profile --json > stats.json",
     "prebuild:prod": "npm run clean",
     "build:prod": "NODE_ENV=prod webpack --config webpack/config.js --profile --json > stats.json",
-    "clean": "rm stats.json && rm -rf dist",
+    "clean": "rm -f stats.json && rm -rf dist",
     "dev": "run-s build:dev run | pino-pretty -c -S",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "prod": "run-s build:prod run | pino-pretty -c -S",
