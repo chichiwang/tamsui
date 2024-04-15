@@ -32,6 +32,14 @@
 
 ## Developing Locally
 
+### Running the Application
+
+Run `npm run watch` to run the development watch server.
+
+`npm run dev` will build and run the application in development mode. `npm run prod` will build and run the application in production mode. All of the above modes will run the server output through [pino-pretty](https://github.com/pinojs/pino-pretty).
+
+### Project Directories
+
 The `client/` directory is intended to house files specific to the client-side bundle. At the moment it only contains the entrypoint file, which [mounts and hydrates the root application](https://react.dev/reference/react-dom/client/hydrateRoot).
 
 The `app/` directory houses application-level concerns: the root application contains the html root, head, and body. The routes are housed in [app/dataRoutes](../app/dataRoutes) as a [data routes object](https://reactrouter.com/en/main/route/route). The reason the routes are not declared in [JSX](https://react.dev/learn/writing-markup-with-jsx) is for compatibility with rendering [React to a Node.js stream](https://react.dev/reference/react-dom/server/renderToPipeableStream).
@@ -40,13 +48,12 @@ The `pages/` directory houses the page-level react components. These are plugged
 
 The `server/` directory houses the server-side rendering logic and defines the static asset directories. [Pino](https://getpino.io/) is implemented as the logger.
 
-### Running the Application
+### Testing
 
-Run `npm run watch` to run the development watch server.
+**Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory and/or contain the extension `.test.js` anywhere within the [project directories](#project-directories).
 
-`npm run dev` will build and run the application in development mode. `npm run prod` will build and run the application in production mode. All of the above modes will run the server output through [pino-pretty](https://github.com/pinojs/pino-pretty).
+The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config}(../jest.config.js).
 
-## Testing
 ## Building for Production
 
 ## Github Tooling
