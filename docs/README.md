@@ -21,8 +21,8 @@
 | `analyze`       | Run [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) against a `stats.json` in the root directory                  |
 | `analyze:dev`   | Build dev assets and run [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) against the generated assets             |
 | `analyze:prod`  | Build prod assets and run [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) against the generated assets            |
-| `build:dev`     | Build dev assets                                                                                                                                   |
-| `build:prod`    | Build prod assets                                                                                                                                  |
+| `build:dev`     | Build dev assets and generate `stats.json`                                                                                                         |
+| `build:prod`    | Build prod assets and generate `stats.json`                                                                                                        |
 | `clean`         | Remove `stats.json` and `dist/` directory                                                                                                          |
 | `dev`           | Build dev assets and run the webserver, running server logs through [pino-pretty](https://github.com/pinojs/pino-pretty) for development purposes  |
 | `lint`          | Run [ESLint](https://eslint.org/)                                                                                                                  |
