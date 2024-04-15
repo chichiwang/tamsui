@@ -48,17 +48,34 @@ The `pages/` directory houses the page-level react components. These are plugged
 
 The `server/` directory houses the server-side rendering logic and defines the static asset directories. [Pino](https://getpino.io/) is implemented as the logger.
 
+### Adding an Application Directory
+
+To add additional application directories, or to remove existing ones:
+* Path aliases need to be updated
+* Jest projects need to be updated
+
+The `app/` and `pages/` directories are set up with path aliases so that a module can be imported with absolute pathing rather than relative pathing:
+
+```javascript
+import module from 'app/module';
+
+import PageModule from 'pages/PageModule';
+```
+
+If any directory is removed, or if a new directory needs an alias:
+* An `alias` should be updated in the [webpack configs](../webpack/resolve.js).
+* The [alias mapping](https://github.com/johvin/eslint-import-resolver-alias?tab=readme-ov-file#usage) should be added to the [eslint configuration](../.eslintrc.js) to avoid linting errors when using the alias.
+* The alias should be updated in the [paths configuration](https://www.typescriptlang.org/tsconfig#paths) for TypeScript to avoid type errors.
+* The alias should be updated in the [moduleNameMapper configuration](https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring) in the [Jest configuration](../jest.config.js) to ensure module mocking will work in tests, and so there are no errors in using the alias.
+* The directory should be updated in the `appConfig`·`testMatch` array to ensure that test runner knows which directories to cover.
+
 ### Testing
 
 **Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory and/or contain the extension `.test.js` anywhere within the [project directories](#project-directories).
 
-The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config}(../jest.config.js).
-
-## Building for Production
+The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config](../jest.config.js).
 
 ## Github Tooling
 PR Template/Workflow for Actions
-## Project Directories/Files
-### Adding a Directory
-## Adding Path Aliases
-## Adding Jest Projects
+
+## Building for Production
