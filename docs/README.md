@@ -1,12 +1,10 @@
 # Developer Documentation
-
-* [Installing the Boilerplate](#installing-the-boilerplate)
+* [Starting a Project](#starting-a-project)
 * [NPM Scripts](#npm-scripts)
 * [Developing Locally](#developing-locally)
 * [Building for Production](#building-for-production)
 
-## Installing the Boilerplate
-
+## Starting a Project
 - [] Clone this repository
 - [] Rename the directory
 - [] Update `package.json`
@@ -14,10 +12,10 @@
   - [] Update `repository/url` field
   - [] Update `bugs/url` field
   - [] Update `homepage` field
-- Run `npm install`
+- [] [Reset the git remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url) to your new project repository
+- [] Run `npm install`
 
 ## NPM Scripts
-
 | Script          | Description                                                                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `analyze`       | Run [webpack-bundle-analyzer](https://www.npmjs.com/package/webpack-bundle-analyzer) against a `stats.json` in the root directory                  |
@@ -36,7 +34,6 @@
 | `watch`         | Run watch server, will restart the server on every file change                                                                                     |
 
 ## Developing Locally
-
 * [Running the Application](#running-the-application)
 * [Project Directories](#project-directories)
 * [Adding an Application Directory](#adding-an-application-directory)
@@ -45,13 +42,11 @@
 * [Github Workflow](#github-workflow)
 
 ### Running the Application
-
 Run `npm run watch` to run the development watch server.
 
 `npm run dev` will build and run the application in development mode. `npm run prod` will build and run the application in production mode. All of the above modes will run the server output through [pino-pretty](https://github.com/pinojs/pino-pretty).
 
 ### Project Directories
-
 The `client/` directory is intended to house files specific to the client-side bundle. At the moment it only contains the entrypoint file, which [mounts and hydrates the root application](https://react.dev/reference/react-dom/client/hydrateRoot).
 
 The `app/` directory houses application-level concerns: the root application contains the html root, head, and body. The routes are housed in [app/dataRoutes](../app/dataRoutes) as a [data routes object](https://reactrouter.com/en/main/route/route). The reason the routes are not declared in [JSX](https://react.dev/learn/writing-markup-with-jsx) is for compatibility with rendering [React to a Node.js stream](https://react.dev/reference/react-dom/server/renderToPipeableStream).
@@ -61,7 +56,6 @@ The `pages/` directory houses the page-level react components. These are plugged
 The `server/` directory houses the server-side rendering logic and defines the static asset directories. [Pino](https://getpino.io/) is implemented as the logger.
 
 ### Adding an Application Directory
-
 To add additional application directories, or to remove existing ones:
 * Path aliases need to be updated
 * Jest projects need to be updated
@@ -82,13 +76,13 @@ If any directory is removed, or if a new directory needs an alias:
 * The directory should be updated in the `appConfig`·`testMatch` array to ensure that test runner knows which directories to cover.
 
 ### Testing
-
 **Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory and/or contain the extension `.test.js` anywhere within the [project directories](#project-directories).
 
 The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config](../jest.config.js).
 
-### Pull Request Template
+To run the test suite locally: `npm run test`. To update [Jest snapshots](https://jestjs.io/docs/snapshot-testing) `npm run test:snapshot` can be used. Alternatively, `npm run test -- -u` will also work.
 
+### Pull Request Template
 **Tamsui** contains a [Github Pull Request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) that is intended to provide a scaffold for a thorough pull request. [This template](../.github/pull_request_template.md) provides the following sections:
 
 * `Description`:
@@ -102,7 +96,6 @@ The reason for these sections is two-fold:
 2. Provide a history of documentation in the repository, so that every significant change is documented and vetted. This can be useful in the future to trace changes and intent when debugging or extending the codebase.
 
 ### Github Workflow
-
 **Tamsui** contains a [Github workflow](https://docs.github.com/en/actions/using-workflows/about-workflows) configured to [run the linter and test runner](../.github/workflows/lint-test.yml) on [push events](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push). If this is not desired, [disable the workflow in Github](https://docs.github.com/en/actions/using-workflows/disabling-and-enabling-a-workflow#disabling-a-workflow).
 
 ## Building for Production

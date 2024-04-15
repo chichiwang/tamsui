@@ -31,8 +31,5 @@ Any non-trivial decisions made within this project will be documented. Technical
 * [Jest](https://jestjs.io/): Testing
 * [ESLint](https://eslint.org/): Linting
 
-## Installation
-Run `npm install` to install dependencies.
-
-## Running the Project
-Run `npm start` to start the server.
+## Usage
+Usage documentation is provided in [docs/README.md](docs/README.md).
