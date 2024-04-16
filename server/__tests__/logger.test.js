@@ -14,6 +14,6 @@ describe('logger', () => {
   });
 
   test('returns an instance of a pino logger', () => {
-    expect(logger).toEqual(mockLogger);
+    expect(logger).toBe(mockLogger);
   });
 });

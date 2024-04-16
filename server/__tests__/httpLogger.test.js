@@ -14,6 +14,6 @@ describe('httpLogger', () => {
   });
 
   test('returns an instance of a pino httpLogger', () => {
-    expect(httpLogger).toEqual(mockLogger);
+    expect(httpLogger).toBe(mockLogger);
   });
 });
