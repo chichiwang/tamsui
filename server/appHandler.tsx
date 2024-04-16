@@ -14,6 +14,7 @@ import {
 import App from 'app/App';
 import dataRoutes from 'app/dataRoutes';
 
+import logger from './logger';
 import createFetchRequest from './createFetchRequest';
 import manifest from './manifest';
 
@@ -24,7 +25,7 @@ export default async function appHandler(req: Request, res: Response) {
   const notFoundPath = '*';
 
   res.socket?.on('error', function responseErr(err) {
-    console.error('Fatal:', err);
+    logger.error('Fatal:', err);
   });
 
   const fetchRequest = createFetchRequest(req, res);
@@ -68,7 +69,7 @@ export default async function appHandler(req: Request, res: Response) {
       },
       onError(err) {
         errored = true;
-        console.error('Streaming failure:', err);
+        logger.error('Streaming failure:', err);
       },
     },
   );

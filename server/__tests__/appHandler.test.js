@@ -10,6 +10,7 @@ import { renderToPipeableStream } from 'react-dom/server';
 import App from 'app/App';
 import dataRoutes from 'app/dataRoutes';
 import createFetchRequest from '../createFetchRequest';
+import logger from '../logger';
 
 const mockedManifest = {
   'app.js': 'path/to/app.supercomplexhash.js',
@@ -19,6 +20,7 @@ const mockedManifest = {
 jest.mock('react-router-dom/server');
 jest.mock('react-dom/server');
 jest.mock('../createFetchRequest');
+jest.mock('../logger');
 jest.mock('../manifest', () => mockedManifest);
 
 const mockedRes = {
@@ -52,7 +54,6 @@ const mockedStaticRouter = 'Buzz Buzz';
 const mockedFetchRequest = 'Severus, please fetch me the strongest truth potion you posess';
 
 const mockPipe = jest.fn();
-let mockConsoleErr;
 let appHandler;
 
 describe('appHandler', () => {
@@ -64,8 +65,6 @@ describe('appHandler', () => {
   });
 
   beforeEach(() => {
-    mockConsoleErr = jest.spyOn(console, 'error').mockImplementation(() => {});
-
     delete mockedRes.statusCode;
 
     jest.isolateModules(() => {
@@ -75,7 +74,6 @@ describe('appHandler', () => {
 
   afterEach(() => {
     jest.clearAllMocks();
-    mockConsoleErr.mockRestore();
   });
 
   test('creates a static handler', () => {
@@ -96,7 +94,7 @@ describe('appHandler', () => {
 
     resSocketOnCallback(mockErr);
 
-    expect(mockConsoleErr).toHaveBeenCalledWith('Fatal:', mockErr);
+    expect(logger.error).toHaveBeenCalledWith('Fatal:', mockErr);
   });
 
   test('creates a static router', async () => {
@@ -182,8 +180,8 @@ describe('appHandler', () => {
       streamConfig.onError(streamErr);
       streamConfig.onShellReady();
 
-      expect(mockConsoleErr).toHaveBeenCalledTimes(1);
-      expect(mockConsoleErr).toHaveBeenCalledWith('Streaming failure:', streamErr);
+      expect(logger.error).toHaveBeenCalledTimes(1);
+      expect(logger.error).toHaveBeenCalledWith('Streaming failure:', streamErr);
       expect(mockedRes.statusCode).toBe(500);
     });
 

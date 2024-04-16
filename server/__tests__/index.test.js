@@ -1,10 +1,14 @@
 /* eslint global-require: 0 */
 import express from 'express';
-import pino from 'pino-http';
+
+import logger from '../logger';
+import httpLogger from '../httpLogger';
 import appHandler from '../appHandler';
 
 jest.mock('express');
-jest.mock('pino-http');
+
+jest.mock('../logger');
+jest.mock('../httpLogger');
 jest.mock('../appHandler', () => () => 'appHandler');
 
 const mockAppGet = jest.fn();
@@ -16,32 +20,21 @@ const mockExpressApp = {
   use: mockAppUse,
 };
 
-const mockLogger = 'Finest logger in the business';
-
 function mockExpressStatic(path) {
   return `Static Asset Directory: ${path}`;
 }
-
-let mockConsoleLog;
 
 describe('server', () => {
   beforeAll(() => {
     express.mockReturnValue(mockExpressApp);
     express.static.mockImplementation(mockExpressStatic);
-    pino.mockReturnValue(mockLogger);
   });
 
   beforeEach(() => {
-    mockConsoleLog = jest.spyOn(console, 'log').mockImplementation(() => {});
-
     jest.clearAllMocks();
     jest.isolateModules(() => {
       require('../index');
     });
-  });
-
-  afterEach(() => {
-    mockConsoleLog.mockRestore();
   });
 
   test('express is invoked once', () => {
@@ -60,16 +53,12 @@ describe('server', () => {
     const callback = mockAppListen.mock.calls[0][1];
     callback();
 
-    expect(mockConsoleLog).toHaveBeenCalledWith(expect.stringContaining('8080'));
+    expect(logger.info).toHaveBeenCalledWith(expect.stringContaining('8080'));
   });
 
   describe('server middleware', () => {
-    test('pino-http is invoked to create a logger', () => {
-      expect(pino).toHaveBeenCalledTimes(1);
-    });
-
     test('logger is passed to express as middleware', () => {
-      expect(mockAppUse).toHaveBeenCalledWith(mockLogger);
+      expect(mockAppUse).toHaveBeenCalledWith(httpLogger);
     });
   });
 
