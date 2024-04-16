@@ -57,6 +57,7 @@ export default async function appHandler(req: Request, res: Response) {
       onShellReady() {
         if (errored) {
           res.statusCode = 500;
+          res.redirect('/error');
         } else if (notFound) {
           res.statusCode = 404;
         } else {

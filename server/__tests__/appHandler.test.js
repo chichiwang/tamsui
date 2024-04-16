@@ -25,6 +25,7 @@ jest.mock('../manifest', () => mockedManifest);
 
 const mockedRes = {
   cookie: jest.fn(),
+  redirect: jest.fn(),
   send: jest.fn(),
   socket: {
     on: jest.fn(),
@@ -183,6 +184,17 @@ describe('appHandler', () => {
       expect(logger.error).toHaveBeenCalledTimes(1);
       expect(logger.error).toHaveBeenCalledWith('Streaming failure:', streamErr);
       expect(mockedRes.statusCode).toBe(500);
+    });
+
+    test('redirects to /error on stream failure', async () => {
+      await appHandler(mockedReq, mockedRes);
+
+      const streamErr = 'Something catastrophic';
+      const streamConfig = renderToPipeableStream.mock.calls[0][1];
+      streamConfig.onError(streamErr);
+      streamConfig.onShellReady();
+
+      expect(mockedRes.redirect).toHaveBeenCalledWith('/error');
     });
 
     test('sets statusCode to 404 on when path match not found', async () => {
