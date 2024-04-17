@@ -97,7 +97,7 @@ describe('appHandler', () => {
 
     resSocketOnCallback(mockErr);
 
-    expect(logger.error).toHaveBeenCalledWith('Fatal:', mockErr);
+    expect(logger.error).toHaveBeenCalledWith(mockErr);
   });
 
   test('creates a static router', async () => {
@@ -119,6 +119,7 @@ describe('appHandler', () => {
           `/${mockedManifest['app.js']}`,
         ]),
         onShellReady: expect.any(Function),
+        onShellError: expect.any(Function),
         onError: expect.any(Function),
       }),
     );
@@ -238,7 +239,7 @@ describe('appHandler', () => {
 
       await appHandler(mockedReq, mockedRes);
 
-      expect(logger.error).toHaveBeenCalledWith(expect.stringContaining('[Error]:'));
+      expect(logger.error).toHaveBeenCalledWith(expect.any(Error));
     });
   });
 
@@ -293,8 +294,23 @@ describe('appHandler', () => {
       streamConfig.onShellReady();
 
       expect(logger.error).toHaveBeenCalledTimes(1);
-      expect(logger.error).toHaveBeenCalledWith('Streaming failure:', streamErr);
+      expect(logger.error).toHaveBeenCalledWith(streamErr);
       expect(mockedRes.statusCode).toBe(500);
+    });
+
+    test('redirects to /error on shell error', async () => {
+      await appHandler(mockedReq, mockedRes);
+
+      const shellErr = new Error('Melted in your mouth');
+      const streamConfig = renderToPipeableStream.mock.calls[0][1];
+      streamConfig.onShellError(shellErr);
+
+      expect(logger.error).toHaveBeenCalledTimes(1);
+      expect(logger.error).toHaveBeenCalledWith(shellErr);
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(500);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith('/error');
     });
 
     test('sets statusCode to 404 on when path match not found', async () => {

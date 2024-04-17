@@ -25,7 +25,7 @@ export default async function appHandler(req: Request, res: Response) {
   const notFoundPath = '*';
 
   res.socket?.on('error', function responseErr(err) {
-    logger.error('Fatal:', err);
+    logger.error(err);
   });
 
   const fetchRequest = createFetchRequest(req, res);
@@ -50,7 +50,7 @@ export default async function appHandler(req: Request, res: Response) {
 
   if (contextIsResponse) {
     // Cannot create a static router if handler.query returned a Response object
-    logger.error('[Error]: handler query returned a Response object');
+    logger.error(new Error('Handler query returned a Response object'));
     res.status(500).redirect('/error');
     return;
   }
@@ -80,9 +80,13 @@ export default async function appHandler(req: Request, res: Response) {
         res.cookie('manifest', JSON.stringify(manifest));
         pipe(res);
       },
+      onShellError(err) {
+        logger.error(err);
+        res.status(500).redirect('/error');
+      },
       onError(err) {
         errored = true;
-        logger.error('Streaming failure:', err);
+        logger.error(err);
       },
     },
   );
