@@ -5,18 +5,25 @@ import Counter from 'pages/Counter';
 import ErrorPage from 'pages/ErrorPage';
 import NotFound from 'pages/NotFound';
 
-const dataRoutes: RouteObject[] = [{
-  path: '/',
-  Component: Home,
-}, {
-  path: '/counter',
-  Component: Counter,
-}, {
-  path: '/error',
-  Component: ErrorPage,
-}, {
-  path: '*',
-  Component: NotFound,
-}];
+import withErrorBoundary from './withErrorBoundary';
+
+const dataRoutes: RouteObject[] = [
+  withErrorBoundary({
+    path: '/',
+    Component: Home,
+  }),
+  withErrorBoundary({
+    path: '/counter',
+    Component: Counter,
+  }),
+  {
+    path: '/error',
+    Component: ErrorPage,
+  },
+  withErrorBoundary({
+    path: '*',
+    Component: NotFound,
+  }),
+];
 
 export default dataRoutes;
