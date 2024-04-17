@@ -8,7 +8,6 @@ import {
   createStaticHandler,
   createStaticRouter,
   StaticRouterProvider,
-  StaticHandlerContext,
 } from 'react-router-dom/server';
 
 import App from 'app/App';
@@ -19,6 +18,7 @@ import createFetchRequest from './createFetchRequest';
 import manifest from './manifest';
 
 const handler = createStaticHandler(dataRoutes);
+const redirectCodes = [301, 302, 303, 307, 308];
 
 export default async function appHandler(req: Request, res: Response) {
   let errored = false;
@@ -37,16 +37,29 @@ export default async function appHandler(req: Request, res: Response) {
    *     - Log errors
    *     - Redirect to 500 page
    */
-  const context = await handler.query(fetchRequest) as StaticHandlerContext;
+  const context = await handler.query(fetchRequest);
+
+  const contextIsResponse = 'status' in context;
+  const isRedirect = contextIsResponse && redirectCodes.includes(context.status);
+  const redirectLocation = isRedirect && context.headers.get('location');
+
+  if (isRedirect && redirectLocation) {
+    res.status(context.status).redirect(redirectLocation);
+    return;
+  }
+
+  if (contextIsResponse) {
+    // Cannot create a static router if handler.query returned a Response object
+    logger.error('[Error]: handler query returned a Response object');
+    res.status(500).redirect('/error');
+    return;
+  }
+
   const router = createStaticRouter(handler.dataRoutes, context);
 
-  const notFound = context.matches.reduce(function notFoundReducer(isFound, match) {
-    if (match.route.path === notFoundPath) {
-      return true;
-    }
-
-    return false || isFound;
-  }, false);
+  const notFound = Boolean(context.matches.find(function find404(match) {
+    return match.route.path === notFoundPath;
+  }));
 
   const { pipe } = renderToPipeableStream(
     <App manifest={manifest}>
@@ -57,7 +70,6 @@ export default async function appHandler(req: Request, res: Response) {
       onShellReady() {
         if (errored) {
           res.statusCode = 500;
-          res.redirect('/error');
         } else if (notFound) {
           res.statusCode = 404;
         } else {

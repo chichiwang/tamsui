@@ -27,10 +27,11 @@ const mockedRes = {
   cookie: jest.fn(),
   redirect: jest.fn(),
   send: jest.fn(),
+  setHeader: jest.fn(),
   socket: {
     on: jest.fn(),
   },
-  setHeader: jest.fn(),
+  status: jest.fn(),
 };
 
 const mockedReq = {
@@ -63,6 +64,7 @@ describe('appHandler', () => {
     createStaticHandler.mockReturnValue(mockedHandler);
     createStaticRouter.mockReturnValue(mockedStaticRouter);
     renderToPipeableStream.mockReturnValue({ pipe: mockPipe });
+    mockedRes.status.mockReturnValue(mockedRes);
   });
 
   beforeEach(() => {
@@ -131,6 +133,115 @@ describe('appHandler', () => {
     expect(JSON.stringify(appComponent)).toEqual(JSON.stringify(expectedComponent));
   });
 
+  describe('context redirects', () => {
+    const redirectLocation = 'Aisle 4';
+    const mockedResponseContext = {
+      headers: {
+        get: jest.fn(() => redirectLocation),
+      },
+    };
+
+    test('does not redirect when context is not a Response object', async () => {
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(0);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(0);
+    });
+
+    test('redirects to header location when status code is 301', async () => {
+      const statusCode = 301;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(statusCode);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith(redirectLocation);
+    });
+
+    test('redirects to header location when status code is 302', async () => {
+      const statusCode = 302;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(statusCode);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith(redirectLocation);
+    });
+
+    test('redirects to header location when status code is 303', async () => {
+      const statusCode = 303;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(statusCode);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith(redirectLocation);
+    });
+
+    test('redirects to header location when status code is 307', async () => {
+      const statusCode = 307;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(statusCode);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith(redirectLocation);
+    });
+
+    test('redirects to header location when status code is 308', async () => {
+      const statusCode = 308;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(mockedRes.status).toHaveBeenCalledTimes(1);
+      expect(mockedRes.status).toHaveBeenCalledWith(statusCode);
+      expect(mockedRes.redirect).toHaveBeenCalledTimes(1);
+      expect(mockedRes.redirect).toHaveBeenCalledWith(redirectLocation);
+    });
+
+    test('redirects to error page if context object is Response but not a redirect', async () => {
+      const statusCode = 404;
+      const mockedRedirectContext = Object.assign(mockedResponseContext, {
+        status: statusCode,
+      });
+
+      mockedHandler.query.mockReturnValueOnce(mockedRedirectContext);
+
+      await appHandler(mockedReq, mockedRes);
+
+      expect(logger.error).toHaveBeenCalledWith(expect.stringContaining('[Error]:'));
+    });
+  });
+
   describe('renderToPipeableStream', () => {
     const notFoundMatches = [{
       route: {
@@ -184,17 +295,6 @@ describe('appHandler', () => {
       expect(logger.error).toHaveBeenCalledTimes(1);
       expect(logger.error).toHaveBeenCalledWith('Streaming failure:', streamErr);
       expect(mockedRes.statusCode).toBe(500);
-    });
-
-    test('redirects to /error on stream failure', async () => {
-      await appHandler(mockedReq, mockedRes);
-
-      const streamErr = 'Something catastrophic';
-      const streamConfig = renderToPipeableStream.mock.calls[0][1];
-      streamConfig.onError(streamErr);
-      streamConfig.onShellReady();
-
-      expect(mockedRes.redirect).toHaveBeenCalledWith('/error');
     });
 
     test('sets statusCode to 404 on when path match not found', async () => {
