@@ -37,6 +37,7 @@
 * [Running the Application](#running-the-application)
 * [Project Directories](#project-directories)
 * [Adding an Application Directory](#adding-an-application-directory)
+* [Error Boundary](#error-boundary)
 * [Testing](#testing)
 * [Pull Request Template](#pull-request-template)
 * [Github Workflow](#github-workflow)
@@ -74,6 +75,31 @@ If any directory is removed, or if a new directory needs an alias:
 * The alias should be updated in the [paths configuration](https://www.typescriptlang.org/tsconfig#paths) for TypeScript to avoid type errors.
 * The alias should be updated in the [moduleNameMapper configuration](https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring) in the [Jest configuration](../jest.config.js) to ensure module mocking will work in tests, and so there are no errors in using the alias.
 * The directory should be updated in the `appConfig`·`testMatch` array to ensure that test runner knows which directories to cover.
+
+### Error Boundary
+**Tamsui** implements a basic [React Error Boundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) in [app/ErrorBoundary](../app/ErrorBoundary). This error boundary is configured as the [errorElement](https://reactrouter.com/en/main/route/error-element) in the [dataRoutes](../app/dataRoutes). It is recommended to wrap all root routes in this error boundary. An utility, [withErrorBoundary](../app/dataRoutes/withErrorBoundary.tsx), is provided to more easily (and declaratively) extend routes with this errorElement when extending routes:
+
+```javascript
+// app/dataRoutes/index.ts
+import withErrorBoundary from './withErrorBoundary';
+
+import PageComponent from 'pages/PageComponent';
+
+const dataRoutes = [
+  withErrorBoundary({
+    path: '/path-to-page',
+    Component: PageComponent,
+  }),
+];
+```
+
+On the server, if an error in rendering the application occurs it will redirect the request to `/error`, [configured by default](../server/appHandler.tsx) to the be [application's error page](../pages/ErrorPage).
+
+On the client, an error in a page will render the [ErrorPage component](../pages/ErrorPage) as fallback.
+
+**To change the path to the error page**: change the value of the constant `errorPagePath` in [server/appHandler.tsx](../server/appHandler.tsx). Make sure you define this route in the [app/dataRoutes/index.ts](../app/dataRoutes/index.ts) file.
+
+Alternatively, keep the error page path and just replace the [ErrorPage component](../pages/ErrorPage).
 
 ### Testing
 **Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory and/or contain the extension `.test.js` anywhere within the [project directories](#project-directories).
