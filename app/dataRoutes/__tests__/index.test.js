@@ -2,6 +2,7 @@ import React from 'react';
 
 import Home from 'pages/Home';
 import Counter from 'pages/Counter';
+import ErrorPage from 'pages/ErrorPage';
 import NotFound from 'pages/NotFound';
 
 import dataRoutes from '../index';
@@ -24,11 +25,20 @@ function MockedNotFound() {
   );
 }
 
+function MockedErrorPage() {
+  return (
+    <h1>Error Page</h1>
+  );
+}
+
 jest.mock('pages/Home', function MockHome() {
   return MockedHome;
 });
 jest.mock('pages/Counter', function MockCounter() {
   return MockedCounter;
+});
+jest.mock('pages/ErrorPage', function MockCounter() {
+  return MockedErrorPage;
 });
 jest.mock('pages/NotFound', function MockNotFound() {
   return MockedNotFound;
@@ -43,10 +53,12 @@ function findRouteByPath(routes, path) {
 describe('dataRoutes', () => {
   test('is an array of route objects', () => {
     expect(dataRoutes).toEqual(expect.any(Array));
+    expect(dataRoutes.length).toBe(4);
 
     for (const route of dataRoutes) {
       expect(route).toEqual(expect.objectContaining({
         path: expect.any(String),
+        Component: expect.any(Function),
       }));
     }
   });
@@ -54,6 +66,17 @@ describe('dataRoutes', () => {
   describe('home route "/"', () => {
     const path = '/';
     const homeRoute = findRouteByPath(dataRoutes, path);
+
+    test('is defined', () => {
+      expect(homeRoute).not.toBe(undefined);
+    });
+
+    test('defines an error boundary', () => {
+      expect(homeRoute).toEqual(expect.objectContaining({
+        path,
+        errorElement: <MockedErrorPage />,
+      }));
+    });
 
     test('assigns the Home component', () => {
       expect(homeRoute).toEqual(expect.objectContaining({
@@ -67,6 +90,17 @@ describe('dataRoutes', () => {
     const path = '/counter';
     const counterRoute = findRouteByPath(dataRoutes, path);
 
+    test('is defined', () => {
+      expect(counterRoute).not.toBe(undefined);
+    });
+
+    test('defines an error boundary', () => {
+      expect(counterRoute).toEqual(expect.objectContaining({
+        path,
+        errorElement: <MockedErrorPage />,
+      }));
+    });
+
     test('assigns the Counter component', () => {
       expect(counterRoute).toEqual(expect.objectContaining({
         path,
@@ -75,9 +109,44 @@ describe('dataRoutes', () => {
     });
   });
 
+  describe('error page route "/error"', () => {
+    const path = '/error';
+    const errorRoute = findRouteByPath(dataRoutes, path);
+
+    test('is defined', () => {
+      expect(errorRoute).not.toBe(undefined);
+    });
+
+    test('does not define an error boundary', () => {
+      expect(Object.prototype.hasOwnProperty.call(errorRoute, 'errorElement')).toBe(false);
+    });
+
+    test('assigns the Counter component', () => {
+      expect(errorRoute).toEqual(expect.objectContaining({
+        path,
+        Component: ErrorPage,
+      }));
+    });
+  });
+
   describe('not-found route "*"', () => {
     const path = '*';
     const notFoundRoute = findRouteByPath(dataRoutes, path);
+
+    test('is defined', () => {
+      expect(notFoundRoute).not.toBe(undefined);
+    });
+
+    test('is the last route defined', () => {
+      expect(dataRoutes[dataRoutes.length - 1]).toBe(notFoundRoute);
+    });
+
+    test('defines an error boundary', () => {
+      expect(notFoundRoute).toEqual(expect.objectContaining({
+        path,
+        errorElement: <MockedErrorPage />,
+      }));
+    });
 
     test('assigns the NotFound component', () => {
       expect(notFoundRoute).toEqual(expect.objectContaining({
