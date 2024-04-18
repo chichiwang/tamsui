@@ -19,6 +19,7 @@ import manifest from './manifest';
 
 const handler = createStaticHandler(dataRoutes);
 const redirectCodes = [301, 302, 303, 307, 308];
+const errorPagePath = '/error';
 
 export default async function appHandler(req: Request, res: Response) {
   let errored = false;
@@ -51,7 +52,7 @@ export default async function appHandler(req: Request, res: Response) {
   if (contextIsResponse) {
     // Cannot create a static router if handler.query returned a Response object
     logger.error(new Error('Handler query returned a Response object'));
-    res.status(500).redirect('/error');
+    res.status(500).redirect(errorPagePath);
     return;
   }
 
@@ -82,7 +83,7 @@ export default async function appHandler(req: Request, res: Response) {
       },
       onShellError(err) {
         logger.error(err);
-        res.status(500).redirect('/error');
+        res.status(500).redirect(errorPagePath);
       },
       onError(err) {
         errored = true;
