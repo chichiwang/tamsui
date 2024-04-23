@@ -1,4 +1,11 @@
-# Tamsui
+<div align="center">
+  <img width="200" height="200" alt="Tamsui logo" src="./static/images/logo.webp" /><br/>
+  <h1>Tamsui</h1>
+  <p>
+    Tamsui is an Express/TypeScript/React server-side rendered universal JavaScript application boilerplate.
+  </p>
+</div>
+
 **Tamsui** is a [Node.js](https://nodejs.org/en) boilerplate using [TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/). It provides server-side rendering using an [Express](https://expressjs.com/) webserver for a client-side [React](https://react.dev/) application.
 
 **Tamsui** renders to a React application to a [Node.js stream](https://nodejs.org/api/stream.html) utilizing React 18's [renderToPipeableStream method](https://react.dev/reference/react-dom/server/renderToPipeableStream).

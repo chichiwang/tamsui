@@ -24,6 +24,6 @@ describe('Home Component', () => {
   test('contains the hello text', () => {
     render(<RouterWrappedHome />);
 
-    expect(screen.getByRole('heading')).toHaveTextContent('Hello, React SSR!');
+    expect(screen.getByRole('heading')).toHaveTextContent('Tamsui');
   });
 });
