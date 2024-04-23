@@ -13,6 +13,7 @@
   - [ ] Update `bugs/url` field
   - [ ] Update `homepage` field
 - [ ] [Reset the git remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url) to your new project repository
+- [ ] If using [nvm](https://github.com/nvm-sh/nvm), run `nvm use`, or note the contents of `.nvmrc` to see the version of [Node.js](https://nodejs.org/) this project is built on.
 - [ ] Run `npm install`
 
 ## NPM Scripts
