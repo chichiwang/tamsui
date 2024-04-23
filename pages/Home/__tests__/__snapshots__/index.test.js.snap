@@ -2,10 +2,15 @@
 
 exports[`Home Component matches snapshot 1`] = `
 <main>
+  <img
+    alt="Tamsui logo"
+    className="logo"
+    src="/static/images/logo.webp"
+  />
   <h1
     className="heading"
   >
-    Hello, React SSR!
+    Tamsui
   </h1>
   <a
     href="/counter"
