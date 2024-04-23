@@ -14,6 +14,7 @@ const port: Number = 8080;
 app.use(httpLogger);
 app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
 app.use('/styles', express.static(path.resolve(__dirname, 'styles')));
+app.use('/static', express.static(path.resolve(__dirname, 'static')));
 
 app.get('*', appHandler);
 

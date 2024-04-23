@@ -63,7 +63,7 @@ describe('server', () => {
   });
 
   test('has the expected number of middleware and static asset routes', () => {
-    expect(mockAppUse).toHaveBeenCalledTimes(3);
+    expect(mockAppUse).toHaveBeenCalledTimes(4);
   });
 
   describe('static asset routes', () => {
@@ -81,6 +81,14 @@ describe('server', () => {
       const stylesPath = express.static.mock.calls[1][0];
 
       expect(mockAppUse).toHaveBeenCalledWith('/styles', mockExpressStatic(stylesPath));
+    });
+
+    test('/static directory is served statically', () => {
+      expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/static/));
+
+      const stylesPath = express.static.mock.calls[2][0];
+
+      expect(mockAppUse).toHaveBeenCalledWith('/static', mockExpressStatic(stylesPath));
     });
   });
 
