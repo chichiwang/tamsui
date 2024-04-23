@@ -83,12 +83,12 @@ describe('server', () => {
       expect(mockAppUse).toHaveBeenCalledWith('/styles', mockExpressStatic(stylesPath));
     });
 
-    test('/images directory is served statically', () => {
-      expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/images$/));
+    test('/static directory is served statically', () => {
+      expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/static/));
 
       const stylesPath = express.static.mock.calls[2][0];
 
-      expect(mockAppUse).toHaveBeenCalledWith('/images', mockExpressStatic(stylesPath));
+      expect(mockAppUse).toHaveBeenCalledWith('/static', mockExpressStatic(stylesPath));
     });
   });
 
