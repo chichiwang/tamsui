@@ -40,3 +40,6 @@ Any non-trivial decisions made within this project will be documented. Technical
 
 ## Usage
 Usage documentation is provided in [docs/README.md](docs/README.md).
+
+## License
+[MIT](./LICENSE)
