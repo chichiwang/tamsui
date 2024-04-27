@@ -1,0 +1,9 @@
+@use "app/var.module";
+
+.page {
+  min-height: 100vh;
+}
+
+.content {
+  padding: 0 var.$spacing-unit;
+}

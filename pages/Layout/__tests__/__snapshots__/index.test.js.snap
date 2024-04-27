@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Component - default matches child snapshot 1`] = `
+<section
+  className="page"
+>
+  <main
+    className="content"
+  >
+    <h1>
+      Layout Child Component
+    </h1>
+  </main>
+</section>
+`;
+
+exports[`Layout Component - default matches no-child snapshot 1`] = `
+<section
+  className="page"
+>
+  <main
+    className="content"
+  />
+</section>
+`;

@@ -1,22 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home Component matches snapshot 1`] = `
-<main>
-  <img
-    alt="Tamsui logo"
-    className="logo"
-    src="/static/images/logo.webp"
-  />
-  <h1
-    className="heading"
+<section
+  className="page"
+>
+  <main
+    className="content"
   >
-    Tamsui
-  </h1>
-  <a
-    href="/counter"
-    onClick={[Function]}
-  >
-    React Counter
-  </a>
-</main>
+    <img
+      alt="Tamsui logo"
+      className="logo"
+      src="/static/images/logo.webp"
+    />
+    <h1
+      className="heading"
+    >
+      Tamsui
+    </h1>
+    <a
+      href="/counter"
+      onClick={[Function]}
+    >
+      React Counter
+    </a>
+  </main>
+</section>
 `;
