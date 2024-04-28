@@ -21,6 +21,7 @@
 :global a:hover,
 :global a:focus,
 :global a:visited {
-  color: map.get(var.$colors, "link");
+  color: map.get(var.$colors, "blue");
   text-decoration: none;
+  font-weight: bold;
 }
