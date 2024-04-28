@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "app/var.module";
 
 .page {
@@ -5,5 +6,5 @@
 }
 
 .content {
-  padding: 0 var.$spacing-unit;
+  padding: 0 map.get(var.$content, "padding");
 }

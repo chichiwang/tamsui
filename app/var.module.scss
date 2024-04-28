@@ -8,3 +8,8 @@ $colors: (
 );
 
 $spacing-unit: 1rem;
+
+$content: (
+  "max-width": 1920px,
+  "padding": $spacing-unit,
+);
