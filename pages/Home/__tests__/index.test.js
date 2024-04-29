@@ -21,7 +21,7 @@ describe('Home Component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('contains the hello text', () => {
+  test('contains the project name', () => {
     render(<RouterWrappedHome />);
 
     expect(screen.getByRole('heading')).toHaveTextContent('Tamsui');
