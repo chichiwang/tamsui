@@ -9,4 +9,5 @@
 .content {
   font-size: 1rem;
   max-width: map.get(var.$content, "max-width");
+  padding-top: 5rem;
 }
