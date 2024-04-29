@@ -11,6 +11,7 @@ $section-border-size: 4px;
 .contents {
   display: flex;
   max-width: map.get(var.$content, "max-width");
+  margin: 0 auto;
 }
 
 .segment {
