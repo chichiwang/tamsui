@@ -2,9 +2,11 @@
 @use "app/var.module";
 
 .page {
+  width: 100%;
   min-height: 100vh;
 }
 
 .content {
-  padding: 0 map.get(var.$content, "padding");
+  font-size: 1rem;
+  max-width: map.get(var.$content, "max-width");
 }

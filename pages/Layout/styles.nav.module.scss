@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "app/var.module";
+
+$section-border-size: 4px;
+
+.navbar {
+  width: 100%;
+  font-size: 1.125rem;
+}
+
+.contents {
+  display: flex;
+  max-width: map.get(var.$content, "max-width");
+}
+
+.segment {
+  display: flex;
+  flex-basis: 33%;
+  flex-grow: 1;
+  align-items: center;
+  padding: calc(map.get(var.$content, "padding") / 2) map.get(var.$content, "padding");
+
+  &.home {
+    justify-content: flex-start;
+    border-bottom: $section-border-size solid map.get(var.$colors, "maroon");
+
+    & span {
+      margin: 0 calc(var.$spacing-unit / 2);
+      vertical-align: middle;
+    }
+
+    & .logo {
+      width: auto;
+      height: 35px;
+    }
+  }
+
+  &.pages {
+    justify-content: center;
+    border-bottom: $section-border-size solid map.get(var.$colors, "red");
+  }
+
+  &.social {
+    justify-content: flex-end;
+    border-bottom: $section-border-size solid map.get(var.$colors, "orange");
+
+    & .logo {
+      width: auto;
+      height: 30px;
+    }
+  }
+
+  .menuLink {
+    color: map.get(var.$colors, "black");
+    font-weight: normal;
+  }
+
+  & .logo {
+    width: auto;
+    height: 35px;
+    vertical-align: middle;
+  }
+}
