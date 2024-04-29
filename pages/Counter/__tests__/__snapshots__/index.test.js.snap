@@ -1,15 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Counter Component matches snapshot 1`] = `
-<main>
-  <h1>
-    React Counter
-  </h1>
-  <a
-    href="/"
-    onClick={[Function]}
+<section
+  className="page"
+>
+  <nav
+    className="navbar"
   >
-    Back to home
-  </a>
-</main>
+    <div
+      className="contents"
+    >
+      <div
+        className="segment home"
+      >
+        <a
+          className="menuLink"
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="Tamsui logo"
+            className="logo"
+            src="/static/images/logo.webp"
+          />
+          <span>
+            Tamsui
+          </span>
+        </a>
+      </div>
+      <div
+        className="segment pages"
+      >
+        <a
+          className="menuLink"
+          href="/counter"
+          onClick={[Function]}
+        >
+          Counter
+        </a>
+      </div>
+      <div
+        className="segment social"
+      >
+        <a
+          href="https://github.com/chichiwang/tamsui"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Github logo"
+            className="logo"
+            src="/static/images/github-mark.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main
+    className="content"
+  >
+    <h1>
+      React Counter
+    </h1>
+  </main>
+</section>
 `;

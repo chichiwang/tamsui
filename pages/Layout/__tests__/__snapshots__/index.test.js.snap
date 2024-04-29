@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Component - default matches child snapshot 1`] = `
+<section
+  className="page"
+>
+  <nav
+    className="navbar"
+  >
+    <div
+      className="contents"
+    >
+      <div
+        className="segment home"
+      >
+        <a
+          className="menuLink"
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="Tamsui logo"
+            className="logo"
+            src="/static/images/logo.webp"
+          />
+          <span>
+            Tamsui
+          </span>
+        </a>
+      </div>
+      <div
+        className="segment pages"
+      >
+        <a
+          className="menuLink"
+          href="/counter"
+          onClick={[Function]}
+        >
+          Counter
+        </a>
+      </div>
+      <div
+        className="segment social"
+      >
+        <a
+          href="https://github.com/chichiwang/tamsui"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Github logo"
+            className="logo"
+            src="/static/images/github-mark.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main
+    className="content"
+  >
+    <h1>
+      Layout Child Component
+    </h1>
+  </main>
+</section>
+`;
+
+exports[`Layout Component - default matches no-child snapshot 1`] = `
+<section
+  className="page"
+>
+  <nav
+    className="navbar"
+  >
+    <div
+      className="contents"
+    >
+      <div
+        className="segment home"
+      >
+        <a
+          className="menuLink"
+          href="/"
+          onClick={[Function]}
+        >
+          <img
+            alt="Tamsui logo"
+            className="logo"
+            src="/static/images/logo.webp"
+          />
+          <span>
+            Tamsui
+          </span>
+        </a>
+      </div>
+      <div
+        className="segment pages"
+      >
+        <a
+          className="menuLink"
+          href="/counter"
+          onClick={[Function]}
+        >
+          Counter
+        </a>
+      </div>
+      <div
+        className="segment social"
+      >
+        <a
+          href="https://github.com/chichiwang/tamsui"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img
+            alt="Github logo"
+            className="logo"
+            src="/static/images/github-mark.svg"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+  <main
+    className="content"
+  />
+</section>
+`;

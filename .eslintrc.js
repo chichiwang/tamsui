@@ -15,6 +15,7 @@ module.exports = {
     rules: {
       'filenames/match-regex': 0,
       'filenames/match-exported': 0,
+      'react/prop-types': 0,
     },
   }, {
     files: ['server/**/*.*'],

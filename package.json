@@ -22,6 +22,7 @@
     "start": "run-s build:prod run",
     "test": "jest",
     "test:snapshot": "jest --updateSnapshot",
+    "prewatch": "run-s clean build:static",
     "watch": "webpack --config webpack/config.js --watch | pino-pretty -c -S"
   },
   "repository": {
@@ -82,6 +83,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "express": "^4.19.2",
     "js-cookie": "^3.0.5",
     "pino": "^8.20.0",
