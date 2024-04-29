@@ -1,11 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Layout from 'pages/Layout';
+
 export default function ErrorPage() {
   return (
-    <main>
+    <Layout>
       <h1>An Error Occurred!</h1>
       <Link to="/">Home</Link>
-    </main>
+    </Layout>
   );
 }
