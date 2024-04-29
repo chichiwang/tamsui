@@ -18,6 +18,7 @@ export default function App({ manifest, children }: AppProps): React.ReactElemen
           <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png" />
           <link rel="manifest" href="/static/site.webmanifest" />
+          <meta name="viewport" content="width=device-width" />
         </head>
         <body>
           { children }
