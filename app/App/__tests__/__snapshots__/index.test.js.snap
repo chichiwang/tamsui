@@ -34,6 +34,10 @@ exports[`App Component matches child snapshot 1`] = `
       href="/static/site.webmanifest"
       rel="manifest"
     />
+    <meta
+      content="width=device-width"
+      name="viewport"
+    />
   </head>
   <body>
     <h1>
@@ -76,6 +80,10 @@ exports[`App Component matches no-child snapshot 1`] = `
     <link
       href="/static/site.webmanifest"
       rel="manifest"
+    />
+    <meta
+      content="width=device-width"
+      name="viewport"
     />
   </head>
   <body />
