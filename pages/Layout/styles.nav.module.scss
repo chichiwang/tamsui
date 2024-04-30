@@ -62,3 +62,9 @@ $section-border-size: 4px;
     vertical-align: middle;
   }
 }
+
+@media print {
+  .navbar {
+    display: none;
+  }
+}
