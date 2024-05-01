@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Logo component matches snapshot 1`] = `
+<div
+  className="logoContainer"
+>
+  <div
+    className="outerHex"
+  >
+    <div
+      className="top"
+    />
+    <div
+      className="middle"
+    />
+    <div
+      className="bottom"
+    />
+  </div>
+  <div
+    className="innerHex"
+  >
+    <div
+      className="hexMaroon"
+    >
+      <div
+        className="top"
+      />
+      <div
+        className="bottom"
+      />
+    </div>
+    <div
+      className="spacer small"
+    />
+    <div
+      className="hexRed"
+    />
+    <div
+      className="spacer small"
+    />
+    <div
+      className="hexOrange"
+    />
+    <div
+      className="spacer"
+    />
+    <div
+      className="hexBlue"
+    >
+      <div
+        className="top"
+      />
+      <div
+        className="bottom"
+      />
+    </div>
+  </div>
+</div>
+`;
