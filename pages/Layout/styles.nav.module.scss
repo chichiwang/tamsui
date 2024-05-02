@@ -29,11 +29,6 @@ $section-border-size: 4px;
       margin: 0 calc(var.$spacing-unit / 2);
       vertical-align: middle;
     }
-
-    & .logo {
-      width: auto;
-      height: 35px;
-    }
   }
 
   &.pages {
@@ -57,8 +52,7 @@ $section-border-size: 4px;
   }
 
   & .logo {
-    width: auto;
-    height: 35px;
+    display: inline-block;
     vertical-align: middle;
   }
 }

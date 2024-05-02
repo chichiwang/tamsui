@@ -7,11 +7,12 @@ import Egret from './Egret';
 import styles from './styles.module.scss';
 
 type LogoProps = {
+  className?: string;
   width?: string;
   height?: string;
 };
 
-function Logo({ width, height }: LogoProps) {
+function Logo({ className, width, height }: LogoProps) {
   const [containerWidth, containerHeight] = getDimensions(width, height);
 
   const containerStyles = {
@@ -20,7 +21,7 @@ function Logo({ width, height }: LogoProps) {
   };
 
   return (
-    <div className={styles.logoContainer} style={containerStyles}>
+    <div className={classNames(className, styles.logoContainer)} style={containerStyles}>
       <div className={styles.outerHex}>
         <div className={styles.top} />
         <div className={styles.middle} />
