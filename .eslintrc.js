@@ -56,6 +56,13 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
+    'react/jsx-props-no-spreading': 0,
+    'react/require-default-props': [
+      2,
+      {
+        functions: 'defaultArguments',
+      },
+    ],
     'wrap-iife': [
       'error',
       'inside',
