@@ -1,9 +1,10 @@
 import React from 'react';
 
 type EgretProps = {
+  className?: string;
+  color?: string;
   width?: string;
   height?: string;
-  color?: string;
 };
 
 const defaultSVGProps = {
@@ -11,12 +12,18 @@ const defaultSVGProps = {
   color: '#fff',
 };
 
-function Egret({ width, height, color }: EgretProps) {
+function Egret({
+  className,
+  color,
+  width,
+  height,
+}: EgretProps) {
   const isDimensionsUndefined = width === undefined && height === undefined;
 
   const svgProps = {
     width: isDimensionsUndefined ? defaultSVGProps.width : width,
     height,
+    className,
   };
 
   const pathProps = {

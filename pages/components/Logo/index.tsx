@@ -1,6 +1,8 @@
 import React from 'react';
 import classNames from 'classnames';
 
+import Egret from './Egret';
+
 import styles from './styles.module.scss';
 
 function Logo() {
@@ -26,6 +28,7 @@ function Logo() {
           <div className={styles.bottom} />
         </div>
       </div>
+      <Egret className={styles.egret} height="82%" color="#fff" />
     </div>
   );
 }
