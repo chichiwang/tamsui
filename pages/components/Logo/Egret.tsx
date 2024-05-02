@@ -11,15 +11,7 @@ const defaultSVGProps = {
   color: '#fff',
 };
 
-function Egret({
-  width,
-  height,
-  color,
-}: EgretProps = {
-  width: undefined,
-  height: undefined,
-  color: undefined,
-}) {
+function Egret({ width, height, color }: EgretProps) {
   const isDimensionsUndefined = width === undefined && height === undefined;
 
   const svgProps = {
