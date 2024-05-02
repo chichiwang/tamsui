@@ -59,6 +59,62 @@ exports[`Home Component matches snapshot 1`] = `
   <main
     className="content"
   >
+    <div
+      className="logoContainer"
+    >
+      <div
+        className="outerHex"
+      >
+        <div
+          className="top"
+        />
+        <div
+          className="middle"
+        />
+        <div
+          className="bottom"
+        />
+      </div>
+      <div
+        className="innerHex"
+      >
+        <div
+          className="hexMaroon"
+        >
+          <div
+            className="top"
+          />
+          <div
+            className="bottom"
+          />
+        </div>
+        <div
+          className="spacer small"
+        />
+        <div
+          className="hexRed"
+        />
+        <div
+          className="spacer small"
+        />
+        <div
+          className="hexOrange"
+        />
+        <div
+          className="spacer"
+        />
+        <div
+          className="hexBlue"
+        >
+          <div
+            className="top"
+          />
+          <div
+            className="bottom"
+          />
+        </div>
+      </div>
+    </div>
     <img
       alt="Tamsui logo"
       className="logo"
