@@ -17,25 +17,17 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 .logoContainer {
   position: relative;
   margin: 0 auto;
-  // width: 926px;
-  // height: 1065px;
-  width: 200px;
-  height: 230px;
 }
 
 .outerHex {
   position: absolute;
   top: 0;
   left: 0;
-  // width: 926px;
-  // height: 1065px;
   width: 100%;
   height: 100%;
 
   & .top {
     position: relative;
-    // width: 926px;
-    // height: 280px;
     width: 100%;
     height: 26.29%;
     overflow: hidden;
@@ -65,8 +57,6 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
   }
 
   & .middle {
-    // width: 926px;
-    // height: 517px;
     width: 100%;
     height: 48.54%;
     background-color: map.get(var.$colors, "white");
@@ -74,8 +64,6 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 
   & .bottom {
     position: relative;
-    // width: 926px;
-    // height: 268px;
     width: 100%;
     height: 25.17%;
     overflow: hidden;
@@ -106,8 +94,6 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 }
 
 .innerHex {
-  // width: 890px;
-  // height: 1023px;
   position: relative;
   top: $outer-hex-diff-vertical;
   left: $outer-hex-diff-horizontal;
@@ -117,8 +103,6 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 }
 
 .hexMaroon {
-  // width: 890px;
-  // height: 498px;
   margin: 0 auto;
   width: 100%;
   height: 48.68%;
@@ -161,16 +145,12 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 }
 
 .hexRed {
-  // width: 890px;
-  // height: 43px;
   width: 100%;
   height: 4.2%;
   background-color: map.get(var.$colors, "red");
 }
 
 .hexOrange {
-  // width: 890px;
-  // height: 30px;
   width: 100%;
   height: 2.93%;
   border-bottom-left-radius: 1.5% 40%;
@@ -179,8 +159,6 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
 }
 
 .hexBlue {
-  // width: 890px;
-  // height: 405px;
   width: 100%;
   height: 39.59%;
 

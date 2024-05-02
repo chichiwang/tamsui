@@ -1,13 +1,26 @@
 import React from 'react';
 import classNames from 'classnames';
+import getDimensions from './getDimensions';
 
 import Egret from './Egret';
 
 import styles from './styles.module.scss';
 
-function Logo() {
+type LogoProps = {
+  width?: string;
+  height?: string;
+};
+
+function Logo({ width, height }: LogoProps) {
+  const [containerWidth, containerHeight] = getDimensions(width, height);
+
+  const containerStyles = {
+    width: containerWidth,
+    height: containerHeight,
+  };
+
   return (
-    <div className={styles.logoContainer}>
+    <div className={styles.logoContainer} style={containerStyles}>
       <div className={styles.outerHex}>
         <div className={styles.top} />
         <div className={styles.middle} />

@@ -3,6 +3,12 @@
 exports[`Logo component matches snapshot 1`] = `
 <div
   className="logoContainer"
+  style={
+    {
+      "height": "1065px",
+      "width": "926px",
+    }
+  }
 >
   <div
     className="outerHex"

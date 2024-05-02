@@ -61,6 +61,12 @@ exports[`Home Component matches snapshot 1`] = `
   >
     <div
       className="logoContainer"
+      style={
+        {
+          "height": "230.02px",
+          "width": "200px",
+        }
+      }
     >
       <div
         className="outerHex"
