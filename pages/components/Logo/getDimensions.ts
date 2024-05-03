@@ -1,59 +1,67 @@
 type dimension = string | undefined;
 type dimensions = [string, string];
+type measurementTransform = (m: number) => number;
+type transformApply = (s: string) => string;
 
 export const aspectRatio = 926 / 1065;
 
-function validateMeasurement(str: string | undefined): Boolean {
+function isMeasurementValid(str: string | undefined): Boolean {
   const measurementRegex = /^\d+\.?\d*[a-zA-Z%]+$/;
+  const isStrUndefined = str === undefined;
 
-  if (str === undefined) {
+  if (!isStrUndefined && !measurementRegex.test(str)) {
     return false;
-  }
-
-  if (!measurementRegex.test(str)) {
-    throw new Error(`
-      Value: ${str} is not a valid unit of measurement.
-        Please provide a string of number(s) followed by a unit of measurement (%, px, rem)
-    `);
   }
 
   return true;
 }
 
-function calculateMeasurement(measurement: string, calculate: Function): string {
-  return measurement.replace(/^\d+\.?\d*/, function applyCalculation(numStr) {
-    return `${calculate(Number(numStr))}`;
-  });
+function transformMeasurementWith(measurementTransformer: measurementTransform): transformApply {
+  return function applyTransformerTo(measurement: string): string {
+    return measurement.replace(/^\d+\.?\d*/, function applyCalculation(numStr) {
+      return `${measurementTransformer(Number(numStr))}`;
+    });
+  };
 }
 
-function heightFromWidth(width: number) {
+const getHeightFromWidth = transformMeasurementWith(function widthToHeight(width: number): number {
   return Number((width / aspectRatio).toFixed(2));
-}
+});
 
-function widthFromHeight(height: number) {
+const getWidthFromHeight = transformMeasurementWith(function heightToWidth(height: number): number {
   return Number((height * aspectRatio).toFixed(2));
+});
+
+function throwMeasurementValidation(invalidMeasurement: string) {
+  throw new Error(`
+    Value: ${invalidMeasurement} is not a valid unit of measurement.
+      Please provide a string of number(s) followed by a unit of measurement (%, px, rem)
+  `);
 }
 
 const defaultWidth = '926px';
-const defaultHeight = calculateMeasurement(defaultWidth, heightFromWidth);
+const defaultHeight = getHeightFromWidth(defaultWidth);
 
 function getDimensions(width: dimension, height: dimension): dimensions {
   const isWidthUndefined = width === undefined;
   const isHeightUndefined = height === undefined;
 
-  validateMeasurement(width);
-  validateMeasurement(height);
+  [width, height].forEach(function validateDimension(dim) {
+    if (!isMeasurementValid(dim)) {
+      throwMeasurementValidation(dim as string);
+    }
+  });
 
   if (isWidthUndefined && isHeightUndefined) {
     return [defaultWidth, defaultHeight];
   }
 
   if (isWidthUndefined) {
-    return [calculateMeasurement(height as string, widthFromHeight), height as string];
+    return [getWidthFromHeight(height as string), height as string];
   }
 
   if (isHeightUndefined) {
-    return [width, calculateMeasurement(width, heightFromWidth)];
+    return [width, getHeightFromWidth(width)];
   }
 
   return [width, height];
