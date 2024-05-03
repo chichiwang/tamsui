@@ -15,10 +15,8 @@ exports[`Layout/Nav Component matches snapshot 1`] = `
         href="/"
         onClick={[Function]}
       >
-        <img
-          alt="Tamsui logo"
-          className="logo"
-          src="/static/images/logo.webp"
+        <div
+          data-testid="mock-logo"
         />
         <span>
           Tamsui

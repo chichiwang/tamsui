@@ -6,6 +6,14 @@ import '@testing-library/jest-dom';
 
 import Nav from '../Nav';
 
+jest.mock('pages/components/Logo', function mockedLogo() {
+  return function mockLogo() {
+    return (
+      <div data-testid="mock-logo" />
+    );
+  };
+});
+
 function RouterWrappedNav() {
   return (
     <MemoryRouter>
@@ -22,10 +30,10 @@ describe('Layout/Nav Component', () => {
   });
 
   describe('Logo and link home', () => {
-    test('contains the project logo', () => {
+    test('renders the site logo', () => {
       render(<RouterWrappedNav />);
 
-      expect(screen.getByRole('img', { name: 'Tamsui logo' })).toBeInTheDocument();
+      expect(screen.getByTestId('mock-logo')).toBeInTheDocument();
     });
 
     test('contains the project name', () => {
@@ -37,7 +45,7 @@ describe('Layout/Nav Component', () => {
     test('contains link to root route /', () => {
       render(<RouterWrappedNav />);
 
-      expect(screen.getByRole('link', { name: 'Tamsui logo Tamsui' })).toHaveAttribute('href', '/');
+      expect(screen.getByRole('link', { name: 'Tamsui' })).toHaveAttribute('href', '/');
     });
   });
 

@@ -26,6 +26,9 @@ module.exports = {
     files: ['*.ts', '*.tsx'],
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
+    rules: {
+      '@typescript-eslint/no-unused-vars': 2,
+    },
   }],
   ignorePatterns: ['dist/**/*.*'],
   rules: {
@@ -56,6 +59,8 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     ],
+    'react/jsx-props-no-spreading': 0,
+    'react/require-default-props': 0,
     'wrap-iife': [
       'error',
       'inside',
