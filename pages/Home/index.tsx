@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 export default function Home(): React.ReactElement {
   return (
     <Layout>
-      <Logo width="200px" />
+      <Logo className={styles.logo} width="200px" />
       <h1 className={styles.heading}>Tamsui</h1>
     </Layout>
   );

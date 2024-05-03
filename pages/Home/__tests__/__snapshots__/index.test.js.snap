@@ -130,7 +130,7 @@ exports[`Home Component matches snapshot 1`] = `
     className="content"
   >
     <div
-      className="logoContainer"
+      className="logo logoContainer"
       style={
         {
           "height": "230.02px",
