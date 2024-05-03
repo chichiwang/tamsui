@@ -1,5 +1,5 @@
 <div align="center">
-  <img width="200" height="auto" alt="Tamsui logo" src="./static/images/logo.webp" /><br/>
+  <img width="200" height="auto" alt="Tamsui logo" src="./logo.webp" /><br/>
   <h1>Tamsui</h1>
   <p>
     Tamsui is an Express/TypeScript/React server-side rendered universal JavaScript application boilerplate.
