@@ -12,7 +12,7 @@ export default function App({ manifest, children }: AppProps): React.ReactElemen
     <React.StrictMode>
       <html lang="en">
         <head>
-          <title>Hello, React SSR!</title>
+          <title>Tamsui</title>
           <link rel="stylesheet" type="text/css" href={`/${manifest['app.css']}`} />
           <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicon/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png" />
