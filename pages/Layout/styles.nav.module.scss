@@ -28,6 +28,10 @@ $section-border-size: 4px;
     & span {
       margin: 0 calc(var.$spacing-unit / 2);
       vertical-align: middle;
+
+      @media (max-width: var.$breakpoint-small-max) {
+        display: none;
+      }
     }
   }
 
