@@ -6,7 +6,7 @@ exports[`App Component matches child snapshot 1`] = `
 >
   <head>
     <title>
-      Hello, React SSR!
+      Tamsui
     </title>
     <link
       href="/Root CSS module"
@@ -53,7 +53,7 @@ exports[`App Component matches no-child snapshot 1`] = `
 >
   <head>
     <title>
-      Hello, React SSR!
+      Tamsui
     </title>
     <link
       href="/Root CSS module"
