@@ -1,5 +1,8 @@
 @use "sass:map";
 
+$breakpoint-medium-min: 40rem;
+$breakpoint-small-max: 39.9375rem;
+
 $colors: (
   "black": #000,
   "white": #fff,
