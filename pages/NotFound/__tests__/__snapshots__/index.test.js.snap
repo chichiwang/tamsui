@@ -141,6 +141,13 @@ exports[`NotFound Component matches snapshot 1`] = `
         </a>
       </div>
     </div>
+    <div
+      className="accentBarContainer"
+    >
+      <div
+        className="accentBar slowSlide"
+      />
+    </div>
   </nav>
   <main
     className="content"

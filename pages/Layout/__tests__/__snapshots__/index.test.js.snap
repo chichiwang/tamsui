@@ -141,6 +141,13 @@ exports[`Layout Component - default matches child snapshot 1`] = `
         </a>
       </div>
     </div>
+    <div
+      className="accentBarContainer"
+    >
+      <div
+        className="accentBar slowSlide"
+      />
+    </div>
   </nav>
   <main
     className="content"
@@ -292,6 +299,13 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
           />
         </a>
       </div>
+    </div>
+    <div
+      className="accentBarContainer"
+    >
+      <div
+        className="accentBar slowSlide"
+      />
     </div>
   </nav>
   <main

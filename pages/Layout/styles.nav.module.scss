@@ -1,11 +1,12 @@
 @use "sass:map";
 @use "app/var.module";
 
-$section-border-size: 4px;
+$accent-height: 4px;
 
 .navbar {
   width: 100%;
   font-size: 1.125rem;
+  overflow: hidden;
 }
 
 .contents {
@@ -23,7 +24,6 @@ $section-border-size: 4px;
   &.home {
     flex-grow: 1;
     justify-content: flex-start;
-    border-bottom: $section-border-size solid map.get(var.$colors, "maroon");
 
     & span {
       margin: 0 calc(var.$spacing-unit / 2);
@@ -39,13 +39,11 @@ $section-border-size: 4px;
     flex-grow: 1;
     justify-content: flex-end;
     padding-right: 2rem;
-    border-bottom: $section-border-size solid map.get(var.$colors, "red");
   }
 
   &.social {
     flex-grow: 0;
     justify-content: flex-end;
-    border-bottom: $section-border-size solid map.get(var.$colors, "orange");
 
     & .logo {
       width: auto;
@@ -64,8 +62,68 @@ $section-border-size: 4px;
   }
 }
 
+$accent-background-gradient: linear-gradient(
+  90deg,
+  map.get(var.$colors, 'maroon') 0% 25%,
+  map.get(var.$colors, 'red') 25% 50%,
+  map.get(var.$colors, 'orange') 50% 75%,
+  map.get(var.$colors, 'blue') 75% 100%,
+);
+
+.accentBarContainer {
+  position: relative;
+  width: 180%;
+  height: $accent-height;
+
+  & .accentBar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: $accent-background-gradient;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background: $accent-background-gradient;
+    }
+  }
+}
+
+/**
+ * Print styles
+ */
+
 @media print {
   .navbar {
     display: none;
+  }
+}
+
+/**
+ * Keyframe animations
+ */
+
+$slide-duration: 2400s;
+
+.slowSlide {
+  animation-name: slide-left;
+  animation-duration: $slide-duration;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
   }
 }
