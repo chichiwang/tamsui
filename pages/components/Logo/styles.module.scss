@@ -286,24 +286,48 @@ $outer-hex-diff-vertical: 1.8%; // as a % of the height of the outer container
  * Keyframe animations
  */
 
+$animation-delay: 75ms;
+
 .spin {
-  animation: spin 6s infinite;
+  animation-name: spin;
+  animation-duration: 9000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier(0.35, 0, 0.35, 0.78);
+}
+
+.delay1 {
+  animation-delay: calc($animation-delay * 1);
+}
+
+.delay2 {
+  animation-delay: calc($animation-delay * 2.25);
+}
+
+.delay3 {
+  animation-delay: calc($animation-delay * 3.75);
 }
 
 @keyframes spin {
   0% {
+    opacity: 1;
     transform: rotateY(0deg);
+    filter: grayscale(0);
   }
 
-  20% {
+  94% {
+    opacity: 1;
     transform: rotateY(0deg);
+    filter: grayscale(0);
   }
 
-  60% {
-    transform: rotateY(180deg);
+  97% {
+    opacity: 0.9;
+    filter: grayscale(0.4);
   }
 
   100% {
+    opacity: 1;
     transform: rotateY(360deg);
+    filter: grayscale(0);
   }
 }
