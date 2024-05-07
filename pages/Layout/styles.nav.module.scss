@@ -16,12 +16,12 @@ $section-border-size: 4px;
 
 .segment {
   display: flex;
-  flex-basis: 33%;
-  flex-grow: 1;
+  flex-basis: auto;
   align-items: center;
   padding: calc(map.get(var.$content, "padding") / 2) map.get(var.$content, "padding");
 
   &.home {
+    flex-grow: 1;
     justify-content: flex-start;
     border-bottom: $section-border-size solid map.get(var.$colors, "maroon");
 
@@ -36,11 +36,14 @@ $section-border-size: 4px;
   }
 
   &.pages {
-    justify-content: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 2rem;
     border-bottom: $section-border-size solid map.get(var.$colors, "red");
   }
 
   &.social {
+    flex-grow: 0;
     justify-content: flex-end;
     border-bottom: $section-border-size solid map.get(var.$colors, "orange");
 
