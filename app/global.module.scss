@@ -9,6 +9,9 @@
 :global *:before,
 :global *:after {
   box-sizing: inherit;
+  -webkit-print-color-adjust: exact;
+  color-adjust: exact;
+  print-color-adjust: exact;
 }
 
 :global body {
