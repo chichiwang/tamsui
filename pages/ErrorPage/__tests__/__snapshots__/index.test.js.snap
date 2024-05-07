@@ -44,39 +44,55 @@ exports[`ErrorPage Component matches snapshot 1`] = `
               className="innerHex"
             >
               <div
-                className="hexMaroon"
+                className="hexMaroonContainer"
               >
                 <div
-                  className="top"
-                />
+                  className="hexMaroon"
+                >
+                  <div
+                    className="top"
+                  />
+                  <div
+                    className="bottom"
+                  />
+                </div>
+              </div>
+              <div
+                className="spacer small"
+              />
+              <div
+                className="hexRedContainer"
+              >
                 <div
-                  className="bottom"
+                  className="hexRed"
                 />
               </div>
               <div
                 className="spacer small"
               />
               <div
-                className="hexRed"
-              />
-              <div
-                className="spacer small"
-              />
-              <div
-                className="hexOrange"
-              />
+                className="hexOrangeContainer"
+              >
+                <div
+                  className="hexOrange"
+                />
+              </div>
               <div
                 className="spacer"
               />
               <div
-                className="hexBlue"
+                className="hexBlueContainer"
               >
                 <div
-                  className="top"
-                />
-                <div
-                  className="bottom"
-                />
+                  className="hexBlue"
+                >
+                  <div
+                    className="top"
+                  />
+                  <div
+                    className="bottom"
+                  />
+                </div>
               </div>
             </div>
             <svg
