@@ -27,6 +27,9 @@ function Nav() {
           </a>
         </div>
       </div>
+      <div className={styles.accentBarContainer}>
+        <div className={classNames(styles.accentBar, styles.slowSlide)} />
+      </div>
     </nav>
   );
 }
