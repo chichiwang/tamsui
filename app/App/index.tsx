@@ -1,7 +1,7 @@
 import React from 'react';
-import 'app/global.module.scss';
-
 import { Manifest } from 'app/types';
+
+import 'app/global.module.scss';
 
 type AppProps = React.PropsWithChildren<{
   manifest: Manifest;
