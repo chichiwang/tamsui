@@ -1,15 +1,16 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 import Nav from './Nav';
 
 import styles from './styles.module.scss';
 
-function Layout({ children }: React.PropsWithChildren) {
+function Layout() {
   return (
     <section className={styles.page}>
       <Nav />
       <main className={styles.content}>
-        {children}
+        <Outlet />
       </main>
     </section>
   );
