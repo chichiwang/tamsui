@@ -1,14 +1,11 @@
 import React from 'react';
 
-import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
+import HeroBanner from 'pages/components/HeroBanner';
 
-import styles from './styles.module.scss';
-
-export default function Home(): React.ReactElement {
+function Home(): React.ReactElement {
   return (
-    <>
-      <AnimatedLogo className={styles.logo} width="200px" />
-      <h1 className={styles.heading}>Tamsui</h1>
-    </>
+    <HeroBanner />
   );
 }
+
+export default Home;

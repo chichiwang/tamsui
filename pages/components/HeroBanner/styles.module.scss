@@ -1,0 +1,235 @@
+@use "sass:map";
+@use "app/var.module";
+
+$hero-height: 450px;
+$small-gap-height: 3px;
+$gap-height: 6px;
+
+.heroContainer {
+  position: relative;
+  width: 100%;
+  height: $hero-height;
+  overflow: hidden;
+}
+
+.fieldMaroon,
+.fieldRed,
+.fieldOrange,
+.fieldBlue {
+  position: relative;
+  width: 100%;
+}
+
+.fieldMaroon {
+  height: 287px;
+  background-color: map.get(var.$colors, 'maroon');
+}
+
+.fieldRed {
+  margin-top: $small-gap-height;
+  height: 7.5px;
+  background-color: map.get(var.$colors, 'red');
+}
+
+.fieldOrange {
+  margin-top: $small-gap-height;
+  height: 5px;
+  background-color: map.get(var.$colors, 'orange');
+}
+
+.fieldBlue {
+  position: relative;
+  margin-top: $gap-height;
+  height: 138px;
+  background-color: map.get(var.$colors, 'blue');
+  overflow: hidden;
+
+  .title {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    margin: 0;
+    transform: translate(-50%, 0%);
+    color: map.get(var.$colors, 'blue');
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  .hexRipple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 27px;
+    width: 46px;
+    transform: rotateX(60deg) translate(-50%, 15%);
+    background-color: map.get(var.$colors, 'white');
+    border-radius: 3%;
+    opacity: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: map.get(var.$colors, 'white');
+      border-radius: 3%;
+      height: 100%;
+    }
+
+    &::before {
+      transform: rotate(60deg);
+    }
+
+    &::after {
+      transform: rotate(-60deg);
+    }
+  }
+}
+
+.logoContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  .logo {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .hexBackdrop {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    height: 108px;
+    width: 184px;
+    transform: translate(-50%, -14%);
+    background-color: map.get(var.$colors, 'white');
+    border-radius: 2px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: map.get(var.$colors, 'white');
+      border-radius: 2px;
+      height: 100%;
+    }
+
+    &::before {
+      transform: rotate(60deg);
+    }
+
+    &::after {
+      transform: rotate(-60deg);
+    }
+  }
+}
+
+/**
+ * Keyframe animations
+ */
+$animation-delay: 600ms;
+
+.ripple,
+.expand {
+  animation-iteration-count: infinite;
+  animation-duration: 9000ms;
+}
+
+.hexRipple.ripple {
+  animation-name: ripple;
+  animation-timing-function: ease-out;
+  animation-delay: $animation-delay;
+
+  &.delay1 {
+    animation-delay: calc($animation-delay * 1.625);
+  }
+
+  &.delay2 {
+    animation-delay: calc($animation-delay * 2.125);
+  }
+}
+
+.title.expand {
+  animation-name: text-expand;
+  animation-timing-function: ease-in;
+  animation-delay: $animation-delay;
+}
+
+@keyframes ripple {
+  0% {
+    height: 27px;
+    width: 46px;
+    transform: rotateX(60deg) translate(-50%, 15%);
+    opacity: 0;
+  }
+
+  90% {
+    height: 27px;
+    width: 46px;
+    transform: rotateX(60deg) translate(-50%, 15%);
+    opacity: 0;
+  }
+
+  94% {
+    opacity: 0.15;
+  }
+
+  99% {
+    opacity: 0;
+  }
+
+  100% {
+    height: 108px;
+    width: 184px;
+    transform: rotateX(60deg) translate(-50%, -70%);
+    opacity: 0;
+  }
+}
+
+@keyframes text-expand {
+  0% {
+    padding-left: 0.75rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.75rem;
+  }
+
+  40% {
+    padding-left: 0.75rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.75rem;
+  }
+
+  50% {
+    padding-left: 0rem;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  60% {
+    padding-left: 0rem;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  88% {
+    padding-left: 0rem;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  100% {
+    padding-left: 0.75rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.75rem;
+  }
+}
