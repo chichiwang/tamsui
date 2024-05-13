@@ -65,7 +65,7 @@ function HeroBanner({
         <div className={classNames(styles.hexRipple, styles.ripple)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay1)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay2)} />
-        <h2 className={classNames(styles.title, styles.expand)}>Tamsui</h2>
+        <h2 className={classNames(styles.title, styles.expand)}>淡水</h2>
       </div>
 
       <div className={styles.logoContainer}>
