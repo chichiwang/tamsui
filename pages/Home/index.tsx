@@ -4,7 +4,10 @@ import HeroBanner from 'pages/components/HeroBanner';
 
 function Home(): React.ReactElement {
   return (
-    <HeroBanner />
+    <>
+      <HeroBanner />
+      <h1>Tamsui</h1>
+    </>
   );
 }
 

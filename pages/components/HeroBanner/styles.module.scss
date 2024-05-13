@@ -277,7 +277,7 @@ $gap-height: 6px;
   .title {
     position: absolute;
     left: 50%;
-    bottom: 1.5rem;
+    bottom: 1rem;
     margin: 0;
     transform: translate(-50%, 0%);
     color: map.get(var.$colors, 'blue');
@@ -440,13 +440,13 @@ $animation-delay: 600ms;
   0% {
     padding-left: 0.75rem;
     font-size: 2.5rem;
-    letter-spacing: 0.75rem;
+    letter-spacing: 1rem;
   }
 
   40% {
     padding-left: 0.75rem;
     font-size: 2.5rem;
-    letter-spacing: 0.75rem;
+    letter-spacing: 1rem;
   }
 
   50% {
@@ -470,6 +470,6 @@ $animation-delay: 600ms;
   100% {
     padding-left: 0.75rem;
     font-size: 2.5rem;
-    letter-spacing: 0.75rem;
+    letter-spacing: 1rem;
   }
 }

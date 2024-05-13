@@ -108,7 +108,7 @@ exports[`HeroBanner Component matches snapshot 1`] = `
     <h2
       className="title expand"
     >
-      Tamsui
+      淡水
     </h2>
   </div>
   <div
