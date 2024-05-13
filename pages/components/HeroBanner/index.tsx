@@ -14,19 +14,65 @@ function HeroBanner({
 }: HeroBannerProps) {
   return (
     <div className={classNames(className, styles.heroContainer)}>
-      <div className={styles.fieldMaroon} />
-      <div className={styles.fieldRed} />
-      <div className={styles.fieldOrange} />
+
+      <div className={styles.fieldMaroon}>
+        <div className={styles.scene} />
+      </div>
+
+      <div className={classNames(styles.spacer, styles.small)} />
+
+      <div className={styles.fieldRed}>
+        <div className={styles.scene} />
+      </div>
+
+      <div className={classNames(styles.spacer, styles.small)} />
+
+      <div className={styles.fieldOrange}>
+        <div className={classNames(styles.scene, styles.foreground)}>
+
+          <div className={classNames(styles.cloudBig, styles.offScreen)}>
+            <div className={styles.inside} />
+            <div className={styles.middle} />
+            <div className={styles.outside} />
+          </div>
+
+          <div className={classNames(styles.cloudSmall, styles.offScreen)}>
+            <div className={styles.inside} />
+            <div className={styles.inner} />
+            <div className={styles.outer} />
+            <div className={styles.outside} />
+          </div>
+
+          <div className={styles.cloudBig}>
+            <div className={styles.inside} />
+            <div className={styles.middle} />
+            <div className={styles.outside} />
+          </div>
+
+          <div className={styles.cloudSmall}>
+            <div className={styles.inside} />
+            <div className={styles.inner} />
+            <div className={styles.outer} />
+            <div className={styles.outside} />
+          </div>
+
+        </div>
+      </div>
+
+      <div className={styles.spacer} />
+
       <div className={styles.fieldBlue}>
         <div className={classNames(styles.hexRipple, styles.ripple)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay1)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay2)} />
         <h2 className={classNames(styles.title, styles.expand)}>Tamsui</h2>
       </div>
+
       <div className={styles.logoContainer}>
         <div className={styles.hexBackdrop} />
         <AnimatedLogo className={styles.logo} height="200px" />
       </div>
+
     </div>
   );
 }
