@@ -22,7 +22,24 @@ function HeroBanner({
       <div className={classNames(styles.spacer, styles.small)} />
 
       <div className={styles.fieldRed}>
-        <div className={styles.scene} />
+        <div className={styles.scene}>
+
+          <div className={styles.fiveBuilding}>
+            <div className={styles.base} />
+            <div className={classNames(styles.level, styles.one)} />
+            <div className={classNames(styles.level, styles.two)} />
+            <div className={classNames(styles.level, styles.three)} />
+            <div className={classNames(styles.level, styles.four)} />
+            <div className={classNames(styles.level, styles.five)} />
+            <div className={classNames(styles.level, styles.six)} />
+            <div className={classNames(styles.level, styles.seven)} />
+            <div className={classNames(styles.level, styles.eight)} />
+            <div className={styles.topBase} />
+            <div className={styles.antenna} />
+            <div className={styles.sign} />
+          </div>
+
+        </div>
       </div>
 
       <div className={classNames(styles.spacer, styles.small)} />
@@ -65,7 +82,6 @@ function HeroBanner({
         <div className={classNames(styles.hexRipple, styles.ripple)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay1)} />
         <div className={classNames(styles.hexRipple, styles.ripple, styles.delay2)} />
-        <h2 className={classNames(styles.title, styles.expand)}>淡水</h2>
       </div>
 
       <div className={styles.logoContainer}>
