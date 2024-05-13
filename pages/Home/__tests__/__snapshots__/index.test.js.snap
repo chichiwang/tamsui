@@ -20,7 +20,48 @@ exports[`Home Component matches snapshot 1`] = `
     >
       <div
         className="scene"
-      />
+      >
+        <div
+          className="fiveBuilding"
+        >
+          <div
+            className="base"
+          />
+          <div
+            className="level one"
+          />
+          <div
+            className="level two"
+          />
+          <div
+            className="level three"
+          />
+          <div
+            className="level four"
+          />
+          <div
+            className="level five"
+          />
+          <div
+            className="level six"
+          />
+          <div
+            className="level seven"
+          />
+          <div
+            className="level eight"
+          />
+          <div
+            className="topBase"
+          />
+          <div
+            className="antenna"
+          />
+          <div
+            className="sign"
+          />
+        </div>
+      </div>
     </div>
     <div
       className="spacer small"
@@ -106,11 +147,6 @@ exports[`Home Component matches snapshot 1`] = `
       <div
         className="hexRipple ripple delay2"
       />
-      <h2
-        className="title expand"
-      >
-        淡水
-      </h2>
     </div>
     <div
       className="logoContainer"
