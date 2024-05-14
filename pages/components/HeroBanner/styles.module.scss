@@ -28,7 +28,6 @@ $gap-height: 6px;
     top: 0%;
     left: 50%;
     transform: translate(-50%, 0%);
-    background-color: map.get(var.$colors, 'black');
   }
 }
 
@@ -238,6 +237,128 @@ $gap-height: 6px;
         }
       }
     }
+
+    .cappedBldg {
+      position: absolute;
+      bottom: 0;
+      left: -338px;
+      width: 45px;
+      height: 78px;
+      background-color: map.get(var.$colors, 'red');
+      border-top: $small-gap-height solid map.get(var.$colors, 'white');
+      border-right: $small-gap-height solid map.get(var.$colors, 'white');
+      border-left: $small-gap-height solid map.get(var.$colors, 'white');
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 39px;
+        height: 8px;
+        left: 0px;
+        top: -8px;
+        background-color: map.get(var.$colors, 'red');
+        border-top: $small-gap-height solid map.get(var.$colors, 'white');
+        border-right: $small-gap-height solid map.get(var.$colors, 'white');
+        border-left: $small-gap-height solid map.get(var.$colors, 'white');
+      }
+
+      &.bldg01 {
+        left: -582px;
+        width: 60px;
+        height: 52px;
+
+        &::before {
+          height: 12px;
+          left: -3px;
+          top: -12px;
+        }
+      }
+
+      &.bldg02 {
+        left: -259px;
+        width: 42px;
+        height: 64px;
+
+        &::before {
+          width: 34px;
+          height: 22px;
+          left: 5px;
+          top: -22px;
+        }
+      }
+    }
+
+    .flatBldg {
+      position: absolute;
+      bottom: 0;
+      left: -291px;
+      width: 30px;
+      height: 50px;
+      background-color: map.get(var.$colors, 'red');
+      border-top: $small-gap-height solid map.get(var.$colors, 'white');
+      border-right: $small-gap-height solid map.get(var.$colors, 'white');
+      border-left: $small-gap-height solid map.get(var.$colors, 'white');
+
+      &.bldg01 {
+        left: -518px;
+        width: 32px;
+        height: 72px;
+      }
+
+      &.bldg02 {
+        left: -438px;
+        width: 35px;
+        height: 42px;
+      }
+    }
+
+    .domedBldg {
+      position: absolute;
+      bottom: 0;
+      left: -214px;
+      width: 30px;
+      height: 75px;
+      background-color: map.get(var.$colors, 'red');
+      border-top: $small-gap-height solid map.get(var.$colors, 'white');
+      border-right: $small-gap-height solid map.get(var.$colors, 'white');
+      border-left: $small-gap-height solid map.get(var.$colors, 'white');
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -12px;
+        left: 1px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: map.get(var.$colors, 'red');
+        border-top: $small-gap-height solid map.get(var.$colors, 'white');
+        border-right: $small-gap-height solid map.get(var.$colors, 'white');
+        border-left: $small-gap-height solid map.get(var.$colors, 'white');
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: map.get(var.$colors, 'red');
+      }
+
+      &.bldg01 {
+        left: -484px;
+        width: 42px;
+        height: 41px;
+
+        &::before {
+          top: -20px;
+          width: 34px;
+          height: 34px;
+        }
+      }
+    }
   }
 }
 
@@ -256,11 +377,12 @@ $gap-height: 6px;
   }
 
   .scene {
+    // display: none;
     margin-left: 0px;
 
     &.foreground {
       animation-name: foreground-clouds;
-      animation-duration: 45s;
+      animation-duration: 90s;
       animation-iteration-count: infinite;
       animation-timing-function: linear;
     }
