@@ -60,6 +60,30 @@ exports[`HeroBanner Component matches snapshot 1`] = `
           className="sign"
         />
       </div>
+      <div
+        className="cappedBldg"
+      />
+      <div
+        className="cappedBldg bldg01"
+      />
+      <div
+        className="cappedBldg bldg02"
+      />
+      <div
+        className="flatBldg"
+      />
+      <div
+        className="flatBldg bldg01"
+      />
+      <div
+        className="flatBldg bldg02"
+      />
+      <div
+        className="domedBldg"
+      />
+      <div
+        className="domedBldg bldg01"
+      />
     </div>
   </div>
   <div
