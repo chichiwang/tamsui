@@ -1,0 +1,272 @@
+@use "sass:map";
+@use "app/var.module";
+
+$gap-height: 3px;
+
+.field {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background-color: map.get(var.$colors, 'orange');
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: map.get(var.$colors, 'orange');
+  }
+
+  .scene {
+    margin-left: 0px;
+    margin-left: 0px;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    transform: translate(-50%, 0%);
+
+    &.foregroundFloat {
+      animation-name: foreground-clouds;
+      animation-duration: 90s;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+    }
+
+    .cloudBig {
+      position: absolute;
+      left: -900px;
+      bottom: 0;
+      width: 662px;
+      height: 85px;
+
+      &.offScreen {
+        left: -2767px;
+      }
+
+      .inside {
+        position: absolute;
+        left: 350px;
+        bottom: 0;
+        width: 312px;
+        height: 60px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 9%;
+          left: 1%;
+          width: 102%;
+          height: 244%;
+          border-radius: 45% 65%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+      }
+
+      .middle {
+        position: absolute;
+        left: 200px;
+        bottom: 0;
+        width: 250px;
+        height: 85px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          width: 118%;
+          height: 195%;
+          border-radius: 65% 70%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 40%;
+          left: 67%;
+          width: 85%;
+          height: 195%;
+          border-radius: 65% 70%;
+          background-color: map.get(var.$colors, 'orange');
+        }
+      }
+
+      .outside {
+        position: absolute;
+        left: 0px;
+        bottom: 0;
+        width: 250px;
+        height: 75px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          width: 125%;
+          height: 195%;
+          border-radius: 105% 70%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -5%;
+          left: 86%;
+          width: 85%;
+          height: 195%;
+          border-radius: 95% 107%;
+          background-color: map.get(var.$colors, 'orange');
+        }
+      }
+    }
+
+    .cloudSmall {
+      position: absolute;
+      left: 200px;
+      bottom: 0;
+      width: 550px;
+      height: 85px;
+
+      &.offScreen {
+        left: -1667px;
+      }
+
+      .inside {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 312px;
+        height: 28px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          width: 110%;
+          height: 225%;
+          border-radius: 75% 45%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+      }
+
+      .inner {
+        position: absolute;
+        left: 160px;
+        bottom: 0;
+        width: 150px;
+        height: 55px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          width: 118%;
+          height: 195%;
+          border-radius: 65% 70%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 56%;
+          left: -33%;
+          width: 85%;
+          height: 195%;
+          border-radius: 65% 70%;
+          background-color: map.get(var.$colors, 'orange');
+        }
+      }
+
+      .outer {
+        position: absolute;
+        left: 299px;
+        bottom: 0;
+        width: 150px;
+        height: 75px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 0%;
+          width: 110%;
+          height: 225%;
+          border-radius: 65% 55%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 39%;
+          left: -67%;
+          width: 100%;
+          height: 195%;
+          border-radius: 95% 107%;
+          background-color: map.get(var.$colors, 'orange');
+        }
+      }
+
+      .outside {
+        position: absolute;
+        left: 425px;
+        bottom: 0;
+        width: 125px;
+        height: 23px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: -8%;
+          width: 115%;
+          height: 225%;
+          border-radius: 45% 70%;
+          background-color: map.get(var.$colors, 'orange');
+          border: $gap-height solid map.get(var.$colors, 'white');
+        }
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: -90%;
+          left: -48%;
+          width: 75%;
+          height: 250%;
+          border-radius: 95% 107%;
+          background-color: map.get(var.$colors, 'orange');
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Keyframe animations
+ */
+
+@keyframes foreground-clouds {
+  0% {
+    margin-left: 0px;
+  }
+
+  100% {
+    margin-left: 1867px;
+  }
+}

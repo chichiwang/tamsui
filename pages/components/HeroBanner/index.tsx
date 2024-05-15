@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
 
 import styles from './styles.module.scss';
+import orange from './styles.orange.module.scss';
 import blue from './styles.blue.module.scss';
 
 type HeroBannerProps = {
@@ -54,33 +55,33 @@ function HeroBanner({
 
       <div className={classNames(styles.spacer, styles.small)} />
 
-      <div className={styles.fieldOrange}>
-        <div className={classNames(styles.scene, styles.foreground)}>
+      <div className={orange.field}>
+        <div className={classNames(orange.scene, orange.foregroundFloat)}>
 
-          <div className={classNames(styles.cloudBig, styles.offScreen)}>
-            <div className={styles.inside} />
-            <div className={styles.middle} />
-            <div className={styles.outside} />
+          <div className={classNames(orange.cloudBig, orange.offScreen)}>
+            <div className={orange.inside} />
+            <div className={orange.middle} />
+            <div className={orange.outside} />
           </div>
 
-          <div className={classNames(styles.cloudSmall, styles.offScreen)}>
-            <div className={styles.inside} />
-            <div className={styles.inner} />
-            <div className={styles.outer} />
-            <div className={styles.outside} />
+          <div className={classNames(orange.cloudSmall, orange.offScreen)}>
+            <div className={orange.inside} />
+            <div className={orange.inner} />
+            <div className={orange.outer} />
+            <div className={orange.outside} />
           </div>
 
-          <div className={styles.cloudBig}>
-            <div className={styles.inside} />
-            <div className={styles.middle} />
-            <div className={styles.outside} />
+          <div className={orange.cloudBig}>
+            <div className={orange.inside} />
+            <div className={orange.middle} />
+            <div className={orange.outside} />
           </div>
 
-          <div className={styles.cloudSmall}>
-            <div className={styles.inside} />
-            <div className={styles.inner} />
-            <div className={styles.outer} />
-            <div className={styles.outside} />
+          <div className={orange.cloudSmall}>
+            <div className={orange.inside} />
+            <div className={orange.inner} />
+            <div className={orange.outer} />
+            <div className={orange.outside} />
           </div>
 
         </div>
