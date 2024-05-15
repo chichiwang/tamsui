@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
+import SceneOrange from './SceneOrange';
 import SceneBlue from './SceneBlue';
 
 import styles from './styles.module.scss';
 import red from './styles.red.module.scss';
-import orange from './styles.orange.module.scss';
 
 type HeroBannerProps = {
   className?: string;
@@ -55,41 +55,8 @@ function HeroBanner({
       </div>
 
       <div className={classNames(styles.spacer, styles.small)} />
-
-      <div className={orange.field}>
-        <div className={classNames(orange.scene, orange.foregroundFloat)}>
-
-          <div className={classNames(orange.cloudBig, orange.offScreen)}>
-            <div className={orange.inside} />
-            <div className={orange.middle} />
-            <div className={orange.outside} />
-          </div>
-
-          <div className={classNames(orange.cloudSmall, orange.offScreen)}>
-            <div className={orange.inside} />
-            <div className={orange.inner} />
-            <div className={orange.outer} />
-            <div className={orange.outside} />
-          </div>
-
-          <div className={orange.cloudBig}>
-            <div className={orange.inside} />
-            <div className={orange.middle} />
-            <div className={orange.outside} />
-          </div>
-
-          <div className={orange.cloudSmall}>
-            <div className={orange.inside} />
-            <div className={orange.inner} />
-            <div className={orange.outer} />
-            <div className={orange.outside} />
-          </div>
-
-        </div>
-      </div>
-
+      <SceneOrange />
       <div className={styles.spacer} />
-
       <SceneBlue />
 
       <div className={styles.logoContainer}>

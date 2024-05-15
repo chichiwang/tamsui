@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroBanner - SceneOrange matches snapshot 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="scene foregroundFloat"
+  >
+    <div
+      className="cloudBig offScreen"
+    >
+      <div
+        className="inside"
+      />
+      <div
+        className="middle"
+      />
+      <div
+        className="outside"
+      />
+    </div>
+    <div
+      className="cloudSmall offScreen"
+    >
+      <div
+        className="inside"
+      />
+      <div
+        className="inner"
+      />
+      <div
+        className="outer"
+      />
+      <div
+        className="outside"
+      />
+    </div>
+    <div
+      className="cloudBig"
+    >
+      <div
+        className="inside"
+      />
+      <div
+        className="middle"
+      />
+      <div
+        className="outside"
+      />
+    </div>
+    <div
+      className="cloudSmall"
+    >
+      <div
+        className="inside"
+      />
+      <div
+        className="inner"
+      />
+      <div
+        className="outer"
+      />
+      <div
+        className="outside"
+      />
+    </div>
+  </div>
+</div>
+`;
