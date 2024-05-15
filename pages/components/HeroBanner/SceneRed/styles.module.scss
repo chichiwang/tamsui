@@ -28,7 +28,10 @@ $gap-height: 3px;
     left: 50%;
     transform: translate(-50%, 0%);
 
-    .fiveBuilding {
+    /**
+     * Cityscape
+     */
+    .taipei101 {
       position: absolute;
       bottom: 0;
       left: -400px;

@@ -22,7 +22,7 @@ exports[`Home Component matches snapshot 1`] = `
         className="scene"
       >
         <div
-          className="fiveBuilding"
+          className="taipei101"
         >
           <div
             className="base"
