@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
+import SceneMaroon from './SceneMaroon';
 import SceneRed from './SceneRed';
 import SceneOrange from './SceneOrange';
 import SceneBlue from './SceneBlue';
@@ -17,18 +18,13 @@ function HeroBanner({
 }: HeroBannerProps) {
   return (
     <div className={classNames(className, styles.heroContainer)}>
-
-      <div className={styles.fieldMaroon}>
-        <div className={styles.scene} />
-      </div>
-
+      <SceneMaroon />
       <div className={classNames(styles.spacer, styles.small)} />
       <SceneRed />
       <div className={classNames(styles.spacer, styles.small)} />
       <SceneOrange />
       <div className={styles.spacer} />
       <SceneBlue />
-
       <div className={styles.logoContainer}>
         <div className={styles.hexBackdrop} />
         <AnimatedLogo className={styles.logo} height="200px" />

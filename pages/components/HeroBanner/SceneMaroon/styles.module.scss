@@ -1,0 +1,22 @@
+@use "sass:map";
+@use "app/var.module";
+
+$gap-height: 3px;
+
+.field {
+  height: 287px;
+  background-color: map.get(var.$colors, 'maroon');
+  position: relative;
+  width: 100%;
+
+  .scene {
+    margin-left: 0px;
+    position: absolute;
+    width: 10px;
+    height: 100%;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    // background-color: map.get(var.$colors, 'black');
+  }
+}

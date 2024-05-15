@@ -6,7 +6,7 @@ exports[`Home Component matches snapshot 1`] = `
     className="heroContainer"
   >
     <div
-      className="fieldMaroon"
+      className="field"
     >
       <div
         className="scene"
