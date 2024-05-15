@@ -2,11 +2,11 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import '@testing-library/jest-dom';
 
-import HeroBanner from '../index';
+import SceneBlue from '../index';
 
-describe('HeroBanner', () => {
+describe('HeroBanner - SceneBlue', () => {
   test('matches snapshot', () => {
-    const tree = renderer.create(<HeroBanner />).toJSON();
+    const tree = renderer.create(<SceneBlue />).toJSON();
 
     expect(tree).toMatchSnapshot();
   });
