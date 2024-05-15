@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
 
 import styles from './styles.module.scss';
+import blue from './styles.blue.module.scss';
 
 type HeroBannerProps = {
   className?: string;
@@ -87,10 +88,10 @@ function HeroBanner({
 
       <div className={styles.spacer} />
 
-      <div className={styles.fieldBlue}>
-        <div className={classNames(styles.hexRipple, styles.ripple)} />
-        <div className={classNames(styles.hexRipple, styles.ripple, styles.delay1)} />
-        <div className={classNames(styles.hexRipple, styles.ripple, styles.delay2)} />
+      <div className={blue.field}>
+        <div className={classNames(blue.hex, blue.ripple)} />
+        <div className={classNames(blue.hex, blue.ripple, blue.delay1)} />
+        <div className={classNames(blue.hex, blue.ripple, blue.delay2)} />
       </div>
 
       <div className={styles.logoContainer}>

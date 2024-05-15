@@ -159,16 +159,16 @@ exports[`HeroBanner Component matches snapshot 1`] = `
     className="spacer"
   />
   <div
-    className="fieldBlue"
+    className="field"
   >
     <div
-      className="hexRipple ripple"
+      className="hex ripple"
     />
     <div
-      className="hexRipple ripple delay1"
+      className="hex ripple delay1"
     />
     <div
-      className="hexRipple ripple delay2"
+      className="hex ripple delay2"
     />
   </div>
   <div
