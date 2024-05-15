@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroBanner - SceneRed matches snapshot 1`] = `
+<div
+  className="field"
+>
+  <div
+    className="scene"
+  >
+    <div
+      className="fiveBuilding"
+    >
+      <div
+        className="base"
+      />
+      <div
+        className="level one"
+      />
+      <div
+        className="level two"
+      />
+      <div
+        className="level three"
+      />
+      <div
+        className="level four"
+      />
+      <div
+        className="level five"
+      />
+      <div
+        className="level six"
+      />
+      <div
+        className="level seven"
+      />
+      <div
+        className="level eight"
+      />
+      <div
+        className="topBase"
+      />
+      <div
+        className="antenna"
+      />
+      <div
+        className="sign"
+      />
+    </div>
+    <div
+      className="cappedBldg"
+    />
+    <div
+      className="cappedBldg bldg01"
+    />
+    <div
+      className="cappedBldg bldg02"
+    />
+    <div
+      className="flatBldg"
+    />
+    <div
+      className="flatBldg bldg01"
+    />
+    <div
+      className="flatBldg bldg02"
+    />
+    <div
+      className="domedBldg"
+    />
+    <div
+      className="domedBldg bldg01"
+    />
+  </div>
+</div>
+`;
