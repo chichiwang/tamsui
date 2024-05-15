@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
 
 import styles from './styles.module.scss';
+import red from './styles.red.module.scss';
 import orange from './styles.orange.module.scss';
 import blue from './styles.blue.module.scss';
 
@@ -23,32 +24,32 @@ function HeroBanner({
 
       <div className={classNames(styles.spacer, styles.small)} />
 
-      <div className={styles.fieldRed}>
-        <div className={styles.scene}>
+      <div className={red.field}>
+        <div className={red.scene}>
 
-          <div className={styles.fiveBuilding}>
-            <div className={styles.base} />
-            <div className={classNames(styles.level, styles.one)} />
-            <div className={classNames(styles.level, styles.two)} />
-            <div className={classNames(styles.level, styles.three)} />
-            <div className={classNames(styles.level, styles.four)} />
-            <div className={classNames(styles.level, styles.five)} />
-            <div className={classNames(styles.level, styles.six)} />
-            <div className={classNames(styles.level, styles.seven)} />
-            <div className={classNames(styles.level, styles.eight)} />
-            <div className={styles.topBase} />
-            <div className={styles.antenna} />
-            <div className={styles.sign} />
+          <div className={red.fiveBuilding}>
+            <div className={red.base} />
+            <div className={classNames(red.level, red.one)} />
+            <div className={classNames(red.level, red.two)} />
+            <div className={classNames(red.level, red.three)} />
+            <div className={classNames(red.level, red.four)} />
+            <div className={classNames(red.level, red.five)} />
+            <div className={classNames(red.level, red.six)} />
+            <div className={classNames(red.level, red.seven)} />
+            <div className={classNames(red.level, red.eight)} />
+            <div className={red.topBase} />
+            <div className={red.antenna} />
+            <div className={red.sign} />
           </div>
 
-          <div className={styles.cappedBldg} />
-          <div className={classNames(styles.cappedBldg, styles.bldg01)} />
-          <div className={classNames(styles.cappedBldg, styles.bldg02)} />
-          <div className={styles.flatBldg} />
-          <div className={classNames(styles.flatBldg, styles.bldg01)} />
-          <div className={classNames(styles.flatBldg, styles.bldg02)} />
-          <div className={styles.domedBldg} />
-          <div className={classNames(styles.domedBldg, styles.bldg01)} />
+          <div className={red.cappedBldg} />
+          <div className={classNames(red.cappedBldg, red.bldg01)} />
+          <div className={classNames(red.cappedBldg, red.bldg02)} />
+          <div className={red.flatBldg} />
+          <div className={classNames(red.flatBldg, red.bldg01)} />
+          <div className={classNames(red.flatBldg, red.bldg02)} />
+          <div className={red.domedBldg} />
+          <div className={classNames(red.domedBldg, red.bldg01)} />
 
         </div>
       </div>

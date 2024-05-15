@@ -15,7 +15,7 @@ exports[`HeroBanner Component matches snapshot 1`] = `
     className="spacer small"
   />
   <div
-    className="fieldRed"
+    className="field"
   >
     <div
       className="scene"
