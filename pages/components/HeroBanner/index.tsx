@@ -2,11 +2,11 @@ import React from 'react';
 import classNames from 'classnames';
 
 import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
+import SceneBlue from './SceneBlue';
 
 import styles from './styles.module.scss';
 import red from './styles.red.module.scss';
 import orange from './styles.orange.module.scss';
-import blue from './styles.blue.module.scss';
 
 type HeroBannerProps = {
   className?: string;
@@ -90,11 +90,7 @@ function HeroBanner({
 
       <div className={styles.spacer} />
 
-      <div className={blue.field}>
-        <div className={classNames(blue.hex, blue.ripple)} />
-        <div className={classNames(blue.hex, blue.ripple, blue.delay1)} />
-        <div className={classNames(blue.hex, blue.ripple, blue.delay2)} />
-      </div>
+      <SceneBlue />
 
       <div className={styles.logoContainer}>
         <div className={styles.hexBackdrop} />
