@@ -5,7 +5,7 @@ exports[`HeroBanner matches snapshot 1`] = `
   className="heroContainer"
 >
   <div
-    className="fieldMaroon"
+    className="field"
   >
     <div
       className="scene"

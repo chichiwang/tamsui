@@ -12,34 +12,15 @@ $gap-height: 6px;
   overflow: hidden;
 }
 
-.fieldMaroon,
 .spacer {
   position: relative;
   width: 100%;
-
-  & .scene {
-    margin-left: 0px;
-    position: absolute;
-    width: 10px;
-    height: 100%;
-    top: 0%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-  }
-}
-
-.spacer {
   height: $gap-height;
   background-color: map.get(var.$colors, 'white');
 
   &.small {
     height: $small-gap-height;
   }
-}
-
-.fieldMaroon {
-  height: 287px;
-  background-color: map.get(var.$colors, 'maroon');
 }
 
 .logoContainer {
