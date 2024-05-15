@@ -15,7 +15,6 @@ $gap-height: 6px;
 .fieldMaroon,
 .fieldRed,
 .fieldOrange,
-.fieldBlue,
 .spacer {
   position: relative;
   width: 100%;
@@ -580,45 +579,6 @@ $gap-height: 6px;
   }
 }
 
-.fieldBlue {
-  position: relative;
-  height: 138px;
-  background-color: map.get(var.$colors, 'blue');
-  overflow: hidden;
-
-  .hexRipple {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    height: 27px;
-    width: 46px;
-    transform: rotateX(60deg) translate(-50%, 15%);
-    background-color: map.get(var.$colors, 'white');
-    border-radius: 3%;
-    opacity: 0;
-
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: map.get(var.$colors, 'white');
-      border-radius: 3%;
-      height: 100%;
-    }
-
-    &::before {
-      transform: rotate(60deg);
-    }
-
-    &::after {
-      transform: rotate(-60deg);
-    }
-  }
-}
-
 .logoContainer {
   position: absolute;
   top: 0;
@@ -668,26 +628,6 @@ $gap-height: 6px;
 /**
  * Keyframe animations
  */
-$animation-delay: 600ms;
-
-.ripple {
-  animation-iteration-count: infinite;
-  animation-duration: 9000ms;
-}
-
-.hexRipple.ripple {
-  animation-name: ripple;
-  animation-timing-function: ease-out;
-  animation-delay: $animation-delay;
-
-  &.delay1 {
-    animation-delay: calc($animation-delay * 1.625);
-  }
-
-  &.delay2 {
-    animation-delay: calc($animation-delay * 2.125);
-  }
-}
 
 @keyframes foreground-clouds {
   0% {
@@ -696,36 +636,5 @@ $animation-delay: 600ms;
 
   100% {
     margin-left: 1867px;
-  }
-}
-
-@keyframes ripple {
-  0% {
-    height: 27px;
-    width: 46px;
-    transform: rotateX(60deg) translate(-50%, 15%);
-    opacity: 0;
-  }
-
-  90% {
-    height: 27px;
-    width: 46px;
-    transform: rotateX(60deg) translate(-50%, 15%);
-    opacity: 0;
-  }
-
-  94% {
-    opacity: 0.15;
-  }
-
-  99% {
-    opacity: 0;
-  }
-
-  100% {
-    height: 108px;
-    width: 184px;
-    transform: rotateX(60deg) translate(-50%, -70%);
-    opacity: 0;
   }
 }
