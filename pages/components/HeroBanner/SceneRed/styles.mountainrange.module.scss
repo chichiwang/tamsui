@@ -1,0 +1,394 @@
+@use "sass:map";
+@use "app/var.module";
+
+$gap-height: 3px;
+
+.mountainRange {
+  position: absolute;
+  left: 200px;
+  bottom: 0;
+  width: 550px;
+  height: 150px;
+
+  .m01 {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 35px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 13px;
+      left: 7px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(50deg);
+      border-top-left-radius: 20% 25%;
+      background-color: map.get(var.$colors, 'red');
+      border: $gap-height solid map.get(var.$colors, 'white');
+    }
+  }
+  .m02 {
+    position: absolute;
+    left: 35px;
+    bottom: 0;
+    width: 65px;
+    height: 25px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: -16px;
+      left: 0px;
+      width: 100%;
+      height: 220%;
+      transform: rotateZ(-30deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 20% 12%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 11px;
+      left: -17px;
+      width: 50%;
+      height: 50%;
+      transform: rotateZ(50deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top-left-radius: 20% 20%;
+    }
+  }
+  .m03 {
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    width: 95px;
+    height: 55px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 18px;
+      left: -27px;
+      width: 112%;
+      height: 150%;
+      transform: rotateZ(25deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-left: $gap-height solid map.get(var.$colors, 'white');
+      border-top-left-radius: 14% 15%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 5px;
+      left: -22px;
+      width: 29%;
+      height: 99%;
+      transform: rotateZ(25deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top-left-radius: 60% 45%;
+    }
+  }
+  .m04 {
+    position: absolute;
+    left: 120px;
+    bottom: 0;
+    width: 95px;
+    height: 55px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 5px;
+      left: -12px;
+      width: 100%;
+      height: 200%;
+      transform: rotateZ(-45deg);
+      background-color: map.get(var.$colors, 'red');
+      border: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 11% 11%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 32px;
+      left: -35px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(25deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+  .m05 {
+    position: absolute;
+    left: 134px;
+    bottom: 0;
+    width: 95px;
+    height: 55px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 6px;
+      left: -4px;
+      width: 85%;
+      height: 100%;
+      transform: rotateZ(30deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-top-left-radius: 14% 20%;
+    }
+  }
+  .m06 {
+    position: absolute;
+    left: 170px;
+    bottom: 0;
+    width: 72px;
+    height: 100px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 5px;
+      left: 10px;
+      width: 128%;
+      height: 100%;
+      transform: rotateZ(48deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-left: $gap-height solid map.get(var.$colors, 'white');
+      border-top-left-radius: 15% 12%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 51px;
+      left: -23px;
+      width: 50%;
+      height: 50%;
+      transform: rotateZ(30deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+  .m07 {
+    position: absolute;
+    left: 240px;
+    bottom: 0;
+    width: 36px;
+    height: 110px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: -8px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(-52deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-right: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 20% 12%;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 1px;
+      top: -3px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(-45deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top-right-radius: 30% 15%;
+    }
+  }
+  .m08 {
+    position: absolute;
+    left: 215px;
+    bottom: 0;
+    width: 80px;
+    height: 95px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 0px;
+      left: 48px;
+      width: 112%;
+      height: 171%;
+      transform: rotateZ(-55deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-right: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 10% 5%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 10px;
+      left: -9px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(36deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+  .m09 {
+    position: absolute;
+    left: 330px;
+    bottom: 0;
+    width: 80px;
+    height: 40px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 8px;
+      left: 0px;
+      width: 100%;
+      height: 120%;
+      transform: rotateZ(-15deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-right: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 15% 15%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 0px;
+      left: -34px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(34deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+  .m10 {
+    position: absolute;
+    left: 390px;
+    bottom: 0;
+    width: 80px;
+    height: 40px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 11px;
+      left: -5px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(20deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-left: $gap-height solid map.get(var.$colors, 'white');
+      border-top-left-radius: 15% 15%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 7px;
+      left: -24px;
+      width: 50%;
+      height: 100%;
+      transform: rotateZ(-15deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top-right-radius: 15% 15%;
+    }
+  }
+  .m11 {
+    position: absolute;
+    left: 425px;
+    bottom: 0;
+    width: 80px;
+    height: 30px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 8px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      transform: rotateZ(10deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+    }
+  }
+  .m12 {
+    position: absolute;
+    left: 470px;
+    bottom: 0;
+    width: 50px;
+    height: 20px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 150%;
+      transform: rotateZ(-20deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-right: $gap-height solid map.get(var.$colors, 'white');
+      border-top-right-radius: 15% 25%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 3px;
+      left: -6px;
+      width: 50%;
+      height: 100%;
+      transform: rotateZ(10deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+  .m13 {
+    position: absolute;
+    left: 499px;
+    bottom: 0;
+    width: 40px;
+    height: 20px;
+
+    &::before {
+      content: '';
+      position:absolute;
+      top: 0px;
+      left: 0px;
+      width: 120%;
+      height: 150%;
+      transform: rotateZ(22deg);
+      background-color: map.get(var.$colors, 'red');
+      border-top: $gap-height solid map.get(var.$colors, 'white');
+      border-left: $gap-height solid map.get(var.$colors, 'white');
+      border-top-left-radius: 15% 25%;
+    }
+
+    &::after {
+      content: '';
+      position:absolute;
+      top: 0px;
+      left: -6px;
+      width: 50%;
+      height: 100%;
+      transform: rotateZ(-20deg);
+      background-color: map.get(var.$colors, 'red');
+    }
+  }
+}
