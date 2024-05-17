@@ -84,6 +84,49 @@ exports[`HeroBanner matches snapshot 1`] = `
       <div
         className="domedBldg bldg01"
       />
+      <div
+        className="mountainRange"
+      >
+        <div
+          className="m01"
+        />
+        <div
+          className="m02"
+        />
+        <div
+          className="m03"
+        />
+        <div
+          className="m04"
+        />
+        <div
+          className="m05"
+        />
+        <div
+          className="m06"
+        />
+        <div
+          className="m07"
+        />
+        <div
+          className="m08"
+        />
+        <div
+          className="m09"
+        />
+        <div
+          className="m10"
+        />
+        <div
+          className="m11"
+        />
+        <div
+          className="m12"
+        />
+        <div
+          className="m13"
+        />
+      </div>
     </div>
   </div>
   <div
