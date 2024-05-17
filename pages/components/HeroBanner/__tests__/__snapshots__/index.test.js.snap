@@ -21,69 +21,73 @@ exports[`HeroBanner matches snapshot 1`] = `
       className="scene"
     >
       <div
-        className="taipei101"
+        className="cityscape"
       >
         <div
-          className="base"
+          className="cappedBldg bldg01"
         />
         <div
-          className="level one"
+          className="flatBldg bldg01"
         />
         <div
-          className="level two"
+          className="domedBldg bldg01"
         />
         <div
-          className="level three"
+          className="flatBldg bldg02"
         />
         <div
-          className="level four"
+          className="taipei101"
+        >
+          <div
+            className="base"
+          />
+          <div
+            className="level one"
+          />
+          <div
+            className="level two"
+          />
+          <div
+            className="level three"
+          />
+          <div
+            className="level four"
+          />
+          <div
+            className="level five"
+          />
+          <div
+            className="level six"
+          />
+          <div
+            className="level seven"
+          />
+          <div
+            className="level eight"
+          />
+          <div
+            className="topBase"
+          />
+          <div
+            className="antenna"
+          />
+          <div
+            className="sign"
+          />
+        </div>
+        <div
+          className="cappedBldg"
         />
         <div
-          className="level five"
+          className="flatBldg"
         />
         <div
-          className="level six"
+          className="cappedBldg bldg02"
         />
         <div
-          className="level seven"
-        />
-        <div
-          className="level eight"
-        />
-        <div
-          className="topBase"
-        />
-        <div
-          className="antenna"
-        />
-        <div
-          className="sign"
+          className="domedBldg"
         />
       </div>
-      <div
-        className="cappedBldg"
-      />
-      <div
-        className="cappedBldg bldg01"
-      />
-      <div
-        className="cappedBldg bldg02"
-      />
-      <div
-        className="flatBldg"
-      />
-      <div
-        className="flatBldg bldg01"
-      />
-      <div
-        className="flatBldg bldg02"
-      />
-      <div
-        className="domedBldg"
-      />
-      <div
-        className="domedBldg bldg01"
-      />
       <div
         className="mountainRange"
       >
