@@ -61,6 +61,10 @@ $animation-delay: 600ms;
   &.delay2 {
     animation-delay: calc($animation-delay * 2.125);
   }
+
+  @media print {
+    animation: none;
+  }
 }
 
 @keyframes ripple {
