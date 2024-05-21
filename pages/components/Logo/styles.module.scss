@@ -303,6 +303,10 @@ $animation-delay: 75ms;
   animation-duration: 9000ms;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.35, 1.64, 0.41, 0.8);
+
+  @media print {
+    animation: none;
+  }
 }
 
 .delay1 {

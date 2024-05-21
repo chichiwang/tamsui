@@ -246,6 +246,10 @@ $gap-height: 3px;
   animation-duration: 500s;
   animation-name: float-background;
   animation-timing-function: linear;
+
+  @media print {
+    animation: none;
+  }
 }
 
 @keyframes float-background {
