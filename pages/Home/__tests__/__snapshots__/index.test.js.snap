@@ -10,7 +10,124 @@ exports[`Home Component matches snapshot 1`] = `
     >
       <div
         className="scene"
-      />
+      >
+        <div
+          className="cloudscape float"
+        >
+          <div
+            className="container offscreen"
+          >
+            <div
+              className="cloud01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud02"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud01 pos01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud02 pos01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+          </div>
+          <div
+            className="container"
+          >
+            <div
+              className="cloud01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud02"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud01 pos01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+            <div
+              className="cloud02 pos01"
+            >
+              <div
+                className="c01"
+              />
+              <div
+                className="c02"
+              />
+              <div
+                className="c03"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div
       className="spacer small"

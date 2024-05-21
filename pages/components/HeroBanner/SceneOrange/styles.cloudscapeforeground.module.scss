@@ -4,7 +4,6 @@
 $gap-height: 3px;
 
 .cloudscape {
-  // display: none; // For development
   position: absolute;
   top: 0px;
   left: 0px;
@@ -81,8 +80,8 @@ $gap-height: 3px;
       }
 
       &.pos02 {
-        top: 250px;
-        left: 1155px;
+        top: 256px;
+        left: 1255px;
       }
     }
 
@@ -328,7 +327,7 @@ $gap-height: 3px;
 
 .float {
   animation-iteration-count: infinite;
-  animation-duration: 200s;
+  animation-duration: 350s;
   animation-name: float-foreground;
   animation-timing-function: linear;
 }
