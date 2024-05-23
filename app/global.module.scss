@@ -29,6 +29,10 @@
   font-weight: bold;
 }
 
+:global p {
+  font-size: 1.125rem;
+}
+
 @viewport {
   width: device-width;
 }
