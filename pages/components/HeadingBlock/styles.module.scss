@@ -1,0 +1,18 @@
+@use "sass:map";
+@use "app/var.module";
+
+$padding-unit: map.get(var.$content, 'padding');
+
+.headingBlock {
+  margin: 0 auto;
+  padding: calc(2 * $padding-unit) $padding-unit;
+  max-width: map.get(var.$content, 'article-max-width');
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.center {
+  text-align: center;
+}
