@@ -39,76 +39,88 @@ describe('HeadingBlock Component', () => {
   });
 
   describe('heading levels', () => {
-    test('contains a h1 tag with the project name', () => {
+    test('contains a h1 tag', () => {
       const headingText = 'H1 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="1" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
 
-    test('contains a h2 tag with the project name', () => {
+    test('contains a h2', () => {
       const headingText = 'H2 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="2" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
 
-    test('contains a h3 tag with the project name', () => {
+    test('contains a h3', () => {
       const headingText = 'H3 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="3" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 3 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
 
-    test('contains a h4 tag with the project name', () => {
+    test('contains a h4', () => {
       const headingText = 'H4 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="4" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 4 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
 
-    test('contains a h5 tag with the project name', () => {
+    test('contains a h5', () => {
       const headingText = 'H5 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="5" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 5 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
 
-    test('contains a h6 tag with the project name', () => {
+    test('contains a h6', () => {
       const headingText = 'H6 tag contents';
+      const content = 'Block content';
 
       render(
         <HeadingBlock heading={headingText} level="6" center>
-          <p>Block content</p>
+          <p>{content}</p>
         </HeadingBlock>,
       );
 
       expect(screen.getByRole('heading', { level: 6 })).toHaveTextContent(headingText);
+      expect(screen.getByText(content)).toBeInTheDocument();
     });
   });
 });
