@@ -4,8 +4,9 @@ type Manifest = {
   'vendors.js': string;
 };
 
+type HeadingLevel = '1' | '2' | '3' | '4' | '5' | '6';
+
 export {
-  // Remove comment after adding more than one export
-  // eslint-disable-next-line
+  HeadingLevel,
   Manifest,
 };
