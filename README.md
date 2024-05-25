@@ -2,16 +2,16 @@
   <img width="200" height="auto" alt="Tamsui logo" src="./logo.webp" /><br/>
   <h1>Tamsui</h1>
   <p>
-    Tamsui is an Express/TypeScript/React server-side rendered universal JavaScript application boilerplate.
+    Tamsui is an Express / TypeScript / React server-side rendered universal JavaScript application boilerplate.
   </p>
 </div>
 
-**Tamsui** is a [Node.js](https://nodejs.org/en) boilerplate using [TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/). It provides server-side rendering using an [Express](https://expressjs.com/) webserver for a client-side [React](https://react.dev/) application.
+**Tamsui** is a [Node.js](https://nodejs.org/en) boilerplate using [TypeScript](https://www.typescriptlang.org/) and [React](https://react.dev/). This boilerplate provides server-side rendering using an [Express](https://expressjs.com/) webserver for a client-side [React](https://react.dev/) application.
 
 **Tamsui** renders to a React application to a [Node.js stream](https://nodejs.org/api/stream.html) utilizing React 18's [renderToPipeableStream method](https://react.dev/reference/react-dom/server/renderToPipeableStream).
 
 ## Mission Intent
-**Tamsui** is meant to be a baseline boilerplate for future projects. The intent of this repository is to provide a thorough project start utilizing a specific set of tech stack and implemenentation decisions while remaining as simple as possible. This boilerplate will provide a foundation for building out a client with a webserver that acts as a [backend for frontend](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends).
+**Tamsui** is meant to be a baseline boilerplate for starting new projects. The intent of this repository is to provide a thorough project start utilizing a specific set of tech stack and implemenentation decisions while remaining as simple as possible. This boilerplate will provide a foundation for building out a client served by a webserver that acts as a [backend for frontend](https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends).
 
 Documentation for this project will be thorough, test coverage will be complete. To that end unit test coverage requirements are set to 100% to start.
 
