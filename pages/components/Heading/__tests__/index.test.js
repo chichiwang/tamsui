@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
 import Heading from '../index';
@@ -16,10 +16,30 @@ describe('Heading component', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('matches centered snapshot', () => {
+    const tree = renderer.create(
+      <Heading level="6" centered>
+        H6 Heading centered
+      </Heading>,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test('matches className snapshot', () => {
     const tree = renderer.create(
       <Heading level="4" className="foobar">
-        H1 Heading
+        H4 Heading with className
+      </Heading>,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('matches id snapshot', () => {
+    const tree = renderer.create(
+      <Heading id="FooBaz" level="2">
+        H2 Heading with ID
       </Heading>,
     ).toJSON();
 
@@ -109,6 +129,26 @@ describe('Heading component', () => {
       );
 
       expect(screen.getByRole('heading', { level: 6 })).toHaveTextContent(headingText);
+    });
+  });
+
+  describe('with ID', () => {
+    test('displays a link when hovered', async () => {
+      render(
+        <Heading id="Triggered Event" level="3">
+          Heading with ID
+        </Heading>,
+      );
+
+      fireEvent.mouseEnter(screen.getByRole('heading', { level: 3 }));
+      const link = await screen.queryByRole('link');
+
+      expect(link).toBeInTheDocument();
+
+      fireEvent.mouseLeave(screen.getByRole('heading', { level: 3 }));
+      const linkExit = await screen.queryByRole('link');
+
+      expect(linkExit).not.toBeInTheDocument();
     });
   });
 });

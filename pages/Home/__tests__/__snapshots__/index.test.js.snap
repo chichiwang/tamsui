@@ -635,11 +635,19 @@ exports[`Home Component matches snapshot 1`] = `
   <section
     className="headingBlock"
   >
-    <h1
-      className="center"
+    <div
+      className="container center"
     >
-      Tamsui
-    </h1>
+      <div
+        className="wrapper"
+      >
+        <h1
+          className="tag"
+        >
+          Tamsui
+        </h1>
+      </div>
+    </div>
     <article>
       <p
         className="tagline"
@@ -713,11 +721,22 @@ exports[`Home Component matches snapshot 1`] = `
   <section
     className="headingBlock"
   >
-    <h2
-      className=""
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
     >
-      Mission Intent
-    </h2>
+      <div
+        className="wrapper"
+      >
+        <h2
+          className="tag"
+          id="Mission-Intent"
+        >
+          Mission Intent
+        </h2>
+      </div>
+    </div>
     <article>
       <p>
         Tamsui is meant to be a baseline boilerplate for starting new projects. 

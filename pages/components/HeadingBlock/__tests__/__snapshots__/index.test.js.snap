@@ -4,11 +4,19 @@ exports[`HeadingBlock Component matches centered snapshot 1`] = `
 <section
   className="headingBlock"
 >
-  <h1
-    className="center"
+  <div
+    className="container center"
   >
-    Test Heading
-  </h1>
+    <div
+      className="wrapper"
+    >
+      <h1
+        className="tag"
+      >
+        Test Heading
+      </h1>
+    </div>
+  </div>
   <article>
     <p>
       Block content
@@ -21,11 +29,19 @@ exports[`HeadingBlock Component matches uncentered snapshot 1`] = `
 <section
   className="headingBlock"
 >
-  <h1
-    className=""
+  <div
+    className="container"
   >
-    Test Heading
-  </h1>
+    <div
+      className="wrapper"
+    >
+      <h1
+        className="tag"
+      >
+        Test Heading
+      </h1>
+    </div>
+  </div>
   <article>
     <p>
       Block content

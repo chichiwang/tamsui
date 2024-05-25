@@ -41,7 +41,7 @@ function Home(): React.ReactElement {
 
       </HeadingBlock>
 
-      <HeadingBlock level="2" heading="Mission Intent">
+      <HeadingBlock id="Mission-Intent" level="2" heading="Mission Intent">
         <p>
           {`Tamsui is meant to be a baseline boilerplate for starting new projects. 
           The intent of this boilerplate is to provide a thorough project start 
