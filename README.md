@@ -29,10 +29,10 @@ Any non-trivial decisions made within this project will be documented. Technical
 
 **Client**
 * [React](https://react.dev/)
-* [Sass](https://sass-lang.com/)
 
 **Developer Tooling**
 * [TypeScript](https://www.typescriptlang.org/): Strict typing
+* [Sass](https://sass-lang.com/)
 * [Webpack](https://webpack.js.org/): Bundling
 * [Babel](https://babeljs.io/): Transpilation
 * [Jest](https://jestjs.io/): Testing
