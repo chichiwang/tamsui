@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 
 import { HeadingLevel } from 'app/types';
+import LinkIcon from 'pages/components/LinkIcon';
 
 import styles from './styles.module.scss';
 
@@ -34,6 +35,7 @@ function Heading({
       styles.container,
       {
         [styles.center]: center,
+        [styles.hover]: hovered,
       },
     ),
     ...(typeof id === 'undefined' ? {} : {
@@ -59,9 +61,13 @@ function Heading({
           )
         }
         {
-          typeof id === 'undefined' || !hovered
+          typeof id === 'undefined'
             ? null
-            : <a className={styles.link} href={`#${id}`}>🔗</a>
+            : (
+              <a className={styles.link} href={`#${id}`} aria-labelledby={id}>
+                <LinkIcon width="1.75rem" height="1.75rem" />
+              </a>
+            )
         }
       </div>
     </div>

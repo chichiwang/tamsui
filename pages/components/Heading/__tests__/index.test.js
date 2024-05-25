@@ -134,21 +134,19 @@ describe('Heading component', () => {
 
   describe('with ID', () => {
     test('displays a link when hovered', async () => {
-      render(
+      const { container } = render(
         <Heading id="Triggered Event" level="3">
           Heading with ID
         </Heading>,
       );
 
       fireEvent.mouseEnter(screen.getByRole('heading', { level: 3 }));
-      const link = await screen.queryByRole('link');
 
-      expect(link).toBeInTheDocument();
+      expect(container.querySelector('.container').classList).toContain('hover');
 
       fireEvent.mouseLeave(screen.getByRole('heading', { level: 3 }));
-      const linkExit = await screen.queryByRole('link');
 
-      expect(linkExit).not.toBeInTheDocument();
+      expect(container.querySelector('.container').classList).not.toContain('hover');
     });
   });
 });
