@@ -7,19 +7,22 @@ import styles from './styles.module.scss';
 
 interface HeadingBlockProps extends React.PropsWithChildren {
   heading: string,
+  id?: string,
   level: HeadingLevel,
   center?: boolean,
 }
 
 function HeadingBlock({
   heading,
+  id,
   level,
   center = false,
   children,
 }: HeadingBlockProps) {
   const headingProps = {
+    center,
+    id,
     level,
-    ...(center ? { className: styles.center } : {}),
   };
 
   return (

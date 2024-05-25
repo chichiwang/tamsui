@@ -1,17 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Heading component matches className snapshot 1`] = `
-<h4
-  className="foobar"
+exports[`Heading component matches centered snapshot 1`] = `
+<div
+  className="container"
 >
-  H1 Heading
-</h4>
+  <div
+    className="wrapper"
+  >
+    <h6
+      className="tag"
+    >
+      H6 Heading centered
+    </h6>
+  </div>
+</div>
+`;
+
+exports[`Heading component matches className snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="wrapper"
+  >
+    <h4
+      className="tag foobar"
+    >
+      H4 Heading with className
+    </h4>
+  </div>
+</div>
+`;
+
+exports[`Heading component matches id snapshot 1`] = `
+<div
+  className="container"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="wrapper"
+  >
+    <h2
+      className="tag"
+      id="FooBaz"
+    >
+      H2 Heading with ID
+    </h2>
+  </div>
+</div>
 `;
 
 exports[`Heading component matches uncentered snapshot 1`] = `
-<h2
-  className=""
+<div
+  className="container"
 >
-  H2 Heading
-</h2>
+  <div
+    className="wrapper"
+  >
+    <h2
+      className="tag"
+    >
+      H2 Heading
+    </h2>
+  </div>
+</div>
 `;
