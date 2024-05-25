@@ -66,6 +66,24 @@ function Home(): React.ReactElement {
           .
         </p>
       </HeadingBlock>
+
+      <HeadingBlock id="What-Tamsui-Is-Not" level="3" heading="What Tamsui Is Not">
+        <p>
+          {'Tamsui is an '}
+          <a href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" rel="noreferrer" target="_blank">isomorphic JavaScript</a>
+          {' application. The '}
+          <a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
+          {' server that renders the application is intended to serve as a simple '}
+          <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends" rel="noreferrer" target="_blank">backend for frontend</a>
+          , not a full fledged backend for business logic.
+        </p>
+
+        <p>
+          {`Tamsui is meant to be a starting point for building a frontend layer, not an entire business application. 
+            Any backend API for managing business logic should not be built on top of Tamsui, and should exist outside 
+            of any application built on top of this boilerplate.`}
+        </p>
+      </HeadingBlock>
     </>
   );
 }
