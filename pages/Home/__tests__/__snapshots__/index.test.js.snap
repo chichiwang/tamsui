@@ -652,7 +652,7 @@ exports[`Home Component matches snapshot 1`] = `
       <p
         className="tagline"
       >
-        An Express / Typescript / React server-side rendered universal JavaScript application Boilerplate
+        An Express / TypeScript / React server-side rendered universal JavaScript application Boilerplate
       </p>
       <p>
         Tamsui is a 
@@ -884,6 +884,196 @@ exports[`Home Component matches snapshot 1`] = `
             Any backend API for managing business logic should not be built on top of Tamsui, and should exist outside 
             of any application built on top of this boilerplate.
       </p>
+    </article>
+  </section>,
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h2
+          className="tag"
+          id="Tech-Stack"
+        >
+          Tech Stack
+        </h2>
+        <a
+          aria-labelledby="Tech-Stack"
+          className="link"
+          href="#Tech-Stack"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <h3>
+        Server
+      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://nodejs.org/en"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Node.js
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://expressjs.com/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Express
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://react.dev/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://reactrouter.com/en/main/guides/ssr"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React Router
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://getpino.io/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Pino
+          </a>
+        </li>
+      </ul>
+      <h3>
+        Client
+      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://react.dev/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://reactrouter.com/en/main/guides/ssr"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React Router
+          </a>
+        </li>
+      </ul>
+      <h3>
+        Developer Tooling
+      </h3>
+      <ul>
+        <li>
+          <a
+            href="https://www.typescriptlang.org/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            TypeScript
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://sass-lang.com/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Sass
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://webpack.js.org/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Webpack
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://babeljs.io/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Babel
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://jestjs.io/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Jest
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://testing-library.com/docs/react-testing-library/intro/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            React Testing Library
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://eslint.org/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Eslint
+          </a>
+        </li>
+      </ul>
     </article>
   </section>,
 ]

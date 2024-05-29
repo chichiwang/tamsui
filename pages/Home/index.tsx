@@ -13,7 +13,7 @@ function Home(): React.ReactElement {
       <HeadingBlock level="1" heading="Tamsui" center>
 
         <p className={styles.tagline}>
-          An Express / Typescript / React server-side rendered
+          An Express / TypeScript / React server-side rendered
           universal JavaScript application Boilerplate
         </p>
 
@@ -83,6 +83,60 @@ function Home(): React.ReactElement {
             Any backend API for managing business logic should not be built on top of Tamsui, and should exist outside 
             of any application built on top of this boilerplate.`}
         </p>
+      </HeadingBlock>
+
+      <HeadingBlock id="Tech-Stack" level="2" heading="Tech Stack">
+        <h3>Server</h3>
+        <ul>
+          <li>
+            <a href="https://nodejs.org/en" rel="noreferrer" target="_blank">Node.js</a>
+          </li>
+          <li>
+            <a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
+          </li>
+          <li>
+            <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+          </li>
+          <li>
+            <a href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
+          </li>
+          <li>
+            <a href="https://getpino.io/" rel="noreferrer" target="_blank">Pino</a>
+          </li>
+        </ul>
+        <h3>Client</h3>
+        <ul>
+          <li>
+            <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+          </li>
+          <li>
+            <a href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
+          </li>
+        </ul>
+        <h3>Developer Tooling</h3>
+        <ul>
+          <li>
+            <a href="https://www.typescriptlang.org/" rel="noreferrer" target="_blank">TypeScript</a>
+          </li>
+          <li>
+            <a href="https://sass-lang.com/" rel="noreferrer" target="_blank">Sass</a>
+          </li>
+          <li>
+            <a href="https://webpack.js.org/" rel="noreferrer" target="_blank">Webpack</a>
+          </li>
+          <li>
+            <a href="https://babeljs.io/" rel="noreferrer" target="_blank">Babel</a>
+          </li>
+          <li>
+            <a href="https://jestjs.io/" rel="noreferrer" target="_blank">Jest</a>
+          </li>
+          <li>
+            <a href="https://testing-library.com/docs/react-testing-library/intro/" rel="noreferrer" target="_blank">React Testing Library</a>
+          </li>
+          <li>
+            <a href="https://eslint.org/" rel="noreferrer" target="_blank">Eslint</a>
+          </li>
+        </ul>
       </HeadingBlock>
     </>
   );
