@@ -26,17 +26,22 @@ Any non-trivial decisions made within this project will be documented. Technical
 **Server**
 * [Node.js](https://nodejs.org/en)
 * [Express](https://expressjs.com/)
+* [React](https://react.dev/)
+* [React Router](https://reactrouter.com/en/main/guides/ssr)
+* [Pino](https://getpino.io/)
 
 **Client**
 * [React](https://react.dev/)
+* [React Router](https://reactrouter.com/en/main)
 
 **Developer Tooling**
-* [TypeScript](https://www.typescriptlang.org/): Strict typing
+* [TypeScript](https://www.typescriptlang.org/)
 * [Sass](https://sass-lang.com/)
-* [Webpack](https://webpack.js.org/): Bundling
-* [Babel](https://babeljs.io/): Transpilation
-* [Jest](https://jestjs.io/): Testing
-* [ESLint](https://eslint.org/): Linting
+* [Webpack](https://webpack.js.org/)
+* [Babel](https://babeljs.io/)
+* [Jest](https://jestjs.io/)
+* [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+* [ESLint](https://eslint.org/)
 
 ## Usage
 Usage documentation is provided in [docs/README.md](docs/README.md).
