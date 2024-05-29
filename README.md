@@ -22,7 +22,7 @@ Any non-trivial decisions made within this project will be documented. Technical
 
 **Tamsui** is meant to be a starting point for building a frontend layer, not an entire business application. Any backend API for managing business logic should not be built on top of Tamsui, and should exist outside of any application built on top of this boilerplate.
 
-## Technology Stack
+## Tech Stack
 **Server**
 * [Node.js](https://nodejs.org/en)
 * [Express](https://expressjs.com/)
