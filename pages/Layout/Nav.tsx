@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import Logo from 'pages/components/Logo';
+import ExternalLink from 'pages/components/ExternalLink';
 
 import styles from './styles.nav.module.scss';
 
@@ -22,9 +23,9 @@ function Nav() {
           </Link>
         </div>
         <div className={classNames(styles.segment, styles.social)}>
-          <a href="https://github.com/chichiwang/tamsui" rel="noreferrer" target="_blank">
+          <ExternalLink href="https://github.com/chichiwang/tamsui">
             <img alt="Github logo" className={styles.logo} src="/static/images/github-mark.svg" />
-          </a>
+          </ExternalLink>
         </div>
       </div>
       <div className={styles.accentBarContainer}>
