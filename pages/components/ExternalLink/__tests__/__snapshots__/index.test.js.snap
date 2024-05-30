@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExternalLink Component className snapshot 1`] = `
+<a
+  className="color-orange dotted-underline"
+  href="https://developer.mozilla.org/"
+  rel="noreferrer"
+  target="_blank"
+>
+  <b>
+    Developer Documentation
+  </b>
+</a>
+`;
+
+exports[`ExternalLink Component matches snapshot 1`] = `
+<a
+  href="https://www.github.com"
+  rel="noreferrer"
+  target="_blank"
+>
+  Repository
+</a>
+`;
