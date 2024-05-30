@@ -774,7 +774,7 @@ exports[`Home Component matches snapshot 1`] = `
         <a
           href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends"
           rel="noreferrer"
-          target="blank"
+          target="_blank"
         >
           backend for frontend
         </a>
