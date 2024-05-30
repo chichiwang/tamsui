@@ -17,7 +17,6 @@ function TaipeiBuilding() {
       <div className={classNames(styles.level, styles.eight)} />
       <div className={styles.topBase} />
       <div className={styles.antenna} />
-      <div className={styles.sign} />
     </div>
   );
 }

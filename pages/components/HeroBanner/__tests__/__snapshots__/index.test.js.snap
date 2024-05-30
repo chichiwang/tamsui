@@ -188,9 +188,6 @@ exports[`HeroBanner matches snapshot 1`] = `
           <div
             className="antenna"
           />
-          <div
-            className="sign"
-          />
         </div>
         <div
           className="cappedBldg"
