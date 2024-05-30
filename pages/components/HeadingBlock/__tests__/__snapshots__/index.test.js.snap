@@ -25,6 +25,31 @@ exports[`HeadingBlock Component matches centered snapshot 1`] = `
 </section>
 `;
 
+exports[`HeadingBlock Component matches className snapshot 1`] = `
+<section
+  className="margin-top-large headingBlock"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="wrapper"
+    >
+      <h3
+        className="tag"
+      >
+        Test Heading
+      </h3>
+    </div>
+  </div>
+  <article>
+    <p>
+      Block content
+    </p>
+  </article>
+</section>
+`;
+
 exports[`HeadingBlock Component matches uncentered snapshot 1`] = `
 <section
   className="headingBlock"

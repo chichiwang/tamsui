@@ -52,3 +52,9 @@ $stackContainer-breakpoint-medium-max: 46.8125rem;
     }
   }
 }
+
+.printPageBreak {
+  @media print {
+    margin-top: calc($content-padding * 8);
+  }
+}

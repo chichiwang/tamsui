@@ -26,6 +26,16 @@ describe('HeadingBlock Component', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('matches className snapshot', () => {
+    const tree = renderer.create(
+      <HeadingBlock className="margin-top-large" heading="Test Heading" level="3">
+        <p>Block content</p>
+      </HeadingBlock>,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test('renders child components', () => {
     const childText = 'Paragraph Contents';
 
