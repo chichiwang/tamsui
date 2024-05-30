@@ -84,7 +84,7 @@ function Home(): React.ReactElement {
         </p>
       </HeadingBlock>
 
-      <HeadingBlock id="Tech-Stack" level="2" heading="Tech Stack">
+      <HeadingBlock className={styles.printPageBreak} id="Tech-Stack" level="2" heading="Tech Stack">
         <div className={styles.fullStackContainer}>
           <div className={styles.stackContainer}>
             <div className={styles.stack}>

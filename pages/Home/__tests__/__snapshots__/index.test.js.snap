@@ -884,7 +884,7 @@ exports[`Home Component matches snapshot 1`] = `
     </article>
   </section>,
   <section
-    className="headingBlock"
+    className="printPageBreak headingBlock"
   >
     <div
       className="container"

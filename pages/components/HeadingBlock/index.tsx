@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from 'classnames';
 
 import { HeadingLevel } from 'app/types';
 import Heading from 'pages/components/Heading';
@@ -10,6 +11,7 @@ interface HeadingBlockProps extends React.PropsWithChildren {
   id?: string,
   level: HeadingLevel,
   center?: boolean,
+  className?: string,
 }
 
 function HeadingBlock({
@@ -18,6 +20,7 @@ function HeadingBlock({
   level,
   center = false,
   children,
+  className,
 }: HeadingBlockProps) {
   const headingProps = {
     center,
@@ -26,7 +29,7 @@ function HeadingBlock({
   };
 
   return (
-    <section className={styles.headingBlock}>
+    <section className={classNames(className, styles.headingBlock)}>
       <Heading {...headingProps}>
         {heading}
       </Heading>
