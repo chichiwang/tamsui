@@ -1,6 +1,59 @@
+@use "sass:map";
+@use "app/var.module";
+
+$content-padding: map.get(var.$content, 'padding');
+
 .tagline {
   margin-bottom: 4rem;
   text-align: center;
   font-size: 1.25rem;
   font-style: italic;
+}
+
+.fullStackContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+
+  .stackContainer {
+    padding: $content-padding;
+    width: 33.33%;
+    flex-grow: 1;
+
+    .stack {
+      width: 100%;
+
+      .title {
+        margin: 0;
+        padding: calc($content-padding / 2) $content-padding;
+      }
+
+      .link {
+        display: block;
+        position: relative;
+        padding: calc($content-padding / 2) $content-padding;
+
+        &::before {
+          display: none;
+          content: '▸';
+          position: absolute;
+          top: calc($content-padding * 0.4);
+          left: 0;
+        }
+
+        &:hover {
+          &::before {
+            display: block;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: var.$breakpoint-small-max) {
+      width: 100%;
+    }
+  }
 }

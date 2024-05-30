@@ -86,57 +86,37 @@ function Home(): React.ReactElement {
       </HeadingBlock>
 
       <HeadingBlock id="Tech-Stack" level="2" heading="Tech Stack">
-        <h3>Server</h3>
-        <ul>
-          <li>
-            <a href="https://nodejs.org/en" rel="noreferrer" target="_blank">Node.js</a>
-          </li>
-          <li>
-            <a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
-          </li>
-          <li>
-            <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
-          </li>
-          <li>
-            <a href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
-          </li>
-          <li>
-            <a href="https://getpino.io/" rel="noreferrer" target="_blank">Pino</a>
-          </li>
-        </ul>
-        <h3>Client</h3>
-        <ul>
-          <li>
-            <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
-          </li>
-          <li>
-            <a href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
-          </li>
-        </ul>
-        <h3>Developer Tooling</h3>
-        <ul>
-          <li>
-            <a href="https://www.typescriptlang.org/" rel="noreferrer" target="_blank">TypeScript</a>
-          </li>
-          <li>
-            <a href="https://sass-lang.com/" rel="noreferrer" target="_blank">Sass</a>
-          </li>
-          <li>
-            <a href="https://webpack.js.org/" rel="noreferrer" target="_blank">Webpack</a>
-          </li>
-          <li>
-            <a href="https://babeljs.io/" rel="noreferrer" target="_blank">Babel</a>
-          </li>
-          <li>
-            <a href="https://jestjs.io/" rel="noreferrer" target="_blank">Jest</a>
-          </li>
-          <li>
-            <a href="https://testing-library.com/docs/react-testing-library/intro/" rel="noreferrer" target="_blank">React Testing Library</a>
-          </li>
-          <li>
-            <a href="https://eslint.org/" rel="noreferrer" target="_blank">Eslint</a>
-          </li>
-        </ul>
+        <div className={styles.fullStackContainer}>
+          <div className={styles.stackContainer}>
+            <div className={styles.stack}>
+              <h3 className={styles.title}>Server</h3>
+              <a className={styles.link} href="https://nodejs.org/en" rel="noreferrer" target="_blank">Node.js</a>
+              <a className={styles.link} href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
+              <a className={styles.link} href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+              <a className={styles.link} href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
+              <a className={styles.link} href="https://getpino.io/" rel="noreferrer" target="_blank">Pino</a>
+            </div>
+          </div>
+          <div className={styles.stackContainer}>
+            <div className={styles.stack}>
+              <h3 className={styles.title}>Client</h3>
+              <a className={styles.link} href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+              <a className={styles.link} href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
+            </div>
+          </div>
+          <div className={styles.stackContainer}>
+            <div className={styles.stack}>
+              <h3 className={styles.title}>Developer Tooling</h3>
+              <a className={styles.link} href="https://www.typescriptlang.org/" rel="noreferrer" target="_blank">TypeScript</a>
+              <a className={styles.link} href="https://sass-lang.com/" rel="noreferrer" target="_blank">Sass</a>
+              <a className={styles.link} href="https://webpack.js.org/" rel="noreferrer" target="_blank">Webpack</a>
+              <a className={styles.link} href="https://babeljs.io/" rel="noreferrer" target="_blank">Babel</a>
+              <a className={styles.link} href="https://jestjs.io/" rel="noreferrer" target="_blank">Jest</a>
+              <a className={styles.link} href="https://testing-library.com/docs/react-testing-library/intro/" rel="noreferrer" target="_blank">React Testing Library</a>
+              <a className={styles.link} href="https://eslint.org/" rel="noreferrer" target="_blank">Eslint</a>
+            </div>
+          </div>
+        </div>
       </HeadingBlock>
     </>
   );
