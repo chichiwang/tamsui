@@ -89,30 +89,58 @@ function Home(): React.ReactElement {
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Server</h3>
-              <ExternalLink className={styles.link} href="https://nodejs.org/en">Node.js</ExternalLink>
-              <ExternalLink className={styles.link} href="https://expressjs.com/">Express</ExternalLink>
-              <ExternalLink className={styles.link} href="https://react.dev/">React</ExternalLink>
-              <ExternalLink className={styles.link} href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
-              <ExternalLink className={styles.link} href="https://getpino.io/">Pino</ExternalLink>
+              <div className={styles.link}>
+                <ExternalLink href="https://nodejs.org/en">Node.js</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://expressjs.com/">Express</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://react.dev/">React</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://getpino.io/">Pino</ExternalLink>
+              </div>
             </div>
           </div>
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Client</h3>
-              <ExternalLink className={styles.link} href="https://react.dev/">React</ExternalLink>
-              <ExternalLink className={styles.link} href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
+              <div className={styles.link}>
+                <ExternalLink href="https://react.dev/">React</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
+              </div>
             </div>
           </div>
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Developer Tooling</h3>
-              <ExternalLink className={styles.link} href="https://www.typescriptlang.org/">TypeScript</ExternalLink>
-              <ExternalLink className={styles.link} href="https://sass-lang.com/">Sass</ExternalLink>
-              <ExternalLink className={styles.link} href="https://webpack.js.org/">Webpack</ExternalLink>
-              <ExternalLink className={styles.link} href="https://babeljs.io/">Babel</ExternalLink>
-              <ExternalLink className={styles.link} href="https://jestjs.io/">Jest</ExternalLink>
-              <ExternalLink className={styles.link} href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</ExternalLink>
-              <ExternalLink className={styles.link} href="https://eslint.org/">Eslint</ExternalLink>
+              <div className={styles.link}>
+                <ExternalLink href="https://www.typescriptlang.org/">TypeScript</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://sass-lang.com/">Sass</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://webpack.js.org/">Webpack</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://babeljs.io/">Babel</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://jestjs.io/">Jest</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</ExternalLink>
+              </div>
+              <div className={styles.link}>
+                <ExternalLink href="https://eslint.org/">Eslint</ExternalLink>
+              </div>
             </div>
           </div>
         </div>
