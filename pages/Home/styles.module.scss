@@ -3,6 +3,10 @@
 
 $content-padding: map.get(var.$content, 'padding');
 
+$stackContainer-breakpoint-small-max: 29.3125rem;
+$stackContainer-breakpoint-medium-min: 29.375rem;
+$stackContainer-breakpoint-medium-max: 46.8125rem;
+
 .tagline {
   margin-bottom: 4rem;
   text-align: center;
@@ -27,33 +31,24 @@ $content-padding: map.get(var.$content, 'padding');
       width: 100%;
 
       .title {
-        margin: 0;
+        margin: 0 0 $content-padding 0;
         padding: calc($content-padding / 2) $content-padding;
+        font-size: 1.25rem;
       }
 
       .link {
-        display: block;
         position: relative;
         padding: calc($content-padding / 2) $content-padding;
-
-        &::before {
-          display: none;
-          content: '▸';
-          position: absolute;
-          top: calc($content-padding * 0.4);
-          left: 0;
-        }
-
-        &:hover {
-          &::before {
-            display: block;
-          }
-        }
+        font-size: 1.17rem;
       }
     }
 
-    @media screen and (max-width: var.$breakpoint-small-max) {
+    @media screen and (max-width: $stackContainer-breakpoint-small-max) {
       width: 100%;
+    }
+
+    @media screen and (min-width: $stackContainer-breakpoint-medium-min) and (max-width: $stackContainer-breakpoint-medium-max) {
+      width: 50%;
     }
   }
 }

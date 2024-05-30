@@ -944,46 +944,61 @@ exports[`Home Component matches snapshot 1`] = `
             >
               Server
             </h3>
-            <a
+            <div
               className="link"
-              href="https://nodejs.org/en"
-              rel="noreferrer"
-              target="_blank"
             >
-              Node.js
-            </a>
-            <a
+              <a
+                href="https://nodejs.org/en"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Node.js
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://expressjs.com/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Express
-            </a>
-            <a
+              <a
+                href="https://expressjs.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Express
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://react.dev/"
-              rel="noreferrer"
-              target="_blank"
             >
-              React
-            </a>
-            <a
+              <a
+                href="https://react.dev/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://reactrouter.com/en/main/guides/ssr"
-              rel="noreferrer"
-              target="_blank"
             >
-              React Router
-            </a>
-            <a
+              <a
+                href="https://reactrouter.com/en/main/guides/ssr"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React Router
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://getpino.io/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Pino
-            </a>
+              <a
+                href="https://getpino.io/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Pino
+              </a>
+            </div>
           </div>
         </div>
         <div
@@ -997,22 +1012,28 @@ exports[`Home Component matches snapshot 1`] = `
             >
               Client
             </h3>
-            <a
+            <div
               className="link"
-              href="https://react.dev/"
-              rel="noreferrer"
-              target="_blank"
             >
-              React
-            </a>
-            <a
+              <a
+                href="https://react.dev/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://reactrouter.com/en/main/guides/ssr"
-              rel="noreferrer"
-              target="_blank"
             >
-              React Router
-            </a>
+              <a
+                href="https://reactrouter.com/en/main/guides/ssr"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React Router
+              </a>
+            </div>
           </div>
         </div>
         <div
@@ -1026,62 +1047,83 @@ exports[`Home Component matches snapshot 1`] = `
             >
               Developer Tooling
             </h3>
-            <a
+            <div
               className="link"
-              href="https://www.typescriptlang.org/"
-              rel="noreferrer"
-              target="_blank"
             >
-              TypeScript
-            </a>
-            <a
+              <a
+                href="https://www.typescriptlang.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                TypeScript
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://sass-lang.com/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Sass
-            </a>
-            <a
+              <a
+                href="https://sass-lang.com/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Sass
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://webpack.js.org/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Webpack
-            </a>
-            <a
+              <a
+                href="https://webpack.js.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Webpack
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://babeljs.io/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Babel
-            </a>
-            <a
+              <a
+                href="https://babeljs.io/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Babel
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://jestjs.io/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Jest
-            </a>
-            <a
+              <a
+                href="https://jestjs.io/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Jest
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://testing-library.com/docs/react-testing-library/intro/"
-              rel="noreferrer"
-              target="_blank"
             >
-              React Testing Library
-            </a>
-            <a
+              <a
+                href="https://testing-library.com/docs/react-testing-library/intro/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                React Testing Library
+              </a>
+            </div>
+            <div
               className="link"
-              href="https://eslint.org/"
-              rel="noreferrer"
-              target="_blank"
             >
-              Eslint
-            </a>
+              <a
+                href="https://eslint.org/"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Eslint
+              </a>
+            </div>
           </div>
         </div>
       </div>
