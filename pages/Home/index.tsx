@@ -2,6 +2,7 @@ import React from 'react';
 
 import HeroBanner from 'pages/components/HeroBanner';
 import HeadingBlock from 'pages/components/HeadingBlock';
+import ExternalLink from 'pages/components/ExternalLink';
 
 import styles from './styles.module.scss';
 
@@ -11,7 +12,6 @@ function Home(): React.ReactElement {
       <HeroBanner />
 
       <HeadingBlock level="1" heading="Tamsui" center>
-
         <p className={styles.tagline}>
           An Express / TypeScript / React server-side rendered
           universal JavaScript application Boilerplate
@@ -19,26 +19,25 @@ function Home(): React.ReactElement {
 
         <p>
           {'Tamsui is a '}
-          <a href="https://nodejs.org/en" rel="noreferrer" target="_blank">Node.js</a>
+          <ExternalLink href="https://nodejs.org/en">Node.js</ExternalLink>
           {' boilerplate using '}
-          <a href="https://www.typescriptlang.org/" rel="noreferrer" target="_blank">TypeScript</a>
+          <ExternalLink href="https://www.typescriptlang.org/">TypeScript</ExternalLink>
           {' and '}
-          <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+          <ExternalLink href="https://react.dev/">React</ExternalLink>
           {'. It provides server-side rendering using an '}
-          <a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
+          <ExternalLink href="https://expressjs.com/">Express</ExternalLink>
           {' webserver for a client-side '}
-          <a href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
+          <ExternalLink href="https://react.dev/">React</ExternalLink>
           {' application.'}
         </p>
 
         <p>
           {'Tamsui renders a React application to a '}
-          <a href="https://nodejs.org/api/stream.html" rel="noreferrer" target="_blank">Node.js stream</a>
+          <ExternalLink href="https://nodejs.org/api/stream.html">Node.js stream</ExternalLink>
           {' utilizing React 18\'s '}
-          <a href="https://react.dev/reference/react-dom/server/renderToPipeableStream" rel="noreferrer" target="_blank">renderToPipeableStream method</a>
+          <ExternalLink href="https://react.dev/reference/react-dom/server/renderToPipeableStream">renderToPipeableStream method</ExternalLink>
           .
         </p>
-
       </HeadingBlock>
 
       <HeadingBlock id="Mission-Intent" level="2" heading="Mission Intent">
@@ -48,7 +47,7 @@ function Home(): React.ReactElement {
           utilizing a specific set of tech stack and implementation decisions while 
           remaining as simple as possible. This boilerplate will provide a foundation 
           for building out a client served by a webserver that acts as a `}
-          <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends" rel="noreferrer" target="blank">backend for frontend</a>
+          <ExternalLink href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends">backend for frontend</ExternalLink>
           .
         </p>
 
@@ -60,9 +59,9 @@ function Home(): React.ReactElement {
         <p>
           {`Any non-trivial decisions made within this project will be documented. 
           Technical decisions will be documented in `}
-          <a href="https://github.com/chichiwang/tamsui/pulls?q=is%3Aclosed" rel="noreferrer" target="_blank">pull request descriptions</a>
+          <ExternalLink href="https://github.com/chichiwang/tamsui/pulls?q=is%3Aclosed">pull request descriptions</ExternalLink>
           {', project decisions documented in a '}
-          <a href="https://github.com/users/chichiwang/projects/1" rel="noreferrer" target="_blank">project board</a>
+          <ExternalLink href="https://github.com/users/chichiwang/projects/1">project board</ExternalLink>
           .
         </p>
       </HeadingBlock>
@@ -70,11 +69,11 @@ function Home(): React.ReactElement {
       <HeadingBlock id="What-Tamsui-Is-Not" level="3" heading="What Tamsui Is Not">
         <p>
           {'Tamsui is an '}
-          <a href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript" rel="noreferrer" target="_blank">isomorphic JavaScript</a>
+          <ExternalLink href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript">isomorphic JavaScript</ExternalLink>
           {' application. The '}
-          <a href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
+          <ExternalLink href="https://expressjs.com/">Express</ExternalLink>
           {' server that renders the application is intended to serve as a simple '}
-          <a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends" rel="noreferrer" target="_blank">backend for frontend</a>
+          <ExternalLink href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends">backend for frontend</ExternalLink>
           , not a full fledged backend for business logic.
         </p>
 
@@ -90,30 +89,30 @@ function Home(): React.ReactElement {
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Server</h3>
-              <a className={styles.link} href="https://nodejs.org/en" rel="noreferrer" target="_blank">Node.js</a>
-              <a className={styles.link} href="https://expressjs.com/" rel="noreferrer" target="_blank">Express</a>
-              <a className={styles.link} href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
-              <a className={styles.link} href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
-              <a className={styles.link} href="https://getpino.io/" rel="noreferrer" target="_blank">Pino</a>
+              <ExternalLink className={styles.link} href="https://nodejs.org/en">Node.js</ExternalLink>
+              <ExternalLink className={styles.link} href="https://expressjs.com/">Express</ExternalLink>
+              <ExternalLink className={styles.link} href="https://react.dev/">React</ExternalLink>
+              <ExternalLink className={styles.link} href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
+              <ExternalLink className={styles.link} href="https://getpino.io/">Pino</ExternalLink>
             </div>
           </div>
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Client</h3>
-              <a className={styles.link} href="https://react.dev/" rel="noreferrer" target="_blank">React</a>
-              <a className={styles.link} href="https://reactrouter.com/en/main/guides/ssr" rel="noreferrer" target="_blank">React Router</a>
+              <ExternalLink className={styles.link} href="https://react.dev/">React</ExternalLink>
+              <ExternalLink className={styles.link} href="https://reactrouter.com/en/main/guides/ssr">React Router</ExternalLink>
             </div>
           </div>
           <div className={styles.stackContainer}>
             <div className={styles.stack}>
               <h3 className={styles.title}>Developer Tooling</h3>
-              <a className={styles.link} href="https://www.typescriptlang.org/" rel="noreferrer" target="_blank">TypeScript</a>
-              <a className={styles.link} href="https://sass-lang.com/" rel="noreferrer" target="_blank">Sass</a>
-              <a className={styles.link} href="https://webpack.js.org/" rel="noreferrer" target="_blank">Webpack</a>
-              <a className={styles.link} href="https://babeljs.io/" rel="noreferrer" target="_blank">Babel</a>
-              <a className={styles.link} href="https://jestjs.io/" rel="noreferrer" target="_blank">Jest</a>
-              <a className={styles.link} href="https://testing-library.com/docs/react-testing-library/intro/" rel="noreferrer" target="_blank">React Testing Library</a>
-              <a className={styles.link} href="https://eslint.org/" rel="noreferrer" target="_blank">Eslint</a>
+              <ExternalLink className={styles.link} href="https://www.typescriptlang.org/">TypeScript</ExternalLink>
+              <ExternalLink className={styles.link} href="https://sass-lang.com/">Sass</ExternalLink>
+              <ExternalLink className={styles.link} href="https://webpack.js.org/">Webpack</ExternalLink>
+              <ExternalLink className={styles.link} href="https://babeljs.io/">Babel</ExternalLink>
+              <ExternalLink className={styles.link} href="https://jestjs.io/">Jest</ExternalLink>
+              <ExternalLink className={styles.link} href="https://testing-library.com/docs/react-testing-library/intro/">React Testing Library</ExternalLink>
+              <ExternalLink className={styles.link} href="https://eslint.org/">Eslint</ExternalLink>
             </div>
           </div>
         </div>
