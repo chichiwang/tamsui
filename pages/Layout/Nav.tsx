@@ -18,8 +18,8 @@ function Nav() {
           </Link>
         </div>
         <div className={classNames(styles.segment, styles.pages)}>
-          <Link className={styles.menuLink} to="/counter">
-            Counter
+          <Link className={styles.menuLink} to="/documentation">
+            Documentation
           </Link>
         </div>
         <div className={classNames(styles.segment, styles.social)}>

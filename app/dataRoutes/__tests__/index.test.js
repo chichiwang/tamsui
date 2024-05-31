@@ -3,7 +3,6 @@ import React from 'react';
 import Layout from 'pages/Layout';
 
 import Home from 'pages/Home';
-import Counter from 'pages/Counter';
 import Documentation from 'pages/Documentation';
 import ErrorPage from 'pages/ErrorPage';
 import NotFound from 'pages/NotFound';
@@ -19,12 +18,6 @@ function MockedLayout() {
 function MockedHome() {
   return (
     <h1>Home Page</h1>
-  );
-}
-
-function MockedCounter() {
-  return (
-    <h1>Counter Page</h1>
   );
 }
 
@@ -51,9 +44,6 @@ jest.mock('pages/Layout', function MockLayout() {
 });
 jest.mock('pages/Home', function MockHome() {
   return MockedHome;
-});
-jest.mock('pages/Counter', function MockCounter() {
-  return MockedCounter;
 });
 jest.mock('pages/Documentation', function MockDocumentation() {
   return MockedDocumentation;
@@ -82,7 +72,7 @@ describe('dataRoutes', () => {
   describe('root Layout route', () => {
     test('nests the other routes', () => {
       expect(layoutRoute.children).toEqual(expect.any(Array));
-      expect(layoutRoute.children.length).toBe(5);
+      expect(layoutRoute.children.length).toBe(4);
 
       for (const route of layoutRoute.children) {
         expect(route).toEqual(expect.objectContaining({
@@ -127,28 +117,6 @@ describe('dataRoutes', () => {
       expect(homeRoute).toEqual(expect.objectContaining({
         path,
         Component: Home,
-      }));
-    });
-  });
-
-  describe('counter route "/counter"', () => {
-    const path = '/counter';
-    const counterRoute = findRouteByPath(layoutRoute.children, path);
-
-    test('is defined', () => {
-      expect(counterRoute).not.toBe(undefined);
-    });
-
-    test('defines an error boundary', () => {
-      expect(counterRoute).toEqual(expect.objectContaining({
-        errorElement: <MockedErrorPage />,
-      }));
-    });
-
-    test('assigns the Counter component', () => {
-      expect(counterRoute).toEqual(expect.objectContaining({
-        path,
-        Component: Counter,
       }));
     });
   });

@@ -28,10 +28,10 @@ exports[`Layout/Nav Component matches snapshot 1`] = `
     >
       <a
         className="menuLink"
-        href="/counter"
+        href="/documentation"
         onClick={[Function]}
       >
-        Counter
+        Documentation
       </a>
     </div>
     <div
