@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import HeroBanner from 'pages/components/HeroBanner';
 import ContentBlock from 'pages/components/ContentBlock';
@@ -146,6 +147,14 @@ function Home(): React.ReactElement {
               </div>
             </div>
           </div>
+        </HeadingBlock>
+
+        <HeadingBlock id="Usage" level="2" heading="Usage">
+          <p>
+            {'Usage documentation is provided on the '}
+            <Link to="/documentation">Documentation page</Link>
+            .
+          </p>
         </HeadingBlock>
       </ContentBlock>
     </>
