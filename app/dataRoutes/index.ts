@@ -4,6 +4,7 @@ import Layout from 'pages/Layout';
 
 import Home from 'pages/Home';
 import Counter from 'pages/Counter';
+import Documentation from 'pages/Documentation';
 import ErrorPage from 'pages/ErrorPage';
 import NotFound from 'pages/NotFound';
 
@@ -16,6 +17,10 @@ const dataRoutes: RouteObject[] = [
       withErrorBoundary({
         path: '/',
         Component: Home,
+      }),
+      withErrorBoundary({
+        path: '/documentation',
+        Component: Documentation,
       }),
       withErrorBoundary({
         path: '/counter',

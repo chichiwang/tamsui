@@ -4,6 +4,7 @@ import Layout from 'pages/Layout';
 
 import Home from 'pages/Home';
 import Counter from 'pages/Counter';
+import Documentation from 'pages/Documentation';
 import ErrorPage from 'pages/ErrorPage';
 import NotFound from 'pages/NotFound';
 
@@ -27,6 +28,12 @@ function MockedCounter() {
   );
 }
 
+function MockedDocumentation() {
+  return (
+    <h1>Documentation Page</h1>
+  );
+}
+
 function MockedNotFound() {
   return (
     <h1>NotFound Page</h1>
@@ -47,6 +54,9 @@ jest.mock('pages/Home', function MockHome() {
 });
 jest.mock('pages/Counter', function MockCounter() {
   return MockedCounter;
+});
+jest.mock('pages/Documentation', function MockDocumentation() {
+  return MockedDocumentation;
 });
 jest.mock('pages/ErrorPage', function MockCounter() {
   return MockedErrorPage;
@@ -72,7 +82,7 @@ describe('dataRoutes', () => {
   describe('root Layout route', () => {
     test('nests the other routes', () => {
       expect(layoutRoute.children).toEqual(expect.any(Array));
-      expect(layoutRoute.children.length).toBe(4);
+      expect(layoutRoute.children.length).toBe(5);
 
       for (const route of layoutRoute.children) {
         expect(route).toEqual(expect.objectContaining({
@@ -139,6 +149,28 @@ describe('dataRoutes', () => {
       expect(counterRoute).toEqual(expect.objectContaining({
         path,
         Component: Counter,
+      }));
+    });
+  });
+
+  describe('documentation route "/documentation"', () => {
+    const path = '/documentation';
+    const documentationRoute = findRouteByPath(layoutRoute.children, path);
+
+    test('is defined', () => {
+      expect(documentationRoute).not.toBe(undefined);
+    });
+
+    test('defines an error boundary', () => {
+      expect(documentationRoute).toEqual(expect.objectContaining({
+        errorElement: <MockedErrorPage />,
+      }));
+    });
+
+    test('assigns the Counter component', () => {
+      expect(documentationRoute).toEqual(expect.objectContaining({
+        path,
+        Component: Documentation,
       }));
     });
   });
