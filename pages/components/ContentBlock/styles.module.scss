@@ -1,0 +1,7 @@
+@use "sass:map";
+@use "app/var.module";
+
+.contentBlock {
+  margin: 0 auto;
+  max-width: map.get(var.$content, 'article-max-width');
+}
