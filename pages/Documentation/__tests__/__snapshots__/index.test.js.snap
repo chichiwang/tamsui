@@ -1,12 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Documentation Page Component matches snapshot 1`] = `
-[
+<div
+  className="contentBlock"
+>
   <h1>
     Developer Documentation
-  </h1>,
+  </h1>
   <p>
     Work in Progress
-  </p>,
-]
+  </p>
+</div>
 `;
