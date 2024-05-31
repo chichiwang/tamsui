@@ -4,7 +4,7 @@
 $padding-unit: map.get(var.$content, 'padding');
 
 .headingBlock {
-  margin: calc(2 * $padding-unit) auto;
+  margin: calc(2 * $padding-unit) 0;
   padding: 0 $padding-unit;
-  max-width: map.get(var.$content, 'article-max-width');
+  width: 100%;
 }

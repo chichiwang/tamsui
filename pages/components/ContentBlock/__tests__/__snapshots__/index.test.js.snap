@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContentBlock Component matches child snapshot 1`] = `
+<div
+  className="contentBlock"
+>
+  <p>
+    Block content
+  </p>
+</div>
+`;
+
+exports[`ContentBlock Component matches no-child snapshot 1`] = `
+<div
+  className="contentBlock"
+/>
+`;
