@@ -50,11 +50,11 @@ describe('Layout/Nav Component', () => {
   });
 
   describe('Page Links', () => {
-    test('contains a link to the Counter page', () => {
+    test('contains a link to the Documentation page', () => {
       render(<RouterWrappedNav />);
 
-      expect(screen.getByText('Counter')).toBeInTheDocument();
-      expect(screen.getByRole('link', { name: 'Counter' })).toHaveAttribute('href', '/counter');
+      expect(screen.getByText('Documentation')).toBeInTheDocument();
+      expect(screen.getByRole('link', { name: 'Documentation' })).toHaveAttribute('href', '/documentation');
     });
   });
 
