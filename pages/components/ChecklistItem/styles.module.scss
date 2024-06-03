@@ -1,0 +1,180 @@
+@use 'sass:map';
+@use 'app/var.module';
+
+$check-size: 1rem;
+$check-size-focus: 1.25rem;
+$checklist-height: 1.5rem;
+
+$flip-duration: 400ms;
+$flip-delay: calc($flip-duration / 2);
+$grow-duration: 150ms;
+$grow-delay: calc($flip-duration * 1.5);
+$opacity-duration: calc($grow-duration * 2);
+
+.checklistItem {
+  position: relative;
+  display: block;
+  height: $checklist-height;
+  line-height: $checklist-height;
+
+  & > .labelContent,
+  & > .checkboxInput,
+  & > .checkboxContainer {
+    margin: 0;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  .checkboxContainer {
+    position: absolute;
+    display: inline-flex;
+    top: 0;
+    left: 0;
+    width: $checklist-height;
+    height: $checklist-height;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.15rem;
+    pointer-events: none;
+
+    .checkbox {
+      width: $check-size;
+      height: $check-size;
+
+      .top {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: transform $flip-duration cubic-bezier(0.35, 1.64, 0.41, 0.8);
+
+        .front {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-top-left-radius: 0.2rem;
+          border-top-right-radius: 0.2rem;
+          border: 2px solid map.get(var.$colors, 'black');
+          border-bottom: 0;
+        }
+
+        .back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
+          border-top-left-radius: 0.2rem;
+          border-top-right-radius: 0.2rem;
+          border: 2px solid map.get(var.$colors, 'maroon');
+          border-bottom: 0;
+
+          &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 13%;
+            width: 74%;
+            height: 0%;
+            background-color: map.get(var.$colors, 'red');
+            border-top-left-radius: 0.1rem;
+            border-top-right-radius: 0.1rem;
+            opacity: 0;
+            border-bottom: 2px solid map.get(var.$colors, 'orange');
+            transition: height $grow-duration $grow-delay ease-in,
+                        opacity $opacity-duration $grow-delay ease-out;
+          }
+        }
+      }
+
+      .bottom {
+        position: relative;
+        width: 100%;
+        height: 50%;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        transition: transform $flip-duration $flip-delay cubic-bezier(0.35, 1.64, 0.41, 0.8);
+        
+        .front {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: rotateY(0deg);
+          backface-visibility: hidden;
+          border-bottom-left-radius: 0.2rem;
+          border-bottom-right-radius: 0.2rem;
+          border: 2px solid map.get(var.$colors, 'black');
+          border-top: 0;
+        }
+
+        .back {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          transform: rotateY(180deg);
+          backface-visibility: hidden;
+          border-bottom-left-radius: 0.2rem;
+          border-bottom-right-radius: 0.2rem;
+          border: 2px solid map.get(var.$colors, 'maroon');
+          border-top: 0;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 13%;
+            width: 74%;
+            height: 0%;
+            background-color: map.get(var.$colors, 'blue');
+            border-bottom-left-radius: 0.1rem;
+            border-bottom-right-radius: 0.1rem;
+            opacity: 0;
+            transition: height $grow-duration $grow-delay ease-in,
+                        opacity $opacity-duration $grow-delay ease-out;
+          }
+        }
+      }
+    }
+  }
+
+  .checkboxInput {
+    width: $checklist-height;
+    height: $checklist-height;
+    cursor: pointer;
+    opacity: 0;
+
+    &:hover ~ .checkboxContainer > .checkbox,
+    &:focus-visible ~ .checkboxContainer > .checkbox {
+      width: $check-size-focus;
+      height: $check-size-focus;
+    }
+
+    &:focus-visible ~ .checkboxContainer {
+      outline: 2px solid map.get(var.$colors, 'black');
+    }
+
+    &:checked ~ .checkboxContainer > .checkbox > .top,
+    &:checked ~ .checkboxContainer > .checkbox > .bottom {
+      transform: rotateY(180deg);
+
+      & > .back::before {
+        height: 75%;
+        opacity: 1;
+      }
+    }
+  }
+
+  .labelContent {
+    margin-left: 0.25rem;
+  }
+}

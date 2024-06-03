@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ChecklistItem component matches the no-children snapshot 1`] = `
+<label
+  className="checklistItem"
+>
+  <input
+    checked={false}
+    className="checkboxInput"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="checkboxContainer"
+  >
+    <div
+      className="checkbox"
+    >
+      <div
+        className="top"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+      <div
+        className="bottom"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    className="labelContent"
+  />
+</label>
+`;
+
+exports[`ChecklistItem component matches the text-content snapshot 1`] = `
+<label
+  className="checklistItem"
+>
+  <input
+    checked={false}
+    className="checkboxInput"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="checkboxContainer"
+  >
+    <div
+      className="checkbox"
+    >
+      <div
+        className="top"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+      <div
+        className="bottom"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    className="labelContent"
+  >
+    Todo: Finish writing ChecklistItem test suite
+  </span>
+</label>
+`;
+
+exports[`ChecklistItem component matches the text-content snapshot 2`] = `
+<label
+  className="checklistItem"
+>
+  <input
+    checked={false}
+    className="checkboxInput"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <div
+    className="checkboxContainer"
+  >
+    <div
+      className="checkbox"
+    >
+      <div
+        className="top"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+      <div
+        className="bottom"
+      >
+        <div
+          className="back"
+        />
+        <div
+          className="front"
+        />
+      </div>
+    </div>
+  </div>
+  <span
+    className="labelContent"
+  >
+    <img
+      alt="Todo Step 1"
+      src="images/todo01.jpg"
+    />
+  </span>
+</label>
+`;
