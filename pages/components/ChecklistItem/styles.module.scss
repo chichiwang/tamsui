@@ -170,6 +170,10 @@ $opacity-duration: calc($grow-duration * 2);
         opacity: 1;
       }
     }
+
+    &:checked ~ .labelContent {
+      text-decoration: line-through;
+    }
   }
 
   .labelContent {
