@@ -5,27 +5,21 @@ $check-size: 1rem;
 $check-size-focus: 1.25rem;
 $checklist-height: 1.5rem;
 
-$flip-duration: 400ms;
+$flip-duration: 375ms;
 $flip-delay: calc($flip-duration / 2);
 $grow-duration: 150ms;
-$grow-delay: calc($flip-duration * 1.5);
+$grow-delay: calc($flip-duration * 0.5);
 $opacity-duration: calc($grow-duration * 2);
 
 .checklistItem {
   position: relative;
   display: block;
   margin: 0.25rem 0;
-  height: $checklist-height;
-  line-height: $checklist-height;
 
   & > label {
     display: inline-block;
-
-    & > .labelContent,
-    & > .checkboxInput,
-    & > .checkboxContainer {
-      height: 100%;
-    }
+    height: $checklist-height;
+    line-height: $checklist-height;
   }
 
   .checkboxContainer {
