@@ -7,11 +7,11 @@
 ## Starting a Project
 - [ ] Clone this repository.
 - [ ] Rename the project directory.
-- [ ] Update `package.json` file.
-  - [ ] Update `name` field.
-  - [ ] Update `repository/url` field.
-  - [ ] Update `bugs/url` field.
-  - [ ] Update `homepage` field.
+- [ ] Update the `package.json` file.
+  - [ ] Update the `name` field.
+  - [ ] Update the `repository/url` field.
+  - [ ] Update the `bugs/url` field.
+  - [ ] Update the `homepage` field.
 - [ ] [Reset the git remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url) to your new project repository.
 - [ ] If using [nvm](https://github.com/nvm-sh/nvm), run `nvm use`.
   - [ ] Otherwise, note the contents of `.nvmrc` to see the version of [Node.js](https://nodejs.org/) this project is built on.
