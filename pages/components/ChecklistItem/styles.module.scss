@@ -176,5 +176,6 @@ $opacity-duration: calc($grow-duration * 2);
 
   .labelContent {
     margin-left: 0.25rem;
+    font-size: map.get(var.$content, 'font-size');
   }
 }
