@@ -1,184 +1,192 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ChecklistItem component matches the child-component snapshot 1`] = `
-<label
+<div
   className="checklistItem"
 >
-  <input
-    checked={false}
-    className="checkboxInput"
-    onChange={[Function]}
-    type="checkbox"
-  />
-  <div
-    className="checkboxContainer"
-  >
+  <label>
+    <input
+      checked={false}
+      className="checkboxInput"
+      onChange={[Function]}
+      type="checkbox"
+    />
     <div
-      className="checkbox"
+      className="checkboxContainer"
     >
       <div
-        className="top"
+        className="checkbox"
       >
         <div
-          className="back"
-        />
+          className="top"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
         <div
-          className="front"
-        />
-      </div>
-      <div
-        className="bottom"
-      >
-        <div
-          className="back"
-        />
-        <div
-          className="front"
-        />
+          className="bottom"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <span
-    className="labelContent"
-  >
-    <img
-      alt="Todo Step 1"
-      src="images/todo01.jpg"
-    />
-  </span>
-</label>
+    <span
+      className="labelContent"
+    >
+      <img
+        alt="Todo Step 1"
+        src="images/todo01.jpg"
+      />
+    </span>
+  </label>
+</div>
 `;
 
 exports[`ChecklistItem component matches the className snapshot 1`] = `
-<label
+<div
   className="checklistItem center"
 >
-  <input
-    checked={false}
-    className="checkboxInput"
-    onChange={[Function]}
-    type="checkbox"
-  />
-  <div
-    className="checkboxContainer"
-  >
+  <label>
+    <input
+      checked={false}
+      className="checkboxInput"
+      onChange={[Function]}
+      type="checkbox"
+    />
     <div
-      className="checkbox"
+      className="checkboxContainer"
     >
       <div
-        className="top"
+        className="checkbox"
       >
         <div
-          className="back"
-        />
+          className="top"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
         <div
-          className="front"
-        />
-      </div>
-      <div
-        className="bottom"
-      >
-        <div
-          className="back"
-        />
-        <div
-          className="front"
-        />
+          className="bottom"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <span
-    className="labelContent"
-  />
-</label>
+    <span
+      className="labelContent"
+    />
+  </label>
+</div>
 `;
 
 exports[`ChecklistItem component matches the no-children snapshot 1`] = `
-<label
+<div
   className="checklistItem"
 >
-  <input
-    checked={false}
-    className="checkboxInput"
-    onChange={[Function]}
-    type="checkbox"
-  />
-  <div
-    className="checkboxContainer"
-  >
+  <label>
+    <input
+      checked={false}
+      className="checkboxInput"
+      onChange={[Function]}
+      type="checkbox"
+    />
     <div
-      className="checkbox"
+      className="checkboxContainer"
     >
       <div
-        className="top"
+        className="checkbox"
       >
         <div
-          className="back"
-        />
+          className="top"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
         <div
-          className="front"
-        />
-      </div>
-      <div
-        className="bottom"
-      >
-        <div
-          className="back"
-        />
-        <div
-          className="front"
-        />
+          className="bottom"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <span
-    className="labelContent"
-  />
-</label>
+    <span
+      className="labelContent"
+    />
+  </label>
+</div>
 `;
 
 exports[`ChecklistItem component matches the text-content snapshot 1`] = `
-<label
+<div
   className="checklistItem"
 >
-  <input
-    checked={false}
-    className="checkboxInput"
-    onChange={[Function]}
-    type="checkbox"
-  />
-  <div
-    className="checkboxContainer"
-  >
+  <label>
+    <input
+      checked={false}
+      className="checkboxInput"
+      onChange={[Function]}
+      type="checkbox"
+    />
     <div
-      className="checkbox"
+      className="checkboxContainer"
     >
       <div
-        className="top"
+        className="checkbox"
       >
         <div
-          className="back"
-        />
+          className="top"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
         <div
-          className="front"
-        />
-      </div>
-      <div
-        className="bottom"
-      >
-        <div
-          className="back"
-        />
-        <div
-          className="front"
-        />
+          className="bottom"
+        >
+          <div
+            className="back"
+          />
+          <div
+            className="front"
+          />
+        </div>
       </div>
     </div>
-  </div>
-  <span
-    className="labelContent"
-  >
-    Todo: Finish writing ChecklistItem test suite
-  </span>
-</label>
+    <span
+      className="labelContent"
+    >
+      Todo: Finish writing ChecklistItem test suite
+    </span>
+  </label>
+</div>
 `;

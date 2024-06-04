@@ -25,22 +25,24 @@ function ChecklistItem({
   };
 
   return (
-    <label className={classNames(styles.checklistItem, className)}>
-      <input {...inputProps} />
-      <div className={styles.checkboxContainer}>
-        <div className={styles.checkbox}>
-          <div className={styles.top}>
-            <div className={styles.back} />
-            <div className={styles.front} />
-          </div>
-          <div className={styles.bottom}>
-            <div className={styles.back} />
-            <div className={styles.front} />
+    <div className={classNames(styles.checklistItem, className)}>
+      <label>
+        <input {...inputProps} />
+        <div className={styles.checkboxContainer}>
+          <div className={styles.checkbox}>
+            <div className={styles.top}>
+              <div className={styles.back} />
+              <div className={styles.front} />
+            </div>
+            <div className={styles.bottom}>
+              <div className={styles.back} />
+              <div className={styles.front} />
+            </div>
           </div>
         </div>
-      </div>
-      <span className={styles.labelContent}>{children}</span>
-    </label>
+        <span className={styles.labelContent}>{children}</span>
+      </label>
+    </div>
   );
 }
 
