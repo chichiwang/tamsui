@@ -5,16 +5,17 @@
 * [Building for Production](#building-for-production)
 
 ## Starting a Project
-- [ ] Clone this repository
-- [ ] Rename the directory
-- [ ] Update `package.json`
-  - [ ] Update `name` field
-  - [ ] Update `repository/url` field
-  - [ ] Update `bugs/url` field
-  - [ ] Update `homepage` field
-- [ ] [Reset the git remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url) to your new project repository
-- [ ] If using [nvm](https://github.com/nvm-sh/nvm), run `nvm use`, or note the contents of `.nvmrc` to see the version of [Node.js](https://nodejs.org/) this project is built on.
-- [ ] Run `npm install`
+- [ ] Clone this repository.
+- [ ] Rename the project directory.
+- [ ] Update `package.json` file.
+  - [ ] Update `name` field.
+  - [ ] Update `repository/url` field.
+  - [ ] Update `bugs/url` field.
+  - [ ] Update `homepage` field.
+- [ ] [Reset the git remote](https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url) to your new project repository.
+- [ ] If using [nvm](https://github.com/nvm-sh/nvm), run `nvm use`.
+  - [ ] Otherwise, note the contents of `.nvmrc` to see the version of [Node.js](https://nodejs.org/) this project is built on.
+- [ ] Run `npm install`.
 
 ## NPM Scripts
 | Script          | Description                                                                                                                                        |
