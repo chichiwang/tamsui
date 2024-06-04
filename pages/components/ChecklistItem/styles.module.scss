@@ -18,12 +18,14 @@ $opacity-duration: calc($grow-duration * 2);
   height: $checklist-height;
   line-height: $checklist-height;
 
-  & > .labelContent,
-  & > .checkboxInput,
-  & > .checkboxContainer {
-    margin: 0;
-    height: 100%;
-    vertical-align: middle;
+  & > label {
+    display: inline-block;
+
+    & > .labelContent,
+    & > .checkboxInput,
+    & > .checkboxContainer {
+      height: 100%;
+    }
   }
 
   .checkboxContainer {
@@ -149,8 +151,6 @@ $opacity-duration: calc($grow-duration * 2);
   }
 
   .checkboxInput {
-    width: $checklist-height;
-    height: $checklist-height;
     cursor: pointer;
     opacity: 0;
 
@@ -176,7 +176,7 @@ $opacity-duration: calc($grow-duration * 2);
   }
 
   .labelContent {
-    margin-left: 0.25rem;
+    margin-left: 0.45rem;
     font-size: map.get(var.$content, 'font-size');
   }
 }

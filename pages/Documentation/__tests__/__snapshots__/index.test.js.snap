@@ -113,558 +113,580 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       </div>
     </div>
     <article>
-      <label
+      <div
         className="checklistItem"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Clone the 
-          <a
-            href="https://github.com/chichiwang/tamsui"
-            rel="noreferrer"
-            target="_blank"
-          >
-            repository
-          </a>
-          .
-        </span>
-      </label>
-      <label
-        className="checklistItem"
-      >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
-          <div
-            className="checkbox"
-          >
-            <div
-              className="top"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
-            </div>
-          </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Rename the project directory.
-        </span>
-      </label>
-      <label
-        className="checklistItem"
-      >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
-          <div
-            className="checkbox"
-          >
-            <div
-              className="top"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
-            </div>
-          </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Update the 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            package.json
+            Clone the 
+            <a
+              href="https://github.com/chichiwang/tamsui"
+              rel="noreferrer"
+              target="_blank"
+            >
+              repository
+            </a>
+            .
           </span>
-           file.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
+        className="checklistItem"
+      >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <div
+            className="checkboxContainer"
+          >
+            <div
+              className="checkbox"
+            >
+              <div
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
+              <div
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
+            </div>
+          </div>
+          <span
+            className="labelContent"
+          >
+            Rename the project directory.
+          </span>
+        </label>
+      </div>
+      <div
+        className="checklistItem"
+      >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
+          <div
+            className="checkboxContainer"
+          >
+            <div
+              className="checkbox"
+            >
+              <div
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
+              <div
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
+            </div>
+          </div>
+          <span
+            className="labelContent"
+          >
+            Update the 
+            <span
+              className="highlight"
+            >
+              package.json
+            </span>
+             file.
+          </span>
+        </label>
+      </div>
+      <div
         className="checklistItem indent checklist"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Update the 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            name
+            Update the 
+            <span
+              className="highlight"
+            >
+              name
+            </span>
+             field.
           </span>
-           field.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem indent checklist"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Update the 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            repository/url
+            Update the 
+            <span
+              className="highlight"
+            >
+              repository/url
+            </span>
+             field.
           </span>
-           field.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem indent checklist"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Update the 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            bugs/url
+            Update the 
+            <span
+              className="highlight"
+            >
+              bugs/url
+            </span>
+             field.
           </span>
-           field.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem indent checklist"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Update the 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            homepage
+            Update the 
+            <span
+              className="highlight"
+            >
+              homepage
+            </span>
+             field.
           </span>
-           field.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          <a
-            href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url"
-            rel="noreferrer"
-            target="_blank"
+          <span
+            className="labelContent"
           >
-            Reset the git remote
-          </a>
-           to your new project repository.
-        </span>
-      </label>
-      <label
+            <a
+              href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Reset the git remote
+            </a>
+             to your new project repository.
+          </span>
+        </label>
+      </div>
+      <div
         className="checklistItem"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          If using 
-          <a
-            href="https://github.com/nvm-sh/nvm"
-            rel="noreferrer"
-            target="_blank"
-          >
-            nvm
-          </a>
-          , run 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            nvm use
+            If using 
+            <a
+              href="https://github.com/nvm-sh/nvm"
+              rel="noreferrer"
+              target="_blank"
+            >
+              nvm
+            </a>
+            , run 
+            <span
+              className="highlight"
+            >
+              nvm use
+            </span>
+            .
           </span>
-          .
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem indent checklist"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Otherwise, note the contents of 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            .nvmrc
+            Otherwise, note the contents of 
+            <span
+              className="highlight"
+            >
+              .nvmrc
+            </span>
+             to see the version of 
+            <a
+              href="https://nodejs.org/"
+              rel="noreferrer"
+              target="_blank"
+            >
+              Node.js
+            </a>
+             this project is built on.
           </span>
-           to see the version of 
-          <a
-            href="https://nodejs.org/"
-            rel="noreferrer"
-            target="_blank"
-          >
-            Node.js
-          </a>
-           this project is built on.
-        </span>
-      </label>
-      <label
+        </label>
+      </div>
+      <div
         className="checklistItem"
       >
-        <input
-          checked={false}
-          className="checkboxInput"
-          onChange={[Function]}
-          type="checkbox"
-        />
-        <div
-          className="checkboxContainer"
-        >
+        <label>
+          <input
+            checked={false}
+            className="checkboxInput"
+            onChange={[Function]}
+            type="checkbox"
+          />
           <div
-            className="checkbox"
+            className="checkboxContainer"
           >
             <div
-              className="top"
+              className="checkbox"
             >
               <div
-                className="back"
-              />
+                className="top"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
               <div
-                className="front"
-              />
-            </div>
-            <div
-              className="bottom"
-            >
-              <div
-                className="back"
-              />
-              <div
-                className="front"
-              />
+                className="bottom"
+              >
+                <div
+                  className="back"
+                />
+                <div
+                  className="front"
+                />
+              </div>
             </div>
           </div>
-        </div>
-        <span
-          className="labelContent"
-        >
-          Run 
           <span
-            className="highlight"
+            className="labelContent"
           >
-            npm install
+            Run 
+            <span
+              className="highlight"
+            >
+              npm install
+            </span>
+            .
           </span>
-          .
-        </span>
-      </label>
+        </label>
+      </div>
     </article>
   </section>
 </div>
