@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import classNames from 'classnames';
 
 import styles from './styles.module.scss';
 
 interface ChecklistItemProps extends React.PropsWithChildren {
+  className?: string;
 }
 
 function ChecklistItem({
   children,
+  className,
 }: ChecklistItemProps) {
   const [checked, setChecked] = useState(false);
 
@@ -22,7 +25,7 @@ function ChecklistItem({
   };
 
   return (
-    <label className={styles.checklistItem}>
+    <label className={classNames(styles.checklistItem, className)}>
       <input {...inputProps} />
       <div className={styles.checkboxContainer}>
         <div className={styles.checkbox}>

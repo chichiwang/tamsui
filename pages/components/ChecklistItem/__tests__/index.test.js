@@ -18,6 +18,12 @@ describe('ChecklistItem component', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('matches the className snapshot', () => {
+    const tree = renderer.create(<ChecklistItem className="center" />).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test('matches the text-content snapshot', () => {
     const tree = renderer.create(
       <ChecklistItem>Todo: Finish writing ChecklistItem test suite</ChecklistItem>,
@@ -26,7 +32,7 @@ describe('ChecklistItem component', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  test('matches the text-content snapshot', () => {
+  test('matches the child-component snapshot', () => {
     const tree = renderer.create(
       <ChecklistItem>
         <ChildComponent />
