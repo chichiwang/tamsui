@@ -15,7 +15,7 @@ function Documentation() {
         <p>
           {'Documentation is also provided in the '}
           <ExternalLink href="https://github.com/chichiwang/tamsui">Github repository</ExternalLink>
-          {' in the directory '}
+          {' in the README file '}
           <ExternalLink href="https://github.com/chichiwang/tamsui/blob/main/docs/README.md">/docs/README.md</ExternalLink>
           .
         </p>

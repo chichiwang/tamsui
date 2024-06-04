@@ -30,7 +30,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         >
           Github repository
         </a>
-         in the directory 
+         in the README file 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/docs/README.md"
           rel="noreferrer"
