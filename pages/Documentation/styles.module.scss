@@ -1,0 +1,20 @@
+@use 'sass:map';
+@use 'app/var.module';
+
+$indent-unit: map.get(var.$content, 'padding');
+$highlight-color: rgba(125, 125, 125, 0.8);
+
+.indent {
+  margin-left: $indent-unit;
+
+  &.checklist {
+    margin-left: calc($indent-unit * 1.5);
+  }
+}
+
+.highlight {
+  padding: calc(map.get(var.$content, 'padding') / 8) calc(map.get(var.$content, 'padding') / 4);
+  color: map.get(var.$colors, 'white');
+  border-radius: 0.25rem;
+  background-color: $highlight-color;
+}
