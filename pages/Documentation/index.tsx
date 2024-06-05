@@ -6,6 +6,8 @@ import ExternalLink from 'pages/components/ExternalLink';
 import HeadingBlock from 'pages/components/HeadingBlock';
 import ChecklistItem from 'pages/components/ChecklistItem';
 
+import CopyIcon from 'pages/components/CopyIcon';
+
 import styles from './styles.module.scss';
 
 function Documentation() {
@@ -85,6 +87,8 @@ function Documentation() {
           .
         </ChecklistItem>
       </HeadingBlock>
+
+      <CopyIcon />
     </ContentBlock>
   );
 }
