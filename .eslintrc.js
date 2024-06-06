@@ -27,7 +27,9 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     plugins: ['@typescript-eslint'],
     rules: {
+      '@typescript-eslint/no-shadow': [2],
       '@typescript-eslint/no-unused-vars': 2,
+      'no-shadow': 0,
     },
   }],
   ignorePatterns: ['dist/**/*.*'],
