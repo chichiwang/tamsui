@@ -43,6 +43,14 @@ describe('CopyButton component', () => {
     expect(tree).toMatchSnapshot();
   });
 
+  test('matches the className snapshot', () => {
+    const tree = renderer.create(
+      <CopyButton className="center" textToCopy="Business Address" />,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
   test('sends text to clipboard API when clicked', async () => {
     const textToCopy = '(288) 555-0153';
 
