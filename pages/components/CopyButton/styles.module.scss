@@ -27,9 +27,9 @@ $icon-size: 1.125rem;
       .successMessage,
       .errorMessage {
         position: absolute;
+        display: flex;
         top: 0;
         right: 0.25rem;
-        display: flex;
         align-items: center;
         padding: calc($padding-unit / 4) calc($padding-unit / 2);
         height: 100%;
@@ -70,7 +70,7 @@ $icon-size: 1.125rem;
         color: map.get(var.$colors, 'blue');
       }
 
-      .copyCharacter {
+      .buttonContent {
         width: $icon-size;
         height: $icon-size;
         font-size: $icon-size;

@@ -18,9 +18,9 @@ enum CopyStates {
 
 const ButtonContent = {
   [CopyStates.ready]: (<CopyIcon className={styles.copyIcon} />),
-  [CopyStates.copying]: (<div className={styles.copyCharacter}>⋯</div>),
-  [CopyStates.copied]: (<div className={styles.copyCharacter}>✓</div>),
-  [CopyStates.errored]: (<div className={styles.copyCharacter}>!</div>),
+  [CopyStates.copying]: (<div className={styles.buttonContent}>⋯</div>),
+  [CopyStates.copied]: (<div className={styles.buttonContent}>✓</div>),
+  [CopyStates.errored]: (<div className={styles.buttonContent}>!</div>),
 };
 
 const messageDisplayTime = 2000;
