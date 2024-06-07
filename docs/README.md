@@ -34,7 +34,7 @@
 | `run`           | Run `dist/index.js`                                                                                                                                |
 | `start`         | Build prod assets and run the webserver, intended to be used in production environments                                                            |
 | `test`          | Run test suites with coverage requirements in place, generates coverage files                                                                      |
-| `test:snapshot` | Update snapshots with [Jest](https://jestjs.io/), can use in lieu of `npm run test -- -u`                                                          |
+| `test:snapshot` | Update snapshots with [Jest](https://jestjs.io/), can be used in lieu of `npm run test -- -u`                                                      |
 | `watch`         | Run watch server, will restart the server on every file change                                                                                     |
 
 ## Developing Locally
