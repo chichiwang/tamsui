@@ -134,4 +134,8 @@ $icon-size: 1.125rem;
       }
     }
   }
+
+  @media print {
+    display: none;
+  }
 }
