@@ -6,7 +6,7 @@ import ExternalLink from 'pages/components/ExternalLink';
 import HeadingBlock from 'pages/components/HeadingBlock';
 import ChecklistItem from 'pages/components/ChecklistItem';
 
-import CopyIcon from 'pages/components/CopyIcon';
+import CopyButton from 'pages/components/CopyButton';
 
 import styles from './styles.module.scss';
 
@@ -88,7 +88,7 @@ function Documentation() {
         </ChecklistItem>
       </HeadingBlock>
 
-      <CopyIcon />
+      <CopyButton textToCopy="Hello, Documentation!" />
     </ContentBlock>
   );
 }

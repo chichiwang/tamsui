@@ -1,0 +1,137 @@
+@use 'sass:map';
+@use 'app/var.module';
+
+$padding-unit: map.get(var.$content, 'padding');
+
+$button-size: 1.75rem;
+$icon-size: 1.125rem;
+
+.copyPosition {
+  position: relative;
+  width: $button-size;
+  height: $button-size;
+
+  .copyContainer {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    font-size: 0;
+
+    .message {
+      position: relative;
+      height: $button-size;
+      user-select: none;
+      pointer-events: none;
+
+      .successMessage,
+      .errorMessage {
+        position: absolute;
+        top: 0;
+        right: 0.25rem;
+        display: flex;
+        align-items: center;
+        padding: calc($padding-unit / 4) calc($padding-unit / 2);
+        height: 100%;
+        color: map.get(var.$colors, 'white');
+        font-size: 0.75rem;
+        border-radius: 0.25rem;
+        transform: rotateY(-180deg);
+        transform-style: preserve-3d;
+        backface-visibility: hidden;
+        opacity: 0;
+        transition: opacity 1500ms ease-out, transform 850ms cubic-bezier(0.35, 1.64, 0.41, 0.8);
+      }
+
+      .successMessage {
+        background-color: map.get(var.$colors, 'blue');
+      }
+
+      .errorMessage {
+        background-color: map.get(var.$colors, 'maroon');
+      }
+    }
+
+    .copyButton {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: calc($padding-unit / 4);
+      width: $button-size;
+      height: $button-size;
+      border-radius: 0.25rem;
+      border: 1px solid map.get(var.$colors, 'blue');
+      background-color: transparent;
+      cursor: pointer;
+
+      .copyIcon {
+        width: $icon-size;
+        height: $icon-size;
+        color: map.get(var.$colors, 'blue');
+      }
+
+      .copyCharacter {
+        width: $icon-size;
+        height: $icon-size;
+        font-size: $icon-size;
+        font-weight: bold;
+        line-height: $icon-size;
+        color: map.get(var.$colors, 'white');
+      }
+
+      &:hover,
+      &:focus-visible {
+        border: 0;
+        background-color: map.get(var.$colors, 'blue');
+
+        .copyIcon {
+          color: map.get(var.$colors, 'white');
+        }
+      }
+    }
+
+    &.disabled .copyButton {
+      border: 0;
+      background-color: map.get(var.$colors, 'grey');
+      cursor: auto;
+
+      .copyIcon {
+        color: map.get(var.$colors, 'white');
+      }
+    }
+
+    &.copied {
+      .message .successMessage {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+
+      .copyButton {
+        border: 0;
+        background-color: map.get(var.$colors, 'blue');
+        cursor: auto;
+
+        .copyIcon {
+          color: map.get(var.$colors, 'white');
+        }
+      }
+    }
+
+    &.error {
+      .message .errorMessage {
+        transform: rotateY(0deg);
+        opacity: 1;
+      }
+
+      .copyButton {
+        border: 0;
+        background-color: map.get(var.$colors, 'maroon');
+        cursor: auto;
+
+        .copyIcon {
+          color: map.get(var.$colors, 'white');
+        }
+      }
+    }
+  }
+}
