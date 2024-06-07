@@ -6,6 +6,7 @@ import CopyIcon from 'pages/components/CopyIcon';
 import styles from './styles.module.scss';
 
 type CopyButtonProps = {
+  className?: string;
   textToCopy: string;
 };
 
@@ -26,6 +27,7 @@ const ButtonContent = {
 const messageDisplayTime = 2000;
 
 function CopyButton({
+  className,
   textToCopy,
 }: CopyButtonProps) {
   const [copyState, setCopyState] = useState(CopyStates.ready);
@@ -69,7 +71,7 @@ function CopyButton({
   };
 
   return (
-    <div className={styles.copyPosition}>
+    <div className={classNames(styles.copyPosition, className)}>
       <div className={containerClassname}>
         <div className={styles.message}>
           <div className={styles.successMessage}>
