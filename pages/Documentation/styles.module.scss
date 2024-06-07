@@ -17,3 +17,72 @@ $indent-unit: map.get(var.$content, 'padding');
   border-radius: 0.25rem;
   background-color: map.get(var.$colors, 'grey');
 }
+
+.contentList {
+  margin: 0;
+  list-style: none;
+
+  & li {
+    margin: calc(map.get(var.$content, 'padding') * 0.75) 0;
+  }
+}
+
+.scriptsList {
+  border-collapse: collapse;
+
+  & td,
+  & th {
+    padding: calc(map.get(var.$content, 'padding') * 0.75) map.get(var.$content, 'padding');
+    vertical-align: middle;
+    border: 1px solid map.get(var.$colors, 'black');
+
+    & p {
+      margin: 0;
+      line-height: 1.65rem;
+    }
+
+    & .script {
+      position: relative;
+      display: flex;
+      align-items: middle;
+      padding-right: calc(map.get(var.$content, 'padding') * 6);
+
+      & .copyButton {
+        position: absolute;
+        display: none;
+        top: 0;
+        right: 0;
+      }
+
+      @media print,
+      screen and (max-width: var.$breakpoint-small-max) {
+        padding-right: 0;
+      }
+    }
+
+    @media screen and (max-width: var.$breakpoint-small-max) {
+      p,
+      .script {
+        font-size: 1rem;
+        line-height: 1.35rem;
+      }
+    }
+  }
+
+  & tr:hover {
+    & td .script .copyButton {
+      display: block;
+
+      @media print,
+      screen and (max-width: var.$breakpoint-small-max) {
+        display: none;
+      }
+    }
+  }
+}
+
+@media print {
+  .pageBreak {
+    margin-top: 8rem;
+  }
+}
