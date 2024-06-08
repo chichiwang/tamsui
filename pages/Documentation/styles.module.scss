@@ -49,9 +49,13 @@ $indent-unit: map.get(var.$content, 'padding');
 
       & .copyButton {
         position: absolute;
-        display: none;
         top: 0;
         right: 0;
+        opacity: 0;
+
+        &:focus-within {
+          opacity: 1;
+        }
       }
 
       @media print,
@@ -71,7 +75,7 @@ $indent-unit: map.get(var.$content, 'padding');
 
   & tr:hover {
     & td .script .copyButton {
-      display: block;
+      opacity: 1;
 
       @media print,
       screen and (max-width: var.$breakpoint-small-max) {
