@@ -6,7 +6,7 @@ import '@testing-library/jest-dom';
 
 import Nav from '../Nav';
 
-jest.mock('pages/components/Logo', function mockedLogo() {
+jest.mock('app/components/Logo', function mockedLogo() {
   return function mockLogo() {
     return (
       <div data-testid="mock-logo" />

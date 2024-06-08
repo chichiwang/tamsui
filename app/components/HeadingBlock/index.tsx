@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 import { HeadingLevel } from 'app/types';
-import Heading from 'pages/components/Heading';
+import Heading from 'app/components/Heading';
 
 import styles from './styles.module.scss';
 

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import classNames from 'classnames';
 
 import { HeadingLevel } from 'app/types';
-import LinkIcon from 'pages/components/LinkIcon';
+import LinkIcon from 'app/components/LinkIcon';
 
 import styles from './styles.module.scss';
 

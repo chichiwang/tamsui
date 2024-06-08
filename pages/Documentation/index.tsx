@@ -1,12 +1,11 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import ContentBlock from 'pages/components/ContentBlock';
-import ExternalLink from 'pages/components/ExternalLink';
-import HeadingBlock from 'pages/components/HeadingBlock';
-import ChecklistItem from 'pages/components/ChecklistItem';
-
-import CopyButton from 'pages/components/CopyButton';
+import ContentBlock from 'app/components/ContentBlock';
+import ExternalLink from 'app/components/ExternalLink';
+import HeadingBlock from 'app/components/HeadingBlock';
+import ChecklistItem from 'app/components/ChecklistItem';
+import CopyButton from 'app/components/CopyButton';
 
 import styles from './styles.module.scss';
 

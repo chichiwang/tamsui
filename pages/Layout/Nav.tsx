@@ -2,8 +2,8 @@ import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 
-import Logo from 'pages/components/Logo';
-import ExternalLink from 'pages/components/ExternalLink';
+import Logo from 'app/components/Logo';
+import ExternalLink from 'app/components/ExternalLink';
 
 import styles from './styles.nav.module.scss';
 
