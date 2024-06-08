@@ -53,7 +53,7 @@ $indent-unit: map.get(var.$content, 'padding');
         right: 0;
         opacity: 0;
 
-        &:focus-within {
+        &:has(:focus-visible) {
           opacity: 1;
         }
       }
