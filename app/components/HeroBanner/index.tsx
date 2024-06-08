@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 
-import AnimatedLogo from 'pages/components/Logo/AnimatedLogo';
+import AnimatedLogo from 'app/components/Logo/AnimatedLogo';
 import SceneMaroon from './SceneMaroon';
 import SceneRed from './SceneRed';
 import SceneOrange from './SceneOrange';

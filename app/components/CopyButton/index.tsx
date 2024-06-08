@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import classNames from 'classnames';
 
-import CopyIcon from 'pages/components/CopyIcon';
+import CopyIcon from 'app/components/CopyIcon';
 
 import styles from './styles.module.scss';
 

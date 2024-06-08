@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import HeroBanner from 'pages/components/HeroBanner';
-import ContentBlock from 'pages/components/ContentBlock';
-import HeadingBlock from 'pages/components/HeadingBlock';
-import ExternalLink from 'pages/components/ExternalLink';
+import HeroBanner from 'app/components/HeroBanner';
+import ContentBlock from 'app/components/ContentBlock';
+import HeadingBlock from 'app/components/HeadingBlock';
+import ExternalLink from 'app/components/ExternalLink';
 
 import styles from './styles.module.scss';
 
