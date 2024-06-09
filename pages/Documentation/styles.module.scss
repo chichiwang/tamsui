@@ -88,6 +88,48 @@ $indent-unit: map.get(var.$content, 'padding');
   }
 }
 
+.codeBlock {
+  position: relative;
+  padding: map.get(var.$content, 'padding');
+  font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+  border-radius: 0.25rem;
+  background-color: map.get(var.$code-colors, 'background');
+
+  .copyButton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    @media print,
+    screen and (max-width: var.$breakpoint-small-max) {
+      display: none;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: map.get(var.$colors, 'white');
+  }
+
+  .red {
+    color: map.get(var.$code-colors, 'red');
+  }
+
+  .orange {
+    color: map.get(var.$colors, 'orange');
+  }
+
+  .blue {
+    color: map.get(var.$code-colors, 'blue');
+  }
+
+  @media screen and (max-width: var.$breakpoint-small-max) {
+    p {
+      font-size: 0.75rem;
+    }
+  }
+}
+
 @media print {
   .pageBreak {
     margin-top: 8rem;

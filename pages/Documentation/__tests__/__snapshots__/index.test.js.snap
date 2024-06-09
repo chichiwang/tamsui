@@ -2118,6 +2118,13 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             Project Directories
           </a>
         </li>
+        <li>
+          <a
+            href="#Adding-an-Application-Directory"
+          >
+            Adding an Application Directory
+          </a>
+        </li>
       </ul>
     </article>
   </section>
@@ -2345,6 +2352,269 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         </a>
          is implemented as the logger.
       </p>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h3
+          className="tag"
+          id="Adding-an-Application-Directory"
+        >
+          Adding an Application Directory
+        </h3>
+        <a
+          aria-labelledby="Adding-an-Application-Directory"
+          className="link"
+          href="#Adding-an-Application-Directory"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <p>
+        To add additional application directories, or to remove existing ones:
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          Path aliases need to be updated
+        </li>
+        <li>
+          Jest projects need to be updated
+        </li>
+      </ul>
+      <p>
+        The 
+        <span
+          className="highlight"
+        >
+          app/
+        </span>
+         and 
+        <span
+          className="highlight"
+        >
+          pages/
+        </span>
+         directories are set up with path aliases so that a module can be imported with
+           absolute pathing rather than relative pathing:
+      </p>
+      <div
+        className="codeBlock"
+      >
+        <div
+          className="copyPosition copyButton"
+        >
+          <div
+            className="copyContainer"
+          >
+            <div
+              className="message"
+            >
+              <div
+                className="successMessage"
+              >
+                <span>
+                  Copied!
+                </span>
+              </div>
+              <div
+                className="errorMessage"
+              >
+                <span>
+                  Failed!
+                </span>
+              </div>
+            </div>
+            <button
+              aria-label="Copy text"
+              className="copyButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="copyIcon"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                >
+                  <path
+                    d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"
+                  />
+                  <path
+                    d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p>
+          <span
+            className="red"
+          >
+            import
+          </span>
+           Module 
+          <span
+            className="red"
+          >
+            from
+          </span>
+           
+          <span
+            className="blue"
+          >
+            'app/module'
+          </span>
+          ;
+        </p>
+        <p>
+          <span
+            className="red"
+          >
+            import
+          </span>
+           PageModule 
+          <span
+            className="red"
+          >
+            from
+          </span>
+           
+          <span
+            className="blue"
+          >
+            'page/PageModule'
+          </span>
+          ;
+        </p>
+      </div>
+      <p>
+        If any directory is removed, or if a new directory needs an alias:
+      </p>
+      <ul
+        className="list"
+      >
+        <li>
+          An 
+          <span
+            className="highlight"
+          >
+            alias
+          </span>
+           should be updated in the 
+          <a
+            href="https://github.com/chichiwang/tamsui/blob/main/webpack/resolve.js"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Webpack configs
+          </a>
+          .
+        </li>
+        <li>
+          The 
+          <a
+            href="https://github.com/johvin/eslint-import-resolver-alias?tab=readme-ov-file#usage"
+            rel="noreferrer"
+            target="_blank"
+          >
+            alias mapping
+          </a>
+           should be added to the 
+          <a
+            href="https://github.com/chichiwang/tamsui/blob/main/.eslintrc.js"
+            rel="noreferrer"
+            target="_blank"
+          >
+            eslint configuration
+          </a>
+           to avoid linting errors when using the alias.
+        </li>
+        <li>
+          The alias should be updated in the 
+          <a
+            href="https://www.typescriptlang.org/tsconfig#paths"
+            rel="noreferrer"
+            target="_blank"
+          >
+            paths configuration
+          </a>
+           for TypeScript to avoid type errors.
+        </li>
+        <li>
+          The alias should be updated in the 
+          <a
+            href="https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring"
+            rel="noreferrer"
+            target="_blank"
+          >
+            moduleNameMapper configuration
+          </a>
+           in the 
+          <a
+            href="https://github.com/chichiwang/tamsui/blob/main/jest.config.js"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Jest configuration
+          </a>
+           to ensure module mocking will work in tests, and so there are no errors in using the alias.
+          <ul
+            className="list"
+          >
+            <li>
+              The directory should be updated in the 
+              <span
+                className="highlight"
+              >
+                appConfig.testMatch
+              </span>
+               array to ensure that the test runner knows which directories to cover.
+            </li>
+          </ul>
+        </li>
+      </ul>
     </article>
   </section>
 </div>
