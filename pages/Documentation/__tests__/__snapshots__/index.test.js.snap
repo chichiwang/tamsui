@@ -60,7 +60,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
     </div>
     <article>
       <ul
-        className="contentList"
+        className="list content"
       >
         <li>
           <a
@@ -74,6 +74,13 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             href="#NPM-Scripts"
           >
             NPM Scripts
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Developing-Locally"
+          >
+            Developing Locally
           </a>
         </li>
       </ul>
@@ -2045,6 +2052,299 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </tr>
         </tbody>
       </table>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h2
+          className="tag"
+          id="Developing-Locally"
+        >
+          Developing Locally
+        </h2>
+        <a
+          aria-labelledby="Developing-Locally"
+          className="link"
+          href="#Developing-Locally"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <ul
+        className="list content"
+      >
+        <li>
+          <a
+            href="#Running-the-Application"
+          >
+            Running the Application
+          </a>
+        </li>
+        <li>
+          <a
+            href="#Project-Directories"
+          >
+            Project Directories
+          </a>
+        </li>
+      </ul>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h3
+          className="tag"
+          id="Running-the-Application"
+        >
+          Running the Application
+        </h3>
+        <a
+          aria-labelledby="Running-the-Application"
+          className="link"
+          href="#Running-the-Application"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <p>
+        Run 
+        <span
+          className="highlight"
+        >
+          npm run watch
+        </span>
+         to run the development watch server.
+      </p>
+      <p>
+        <span
+          className="highlight"
+        >
+          npm run dev
+        </span>
+         will build and run the application in development mode. 
+        <span
+          className="highlight"
+        >
+          npm run prod
+        </span>
+         will build and run the application in production mode. All of the above modes
+           will run the server output through 
+        <a
+          href="https://github.com/pinojs/pino-pretty"
+          rel="noreferrer"
+          target="_blank"
+        >
+          pino-pretty
+        </a>
+        .
+      </p>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h3
+          className="tag"
+          id="Project-Directories"
+        >
+          Project Directories
+        </h3>
+        <a
+          aria-labelledby="Project-Directories"
+          className="link"
+          href="#Project-Directories"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <p>
+        The 
+        <span
+          className="highlight"
+        >
+          client/
+        </span>
+         directory is intended to house files specific to the client-side bundle.
+           At the moment it only contains the entrypoint file, which 
+        <a
+          href="https://react.dev/reference/react-dom/client/hydrateRoot"
+          rel="noreferrer"
+          target="_blank"
+        >
+          mounts and hydrates the root application
+        </a>
+        .
+      </p>
+      <p>
+        The 
+        <span
+          className="highlight"
+        >
+          app/
+        </span>
+         directory houses application-level concerns: the root application contains the
+           the html root, head, and body. The routes are housed in 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/dataRoutes
+        </a>
+         as a 
+        <a
+          href="https://reactrouter.com/en/main/route/route"
+          rel="noreferrer"
+          target="_blank"
+        >
+          data routes object
+        </a>
+        . The reason the routes are not declared in 
+        <a
+          href="https://react.dev/learn/writing-markup-with-jsx"
+          rel="noreferrer"
+          target="_blank"
+        >
+          JSX
+        </a>
+         is for compatibility with rendering 
+        <a
+          href="https://react.dev/reference/react-dom/server/renderToPipeableStream"
+          rel="noreferrer"
+          target="_blank"
+        >
+          React to a Node.js stream
+        </a>
+        .
+      </p>
+      <p>
+        The 
+        <span
+          className="highlight"
+        >
+          pages/
+        </span>
+         directory houses the page-level react components. These are plugged into the
+           application via the 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
+          rel="noreferrer"
+          target="_blank"
+        >
+          dataRoutes object
+        </a>
+        .
+      </p>
+      <p>
+        The 
+        <span
+          className="highlight"
+        >
+          server/
+        </span>
+         directory houses the server-side rendering logic and defines the static asset
+           directories. 
+        <a
+          href="https://getpino.io/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Pino
+        </a>
+         is implemented as the logger.
+      </p>
     </article>
   </section>
 </div>
