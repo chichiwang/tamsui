@@ -23,7 +23,7 @@ function Documentation() {
       </HeadingBlock>
 
       <HeadingBlock level="2" heading="Contents">
-        <ul className={styles.contentList}>
+        <ul className={classNames(styles.list, styles.content)}>
           <li>
             <a href="#Starting-a-Project">Starting a Project</a>
           </li>
