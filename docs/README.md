@@ -69,8 +69,7 @@ To add additional application directories, or to remove existing ones:
 The `app/` and `pages/` directories are set up with path aliases so that a module can be imported with absolute pathing rather than relative pathing:
 
 ```javascript
-import module from 'app/module';
-
+import Module from 'app/Module';
 import PageModule from 'pages/PageModule';
 ```
 
