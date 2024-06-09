@@ -18,9 +18,12 @@ $indent-unit: map.get(var.$content, 'padding');
   background-color: map.get(var.$colors, 'grey');
 }
 
-.contentList {
+.list {
   margin: 0;
-  list-style: none;
+
+  &.content {
+    list-style: none;
+  }
 
   & li {
     margin: calc(map.get(var.$content, 'padding') * 0.75) 0;
