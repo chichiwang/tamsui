@@ -78,7 +78,7 @@ If any directory is removed, or if a new directory needs an alias:
 * The [alias mapping](https://github.com/johvin/eslint-import-resolver-alias?tab=readme-ov-file#usage) should be added to the [eslint configuration](../.eslintrc.js) to avoid linting errors when using the alias.
 * The alias should be updated in the [paths configuration](https://www.typescriptlang.org/tsconfig#paths) for TypeScript to avoid type errors.
 * The alias should be updated in the [moduleNameMapper configuration](https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring) in the [Jest configuration](../jest.config.js) to ensure module mocking will work in tests, and so there are no errors in using the alias.
-* The directory should be updated in the `appConfig`·`testMatch` array to ensure that test runner knows which directories to cover.
+  * The directory should be updated in the `appConfig.testMatch` array to ensure that the test runner knows which directories to cover.
 
 ### Static Files
 The directory [static/](../static) housed in the project root is copied directly into the `dist/` directory on project build. This directory is served statically by the Express server.
