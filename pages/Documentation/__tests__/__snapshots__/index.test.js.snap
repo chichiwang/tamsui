@@ -1813,7 +1813,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             <td>
               <p>
                 Build prod assets and run the webserver, 
-                    intended to be used in production environments
+                  intended to be used in production environments
               </p>
             </td>
           </tr>
@@ -1887,7 +1887,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             <td>
               <p>
                 Build prod assets and run the webserver, 
-                    intended to be used in production environments
+                  intended to be used in production environments
               </p>
             </td>
           </tr>
@@ -2197,7 +2197,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           npm run prod
         </span>
          will build and run the application in production mode. All of the above modes
-           will run the server output through 
+         will run the server output through 
         <a
           href="https://github.com/pinojs/pino-pretty"
           rel="noreferrer"
@@ -2264,7 +2264,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           client/
         </span>
          directory is intended to house files specific to the client-side bundle.
-           At the moment it only contains the entrypoint file, which 
+         At the moment it only contains the entrypoint file, which 
         <a
           href="https://react.dev/reference/react-dom/client/hydrateRoot"
           rel="noreferrer"
@@ -2282,7 +2282,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           app/
         </span>
          directory houses application-level concerns: the root application contains the
-           the html root, head, and body. The routes are housed in 
+         the html root, head, and body. The routes are housed in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
           rel="noreferrer"
@@ -2324,7 +2324,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           pages/
         </span>
          directory houses the page-level react components. These are plugged into the
-           application via the 
+         application via the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
           rel="noreferrer"
@@ -2342,7 +2342,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           server/
         </span>
          directory houses the server-side rendering logic and defines the static asset
-           directories. 
+         directories. 
         <a
           href="https://getpino.io/"
           rel="noreferrer"
@@ -2428,7 +2428,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           pages/
         </span>
          directories are set up with path aliases so that a module can be imported with
-           absolute pathing rather than relative pathing:
+         absolute pathing rather than relative pathing:
       </p>
       <div
         className="codeBlock"
