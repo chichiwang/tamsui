@@ -6,12 +6,12 @@ $padding-unit: map.get(var.$content, 'padding');
 $button-size: 1.75rem;
 $icon-size: 1.125rem;
 
-.copyPosition {
+.copyContainer {
   position: relative;
   width: $button-size;
   height: $button-size;
 
-  .copyContainer {
+  .copyWrapper {
     position: absolute;
     display: flex;
     top: 0;
@@ -87,6 +87,14 @@ $icon-size: 1.125rem;
         .copyIcon {
           color: map.get(var.$colors, 'white');
         }
+      }
+    }
+
+    &.lightMode .copyButton {
+      border: 1px solid map.get(var.$colors, 'white');
+
+      .copyIcon {
+        color: map.get(var.$colors, 'white');
       }
     }
 

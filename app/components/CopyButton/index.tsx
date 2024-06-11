@@ -5,17 +5,24 @@ import CopyIcon from 'app/components/CopyIcon';
 
 import styles from './styles.module.scss';
 
-type CopyButtonProps = {
-  className?: string;
-  textToCopy: string;
-};
-
 enum CopyStates {
   ready,
   copying,
   copied,
   errored
 }
+
+export enum ColorModes {
+  dark = 'dark',
+  default = 'dark',
+  light = 'light',
+}
+
+type CopyButtonProps = {
+  className?: string;
+  colorMode?: ColorModes,
+  textToCopy: string;
+};
 
 const ButtonContent = {
   [CopyStates.ready]: (<CopyIcon className={styles.copyIcon} />),
@@ -28,6 +35,7 @@ const messageDisplayTime = 2000;
 
 function CopyButton({
   className,
+  colorMode = ColorModes.default,
   textToCopy,
 }: CopyButtonProps) {
   const [copyState, setCopyState] = useState(CopyStates.ready);
@@ -55,8 +63,9 @@ function CopyButton({
       });
   }
 
-  const containerClassname = classNames({
-    [styles.copyContainer]: true,
+  const wrapperClassName = classNames({
+    [styles.copyWrapper]: true,
+    [styles.lightMode]: colorMode === ColorModes.light,
     [styles.disabled]: copyState === CopyStates.copying,
     [styles.copied]: copyState === CopyStates.copied,
     [styles.error]: copyState === CopyStates.errored,
@@ -71,8 +80,8 @@ function CopyButton({
   };
 
   return (
-    <div className={classNames(styles.copyPosition, className)}>
-      <div className={containerClassname}>
+    <div className={classNames(styles.copyContainer, className)}>
+      <div className={wrapperClassName}>
         <div className={styles.message}>
           <div className={styles.successMessage}>
             <span>Copied!</span>
