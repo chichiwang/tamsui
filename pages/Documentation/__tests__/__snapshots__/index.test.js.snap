@@ -788,10 +788,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   analyze
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -875,10 +875,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   analyze:dev
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -956,10 +956,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   analyze:prod
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1037,10 +1037,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   build:dev
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1115,10 +1115,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   build:dist
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1194,10 +1194,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   build:prod
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1272,10 +1272,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   build:static
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1356,10 +1356,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   clean
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1441,10 +1441,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   dev
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1522,10 +1522,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   lint
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1602,10 +1602,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   prod
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1683,10 +1683,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   run
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1761,10 +1761,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   start
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1835,10 +1835,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   test
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1909,10 +1909,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   test:snapshot
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -1995,10 +1995,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                   watch
                 </span>
                 <div
-                  className="copyPosition copyButton"
+                  className="copyContainer copyButton"
                 >
                   <div
-                    className="copyContainer"
+                    className="copyWrapper"
                   >
                     <div
                       className="message"
@@ -2476,10 +2476,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         className="codeBlock"
       >
         <div
-          className="copyPosition copyButton"
+          className="copyContainer copyButton"
         >
           <div
-            className="copyContainer"
+            className="copyWrapper lightMode"
           >
             <div
               className="message"
@@ -2888,10 +2888,10 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         className="codeBlock"
       >
         <div
-          className="copyPosition copyButton"
+          className="copyContainer copyButton"
         >
           <div
-            className="copyContainer"
+            className="copyWrapper lightMode"
           >
             <div
               className="message"

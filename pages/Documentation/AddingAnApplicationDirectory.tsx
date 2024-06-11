@@ -2,7 +2,7 @@ import React from 'react';
 
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
-import CopyButton from 'app/components/CopyButton';
+import CopyButton, { ColorModes } from 'app/components/CopyButton';
 
 import styles from './styles.module.scss';
 
@@ -35,6 +35,7 @@ function AddingAnApplicationDirectory() {
         <CopyButton
           className={styles.copyButton}
           textToCopy={'import Module from app/Module;\nimport PageModule from page/PageModule;'}
+          colorMode={ColorModes.light}
         />
         <p>
           <span className={styles.red}>import</span>

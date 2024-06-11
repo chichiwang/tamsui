@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
-import CopyButton from 'app/components/CopyButton';
+import CopyButton, { ColorModes } from 'app/components/CopyButton';
 
 import styles from './styles.module.scss';
 
@@ -54,7 +54,11 @@ function ErrorBoundary() {
       </p>
 
       <div className={styles.codeBlock}>
-        <CopyButton className={styles.copyButton} textToCopy={errorBoundarySnippet} />
+        <CopyButton
+          className={styles.copyButton}
+          textToCopy={errorBoundarySnippet}
+          colorMode={ColorModes.light}
+        />
         <p>
           <span className={styles.grey}>&#47;&#47; app/dataRoutes/index.ts</span>
         </p>
