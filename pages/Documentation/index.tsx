@@ -14,6 +14,7 @@ import StaticFiles from './StaticFiles';
 import ErrorBoundary from './ErrorBoundary';
 import Testing from './Testing';
 import PullRequestTemplate from './PullRequestTemplate';
+import GithubWorkflow from './GithubWorkflow';
 
 import styles from './styles.module.scss';
 
@@ -70,6 +71,9 @@ function Documentation() {
           <li>
             <a href="#Pull-Request-Template">Pull Request Template</a>
           </li>
+          <li>
+            <a href="#Github-Workflow">Github Workflow</a>
+          </li>
         </ul>
       </HeadingBlock>
 
@@ -80,6 +84,7 @@ function Documentation() {
       <ErrorBoundary />
       <Testing />
       <PullRequestTemplate />
+      <GithubWorkflow />
     </ContentBlock>
   );
 }
