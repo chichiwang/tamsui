@@ -118,11 +118,11 @@ On the client, an error in a page will render the [ErrorPage component](../pages
 Alternatively, keep the error page path and just replace the [ErrorPage component](../pages/ErrorPage).
 
 ### Testing
-**Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory and/or contain the extension `.test.js` anywhere within the [project directories](#project-directories).
+**Tamsui** utilizes [Jest](https://jestjs.io/) as test runner. Tests should be housed in a `__tests__/` directory within their respective [project directories](#project-directories). Test files should have the file extension `.test.js`.
 
 The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config](../jest.config.js).
 
-To run the test suite locally: `npm run test`. To update [Jest snapshots](https://jestjs.io/docs/snapshot-testing) `npm run test:snapshot` can be used. Alternatively, `npm run test -- -u` will also work.
+To run the test suite locally: `npm test`. To update [Jest snapshots](https://jestjs.io/docs/snapshot-testing) `npm run test:snapshot` can be used. Alternatively, `npm run test -- -u` will also work.
 
 ### Pull Request Template
 **Tamsui** contains a [Github Pull Request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) that is intended to provide a scaffold for a thorough pull request. [This template](../.github/pull_request_template.md) provides the following sections:
