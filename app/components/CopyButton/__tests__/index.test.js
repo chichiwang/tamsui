@@ -10,7 +10,7 @@ import {
 } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
-import CopyButton from '../index';
+import CopyButton, { ColorModes } from '../index';
 
 jest.useFakeTimers();
 
@@ -46,6 +46,30 @@ describe('CopyButton component', () => {
   test('matches the className snapshot', () => {
     const tree = renderer.create(
       <CopyButton className="center" textToCopy="Business Address" />,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('matches the dark-mode snapshot', () => {
+    const tree = renderer.create(
+      <CopyButton className="center" colorMode={ColorModes.dark} textToCopy="s3cr37 m3554g3" />,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('matches the default-mode snapshot', () => {
+    const tree = renderer.create(
+      <CopyButton className="center" colorMode={ColorModes.default} textToCopy="Santa's List" />,
+    ).toJSON();
+
+    expect(tree).toMatchSnapshot();
+  });
+
+  test('matches the light-mode snapshot', () => {
+    const tree = renderer.create(
+      <CopyButton className="center" colorMode={ColorModes.light} textToCopy="Homework" />,
     ).toJSON();
 
     expect(tree).toMatchSnapshot();
