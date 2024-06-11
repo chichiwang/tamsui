@@ -93,13 +93,13 @@ On deployment, the `/dist/static/` directory can be uploaded to your CDN of choi
 - [ ] Add configuration options for serving built assets (`/scripts`, `/styles`) as well, so these assets can also be served via CDN
 
 ### Error Boundary
-**Tamsui** implements a basic [React Error Boundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) in [app/ErrorBoundary](../app/ErrorBoundary). This error boundary is configured as the [errorElement](https://reactrouter.com/en/main/route/error-element) in the [dataRoutes](../app/dataRoutes). It is recommended to wrap all root routes in this error boundary. An utility, [withErrorBoundary](../app/dataRoutes/withErrorBoundary.tsx), is provided to more easily (and declaratively) extend routes with this errorElement when extending routes:
+**Tamsui** implements a basic [React Error Boundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) in [app/ErrorBoundary](../app/ErrorBoundary). This error boundary is configured as an [errorElement](https://reactrouter.com/en/main/route/error-element) in the [dataRoutes](../app/dataRoutes) object. It is recommended all root routes are wrapped in this error boundary. A utility, [withErrorBoundary](../app/dataRoutes/withErrorBoundary.tsx), is provided to more easily (and declaratively) extend routes with this `errorElement` property:
 
 ```javascript
 // app/dataRoutes/index.ts
-import withErrorBoundary from './withErrorBoundary';
-
 import PageComponent from 'pages/PageComponent';
+
+import withErrorBoundary from './withErrorBoundary';
 
 const dataRoutes = [
   withErrorBoundary({
@@ -109,7 +109,7 @@ const dataRoutes = [
 ];
 ```
 
-On the server, if an error in rendering the application occurs it will redirect the request to `/error`, [configured by default](../server/appHandler.tsx) to the be [application's error page](../pages/ErrorPage).
+On the server, if an error in rendering the application occurs it will redirect the request to `/error`, [configured by default](../server/appHandler.tsx) to be the [application's error page](../pages/ErrorPage).
 
 On the client, an error in a page will render the [ErrorPage component](../pages/ErrorPage) as fallback.
 
