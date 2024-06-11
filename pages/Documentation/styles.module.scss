@@ -6,6 +6,10 @@ $indent-unit: map.get(var.$content, 'padding');
 .indent {
   margin-left: $indent-unit;
 
+  &.twice {
+    margin-left: calc($indent-unit * 2);
+  }
+
   &.checklist {
     margin-left: calc($indent-unit * 1.5);
   }
@@ -107,20 +111,33 @@ $indent-unit: map.get(var.$content, 'padding');
   }
 
   p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
     color: map.get(var.$colors, 'white');
-  }
-
-  .red {
-    color: map.get(var.$code-colors, 'red');
-  }
-
-  .orange {
-    color: map.get(var.$colors, 'orange');
   }
 
   .blue {
     color: map.get(var.$code-colors, 'blue');
+  }
+
+  .darkBlue {
+    color: map.get(var.$code-colors, 'darkBlue');
+  }
+
+  .grey {
+    color: map.get(var.$code-colors, 'grey');
+  }
+
+  .orange {
+    color: map.get(var.$code-colors, 'orange');
+  }
+
+  .purple {
+    color: map.get(var.$code-colors, 'purple');
+  }
+
+  .red {
+    color: map.get(var.$code-colors, 'red');
   }
 
   @media screen and (max-width: var.$breakpoint-small-max) {
