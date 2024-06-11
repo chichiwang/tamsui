@@ -10,6 +10,7 @@ import NPMScripts from './NPMScripts';
 import RunningTheApplication from './RunningTheApplication';
 import ProjectDirectories from './ProjectDirectories';
 import AddingAnApplicationDirectory from './AddingAnApplicationDirectory';
+import StaticFiles from './StaticFiles';
 
 import styles from './styles.module.scss';
 
@@ -54,12 +55,16 @@ function Documentation() {
           <li>
             <a href="#Adding-an-Application-Directory">Adding an Application Directory</a>
           </li>
+          <li>
+            <a href="#Static-Files">Static Files</a>
+          </li>
         </ul>
       </HeadingBlock>
 
       <RunningTheApplication />
       <ProjectDirectories />
       <AddingAnApplicationDirectory />
+      <StaticFiles />
     </ContentBlock>
   );
 }
