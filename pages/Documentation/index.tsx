@@ -12,6 +12,7 @@ import ProjectDirectories from './ProjectDirectories';
 import AddingAnApplicationDirectory from './AddingAnApplicationDirectory';
 import StaticFiles from './StaticFiles';
 import ErrorBoundary from './ErrorBoundary';
+import Testing from './Testing';
 
 import styles from './styles.module.scss';
 
@@ -62,6 +63,9 @@ function Documentation() {
           <li>
             <a href="#Error-Boundary">Error Boundary</a>
           </li>
+          <li>
+            <a href="#Testing">Testing</a>
+          </li>
         </ul>
       </HeadingBlock>
 
@@ -70,6 +74,7 @@ function Documentation() {
       <AddingAnApplicationDirectory />
       <StaticFiles />
       <ErrorBoundary />
+      <Testing />
     </ContentBlock>
   );
 }
