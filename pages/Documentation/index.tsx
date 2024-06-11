@@ -13,6 +13,7 @@ import AddingAnApplicationDirectory from './AddingAnApplicationDirectory';
 import StaticFiles from './StaticFiles';
 import ErrorBoundary from './ErrorBoundary';
 import Testing from './Testing';
+import PullRequestTemplate from './PullRequestTemplate';
 
 import styles from './styles.module.scss';
 
@@ -66,6 +67,9 @@ function Documentation() {
           <li>
             <a href="#Testing">Testing</a>
           </li>
+          <li>
+            <a href="#Pull-Request-Template">Pull Request Template</a>
+          </li>
         </ul>
       </HeadingBlock>
 
@@ -75,6 +79,7 @@ function Documentation() {
       <StaticFiles />
       <ErrorBoundary />
       <Testing />
+      <PullRequestTemplate />
     </ContentBlock>
   );
 }
