@@ -2139,6 +2139,13 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             Error Boundary
           </a>
         </li>
+        <li>
+          <a
+            href="#Testing"
+          >
+            Testing
+          </a>
+        </li>
       </ul>
     </article>
   </section>
@@ -3109,6 +3116,140 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           ErrorPage component
         </a>
         .
+      </p>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h3
+          className="tag"
+          id="Testing"
+        >
+          Testing
+        </h3>
+        <a
+          aria-labelledby="Testing"
+          className="link"
+          href="#Testing"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <p>
+        <b>
+          Tamsui
+        </b>
+         utilizes 
+        <a
+          href="https://jestjs.io/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Jest
+        </a>
+         as a test runner. Tests should be housed in a 
+        <span
+          className="highlight"
+        >
+          __tests__/
+        </span>
+         directory within their respective 
+        <a
+          href="#Project-Directories"
+        >
+          project directories
+        </a>
+        . Test files should have the file extension 
+        <span
+          className="highlight"
+        >
+          .test.js
+        </span>
+      </p>
+      <p>
+        The default 
+        <a
+          href="https://jestjs.io/docs/configuration#coveragethreshold-object"
+          rel="noreferrer"
+          target="_blank"
+        >
+          coverage threshold
+        </a>
+         is set too 100% across the board. To reduce or remove the coverage requirements, modify the 
+        <span
+          className="highlight"
+        >
+          coverageThreshold
+        </span>
+         field in the 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/jest.config.js"
+          rel="noreferrer"
+          target="_blank"
+        >
+          config
+        </a>
+        .
+      </p>
+      <p>
+        To run the test suite locally: 
+        <span
+          className="highlight"
+        >
+          npm test
+        </span>
+        . To update 
+        <a
+          href="https://jestjs.io/docs/snapshot-testing"
+          rel="noreferrer"
+          target="_blank"
+        >
+          Jest snapshots
+        </a>
+         
+        <span
+          className="highlight"
+        >
+          npm run test:snapshot
+        </span>
+         can be used. Alternatively, 
+        <span
+          className="highlight"
+        >
+          npm run test -- -u
+        </span>
+         will also work.
       </p>
     </article>
   </section>
