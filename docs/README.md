@@ -81,13 +81,13 @@ If any directory is removed, or if a new directory needs an alias:
   * The directory should be updated in the `appConfig.testMatch` array to ensure that the test runner knows which directories to cover.
 
 ### Static Files
-The directory [static/](../static) housed in the project root is copied directly into the `dist/` directory on project build. This directory is served statically by the Express server.
+The directory [static/](../static), housed in the project root, is copied directly into the `dist/` directory on project build. This directory is served statically by the Express server.
 
 This directory is meant to house static files (images, JSON files, etc.) used by **Tamsui**. This is a stop-gap solution: the Express server should not be used to serve static files like images - these should be housed in a CDN.
 
 On deployment, the `/dist/static/` directory can be uploaded to your CDN of choice.
 
-**TODO** (future tasks for the **Tamsui**):
+**TODO** (future tasks for the **Tamsui** project):
 - [ ] Add a configuration to provide a base route to static assets (so a CDN route can be provided)
 - [ ] Add a configuration to enable/disable serving `/static` directory files in various environments (development/production)
 - [ ] Add configuration options for serving built assets (`/scripts`, `/styles`) as well, so these assets can also be served via CDN
