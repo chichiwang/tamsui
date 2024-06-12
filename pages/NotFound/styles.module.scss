@@ -1,0 +1,13 @@
+@use 'sass:map';
+@use 'app/var.module';
+
+.logoBlock {
+  display: flex;
+  justify-content: center;
+  margin: calc(map.get(var.$content, 'padding') * 4) auto;
+}
+
+.notFoundHeading,
+.notFoundMessage {
+  text-align: center;
+}
