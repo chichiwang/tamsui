@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
@@ -26,22 +25,22 @@ function StartingAProject() {
         <span className={styles.highlight}>package.json</span>
         {' file.'}
       </ChecklistItem>
-      <ChecklistItem className={classNames(styles.indent, styles.checklist)}>
+      <ChecklistItem className={styles.indent}>
         {'Update the '}
         <span className={styles.highlight}>name</span>
         {' field.'}
       </ChecklistItem>
-      <ChecklistItem className={classNames(styles.indent, styles.checklist)}>
+      <ChecklistItem className={styles.indent}>
         {'Update the '}
         <span className={styles.highlight}>repository/url</span>
         {' field.'}
       </ChecklistItem>
-      <ChecklistItem className={classNames(styles.indent, styles.checklist)}>
+      <ChecklistItem className={styles.indent}>
         {'Update the '}
         <span className={styles.highlight}>bugs/url</span>
         {' field.'}
       </ChecklistItem>
-      <ChecklistItem className={classNames(styles.indent, styles.checklist)}>
+      <ChecklistItem className={styles.indent}>
         {'Update the '}
         <span className={styles.highlight}>homepage</span>
         {' field.'}
@@ -59,7 +58,7 @@ function StartingAProject() {
         <span className={styles.highlight}>nvm use</span>
         .
       </ChecklistItem>
-      <ChecklistItem className={classNames(styles.indent, styles.checklist)}>
+      <ChecklistItem className={styles.indent}>
         {'Otherwise, note the contents of '}
         <span className={styles.highlight}>.nvmrc</span>
         {' to see the version of '}
