@@ -88,24 +88,27 @@ function ErrorBoundary() {
           <span className={styles.blue}>=</span>
           {' ['}
         </p>
-        <p className={styles.indent}>
+        <p>
+          &nbsp;&nbsp;
           <span className={styles.purple}>withErrorBoundary</span>
           (&#123;
         </p>
-        <p className={classNames(styles.indent, styles.twice)}>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <span className={styles.darkBlue}>path</span>
           {': '}
           <span className={styles.blue}>&apos;/path-to-page&apos;</span>
           ,
         </p>
-        <p className={classNames(styles.indent, styles.twice)}>
+        <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;
           <span className={styles.darkBlue}>Component</span>
           {': '}
           <span className={styles.orange}>PageComponent</span>
           ,
         </p>
-        <p className={styles.indent}>
-          &#125;),
+        <p>
+          &nbsp;&nbsp;&#125;),
         </p>
         <p>
           ];
