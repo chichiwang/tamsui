@@ -5,6 +5,9 @@ exports[`App Component matches child snapshot 1`] = `
   lang="en"
 >
   <head>
+    <meta
+      charSet="utf-8"
+    />
     <title>
       Tamsui
     </title>
@@ -52,6 +55,9 @@ exports[`App Component matches no-child snapshot 1`] = `
   lang="en"
 >
   <head>
+    <meta
+      charSet="utf-8"
+    />
     <title>
       Tamsui
     </title>
