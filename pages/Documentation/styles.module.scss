@@ -6,10 +6,6 @@ $indent-unit: map.get(var.$content, 'padding');
 .indent {
   margin-left: $indent-unit;
 
-  &.twice {
-    margin-left: calc($indent-unit * 2);
-  }
-
   &.checklist {
     margin-left: calc($indent-unit * 1.5);
   }

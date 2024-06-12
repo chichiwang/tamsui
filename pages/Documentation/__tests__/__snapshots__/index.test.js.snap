@@ -3011,9 +3011,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </span>
            [
         </p>
-        <p
-          className="indent"
-        >
+        <p>
+            
           <span
             className="purple"
           >
@@ -3021,9 +3020,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </span>
           ({
         </p>
-        <p
-          className="indent twice"
-        >
+        <p>
+              
           <span
             className="darkBlue"
           >
@@ -3037,9 +3035,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </span>
           ,
         </p>
-        <p
-          className="indent twice"
-        >
+        <p>
+              
           <span
             className="darkBlue"
           >
@@ -3053,10 +3050,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </span>
           ,
         </p>
-        <p
-          className="indent"
-        >
-          }),
+        <p>
+            }),
         </p>
         <p>
           ];
