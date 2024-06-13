@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
