@@ -2948,8 +2948,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           >
             // app/dataRoutes/index.ts
           </span>
-        </p>
-        <p>
+          <br />
           <span
             className="red"
           >
@@ -2974,9 +2973,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             'pages/PageComponent'
           </span>
           ;
-        </p>
-        <br />
-        <p>
+          <br />
+          <br />
           <span
             className="red"
           >
@@ -2995,9 +2993,8 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             './withErrorBoundary'
           </span>
           ;
-        </p>
-        <br />
-        <p>
+          <br />
+          <br />
           <span
             className="red"
           >
@@ -3010,8 +3007,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             =
           </span>
            [
-        </p>
-        <p>
+          <br />
             
           <span
             className="purple"
@@ -3019,8 +3015,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             withErrorBoundary
           </span>
           ({
-        </p>
-        <p>
+          <br />
               
           <span
             className="darkBlue"
@@ -3034,8 +3029,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             '/path-to-page'
           </span>
           ,
-        </p>
-        <p>
+          <br />
               
           <span
             className="darkBlue"
@@ -3049,11 +3043,9 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             PageComponent
           </span>
           ,
-        </p>
-        <p>
+          <br />
             }),
-        </p>
-        <p>
+          <br />
           ];
         </p>
       </div>
