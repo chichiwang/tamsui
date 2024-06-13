@@ -2549,8 +2549,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             'app/module'
           </span>
           ;
-        </p>
-        <p>
+          <br />
           <span
             className="red"
           >
