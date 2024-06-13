@@ -60,8 +60,7 @@ function ErrorBoundary() {
         />
         <p>
           <span className={styles.grey}>&#47;&#47; app/dataRoutes/index.ts</span>
-        </p>
-        <p>
+          <br />
           <span className={styles.red}>import</span>
           {' '}
           <span className={styles.orange}>PageComponent</span>
@@ -70,46 +69,39 @@ function ErrorBoundary() {
           {' '}
           <span className={styles.blue}>&apos;pages/PageComponent&apos;</span>
           ;
-        </p>
-        <br />
-        <p>
+          <br />
+          <br />
           <span className={styles.red}>import</span>
           {' withErrorBoundary '}
           <span className={styles.red}>from</span>
           {' '}
           <span className={styles.blue}>&apos;./withErrorBoundary&apos;</span>
           ;
-        </p>
-        <br />
-        <p>
+          <br />
+          <br />
           <span className={styles.red}>const</span>
           {' dataRoutes '}
           <span className={styles.blue}>=</span>
           {' ['}
-        </p>
-        <p>
+          <br />
           &nbsp;&nbsp;
           <span className={styles.purple}>withErrorBoundary</span>
           (&#123;
-        </p>
-        <p>
+          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;
           <span className={styles.darkBlue}>path</span>
           {': '}
           <span className={styles.blue}>&apos;/path-to-page&apos;</span>
           ,
-        </p>
-        <p>
+          <br />
           &nbsp;&nbsp;&nbsp;&nbsp;
           <span className={styles.darkBlue}>Component</span>
           {': '}
           <span className={styles.orange}>PageComponent</span>
           ,
-        </p>
-        <p>
+          <br />
           &nbsp;&nbsp;&#125;),
-        </p>
-        <p>
+          <br />
           ];
         </p>
       </div>
