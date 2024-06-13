@@ -44,8 +44,7 @@ function AddingAnApplicationDirectory() {
           {' '}
           <span className={styles.blue}>&apos;app/module&apos;</span>
           ;
-        </p>
-        <p>
+          <br />
           <span className={styles.red}>import</span>
           {' PageModule '}
           <span className={styles.red}>from</span>
