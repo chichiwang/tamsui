@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import ContentBlock from 'app/components/ContentBlock';
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
+import InternalLink from 'app/components/InternalLink';
 
 import StartingAProject from './StartingAProject';
 import NPMScripts from './NPMScripts';
@@ -40,16 +41,16 @@ function Documentation() {
       >
         <ul className={classNames(styles.list, styles.content)}>
           <li>
-            <a href="#Starting-a-Project">Starting a Project</a>
+            <InternalLink to="#Starting-a-Project">Starting a Project</InternalLink>
           </li>
           <li>
-            <a href="#NPM-Scripts">NPM Scripts</a>
+            <InternalLink to="#NPM-Scripts">NPM Scripts</InternalLink>
           </li>
           <li>
-            <a href="#Developing-Locally">Developing Locally</a>
+            <InternalLink to="#Developing-Locally">Developing Locally</InternalLink>
           </li>
           <li>
-            <a href="#Building-for-Production">Building for Production</a>
+            <InternalLink to="#Building-for-Production">Building for Production</InternalLink>
           </li>
         </ul>
       </HeadingBlock>
@@ -64,28 +65,28 @@ function Documentation() {
       >
         <ul className={classNames(styles.list, styles.content)}>
           <li>
-            <a href="#Running-the-Application">Running the Application</a>
+            <InternalLink to="#Running-the-Application">Running the Application</InternalLink>
           </li>
           <li>
-            <a href="#Project-Directories">Project Directories</a>
+            <InternalLink to="#Project-Directories">Project Directories</InternalLink>
           </li>
           <li>
-            <a href="#Adding-an-Application-Directory">Adding an Application Directory</a>
+            <InternalLink to="#Adding-an-Application-Directory">Adding an Application Directory</InternalLink>
           </li>
           <li>
-            <a href="#Static-Files">Static Files</a>
+            <InternalLink to="#Static-Files">Static Files</InternalLink>
           </li>
           <li>
-            <a href="#Error-Boundary">Error Boundary</a>
+            <InternalLink to="#Error-Boundary">Error Boundary</InternalLink>
           </li>
           <li>
-            <a href="#Testing">Testing</a>
+            <InternalLink to="#Testing">Testing</InternalLink>
           </li>
           <li>
-            <a href="#Pull-Request-Template">Pull Request Template</a>
+            <InternalLink to="#Pull-Request-Template">Pull Request Template</InternalLink>
           </li>
           <li>
-            <a href="#Github-Workflow">Github Workflow</a>
+            <InternalLink to="#Github-Workflow">Github Workflow</InternalLink>
           </li>
         </ul>
       </HeadingBlock>
