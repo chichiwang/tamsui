@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import HeroBanner from 'app/components/HeroBanner';
 import ContentBlock from 'app/components/ContentBlock';
 import HeadingBlock from 'app/components/HeadingBlock';
 import ExternalLink from 'app/components/ExternalLink';
+import InternalLink from 'app/components/InternalLink';
 
 import styles from './styles.module.scss';
 
@@ -152,7 +152,7 @@ function Home(): React.ReactElement {
         <HeadingBlock id="Usage" level="2" heading="Usage">
           <p>
             {'Usage documentation is provided on the '}
-            <Link to="/documentation">Documentation page</Link>
+            <InternalLink to="/documentation">Documentation page</InternalLink>
             .
           </p>
         </HeadingBlock>
