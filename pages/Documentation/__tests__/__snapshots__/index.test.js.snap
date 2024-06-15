@@ -64,28 +64,32 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <li>
           <a
-            href="#Starting-a-Project"
+            href="/#Starting-a-Project"
+            onClick={[Function]}
           >
             Starting a Project
           </a>
         </li>
         <li>
           <a
-            href="#NPM-Scripts"
+            href="/#NPM-Scripts"
+            onClick={[Function]}
           >
             NPM Scripts
           </a>
         </li>
         <li>
           <a
-            href="#Developing-Locally"
+            href="/#Developing-Locally"
+            onClick={[Function]}
           >
             Developing Locally
           </a>
         </li>
         <li>
           <a
-            href="#Building-for-Production"
+            href="/#Building-for-Production"
+            onClick={[Function]}
           >
             Building for Production
           </a>
@@ -2113,56 +2117,64 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <li>
           <a
-            href="#Running-the-Application"
+            href="/#Running-the-Application"
+            onClick={[Function]}
           >
             Running the Application
           </a>
         </li>
         <li>
           <a
-            href="#Project-Directories"
+            href="/#Project-Directories"
+            onClick={[Function]}
           >
             Project Directories
           </a>
         </li>
         <li>
           <a
-            href="#Adding-an-Application-Directory"
+            href="/#Adding-an-Application-Directory"
+            onClick={[Function]}
           >
             Adding an Application Directory
           </a>
         </li>
         <li>
           <a
-            href="#Static-Files"
+            href="/#Static-Files"
+            onClick={[Function]}
           >
             Static Files
           </a>
         </li>
         <li>
           <a
-            href="#Error-Boundary"
+            href="/#Error-Boundary"
+            onClick={[Function]}
           >
             Error Boundary
           </a>
         </li>
         <li>
           <a
-            href="#Testing"
+            href="/#Testing"
+            onClick={[Function]}
           >
             Testing
           </a>
         </li>
         <li>
           <a
-            href="#Pull-Request-Template"
+            href="/#Pull-Request-Template"
+            onClick={[Function]}
           >
             Pull Request Template
           </a>
         </li>
         <li>
           <a
-            href="#Github-Workflow"
+            href="/#Github-Workflow"
+            onClick={[Function]}
           >
             Github Workflow
           </a>
