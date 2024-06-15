@@ -44,6 +44,7 @@
 * [Static Files](#static-files)
 * [Error Boundary](#error-boundary)
 * [Testing](#testing)
+* [Application Layouts](#application-layouts)
 * [Pull Request Template](#pull-request-template)
 * [Github Workflow](#github-workflow)
 
@@ -123,6 +124,15 @@ Alternatively, keep the error page path and just replace the [ErrorPage componen
 The default [coverage threshhold](https://jestjs.io/docs/configuration#coveragethreshold-object) is set to 100% across the board. To reduce or remove the test coverage requirements, modify the `coverageThreshold` field in the [config](../jest.config.js).
 
 To run the test suite locally: `npm test`. To update [Jest snapshots](https://jestjs.io/docs/snapshot-testing) `npm run test:snapshot` can be used. Alternatively, `npm run test -- -u` will also work.
+
+### Application Layouts
+Layouts can be applied directly to routes in [React Router](https://reactrouter.com/en/main) using [Layout Routes](https://reactrouter.com/en/main/start/concepts#layout-routes).
+
+In the boilerplate, a default Layout has been created in [pages/Layout](../pages/Layout).
+
+One issue that has arisen from the usage of a layout route is that client-side navigation will not reset the browser scroll upon page navigation: clicking a link to another page will land the user on the new page, scrolled the same amount as on the previous page.
+
+A solution has been implemented in this boilerplate in the form of a [custom React hook](https://react.dev/learn/reusing-logic-with-custom-hooks): [useResetScroll](../app/hooks/README.md#useResetScroll). This hook needs to be invoked by any layout route component used to be put into effect, and [Links](https://reactrouter.com/en/main/components/link) to pages that need the scroll reset need to pass a [state](https://reactrouter.com/en/main/components/link#state) object with a property `resetScroll` set to `true`. A reusable component [InternalLink](../app/components/InternalLink) has been provided to automatically pass this state object property.
 
 ### Pull Request Template
 **Tamsui** contains a [Github Pull Request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) that is intended to provide a scaffold for a thorough pull request. [This template](../.github/pull_request_template.md) provides the following sections:
