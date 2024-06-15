@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`InternalLink component matches the snapshot 1`] = `
-<a
-  href="/test"
-  onClick={[Function]}
-/>
-`;
-
-exports[`InternalLink component matches the snapshot with existing state 1`] = `
-<a
-  href="/test-state"
-  onClick={[Function]}
-/>
+<div>
+  <p
+    data-testid="to"
+  >
+    "/test"
+  </p>
+  <p
+    data-testid="state"
+  >
+    {"resetScroll":true}
+  </p>
+</div>
 `;
