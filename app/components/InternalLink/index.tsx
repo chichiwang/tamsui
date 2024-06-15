@@ -9,22 +9,14 @@ interface InternalLinkProps extends Omit<LinkProps, 'state'> {
 }
 
 function InternalLink(props: InternalLinkProps) {
-  const resetScrollState = {
-    [ResetScrollKey]: true,
-  };
-
   const { state } = props;
 
   const propsWithState = {
     ...props,
-    ...(typeof state === 'undefined' ? {
-      state: resetScrollState,
-    } : {
-      state: {
-        ...state,
-        ...resetScrollState,
-      },
-    }),
+    state: {
+      ...(typeof state !== 'undefined' ? state : {}),
+      [ResetScrollKey]: true,
+    },
   };
 
   return (
