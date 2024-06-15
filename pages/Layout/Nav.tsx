@@ -1,9 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
-import { Link } from 'react-router-dom';
 
 import Logo from 'app/components/Logo';
 import ExternalLink from 'app/components/ExternalLink';
+import InternalLink from 'app/components/InternalLink';
 
 import styles from './styles.nav.module.scss';
 
@@ -12,15 +12,15 @@ function Nav() {
     <nav className={styles.navbar}>
       <div className={styles.contents}>
         <div className={classNames(styles.segment, styles.home)}>
-          <Link className={styles.menuLink} to="/">
+          <InternalLink className={styles.menuLink} to="/">
             <Logo className={styles.logo} height="30px" />
             <span>Tamsui</span>
-          </Link>
+          </InternalLink>
         </div>
         <div className={classNames(styles.segment, styles.pages)}>
-          <Link className={styles.menuLink} to="/documentation">
+          <InternalLink className={styles.menuLink} to="/documentation">
             Documentation
-          </Link>
+          </InternalLink>
         </div>
         <div className={classNames(styles.segment, styles.social)}>
           <ExternalLink href="https://github.com/chichiwang/tamsui">
