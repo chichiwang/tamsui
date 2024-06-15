@@ -18,26 +18,28 @@ jest.mock('react-router-dom', () => ({
 const mockedNavigate = jest.fn();
 const mockedLocation = {
   pathname: '/mocked',
+  hash: '',
 };
 const mockedScrollTo = jest.fn();
+const mockedElement = {
+  scrollIntoView: jest.fn(),
+};
 
 describe('useResetScroll', () => {
   beforeAll(() => {
     useNavigate.mockReturnValue(mockedNavigate);
     useLocation.mockReturnValue(mockedLocation);
     global.document.documentElement.scrollTo = mockedScrollTo;
+    jest.spyOn(global.document, 'getElementById').mockReturnValue(null);
   });
 
   beforeEach(() => {
-    useLayoutEffect.mockClear();
-    useLocation.mockClear();
-    useNavigate.mockClear();
-    mockedNavigate.mockClear();
-    mockedScrollTo.mockClear();
+    jest.clearAllMocks();
   });
 
   afterAll(() => {
     delete global.document.documentElement.scrollTo;
+    jest.restoreAllMocks();
   });
 
   test('assigns handler to useLayoutEffect, watching location.pathname', () => {
@@ -45,13 +47,18 @@ describe('useResetScroll', () => {
 
     expect(useLocation).toHaveBeenCalledTimes(1);
     expect(useNavigate).toHaveBeenCalledTimes(1);
-    expect(mockedNavigate).toHaveBeenCalledTimes(0);
-    expect(mockedScrollTo).toHaveBeenCalledTimes(0);
+    expect(mockedNavigate).not.toHaveBeenCalled();
+    expect(mockedScrollTo).not.toHaveBeenCalled();
+    expect(mockedElement.scrollIntoView).not.toHaveBeenCalled();
     expect(useLayoutEffect).toHaveBeenCalledTimes(1);
+  });
+
+  test('useLayoutEffect watches location.pathname and location.hash', () => {
+    useResetScroll();
 
     expect(useLayoutEffect).toHaveBeenCalledWith(
       expect.any(Function),
-      expect.arrayContaining([mockedLocation.pathname]),
+      expect.arrayContaining([mockedLocation.pathname, mockedLocation.hash]),
     );
   });
 
@@ -113,9 +120,65 @@ describe('useResetScroll', () => {
       effectHandler();
 
       expect(mockedNavigate).toHaveBeenCalledTimes(1);
-      expect(mockedNavigate).toHaveBeenCalledWith(mockedLocation.pathname, expect.objectContaining({
-        replace: true,
-      }));
+      expect(mockedNavigate)
+        .toHaveBeenCalledWith(mockedLocation.pathname, expect.objectContaining({
+          replace: true,
+        }));
+    });
+
+    describe('location contains a hash', () => {
+      const targetId = 'page-section';
+
+      beforeAll(() => {
+        mockedLocation.hash = `#${targetId}`;
+      });
+
+      afterAll(() => {
+        mockedLocation.hash = '';
+      });
+
+      test('handler scrolls to the element with the same id as the hash', () => {
+        const pathWithHash = `${mockedLocation.pathname}${mockedLocation.hash}`;
+        global.document.getElementById.mockReturnValueOnce(mockedElement);
+
+        useResetScroll();
+
+        const [effectHandler] = useLayoutEffect.mock.calls[0];
+        effectHandler();
+
+        expect(mockedElement.scrollIntoView).toHaveBeenCalledTimes(1);
+        expect(mockedElement.scrollIntoView).toHaveBeenCalledWith(true);
+
+        expect(mockedNavigate).toHaveBeenCalledTimes(1);
+        expect(mockedNavigate)
+          .toHaveBeenCalledWith(pathWithHash, expect.objectContaining({
+            replace: true,
+          }));
+      });
+
+      test('handler scrolls to top of page if no element has id that matches hash', () => {
+        const pathWithHash = `${mockedLocation.pathname}${mockedLocation.hash}`;
+
+        useResetScroll();
+
+        const [effectHandler] = useLayoutEffect.mock.calls[0];
+        effectHandler();
+
+        expect(mockedElement.scrollIntoView).not.toHaveBeenCalled();
+
+        expect(mockedScrollTo).toHaveBeenCalledTimes(1);
+        expect(mockedScrollTo).toHaveBeenCalledWith(expect.objectContaining({
+          top: 0,
+          left: 0,
+          behavior: 'instant',
+        }));
+
+        expect(mockedNavigate).toHaveBeenCalledTimes(1);
+        expect(mockedNavigate)
+          .toHaveBeenCalledWith(pathWithHash, expect.objectContaining({
+            replace: true,
+          }));
+      });
     });
   });
 });
