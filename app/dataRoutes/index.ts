@@ -1,6 +1,6 @@
 import { RouteObject } from 'react-router-dom';
 
-import Layout from 'pages/Layout';
+import Layout from 'app/Layout';
 
 import Home from 'pages/Home';
 import Documentation from 'pages/Documentation';
