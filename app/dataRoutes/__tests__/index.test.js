@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Layout from 'pages/Layout';
+import Layout from 'app/Layout';
 
 import Home from 'pages/Home';
 import Documentation from 'pages/Documentation';
@@ -39,9 +39,10 @@ function MockedErrorPage() {
   );
 }
 
-jest.mock('pages/Layout', function MockLayout() {
+jest.mock('app/Layout', function MockLayout() {
   return MockedLayout;
 });
+
 jest.mock('pages/Home', function MockHome() {
   return MockedHome;
 });
