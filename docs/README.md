@@ -128,7 +128,7 @@ To run the test suite locally: `npm test`. To update [Jest snapshots](https://je
 ### Application Layouts
 Layouts can be applied directly to routes in [React Router](https://reactrouter.com/en/main) using [Layout Routes](https://reactrouter.com/en/main/start/concepts#layout-routes).
 
-In the boilerplate, a default Layout has been created in [pages/Layout](../pages/Layout).
+In the boilerplate, a default Layout has been created in [app/Layout](../app/Layout).
 
 One issue that has arisen from the usage of a layout route is that client-side navigation will not reset the browser scroll upon page navigation: clicking a link to another page will land the user on the new page, scrolled the same amount as on the previous page.
 
