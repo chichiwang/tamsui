@@ -14,6 +14,7 @@ import AddingAnApplicationDirectory from './AddingAnApplicationDirectory';
 import StaticFiles from './StaticFiles';
 import ErrorBoundary from './ErrorBoundary';
 import Testing from './Testing';
+import ApplicationLayouts from './ApplicationLayouts';
 import PullRequestTemplate from './PullRequestTemplate';
 import GithubWorkflow from './GithubWorkflow';
 
@@ -83,6 +84,9 @@ function Documentation() {
             <InternalLink to="#Testing">Testing</InternalLink>
           </li>
           <li>
+            <InternalLink to="#Application-Layouts">Application Layouts</InternalLink>
+          </li>
+          <li>
             <InternalLink to="#Pull-Request-Template">Pull Request Template</InternalLink>
           </li>
           <li>
@@ -97,6 +101,7 @@ function Documentation() {
       <StaticFiles />
       <ErrorBoundary />
       <Testing />
+      <ApplicationLayouts />
       <PullRequestTemplate />
       <GithubWorkflow />
 
