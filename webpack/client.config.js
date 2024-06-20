@@ -8,6 +8,7 @@ const env = require('./env');
 const typescriptRule = require('./rules/typescript');
 const sassModulesRule = require('./rules/sass.modules');
 const resolve = require('./resolve');
+const define = require('./define');
 
 const config = {
   mode: env.get(),
@@ -47,6 +48,7 @@ const config = {
     new WebpackManifestPlugin({
       publicPath: '',
     }),
+    define,
   ],
   resolve,
 };
