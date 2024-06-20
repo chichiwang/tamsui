@@ -82,7 +82,7 @@ Then add a [type declaration](https://www.typescriptlang.org/docs/handbook/2/typ
 declare const NEW_CONFIG: boolean;
 ```
 
-Now `NEW_CONFIG` can be used in the project code. When building for development instances of `NEW_CONFIG` will be replaced with `false`, when building for production instances will be replaced with `true`.
+Now `NEW_CONFIG` can be used in the project code. When building for development, instances of `NEW_CONFIG` will be replaced with `false`, when building for production instances will be replaced with `true`.
 
 **Note**: String values must be double-wrapped in quotes, since all config values are passed into the [DefinePlugin](https://webpack.js.org/plugins/define-plugin/#usage). This means that string values are treated as code fragments. Calling `JSON.stringify()` on string values will also preserve them as strings:
 
