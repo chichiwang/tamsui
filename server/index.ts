@@ -1,3 +1,4 @@
+/* global PORT */
 import path from 'node:path';
 
 import express, {
@@ -9,7 +10,7 @@ import httpLogger from './httpLogger';
 import appHandler from './appHandler';
 
 const app: Express = express();
-const port: Number = 8080;
+const port: Number = PORT;
 
 app.use(httpLogger);
 app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
