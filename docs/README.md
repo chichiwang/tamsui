@@ -76,18 +76,19 @@ module.exports = {
 
 Then add a [type declaration](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html) for the new configuration variable to [app/global.d.ts](../app/globals.d.ts):
 
-```javascript
+```typescript
 // app/global.d.ts
 
 declare const NEW_CONFIG: boolean;
 ```
 
-Now `NEW_CONFIG` can be used in the project code. When building for development the value of `NEW_CONFIG` will be set to `false`, when building for production the value will be set to `true`.
+Now `NEW_CONFIG` can be used in the project code. When building for development instances of `NEW_CONFIG` will be replaced with `false`, when building for production instances will be replaced with `true`.
 
 **Note**: String values must be double-wrapped in quotes, since all config values are passed into the [DefinePlugin](https://webpack.js.org/plugins/define-plugin/#usage). This means that string values are treated as code fragments. Calling `JSON.stringify()` on string values will also preserve them as strings:
 
 ```javascript
 // project-configs.js
+
 module.exports = {
   development: {
     DOUBLE_WRAPPED_STRING: "'string value'",
