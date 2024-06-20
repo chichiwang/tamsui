@@ -40,6 +40,7 @@
 | `watch`         | Run watch server, will restart the server on every file change                                                                                     |
 
 ## Developing Locally
+* [Project Configurations](#project-configurations)
 * [Running the Application](#running-the-application)
 * [Project Directories](#project-directories)
 * [Adding an Application Directory](#adding-an-application-directory)
@@ -49,6 +50,58 @@
 * [Application Layouts](#application-layouts)
 * [Pull Request Template](#pull-request-template)
 * [Github Workflow](#github-workflow)
+
+### Project Configurations
+**Tamsui** uses environment-aware configurations via [Webpack's DefinePlugin](https://webpack.js.org/plugins/define-plugin/). This behavior is instrumented in [webpack/define.js](../webpack/define.js).
+
+A sample config file `project-configs-example.js` is provided in the project root directory. Running `npm run create-config` will copy `project-configs-example.js` to `project-configs.js` if it doesn't already exist.
+
+The application will not build without a `project-configs.js` file in the project root: the boilerplate application relies on the `PORT` value being defined as a project configuration variable.
+
+**Adding configuration variables**
+
+To add a configuration variable, add the variable as a property to `project-configs.js`, in both defined environments:
+
+```javascript
+// project-configs.js
+module.exports = {
+  development: {
+    NEW_CONFIG: false,
+  },
+  production: {
+    NEW_CONFIG: true,
+  },
+};
+```
+
+Then add a [type declaration](https://www.typescriptlang.org/docs/handbook/2/type-declarations.html) for the new configuration variable to [app/global.d.ts](../app/globals.d.ts):
+
+```javascript
+// app/global.d.ts
+
+declare const NEW_CONFIG: boolean;
+```
+
+Now `NEW_CONFIG` can be used in the project code. When building for development the value of `NEW_CONFIG` will be set to `false`, when building for production the value will be set to `true`.
+
+**Note**: String values must be double-wrapped in quotes, since all config values are passed into the [DefinePlugin](https://webpack.js.org/plugins/define-plugin/#usage). This means that string values are treated as code fragments. Calling `JSON.stringify()` on string values will also preserve them as strings:
+
+```javascript
+// project-configs.js
+module.exports = {
+  development: {
+    DOUBLE_WRAPPED_STRING: "'string value'",
+    JSON_WRAPPED_STRING: JSON.stringify('remains a string'),
+  },
+  production: {
+    // ...
+  },
+};
+```
+
+**Testing with configuration variables**
+
+New configuration variables can either be mocked into tests by modifying the `global` object, or adding the variable to the [Jest globals object](https://jestjs.io/docs/configuration#globals-object). The globals object can be added to `sharedConfigs`, `appConfig`, `clientConfig`, or `serverConfig` (as appropriate) in [jest.config.js](../jest.config.js).
 
 ### Running the Application
 Run `npm run watch` to run the development watch server.
