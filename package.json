@@ -15,6 +15,7 @@
     "prebuild:static": "npm run build:dist",
     "build:static": "cp -r static dist/static",
     "clean": "rm -f stats.json && rm -rf dist",
+    "create-config": "[ -f project-configs.js ] || cp project-configs-example.js project-configs.js",
     "dev": "run-s build:dev run | pino-pretty -c -S",
     "lint": "eslint --ext .js,.jsx,.mjs,.ts,.tsx .",
     "prod": "run-s build:prod run | pino-pretty -c -S",
