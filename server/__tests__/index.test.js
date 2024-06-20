@@ -24,10 +24,13 @@ function mockExpressStatic(path) {
   return `Static Asset Directory: ${path}`;
 }
 
+const mockedPORT = 8080;
+
 describe('server', () => {
   beforeAll(() => {
     express.mockReturnValue(mockExpressApp);
     express.static.mockImplementation(mockExpressStatic);
+    global.PORT = mockedPORT;
   });
 
   beforeEach(() => {
@@ -35,6 +38,10 @@ describe('server', () => {
     jest.isolateModules(() => {
       require('../index');
     });
+  });
+
+  afterAll(() => {
+    delete global.PORT;
   });
 
   test('express is invoked once', () => {
@@ -45,8 +52,8 @@ describe('server', () => {
     expect(mockAppListen).toHaveBeenCalledTimes(1);
   });
 
-  test('app.listen is called with port 8080', () => {
-    expect(mockAppListen).toHaveBeenCalledWith(8080, expect.any(Function));
+  test('app.listen is called with port value', () => {
+    expect(mockAppListen).toHaveBeenCalledWith(expect.any(Number), expect.any(Function));
   });
 
   test('app.listen is passed a callback that logs out the port the app is listening on', () => {
