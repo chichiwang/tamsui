@@ -8,6 +8,7 @@ import InternalLink from 'app/components/InternalLink';
 
 import StartingAProject from './StartingAProject';
 import NPMScripts from './NPMScripts';
+import ProjectConfigurations from './ProjectConfigurations';
 import RunningTheApplication from './RunningTheApplication';
 import ProjectDirectories from './ProjectDirectories';
 import AddingAnApplicationDirectory from './AddingAnApplicationDirectory';
@@ -66,6 +67,9 @@ function Documentation() {
       >
         <ul className={classNames(styles.list, styles.content)}>
           <li>
+            <InternalLink to="#Project-Configurations">Project Configurations</InternalLink>
+          </li>
+          <li>
             <InternalLink to="#Running-the-Application">Running the Application</InternalLink>
           </li>
           <li>
@@ -95,6 +99,7 @@ function Documentation() {
         </ul>
       </HeadingBlock>
 
+      <ProjectConfigurations />
       <RunningTheApplication />
       <ProjectDirectories />
       <AddingAnApplicationDirectory />
