@@ -8,6 +8,7 @@ const env = require('./env');
 const typescriptRule = require('./rules/typescript');
 const sassInlineRule = require('./rules/sass.inline');
 const resolve = require('./resolve');
+const define = require('./define');
 
 const config = {
   mode: env.get(),
@@ -38,6 +39,7 @@ const config = {
       ],
       ignore: ['/__tests__/', '**.test.*'],
     })]),
+    define,
   ],
   resolve,
 };
