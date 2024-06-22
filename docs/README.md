@@ -149,16 +149,11 @@ If any directory is removed, or if a new directory needs an alias:
   * The directory should be updated in the `appConfig.testMatch` array to ensure that the test runner knows which directories to cover.
 
 ### Static Files
-The directory [static/](../static), housed in the project root, is copied directly into the `dist/` directory on project build. This directory is served statically by the Express server.
+The directory [static/](../static), housed in the project root, is copied directly into the `dist/static/` directory on project build. This directory is served statically by the Express server in development builds. `static/` is meant to house static files (images, JSON files, etc.) used by **Tamsui**.
 
-This directory is meant to house static files (images, JSON files, etc.) used by **Tamsui**. This is a stop-gap solution: the Express server should not be used to serve static files like images - these should be housed in a CDN.
+Similarly, JavaScript assets are built to `dist/scripts/`, CSS files are built to `dist/styles/`. For local development all of these directories are served by the Express backend server (dictated by the `SERVE_STATIC` [project variable](#project-configurations) in `project-configs.js`). For production builds the `SERVE_STATIC` config is set to `false` by default.
 
-On deployment, the `/dist/static/` directory can be uploaded to your CDN of choice.
-
-**TODO** (future tasks for the **Tamsui** project):
-- [ ] Add a configuration to provide a base route to static assets (so a CDN route can be provided)
-- [ ] Add a configuration to enable/disable serving `/static` directory files in various environments (development/production)
-- [ ] Add configuration options for serving built assets (`/scripts`, `/styles`) as well, so these assets can also be served via CDN
+On deployment: the directories `dist/static/`, `dist/scripts/`, and `dist/styles/` can be deployed to a CDN.
 
 ### Error Boundary
 **Tamsui** implements a basic [React Error Boundary](https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary) in [app/ErrorBoundary](../app/ErrorBoundary). This error boundary is configured as an [errorElement](https://reactrouter.com/en/main/route/error-element) in the [dataRoutes](../app/dataRoutes) object. It is recommended all root routes are wrapped in this error boundary. A utility, [withErrorBoundary](../app/dataRoutes/withErrorBoundary.tsx), is provided to more easily (and declaratively) extend routes with this `errorElement` property:
