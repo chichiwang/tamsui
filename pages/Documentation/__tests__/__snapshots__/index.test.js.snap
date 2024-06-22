@@ -2565,7 +2565,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         </p>
       </div>
       <p>
-        To avoid running foul of ESLint's 
+        To avoid running afoul of ESLint's 
         <a
           href="https://eslint.org/docs/latest/rules/no-undef"
           rel="noreferrer"

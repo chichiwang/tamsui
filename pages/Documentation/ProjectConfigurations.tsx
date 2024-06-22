@@ -174,7 +174,7 @@ function ProjectConfigurations() {
       </div>
 
       <p>
-        {'To avoid running foul of ESLint\'s '}
+        {'To avoid running afoul of ESLint\'s '}
         <ExternalLink href="https://eslint.org/docs/latest/rules/no-undef">
           no-undef
         </ExternalLink>
