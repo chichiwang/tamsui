@@ -1,7 +1,7 @@
 {
   "name": "tamsui",
   "version": "0.0.0",
-  "description": "A TypeScript React server-side rendering boilerplate",
+  "description": "An Express/React universal application boilerplate",
   "main": "index.js",
   "scripts": {
     "analyze": "webpack-bundle-analyzer stats.json",
