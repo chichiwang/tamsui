@@ -13,6 +13,7 @@ function useResetScroll() {
       const $hashEl = document.getElementById(IdFromHash);
 
       if ($hashEl) {
+        $hashEl.focus();
         $hashEl.scrollIntoView(true);
       } else {
         document.documentElement.scrollTo({
