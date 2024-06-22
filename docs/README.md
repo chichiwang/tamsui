@@ -28,7 +28,6 @@
 | `build:prod`    | Build prod assets and generate `stats.json`                                                                                                        |
 | `build:static`  | Copy the `static/` directory in project root into `dist/`                                                                                          | 
 | `clean`         | Remove `stats.json` and `dist/` directory                                                                                                          |
-| `create-config` | Copies `project-configs-example.js` to `project-configs.js` in the root directory only if it doesn't already exist                                 |
 | `dev`           | Build dev assets and run the webserver, running server logs through [pino-pretty](https://github.com/pinojs/pino-pretty) for development purposes  |
 | `lint`          | Run [ESLint](https://eslint.org/)                                                                                                                  |
 | `prod`          | Build prod assets and run the webserver, running server logs through [pino-pretty](https://github.com/pinojs/pino-pretty) for development purposes |
