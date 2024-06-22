@@ -21,6 +21,11 @@ $gap-height: 3px;
       left: -2875px;
     }
 
+    & > div {
+      transform: translate3d(0, 0, 0);
+      will-change: transform;
+    }
+
     .cloud01 {
       position: absolute;
       top: 235px;
@@ -270,8 +275,8 @@ $gap-height: 3px;
           content: '';
           position: absolute;
           top: 73%;
-          left: -19%;
-          width: 152%;
+          left: -30%;
+          width: 160%;
           height: 60%;
           background-color: map.get(var.$colors, 'orange');
           border-top-right-radius: 15% 80%;
@@ -330,6 +335,7 @@ $gap-height: 3px;
   animation-duration: 350s;
   animation-name: float-foreground;
   animation-timing-function: linear;
+  will-change: transform;
 
   @media print {
     animation: none;
@@ -338,10 +344,10 @@ $gap-height: 3px;
 
 @keyframes float-foreground {
   0% {
-    left: 0px;
+    transform: translate3d(0px, 0, 0);
   }
 
   100% {
-    left: 1920px;
+    transform: translate3d(1920px, 0, 0);
   }
 }
