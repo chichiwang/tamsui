@@ -52,9 +52,11 @@
 ### Project Configurations
 **Tamsui** uses environment-aware configurations via [Webpack's DefinePlugin](https://webpack.js.org/plugins/define-plugin/). This behavior is instrumented in [webpack/define.js](../webpack/define.js).
 
-A sample config file `project-configs-example.js` is provided in the project root directory. Running `npm run create-config` will copy `project-configs-example.js` to `project-configs.js` if it doesn't already exist.
+A config file `project-configs.js` exists in the project root directory. These variables are replaced with their corresponding values in the project code at build time.
 
-The application will not build without a `project-configs.js` file in the project root: the boilerplate application relies on the `PORT` value being defined as a project configuration variable.
+Currently the following variables are used:
+* `PORT` (number): The port the express server will run on.
+* `SERVE_STATIC` (boolean): Whether the Express server should serve static assets located in `/static`, `/styles`, and `/scripts` of the `/dist` directory on build.
 
 **Adding configuration variables**
 
@@ -78,6 +80,17 @@ Then add a [type declaration](https://www.typescriptlang.org/docs/handbook/2/typ
 // app/global.d.ts
 
 declare const NEW_CONFIG: boolean;
+```
+
+To avoid running foul of ESLint's [no-undef](https://eslint.org/docs/latest/rules/no-undef) rule when using these project config variables, a `/* global */` comment should be used in any file that references a project config variable:
+
+```javascript
+// example.js
+/* global NEW_CONFIG */
+
+if (NEW_CONFIG) {
+  // ...
+}
 ```
 
 Now `NEW_CONFIG` can be used in the project code. When building for development, instances of `NEW_CONFIG` will be replaced with `false`, when building for production instances will be replaced with `true`.
