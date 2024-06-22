@@ -2301,27 +2301,21 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           <span
             className="highlight"
           >
-            /static
+            dist/static/
           </span>
           , 
           <span
             className="highlight"
           >
-            /styles
+            dist/styles/
           </span>
           , and 
           <span
             className="highlight"
           >
-            /scripts
+            dist/scripts/
           </span>
-           of the 
-          <span
-            className="highlight"
-          >
-            /dist
-          </span>
-           directory on build.
+          .
         </li>
       </ul>
       <p>

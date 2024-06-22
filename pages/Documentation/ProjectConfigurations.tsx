@@ -79,14 +79,12 @@ function ProjectConfigurations() {
         <li>
           <span className={styles.highlight}>SERVE_STATIC</span>
           {' (boolean): Whether the Express server should serve static assets located in '}
-          <span className={styles.highlight}>/static</span>
+          <span className={styles.highlight}>dist/static/</span>
           {', '}
-          <span className={styles.highlight}>/styles</span>
+          <span className={styles.highlight}>dist/styles/</span>
           {', and '}
-          <span className={styles.highlight}>/scripts</span>
-          {' of the '}
-          <span className={styles.highlight}>/dist</span>
-          {' directory on build.'}
+          <span className={styles.highlight}>dist/scripts/</span>
+          .
         </li>
       </ul>
 
