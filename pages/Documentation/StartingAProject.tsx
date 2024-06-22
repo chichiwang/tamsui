@@ -71,13 +71,6 @@ function StartingAProject() {
         <span className={styles.highlight}>npm install</span>
         .
       </ChecklistItem>
-
-      <ChecklistItem>
-        {'Run '}
-        <span className={styles.highlight}>npm run create-config</span>
-        {' to initialize the configuration file '}
-        <span className={styles.highlight}>project-configs.js</span>
-      </ChecklistItem>
     </HeadingBlock>
   );
 }
