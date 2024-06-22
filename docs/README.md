@@ -16,7 +16,6 @@
 - [ ] If using [nvm](https://github.com/nvm-sh/nvm), run `nvm use`.
   - [ ] Otherwise, note the contents of `.nvmrc` to see the version of [Node.js](https://nodejs.org/) this project is built on.
 - [ ] Run `npm install`.
-- [ ] Run `npm run create-config` to initialize the configuration file `project-configs.js`.
 
 ## NPM Scripts
 | Script          | Description                                                                                                                                        |
