@@ -13,7 +13,7 @@ export default function App({ manifest, children }: AppProps): React.ReactElemen
       <html lang="en">
         <head>
           <meta charSet="utf-8" />
-          <title>Tamsui</title>
+          <title>Tamsui: A Universal JavaScript Application Boilerplate</title>
           <meta name="author" content="Chi-chi Wang" />
           <meta
             name="keywords"
