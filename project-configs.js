@@ -5,6 +5,6 @@ module.exports = {
   },
   production: {
     PORT: 3000,
-    SERVE_STATIC: true,
+    SERVE_STATIC: false,
   },
 };

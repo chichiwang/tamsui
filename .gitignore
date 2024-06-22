@@ -4,7 +4,6 @@ dist/
 # Development Workflow Files
 __coverage__/
 stats.json
-project-configs.js
 
 # Dependencies
 node_modules/
