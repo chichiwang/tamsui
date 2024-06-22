@@ -2268,47 +2268,62 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         .
       </p>
       <p>
-        A sample config file 
-        <span
-          className="highlight"
-        >
-          project-configs-example.js
-        </span>
-         is provided in the project root directory. Running 
-        <span
-          className="highlight"
-        >
-          npm run create-config
-        </span>
-         will copy 
-        <span
-          className="highlight"
-        >
-          project-configs-example.js
-        </span>
-         to 
+        A config file 
         <span
           className="highlight"
         >
           project-configs.js
         </span>
-         if it doesn't already exist.
+         exists in the project root directory. These variables are replaced with their corresponding
+         values in the project code at build time.
       </p>
       <p>
-        The application will not build without a 
-        <span
-          className="highlight"
-        >
-          project-configs.js
-        </span>
-         file in the project root: the boilerplate application relies on the 
-        <span
-          className="highlight"
-        >
-          PORT
-        </span>
-         value being defined as a project configuration variable.
+        Currently the following variables are used:
       </p>
+      <ul
+        className="list"
+      >
+        <li>
+          <span
+            className="highlight"
+          >
+            PORT
+          </span>
+           (number): The port the express server will run on.
+        </li>
+        <li>
+          <span
+            className="highlight"
+          >
+            SERVE_STATIC
+          </span>
+           (boolean): Whether the Express server should serve static assets located in 
+          <span
+            className="highlight"
+          >
+            /static
+          </span>
+          , 
+          <span
+            className="highlight"
+          >
+            /styles
+          </span>
+          , and 
+          <span
+            className="highlight"
+          >
+            /scripts
+          </span>
+           of the 
+          <span
+            className="highlight"
+          >
+            /dist
+          </span>
+           directory on build.
+        </li>
+      </ul>
       <p>
         <b>
           Adding configuration variables
@@ -2547,6 +2562,118 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             boolean
           </span>
           ;
+        </p>
+      </div>
+      <p>
+        To avoid running foul of ESLint's 
+        <a
+          href="https://eslint.org/docs/latest/rules/no-undef"
+          rel="noreferrer"
+          target="_blank"
+        >
+          no-undef
+        </a>
+         rule when using these project config variables, a 
+        <span
+          className="highlight"
+        >
+          /* global */
+        </span>
+         comment should be used in any file that references a project config variable:
+      </p>
+      <div
+        className="codeBlock"
+      >
+        <div
+          className="copyContainer copyButton"
+        >
+          <div
+            className="copyWrapper lightMode"
+          >
+            <div
+              className="message"
+            >
+              <div
+                className="successMessage"
+              >
+                <span>
+                  Copied!
+                </span>
+              </div>
+              <div
+                className="errorMessage"
+              >
+                <span>
+                  Failed!
+                </span>
+              </div>
+            </div>
+            <button
+              aria-label="Copy text"
+              className="copyButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="copyIcon"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                >
+                  <path
+                    d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"
+                  />
+                  <path
+                    d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p>
+          <span
+            className="grey"
+          >
+            // example.js
+          </span>
+          <br />
+          <span
+            className="grey"
+          >
+            /* global NEW_CONFIG */
+          </span>
+          <br />
+          <br />
+          <span
+            className="red"
+          >
+            if
+          </span>
+           (
+          <span
+            className="darkBlue"
+          >
+            NEW_CONFIG
+          </span>
+          ) {
+          <br />
+            
+          <span
+            className="grey"
+          >
+            // ...
+          </span>
+          <br />
+          }
         </p>
       </div>
       <p>

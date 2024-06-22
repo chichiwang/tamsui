@@ -27,6 +27,7 @@ $indent-unit: map.get(var.$content, 'padding');
 
   & li {
     margin: calc(map.get(var.$content, 'padding') * 0.75) 0;
+    line-height: 1.75rem;
   }
 }
 

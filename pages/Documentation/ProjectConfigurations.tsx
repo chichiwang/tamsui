@@ -21,6 +21,13 @@ const declarationSnippet = `// app/global.d.ts
 
 declare const NEW_CONFIG: boolean;`;
 
+const globalsSnippet = `// example.js
+/* global NEW_CONFIG */
+
+if (NEW_CONFIG) {
+  // ...
+}`;
+
 const stringsSnippet = `// project-configs.js
 
 module.exports = {
@@ -54,24 +61,34 @@ function ProjectConfigurations() {
       </p>
 
       <p>
-        {'A sample config file '}
-        <span className={styles.highlight}>project-configs-example.js</span>
-        {' is provided in the project root directory. Running '}
-        <span className={styles.highlight}>npm run create-config</span>
-        {' will copy '}
-        <span className={styles.highlight}>project-configs-example.js</span>
-        {' to '}
+        {'A config file '}
         <span className={styles.highlight}>project-configs.js</span>
-        {' if it doesn\'t already exist.'}
+        {` exists in the project root directory. These variables are replaced with their corresponding
+         values in the project code at build time.`}
       </p>
 
       <p>
-        {'The application will not build without a '}
-        <span className={styles.highlight}>project-configs.js</span>
-        {' file in the project root: the boilerplate application relies on the '}
-        <span className={styles.highlight}>PORT</span>
-        {' value being defined as a project configuration variable.'}
+        Currently the following variables are used:
       </p>
+
+      <ul className={styles.list}>
+        <li>
+          <span className={styles.highlight}>PORT</span>
+          {' (number): The port the express server will run on.'}
+        </li>
+        <li>
+          <span className={styles.highlight}>SERVE_STATIC</span>
+          {' (boolean): Whether the Express server should serve static assets located in '}
+          <span className={styles.highlight}>/static</span>
+          {', '}
+          <span className={styles.highlight}>/styles</span>
+          {', and '}
+          <span className={styles.highlight}>/scripts</span>
+          {' of the '}
+          <span className={styles.highlight}>/dist</span>
+          {' directory on build.'}
+        </li>
+      </ul>
 
       <p>
         <b>Adding configuration variables</b>
@@ -153,6 +170,40 @@ function ProjectConfigurations() {
           {' NEW_CONFIG: '}
           <span className={styles.orange}>boolean</span>
           ;
+        </p>
+      </div>
+
+      <p>
+        {'To avoid running foul of ESLint\'s '}
+        <ExternalLink href="https://eslint.org/docs/latest/rules/no-undef">
+          no-undef
+        </ExternalLink>
+        {' rule when using these project config variables, a '}
+        <span className={styles.highlight}>{'/* global */'}</span>
+        {' comment should be used in any file that references a project config variable:'}
+      </p>
+
+      <div className={styles.codeBlock}>
+        <CopyButton
+          className={styles.copyButton}
+          textToCopy={globalsSnippet}
+          colorMode={ColorModes.light}
+        />
+        <p>
+          <span className={styles.grey}>&#47;&#47; example.js</span>
+          <br />
+          <span className={styles.grey}>&#47;* global NEW_CONFIG *&#47;</span>
+          <br />
+          <br />
+          <span className={styles.red}>if</span>
+          {' ('}
+          <span className={styles.darkBlue}>NEW_CONFIG</span>
+          {') {'}
+          <br />
+          &nbsp;&nbsp;
+          <span className={styles.grey}>&#47;&#47; ...</span>
+          <br />
+          {'}'}
         </p>
       </div>
 
