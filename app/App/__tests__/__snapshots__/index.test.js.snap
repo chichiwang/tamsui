@@ -9,8 +9,28 @@ exports[`App Component matches child snapshot 1`] = `
       charSet="utf-8"
     />
     <title>
-      Tamsui
+      Tamsui: A Universal JavaScript Application Boilerplate
     </title>
+    <meta
+      content="Chi-chi Wang"
+      name="author"
+    />
+    <meta
+      content="Tamsui, js, JavaScript, isomorphic, Node.js, React, TypeScript, Express, React-Router, Boilerplate"
+      name="keywords"
+    />
+    <meta
+      content="A TypeScript React server-side rendering boilerplate"
+      name="description"
+    />
+    <meta
+      content="all"
+      name="robots"
+    />
+    <meta
+      content="width=device-width"
+      name="viewport"
+    />
     <link
       href="/Root CSS module"
       rel="stylesheet"
@@ -36,10 +56,6 @@ exports[`App Component matches child snapshot 1`] = `
     <link
       href="/static/site.webmanifest"
       rel="manifest"
-    />
-    <meta
-      content="width=device-width"
-      name="viewport"
     />
   </head>
   <body>
@@ -59,8 +75,28 @@ exports[`App Component matches no-child snapshot 1`] = `
       charSet="utf-8"
     />
     <title>
-      Tamsui
+      Tamsui: A Universal JavaScript Application Boilerplate
     </title>
+    <meta
+      content="Chi-chi Wang"
+      name="author"
+    />
+    <meta
+      content="Tamsui, js, JavaScript, isomorphic, Node.js, React, TypeScript, Express, React-Router, Boilerplate"
+      name="keywords"
+    />
+    <meta
+      content="A TypeScript React server-side rendering boilerplate"
+      name="description"
+    />
+    <meta
+      content="all"
+      name="robots"
+    />
+    <meta
+      content="width=device-width"
+      name="viewport"
+    />
     <link
       href="/Root CSS module"
       rel="stylesheet"
@@ -86,10 +122,6 @@ exports[`App Component matches no-child snapshot 1`] = `
     <link
       href="/static/site.webmanifest"
       rel="manifest"
-    />
-    <meta
-      content="width=device-width"
-      name="viewport"
     />
   </head>
   <body />
