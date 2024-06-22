@@ -82,7 +82,7 @@ Then add a [type declaration](https://www.typescriptlang.org/docs/handbook/2/typ
 declare const NEW_CONFIG: boolean;
 ```
 
-To avoid running foul of ESLint's [no-undef](https://eslint.org/docs/latest/rules/no-undef) rule when using these project config variables, a `/* global */` comment should be used in any file that references a project config variable:
+To avoid running afoul of ESLint's [no-undef](https://eslint.org/docs/latest/rules/no-undef) rule when using these project config variables, a `/* global */` comment should be used in any file that references a project config variable:
 
 ```javascript
 // example.js
