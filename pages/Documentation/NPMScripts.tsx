@@ -156,24 +156,6 @@ function NPMScripts() {
           <tr>
             <td>
               <div className={styles.script}>
-                <span className={styles.highlight}>create-config</span>
-                <CopyButton className={styles.copyButton} textToCopy="npm run create-config" />
-              </div>
-            </td>
-            <td>
-              <p>
-                {'Copies '}
-                <span className={styles.highlight}>project-configs-example.js</span>
-                {' to '}
-                <span className={styles.highlight}>project-configs.js</span>
-                {' in the root directory only if it doesn\'t already exist'}
-              </p>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div className={styles.script}>
                 <span className={styles.highlight}>dev</span>
                 <CopyButton className={styles.copyButton} textToCopy="npm run dev" />
               </div>
