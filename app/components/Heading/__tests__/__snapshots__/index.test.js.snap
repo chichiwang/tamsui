@@ -43,7 +43,6 @@ exports[`Heading component matches id snapshot 1`] = `
   >
     <h2
       className="tag"
-      id="FooBaz"
     >
       H2 Heading with ID
     </h2>
@@ -51,6 +50,7 @@ exports[`Heading component matches id snapshot 1`] = `
       aria-labelledby="FooBaz"
       className="link"
       href="#FooBaz"
+      id="FooBaz"
     >
       <svg
         height="1.75rem"

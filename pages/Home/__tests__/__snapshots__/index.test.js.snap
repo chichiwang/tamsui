@@ -731,7 +731,6 @@ exports[`Home Component matches snapshot 1`] = `
         >
           <h2
             className="tag"
-            id="Mission-Intent"
           >
             Mission Intent
           </h2>
@@ -739,6 +738,7 @@ exports[`Home Component matches snapshot 1`] = `
             aria-labelledby="Mission-Intent"
             className="link"
             href="#Mission-Intent"
+            id="Mission-Intent"
           >
             <svg
               height="1.75rem"
@@ -818,7 +818,6 @@ exports[`Home Component matches snapshot 1`] = `
         >
           <h3
             className="tag"
-            id="What-Tamsui-Is-Not"
           >
             What Tamsui Is Not
           </h3>
@@ -826,6 +825,7 @@ exports[`Home Component matches snapshot 1`] = `
             aria-labelledby="What-Tamsui-Is-Not"
             className="link"
             href="#What-Tamsui-Is-Not"
+            id="What-Tamsui-Is-Not"
           >
             <svg
               height="1.75rem"
@@ -899,7 +899,6 @@ exports[`Home Component matches snapshot 1`] = `
         >
           <h2
             className="tag"
-            id="Tech-Stack"
           >
             Tech Stack
           </h2>
@@ -907,6 +906,7 @@ exports[`Home Component matches snapshot 1`] = `
             aria-labelledby="Tech-Stack"
             className="link"
             href="#Tech-Stack"
+            id="Tech-Stack"
           >
             <svg
               height="1.75rem"
@@ -1145,7 +1145,6 @@ exports[`Home Component matches snapshot 1`] = `
         >
           <h2
             className="tag"
-            id="Usage"
           >
             Usage
           </h2>
@@ -1153,6 +1152,7 @@ exports[`Home Component matches snapshot 1`] = `
             aria-labelledby="Usage"
             className="link"
             href="#Usage"
+            id="Usage"
           >
             <svg
               height="1.75rem"
