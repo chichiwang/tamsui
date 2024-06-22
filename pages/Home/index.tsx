@@ -17,7 +17,7 @@ function Home(): React.ReactElement {
         <HeadingBlock level="1" heading="Tamsui" center>
           <p className={styles.tagline}>
             An Express / TypeScript / React server-side rendered
-            universal JavaScript application Boilerplate
+            universal JavaScript application boilerplate
           </p>
 
           <p>

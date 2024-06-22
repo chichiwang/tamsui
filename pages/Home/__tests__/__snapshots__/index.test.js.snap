@@ -652,7 +652,7 @@ exports[`Home Component matches snapshot 1`] = `
         <p
           className="tagline"
         >
-          An Express / TypeScript / React server-side rendered universal JavaScript application Boilerplate
+          An Express / TypeScript / React server-side rendered universal JavaScript application boilerplate
         </p>
         <p>
           Tamsui is a 
