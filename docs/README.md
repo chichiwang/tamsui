@@ -56,7 +56,7 @@ A config file `project-configs.js` exists in the project root directory. These v
 
 Currently the following variables are used:
 * `PORT` (number): The port the express server will run on.
-* `SERVE_STATIC` (boolean): Whether the Express server should serve static assets located in `/static`, `/styles`, and `/scripts` of the `/dist` directory on build.
+* `SERVE_STATIC` (boolean): Whether the Express server should serve static assets located in `dist/static/`, `dist/styles/`, and `dist/scripts`.
 
 **Adding configuration variables**
 
