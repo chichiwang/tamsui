@@ -19,7 +19,7 @@ export default function App({ manifest, children }: AppProps): React.ReactElemen
             name="keywords"
             content="Tamsui, js, JavaScript, isomorphic, Node.js, React, TypeScript, Express, React-Router, Boilerplate"
           />
-          <meta name="description" content="A TypeScript React server-side rendering boilerplate" />
+          <meta name="description" content="An Express/React universal application boilerplate" />
           <meta name="robots" content="all" />
           <meta name="viewport" content="width=device-width" />
           <link rel="stylesheet" type="text/css" href={`/${manifest['app.css']}`} />

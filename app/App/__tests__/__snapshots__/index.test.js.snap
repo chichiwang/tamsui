@@ -20,7 +20,7 @@ exports[`App Component matches child snapshot 1`] = `
       name="keywords"
     />
     <meta
-      content="A TypeScript React server-side rendering boilerplate"
+      content="An Express/React universal application boilerplate"
       name="description"
     />
     <meta
@@ -86,7 +86,7 @@ exports[`App Component matches no-child snapshot 1`] = `
       name="keywords"
     />
     <meta
-      content="A TypeScript React server-side rendering boilerplate"
+      content="An Express/React universal application boilerplate"
       name="description"
     />
     <meta
