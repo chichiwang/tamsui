@@ -4,6 +4,7 @@ import { Outlet } from 'react-router-dom';
 import useResetScroll from 'app/hooks/useResetScroll';
 
 import Nav from './Nav';
+import Footer from './Footer';
 
 import styles from './styles.module.scss';
 
@@ -16,6 +17,7 @@ function Layout() {
       <main className={styles.content}>
         <Outlet />
       </main>
+      <Footer />
     </section>
   );
 }

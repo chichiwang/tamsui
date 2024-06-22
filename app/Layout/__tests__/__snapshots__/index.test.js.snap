@@ -152,5 +152,22 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
   <main
     className="content"
   />
+  <footer
+    className="footer"
+  >
+    <div
+      className="divider"
+    />
+    <p>
+      Created by 
+      <a
+        href="https://github.com/chichiwang"
+        rel="noreferrer"
+        target="_blank"
+      >
+        Chi-chi Wang
+      </a>
+    </p>
+  </footer>
 </section>
 `;

@@ -12,3 +12,24 @@
   margin: 0 auto;
   font-size: map.get(var.$content, 'font-size');
 }
+
+.footer {
+  position: relative;
+  padding: 1.5rem 0;
+  margin-top: 8rem;
+  text-align: center;
+
+  .divider {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60px;
+    height: 3px;
+    transform: translate(-30px);
+    background-color: map.get(var.$colors, 'maroon');
+  }
+  
+  p {
+    margin: 0;
+  }
+}
