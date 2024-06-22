@@ -23,6 +23,7 @@ const mockedLocation = {
 const mockedScrollTo = jest.fn();
 const mockedElement = {
   scrollIntoView: jest.fn(),
+  focus: jest.fn(),
 };
 
 describe('useResetScroll', () => {
@@ -154,6 +155,17 @@ describe('useResetScroll', () => {
           .toHaveBeenCalledWith(pathWithHash, expect.objectContaining({
             replace: true,
           }));
+      });
+
+      test('handler sets focus on the element with the same id as the hash', () => {
+        global.document.getElementById.mockReturnValueOnce(mockedElement);
+
+        useResetScroll();
+
+        const [effectHandler] = useLayoutEffect.mock.calls[0];
+        effectHandler();
+
+        expect(mockedElement.focus).toHaveBeenCalledTimes(1);
       });
 
       test('handler scrolls to top of page if no element has id that matches hash', () => {
