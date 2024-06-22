@@ -1,4 +1,4 @@
-/* global PORT */
+/* global PORT, SERVE_STATIC */
 import path from 'node:path';
 
 import express, {
@@ -13,9 +13,12 @@ const app: Express = express();
 const port: Number = PORT;
 
 app.use(httpLogger);
-app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
-app.use('/styles', express.static(path.resolve(__dirname, 'styles')));
-app.use('/static', express.static(path.resolve(__dirname, 'static')));
+
+if (SERVE_STATIC) {
+  app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
+  app.use('/styles', express.static(path.resolve(__dirname, 'styles')));
+  app.use('/static', express.static(path.resolve(__dirname, 'static')));
+}
 
 app.get('*', appHandler);
 

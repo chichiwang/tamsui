@@ -1,4 +1,4 @@
-/* eslint global-require: 0 */
+/* eslint global-require: 0, camelcase: 0 */
 import express from 'express';
 
 import logger from '../logger';
@@ -25,12 +25,14 @@ function mockExpressStatic(path) {
 }
 
 const mockedPORT = 8080;
+const mockedSERVE_STATIC = true;
 
 describe('server', () => {
   beforeAll(() => {
     express.mockReturnValue(mockExpressApp);
     express.static.mockImplementation(mockExpressStatic);
     global.PORT = mockedPORT;
+    global.SERVE_STATIC = mockedSERVE_STATIC;
   });
 
   beforeEach(() => {
@@ -42,6 +44,7 @@ describe('server', () => {
 
   afterAll(() => {
     delete global.PORT;
+    delete global.SERVE_STATIC;
   });
 
   test('express is invoked once', () => {
@@ -53,14 +56,35 @@ describe('server', () => {
   });
 
   test('app.listen is called with port value', () => {
-    expect(mockAppListen).toHaveBeenCalledWith(expect.any(Number), expect.any(Function));
+    expect(mockAppListen).toHaveBeenCalledWith(mockedPORT, expect.any(Function));
   });
 
   test('app.listen is passed a callback that logs out the port the app is listening on', () => {
     const callback = mockAppListen.mock.calls[0][1];
     callback();
 
-    expect(logger.info).toHaveBeenCalledWith(expect.stringContaining('8080'));
+    expect(logger.info).toHaveBeenCalledWith(expect.stringContaining(`${mockedPORT}`));
+  });
+
+  describe('assigns PORT value from config', () => {
+    const altPORT = 8888;
+
+    beforeAll(() => {
+      global.PORT = altPORT;
+    });
+
+    afterAll(() => {
+      global.PORT = mockedPORT;
+    });
+
+    test('app.listen is called with the config PORT value', () => {
+      expect(mockAppListen).toHaveBeenCalledWith(altPORT, expect.any(Function));
+
+      const callback = mockAppListen.mock.calls[0][1];
+      callback();
+
+      expect(logger.info).toHaveBeenCalledWith(expect.stringContaining(`${altPORT}`));
+    });
   });
 
   describe('server middleware', () => {
@@ -69,11 +93,15 @@ describe('server', () => {
     });
   });
 
-  test('has the expected number of middleware and static asset routes', () => {
-    expect(mockAppUse).toHaveBeenCalledTimes(4);
-  });
+  describe('SERVE_STATIC config set to true', () => {
+    test('has the expected number of middleware and static asset routes', () => {
+      expect(mockAppUse).toHaveBeenCalledTimes(4);
+    });
 
-  describe('static asset routes', () => {
+    test('serves the correct number of static routes', () => {
+      expect(express.static).toHaveBeenCalledTimes(3);
+    });
+
     test('/scripts directory is served statically', () => {
       expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/scripts$/));
 
@@ -96,6 +124,26 @@ describe('server', () => {
       const stylesPath = express.static.mock.calls[2][0];
 
       expect(mockAppUse).toHaveBeenCalledWith('/static', mockExpressStatic(stylesPath));
+    });
+  });
+
+  describe('SERVE_STATIC config set to false', () => {
+    const altSERVE_STATIC = false;
+
+    beforeAll(() => {
+      global.SERVE_STATIC = altSERVE_STATIC;
+    });
+
+    afterAll(() => {
+      global.SERVE_STATIC = mockedSERVE_STATIC;
+    });
+
+    test('has the expected number of middleware and static asset routes', () => {
+      expect(mockAppUse).toHaveBeenCalledTimes(1);
+    });
+
+    test('does not set up any static routes', () => {
+      expect(express.static).not.toHaveBeenCalled();
     });
   });
 
