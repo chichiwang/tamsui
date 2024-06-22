@@ -170,12 +170,16 @@ $accent-background-gradient: linear-gradient(
     display: none;
   }
 
-  .footer .divider .slowSlide {
-    animation: none;
-  }
+  .footer .divider {
+    height: 1px;
 
-  .footer .divider .accentBarContainer .accentBar {
-    background: map.get(var.$colors, 'maroon');
+    .slowSlide {
+      animation: none;
+    }
+
+    .accentBarContainer .accentBar {
+      background: map.get(var.$colors, 'black');
+    }
   }
 }
 
