@@ -51,7 +51,6 @@ function Heading({
           React.createElement(
             `h${level}`,
             {
-              ...(typeof id === 'undefined' ? {} : { id }),
               className: classNames(
                 styles.tag,
                 className,
@@ -64,7 +63,7 @@ function Heading({
           typeof id === 'undefined'
             ? null
             : (
-              <a className={styles.link} href={`#${id}`} aria-labelledby={id}>
+              <a id={id} className={styles.link} href={`#${id}`} aria-labelledby={id}>
                 <LinkIcon width="1.75rem" height="1.75rem" />
               </a>
             )

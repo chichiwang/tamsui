@@ -110,7 +110,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h2
           className="tag"
-          id="Starting-a-Project"
         >
           Starting a Project
         </h2>
@@ -118,6 +117,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Starting-a-Project"
           className="link"
           href="#Starting-a-Project"
+          id="Starting-a-Project"
         >
           <svg
             height="1.75rem"
@@ -733,7 +733,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h2
           className="tag"
-          id="NPM-Scripts"
         >
           NPM Scripts
         </h2>
@@ -741,6 +740,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="NPM-Scripts"
           className="link"
           href="#NPM-Scripts"
+          id="NPM-Scripts"
         >
           <svg
             height="1.75rem"
@@ -2078,7 +2078,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h2
           className="tag"
-          id="Developing-Locally"
         >
           Developing Locally
         </h2>
@@ -2086,6 +2085,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Developing-Locally"
           className="link"
           href="#Developing-Locally"
+          id="Developing-Locally"
         >
           <svg
             height="1.75rem"
@@ -2211,7 +2211,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Project-Configurations"
         >
           Project Configurations
         </h3>
@@ -2219,6 +2218,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Project-Configurations"
           className="link"
           href="#Project-Configurations"
+          id="Project-Configurations"
         >
           <svg
             height="1.75rem"
@@ -2933,7 +2933,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Running-the-Application"
         >
           Running the Application
         </h3>
@@ -2941,6 +2940,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Running-the-Application"
           className="link"
           href="#Running-the-Application"
+          id="Running-the-Application"
         >
           <svg
             height="1.75rem"
@@ -3014,7 +3014,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Project-Directories"
         >
           Project Directories
         </h3>
@@ -3022,6 +3021,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Project-Directories"
           className="link"
           href="#Project-Directories"
+          id="Project-Directories"
         >
           <svg
             height="1.75rem"
@@ -3159,7 +3159,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Adding-an-Application-Directory"
         >
           Adding an Application Directory
         </h3>
@@ -3167,6 +3166,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Adding-an-Application-Directory"
           className="link"
           href="#Adding-an-Application-Directory"
+          id="Adding-an-Application-Directory"
         >
           <svg
             height="1.75rem"
@@ -3421,7 +3421,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Static-Files"
         >
           Static Files
         </h3>
@@ -3429,6 +3428,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Static-Files"
           className="link"
           href="#Static-Files"
+          id="Static-Files"
         >
           <svg
             height="1.75rem"
@@ -3566,7 +3566,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Error-Boundary"
         >
           Error Boundary
         </h3>
@@ -3574,6 +3573,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Error-Boundary"
           className="link"
           href="#Error-Boundary"
+          id="Error-Boundary"
         >
           <svg
             height="1.75rem"
@@ -3908,7 +3908,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Testing"
         >
           Testing
         </h3>
@@ -3916,6 +3915,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Testing"
           className="link"
           href="#Testing"
+          id="Testing"
         >
           <svg
             height="1.75rem"
@@ -4042,7 +4042,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Application-Layouts"
         >
           Application Layouts
         </h3>
@@ -4050,6 +4049,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Application-Layouts"
           className="link"
           href="#Application-Layouts"
+          id="Application-Layouts"
         >
           <svg
             height="1.75rem"
@@ -4423,7 +4423,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Pull-Request-Template"
         >
           Pull Request Template
         </h3>
@@ -4431,6 +4430,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Pull-Request-Template"
           className="link"
           href="#Pull-Request-Template"
+          id="Pull-Request-Template"
         >
           <svg
             height="1.75rem"
@@ -4550,7 +4550,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h3
           className="tag"
-          id="Github-Workflow"
         >
           Github Workflow
         </h3>
@@ -4558,6 +4557,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Github-Workflow"
           className="link"
           href="#Github-Workflow"
+          id="Github-Workflow"
         >
           <svg
             height="1.75rem"
@@ -4635,7 +4635,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
       >
         <h2
           className="tag"
-          id="Building-for-Production"
         >
           Building for Production
         </h2>
@@ -4643,6 +4642,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           aria-labelledby="Building-for-Production"
           className="link"
           href="#Building-for-Production"
+          id="Building-for-Production"
         >
           <svg
             height="1.75rem"
