@@ -5,7 +5,7 @@ import Logo from 'app/components/Logo';
 import ExternalLink from 'app/components/ExternalLink';
 import InternalLink from 'app/components/InternalLink';
 
-import styles from './styles.nav.module.scss';
+import styles from './styles.module.scss';
 
 function Nav() {
   return (

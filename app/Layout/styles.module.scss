@@ -1,6 +1,16 @@
 @use 'sass:map';
 @use 'app/var.module';
 
+$accent-height: 4px;
+
+$accent-background-gradient: linear-gradient(
+  90deg,
+  map.get(var.$colors, 'maroon') 0% 25%,
+  map.get(var.$colors, 'red') 25% 50%,
+  map.get(var.$colors, 'orange') 50% 75%,
+  map.get(var.$colors, 'blue') 75% 100%,
+);
+
 .page {
   width: 100%;
   min-height: 100vh;
@@ -13,6 +23,98 @@
   font-size: map.get(var.$content, 'font-size');
 }
 
+/**
+ * Navbar styles
+ */
+
+.navbar {
+  width: 100%;
+  font-size: 1.125rem;
+  overflow: hidden;
+}
+
+.contents {
+  display: flex;
+  max-width: map.get(var.$content, "max-width");
+  margin: 0 auto;
+}
+
+.segment {
+  display: flex;
+  flex-basis: auto;
+  align-items: center;
+  padding: calc(map.get(var.$content, "padding") / 2) map.get(var.$content, "padding");
+
+  &.home {
+    flex-grow: 1;
+    justify-content: flex-start;
+
+    & span {
+      margin: 0 calc(var.$spacing-unit / 2);
+      vertical-align: middle;
+
+      @media (max-width: var.$breakpoint-small-max) {
+        display: none;
+      }
+    }
+  }
+
+  &.pages {
+    flex-grow: 1;
+    justify-content: flex-end;
+    padding-right: 2rem;
+  }
+
+  &.social {
+    flex-grow: 0;
+    justify-content: flex-end;
+
+    & .logo {
+      width: auto;
+      height: 30px;
+    }
+  }
+
+  .menuLink {
+    color: map.get(var.$colors, "black");
+    font-weight: normal;
+  }
+
+  & .logo {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.accentBarContainer {
+  position: relative;
+  width: 180%;
+  height: $accent-height;
+
+  & .accentBar {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: $accent-background-gradient;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0%;
+      left: 100%;
+      width: 100%;
+      height: 100%;
+      background: $accent-background-gradient;
+    }
+  }
+}
+
+/**
+ * Footer styles
+ */
+
 .footer {
   position: relative;
   padding: 1.5rem 0;
@@ -24,12 +126,82 @@
     top: 0;
     left: 50%;
     width: 60px;
-    height: 3px;
+    height: $accent-height;
     transform: translate(-30px);
-    background-color: map.get(var.$colors, 'maroon');
+    overflow: hidden;
+
+    .accentBarContainer {
+      position: relative;
+      width: 250%;
+      height: 100%;
+
+      .accentBar {
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100%;
+        background: $accent-background-gradient;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0%;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          background: $accent-background-gradient;
+        }
+      }
+    }
   }
   
   p {
     margin: 0;
+  }
+}
+
+/**
+ * Print styles
+ */
+
+@media print {
+  .navbar {
+    display: none;
+  }
+
+  .footer .divider .slowSlide {
+    animation: none;
+  }
+
+  .footer .divider .accentBarContainer .accentBar {
+    background: map.get(var.$colors, 'maroon');
+  }
+}
+
+/**
+ * Keyframe animations
+ */
+
+$slide-duration: 2400s;
+
+.slowSlide {
+  animation-name: slide-left;
+  animation-duration: $slide-duration;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.footer .divider .slowSlide {
+  animation-duration: calc($slide-duration / 32);
+}
+
+@keyframes slide-left {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: -100%;
   }
 }

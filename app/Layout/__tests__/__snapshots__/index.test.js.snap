@@ -157,7 +157,15 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
   >
     <div
       className="divider"
-    />
+    >
+      <div
+        className="accentBarContainer"
+      >
+        <div
+          className="accentBar slowSlide"
+        />
+      </div>
+    </div>
     <p>
       Created by 
       <a
