@@ -1,7 +1,5 @@
 type Manifest = {
-  'app.js': string;
-  'app.css': string;
-  'vendors.js': string;
+  [key: string]: string;
 };
 
 type HeadingLevel = '1' | '2' | '3' | '4' | '5' | '6';
