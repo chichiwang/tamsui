@@ -1,7 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { MemoryRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
 import useResetScroll from 'app/hooks/useResetScroll';
 
 import Layout from '../index';
@@ -28,7 +27,7 @@ describe('Layout Component - default', () => {
   });
 
   test('invokes the useResetScroll hook', () => {
-    render(<RouterWrappedLayout />);
+    renderer.create(<RouterWrappedLayout />);
 
     expect(useResetScroll).toHaveBeenCalledTimes(1);
   });
