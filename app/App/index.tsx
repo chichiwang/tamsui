@@ -2,7 +2,6 @@ import React from 'react';
 import { Manifest } from 'app/types';
 
 import ManifestContext from 'app/context/ManifestContext';
-import Head from 'app/Head';
 
 import 'app/global.module.scss';
 
@@ -14,12 +13,7 @@ export default function App({ manifest, children }: AppProps): React.ReactElemen
   return (
     <React.StrictMode>
       <ManifestContext.Provider value={manifest}>
-        <html lang="en">
-          <Head />
-          <body>
-            { children }
-          </body>
-        </html>
+        { children }
       </ManifestContext.Provider>
     </React.StrictMode>
   );

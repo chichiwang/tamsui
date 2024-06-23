@@ -3,6 +3,8 @@ import { Outlet } from 'react-router-dom';
 
 import useResetScroll from 'app/hooks/useResetScroll';
 
+import HTMLBody from 'app/HTMLBody';
+
 import Nav from './Nav';
 import Footer from './Footer';
 
@@ -12,13 +14,15 @@ function Layout() {
   useResetScroll();
 
   return (
-    <section className={styles.page}>
-      <Nav />
-      <main className={styles.content}>
-        <Outlet />
-      </main>
-      <Footer />
-    </section>
+    <HTMLBody>
+      <section className={styles.page}>
+        <Nav />
+        <main className={styles.content}>
+          <Outlet />
+        </main>
+        <Footer />
+      </section>
+    </HTMLBody>
   );
 }
 
