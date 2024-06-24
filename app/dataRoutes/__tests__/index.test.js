@@ -49,7 +49,7 @@ jest.mock('pages/Home', function MockHome() {
 jest.mock('pages/Documentation', function MockDocumentation() {
   return MockedDocumentation;
 });
-jest.mock('pages/ErrorPage', function MockCounter() {
+jest.mock('pages/ErrorPage', function MockErrorPage() {
   return MockedErrorPage;
 });
 jest.mock('pages/NotFound', function MockNotFound() {
@@ -136,7 +136,7 @@ describe('dataRoutes', () => {
       }));
     });
 
-    test('assigns the Counter component', () => {
+    test('assigns the Documentation component', () => {
       expect(documentationRoute).toEqual(expect.objectContaining({
         path,
         Component: Documentation,
@@ -158,7 +158,7 @@ describe('dataRoutes', () => {
       }));
     });
 
-    test('assigns the Counter component', () => {
+    test('assigns the ErrorPage component', () => {
       expect(errorRoute).toEqual(expect.objectContaining({
         path,
         Component: ErrorPage,
