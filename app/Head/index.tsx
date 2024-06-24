@@ -1,15 +1,23 @@
 import React, { useContext } from 'react';
 
 import ManifestContext from 'app/context/ManifestContext';
+import useRouteHead from 'app/hooks/useRouteHead';
 import type { Manifest } from 'app/types';
 
 function Head() {
   const manifest: Manifest = useContext(ManifestContext);
+  const head = useRouteHead();
+
+  const defaultTitle = 'Tamsui: A Universal JavaScript Application Boilerplate';
+  const titleSuffix = '| Tamsui';
+  const title = head?.title
+    ? `${head.title} ${titleSuffix}`
+    : defaultTitle;
 
   return (
     <head>
       <meta charSet="utf-8" />
-      <title>Tamsui: A Universal JavaScript Application Boilerplate</title>
+      <title>{ title }</title>
       <meta name="author" content="Chi-chi Wang" />
       <meta
         name="keywords"
