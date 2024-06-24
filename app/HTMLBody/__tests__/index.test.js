@@ -11,6 +11,16 @@ function ChildComponent() {
   );
 }
 
+function MockedHead() {
+  return (
+    <head>
+      <title>HTMLBody Test</title>
+    </head>
+  );
+}
+
+jest.mock('app/Head', () => MockedHead);
+
 const mockedManifest = {
   'app.css': 'HTML Body CSS path',
 };
