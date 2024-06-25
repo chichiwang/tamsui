@@ -13,8 +13,16 @@ const mockedManifest = {
 };
 
 describe('Head component', () => {
+  beforeAll(() => {
+    global.PROJECT_URL = 'https://test.app.head';
+  });
+
   beforeEach(() => {
     jest.clearAllMocks();
+  });
+
+  afterAll(() => {
+    delete global.PROJECT_URL;
   });
 
   test('matches the no route head snapshot', () => {

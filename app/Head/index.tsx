@@ -1,3 +1,4 @@
+/* global PROJECT_URL */
 import React, { useContext } from 'react';
 
 import ManifestContext from 'app/context/ManifestContext';
@@ -31,6 +32,11 @@ function Head() {
       <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon/favicon-16x16.png" />
       <link rel="manifest" href="/static/site.webmanifest" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:image" content={`${PROJECT_URL}/static/images/site-preview.webp`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:type" content="image/webp" />
     </head>
   );
 }
