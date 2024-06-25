@@ -118,6 +118,11 @@ describe('dataRoutes', () => {
       expect(homeRoute).toEqual(expect.objectContaining({
         path,
         Component: Home,
+        handle: expect.objectContaining({
+          head: expect.objectContaining({
+            tags: expect.any(Object),
+          }),
+        }),
       }));
     });
   });
@@ -140,6 +145,12 @@ describe('dataRoutes', () => {
       expect(documentationRoute).toEqual(expect.objectContaining({
         path,
         Component: Documentation,
+        handle: expect.objectContaining({
+          head: expect.objectContaining({
+            title: expect.any(String),
+            tags: expect.any(Object),
+          }),
+        }),
       }));
     });
   });
