@@ -18,5 +18,9 @@ exports[`Home/Head component matches the snapshot 1`] = `
     content="https://home.head.test"
     property="og:url"
   />,
+  <link
+    href="https://home.head.test"
+    rel="canonical"
+  />,
 ]
 `;
