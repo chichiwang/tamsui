@@ -46,6 +46,7 @@
 * [Error Boundary](#error-boundary)
 * [Testing](#testing)
 * [Application Layouts](#application-layouts)
+* [Route-Specific Data](#route-specific-data)
 * [Pull Request Template](#pull-request-template)
 * [Github Workflow](#github-workflow)
 
@@ -210,11 +211,75 @@ const routes = [{
 }];
 ```
 
-In the boilerplate, a default Layout has been created in [app/Layout](../app/Layout).
+In the boilerplate, a default Layout has been created in [app/Layout](../app/Layout/index.tsx).
 
 One issue that has arisen from the usage of a layout route is that client-side navigation will not reset the browser scroll upon page navigation: clicking a link to another page will land the user on the new page, scrolled the same amount as on the previous page.
 
 A solution has been implemented in this boilerplate in the form of a [custom React hook](https://react.dev/learn/reusing-logic-with-custom-hooks): [useResetScroll](../app/hooks/README.md#useresetscroll). This hook needs to be invoked by any layouts in use, and [Links](https://reactrouter.com/en/main/components/link) to pages that need the scroll reset need to pass a [state](https://reactrouter.com/en/main/components/link#state) object with a property `resetScroll` set to `true`. A reusable component [InternalLink](../app/components/InternalLink) has been provided to automatically pass this state object property.
+
+### Route-Specific Data
+**Tamsui** uses a React Router [data router](https://reactrouter.com/en/main/routers/router-provider). A route can be passed a [handle](https://reactrouter.com/en/main/route/route#handle), which allows any arbitrary data to be passed to a route, retrieved in a component using the [useMatches](https://reactrouter.com/en/main/hooks/use-matches) hook.
+
+This boilerplate has a baseline implementation of this usage in place, passing a [PageHandle](../app/types.ts) object. This is intended to pass route-specific or page-specific data to a page component. A `PageHandle` is currently defined as:
+
+```typescript
+type RouteHead = {
+  title?: string;
+  tags?: React.ReactNode;
+};
+
+type PageHandle = {
+  head?: RouteHead;
+};
+```
+
+A `PageHandle` object can be passed into a given data route's `handle` field. If this `PageHandle` contains a `head` property with `title` or `tags` then these values will be used by the [app/Head](../app/Head/index.tsx) component to set the title and append route-specific head tags to a page.
+
+**NOTE**: [app/Head](../app/Head/index.tsx) is rendered by [app/HTMLBody](../app/HTMLBody/index.tsx), which rendered by [app/Layout](../app/Layout/index.tsx). This makes `app/Head` the ideal component to house site-wide [document head](https://developer.mozilla.org/en-US/docs/Web/API/Document/head) tags. To leverage this in new layouts, follow the example set by `app/Layout`: wrap the contents of the layout in `app/HTMLBody` and invoke the hook [useResetScroll](../app/hooks/README.md#useresetscroll) to ensure proper scroll behavior on route change.
+
+A custom hook, [app/hooks/useRouteHead](../app/hooks/README.md#useroutehead) has been created for use in `app/Head` to retrieve the contents of a route's PageHandle `head` property if it exists.
+
+To add a `PageHandle` to a data route:
+
+```javascript
+// dataRoutes.js
+import Home from 'pages/Home';
+import About from 'pages/About';
+
+const dataRoutes = [{
+  path: '/',
+  Component: Home,
+  handle: {
+    head: {
+      title: 'Welcome to my homepage!',
+      tags: (
+        <>
+          <meta property="og:title" content="Check out my website!" />
+          <meta property="og:description" content="I think it might be the best website ever made." />
+        </>
+      ),
+    },
+  },
+}, {
+  path: '/about',
+  Component: About,
+  handle: {
+    head: {
+      title: 'Some things about my website',
+      tags: (
+        <>
+          <meta property="og:title" content="Learn about the best website" />
+          <meta property="og:description" content="A well-reasoned thesis on what makes this website the best one." />
+        </>
+      ),
+    },
+  },
+}];
+
+export default dataRoutes
+```
+
+These `title`s and `tags` will be rendered into the document head only for their respective routes.
 
 ### Pull Request Template
 **Tamsui** contains a [Github Pull Request template](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository) that is intended to provide a scaffold for a thorough pull request. [This template](../.github/pull_request_template.md) provides the following sections:
