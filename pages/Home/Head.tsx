@@ -10,6 +10,7 @@ function Head() {
       <meta property="og:title" content="Tamsui: A React/Express universal JavaScript boilerplate" />
       <meta property="og:description" content="Build a universal JavaScript application using React and Express." />
       <meta property="og:url" content={url} />
+      <link href={url} rel="canonical" />
     </>
   );
 }
