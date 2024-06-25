@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Documentation/Head component matches the snapshot 1`] = `
+[
+  <meta
+    content="article"
+    property="og:type"
+  />,
+  <meta
+    content="Chi-chi Wang"
+    property="og:author"
+  />,
+  <meta
+    content="Developer Documentation for Tamsui: React/Express universal JavaScript boilerplate"
+    property="og:title"
+  />,
+  <meta
+    content="Set up a universal JavaScript application on the Tamsui boilerplate."
+    property="og:description"
+  />,
+  <meta
+    content="https://documentation.head.test/documentation"
+    property="og:url"
+  />,
+]
+`;
