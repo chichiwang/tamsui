@@ -77,6 +77,91 @@ exports[`Head component matches the no route head snapshot 1`] = `
 </head>
 `;
 
+exports[`Head component matches the route tags snapshot 1`] = `
+<head>
+  <meta
+    charSet="utf-8"
+  />
+  <title>
+    Tamsui: A Universal JavaScript Application Boilerplate
+  </title>
+  <meta
+    content="Chi-chi Wang"
+    name="author"
+  />
+  <meta
+    content="Tamsui, js, JavaScript, isomorphic, Node.js, React, TypeScript, Express, React-Router, Boilerplate"
+    name="keywords"
+  />
+  <meta
+    content="An Express/React universal application boilerplate"
+    name="description"
+  />
+  <meta
+    content="all"
+    name="robots"
+  />
+  <meta
+    content="width=device-width"
+    name="viewport"
+  />
+  <link
+    href="/Head CSS filepath"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="/static/images/favicon/apple-touch-icon.png"
+    rel="apple-touch-icon"
+    sizes="180x180"
+  />
+  <link
+    href="/static/images/favicon/favicon-32x32.png"
+    rel="icon"
+    sizes="32x32"
+    type="image/png"
+  />
+  <link
+    href="/static/images/favicon/favicon-16x16.png"
+    rel="icon"
+    sizes="16x16"
+    type="image/png"
+  />
+  <link
+    href="/static/site.webmanifest"
+    rel="manifest"
+  />
+  <meta
+    content="en_US"
+    property="og:locale"
+  />
+  <meta
+    content="https://test.app.head/static/images/site-preview.webp"
+    property="og:image"
+  />
+  <meta
+    content="1200"
+    property="og:image:width"
+  />
+  <meta
+    content="630"
+    property="og:image:height"
+  />
+  <meta
+    content="image/webp"
+    property="og:image:type"
+  />
+  <meta
+    content="dootaloot doot"
+    property="fugazi"
+  />
+  <meta
+    content="you're gonna to have to figure that out for yourself"
+    property="destiny"
+  />
+</head>
+`;
+
 exports[`Head component matches the route title snapshot 1`] = `
 <head>
   <meta
