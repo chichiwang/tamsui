@@ -86,6 +86,18 @@ function ProjectConfigurations() {
           <span className={styles.highlight}>dist/scripts/</span>
           .
         </li>
+        <li>
+          <span className={styles.highlight}>PROJECT_URL</span>
+          {' (string): The intended deployment URL of the application in each environment, used to set '}
+          <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#canonical">
+            canonical links
+          </ExternalLink>
+          {' and '}
+          <ExternalLink href="https://ogp.me/">
+            Open Graph
+          </ExternalLink>
+          {' meta tags.'}
+        </li>
       </ul>
 
       <p>
