@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home/Head component matches the snapshot 1`] = `
+[
+  <meta
+    content="website"
+    property="og:type"
+  />,
+  <meta
+    content="Tamsui: A React/Express universal JavaScript boilerplate"
+    property="og:title"
+  />,
+  <meta
+    content="Build a universal JavaScript application using React and Express."
+    property="og:description"
+  />,
+  <meta
+    content="https://home.head.test"
+    property="og:url"
+  />,
+]
+`;
