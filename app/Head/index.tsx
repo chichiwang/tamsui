@@ -15,6 +15,8 @@ function Head() {
     ? `${head.title} ${titleSuffix}`
     : defaultTitle;
 
+  const PageSpecificHeadTags = head?.tags === undefined ? null : head.tags;
+
   return (
     <head>
       <meta charSet="utf-8" />
@@ -37,6 +39,7 @@ function Head() {
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:image:type" content="image/webp" />
+      { PageSpecificHeadTags }
     </head>
   );
 }
