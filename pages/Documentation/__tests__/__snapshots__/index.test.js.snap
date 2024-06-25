@@ -2317,6 +2317,30 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           </span>
           .
         </li>
+        <li>
+          <span
+            className="highlight"
+          >
+            PROJECT_URL
+          </span>
+           (string): The intended deployment URL of the application in each environment, used to set 
+          <a
+            href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#canonical"
+            rel="noreferrer"
+            target="_blank"
+          >
+            canonical links
+          </a>
+           and 
+          <a
+            href="https://ogp.me/"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Open Graph
+          </a>
+           meta tags.
+        </li>
       </ul>
       <p>
         <b>

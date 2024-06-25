@@ -57,6 +57,7 @@ A config file `project-configs.js` exists in the project root directory. These v
 Currently the following variables are used:
 * `PORT` (number): The port the express server will run on.
 * `SERVE_STATIC` (boolean): Whether the Express server should serve static assets located in `dist/static/`, `dist/styles/`, and `dist/scripts`.
+* `PROJECT_URL` (string): The intended deployment URL of the application in each environment, used to set [canonical links](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#canonical) and [Open Graph](https://ogp.me/) meta tags.
 
 **Adding configuration variables**
 
