@@ -16,6 +16,7 @@ import StaticFiles from './StaticFiles';
 import ErrorBoundary from './ErrorBoundary';
 import Testing from './Testing';
 import ApplicationLayouts from './ApplicationLayouts';
+import RouteSpecificData from './RouteSpecificData';
 import PullRequestTemplate from './PullRequestTemplate';
 import GithubWorkflow from './GithubWorkflow';
 
@@ -91,6 +92,9 @@ function Documentation() {
             <InternalLink to="#Application-Layouts">Application Layouts</InternalLink>
           </li>
           <li>
+            <InternalLink to="#Route-Specific-Data">Route-Specific Data</InternalLink>
+          </li>
+          <li>
             <InternalLink to="#Pull-Request-Template">Pull Request Template</InternalLink>
           </li>
           <li>
@@ -107,6 +111,7 @@ function Documentation() {
       <ErrorBoundary />
       <Testing />
       <ApplicationLayouts />
+      <RouteSpecificData />
       <PullRequestTemplate />
       <GithubWorkflow />
 

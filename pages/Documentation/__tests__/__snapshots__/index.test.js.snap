@@ -2181,6 +2181,14 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         </li>
         <li>
           <a
+            href="/#Route-Specific-Data"
+            onClick={[Function]}
+          >
+            Route-Specific Data
+          </a>
+        </li>
+        <li>
+          <a
             href="/#Pull-Request-Template"
             onClick={[Function]}
           >
@@ -4431,6 +4439,855 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           InternalLink
         </a>
          has been provided to automatically pass this state object property.
+      </p>
+    </article>
+  </section>
+  <section
+    className="headingBlock"
+  >
+    <div
+      className="container"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      <div
+        className="wrapper"
+      >
+        <h3
+          className="tag"
+        >
+          Route-Specific Data
+        </h3>
+        <a
+          aria-labelledby="Route-Specific-Data"
+          className="link"
+          href="#Route-Specific-Data"
+          id="Route-Specific-Data"
+        >
+          <svg
+            height="1.75rem"
+            viewBox="0 0 24 24"
+            width="1.75rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+            >
+              <path
+                d="M14 11.998C14 9.506 11.683 7 8.857 7H7.143C4.303 7 2 9.238 2 11.998c0 2.378 1.71 4.368 4 4.873a5.3 5.3 0 0 0 1.143.124"
+              />
+              <path
+                d="M10 11.998c0 2.491 2.317 4.997 5.143 4.997h1.714c2.84 0 5.143-2.237 5.143-4.997c0-2.379-1.71-4.37-4-4.874A5.3 5.3 0 0 0 16.857 7"
+              />
+            </g>
+          </svg>
+        </a>
+      </div>
+    </div>
+    <article>
+      <p>
+        <b>
+          Tamsui
+        </b>
+         uses a React Router 
+        <a
+          href="https://reactrouter.com/en/main/routers/router-provider"
+          rel="noreferrer"
+          target="_blank"
+        >
+          data router
+        </a>
+        . A route can be passed a 
+        <a
+          href="https://reactrouter.com/en/main/route/route#handle"
+          rel="noreferrer"
+          target="_blank"
+        >
+          handle
+        </a>
+        , which allows any arbitrary data to be passed to a route, retrieved in a
+         component using the 
+        <a
+          href="https://reactrouter.com/en/main/hooks/use-matches"
+          rel="noreferrer"
+          target="_blank"
+        >
+          useMatches
+        </a>
+         hook.
+      </p>
+      <p>
+        This boilerplate has a baseline implementation of this usage in place, passing a 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/types.ts"
+          rel="noreferrer"
+          target="_blank"
+        >
+          PageHandle
+        </a>
+         object. This is intended to pass route-specific or page-specific data to a page
+         component. A 
+        <span
+          className="highlight"
+        >
+          PageHandle
+        </span>
+         is currently defined as:
+      </p>
+      <div
+        className="codeBlock"
+      >
+        <div
+          className="copyContainer copyButton"
+        >
+          <div
+            className="copyWrapper lightMode"
+          >
+            <div
+              className="message"
+            >
+              <div
+                className="successMessage"
+              >
+                <span>
+                  Copied!
+                </span>
+              </div>
+              <div
+                className="errorMessage"
+              >
+                <span>
+                  Failed!
+                </span>
+              </div>
+            </div>
+            <button
+              aria-label="Copy text"
+              className="copyButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="copyIcon"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                >
+                  <path
+                    d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"
+                  />
+                  <path
+                    d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p>
+          <span
+            className="red"
+          >
+            type
+          </span>
+           RouteHead 
+          <span
+            className="darkBlue"
+          >
+            =
+          </span>
+           {
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            title
+          </span>
+          ?: string;
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            tags
+          </span>
+          ?: React.ReactNode;
+          <br />
+          };
+          <br />
+          <br />
+          <span
+            className="red"
+          >
+            type
+          </span>
+           PageHandle 
+          <span
+            className="darkBlue"
+          >
+            =
+          </span>
+           {
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            head
+          </span>
+          ?: RouteHead;
+          <br />
+          };
+        </p>
+      </div>
+      <p>
+        A 
+        <span
+          className="highlight"
+        >
+          PageHandle
+        </span>
+         object can be passed into a given data route's 
+        <span
+          className="highlight"
+        >
+          handle
+        </span>
+         field. If this 
+        <span
+          className="highlight"
+        >
+          PageHandle
+        </span>
+         contains a 
+        <span
+          className="highlight"
+        >
+          head
+        </span>
+         property with 
+        <span
+          className="highlight"
+        >
+          title
+        </span>
+         or 
+        <span
+          className="highlight"
+        >
+          tags
+        </span>
+         then these values will be used by the 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/Head/index.tsx"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/Head
+        </a>
+         component to set the title and append route-specific head tags to a page.
+      </p>
+      <p>
+        <b>
+          NOTE
+        </b>
+        : 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/Head/index.tsx"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/Head
+        </a>
+         is rendered by 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/HTMLBody/index.tsx"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/HTMLBody
+        </a>
+        , which rendered by 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/Layout/index.tsx"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/Layout
+        </a>
+        . This makes 
+        <span
+          className="highlight"
+        >
+          app/Head
+        </span>
+         the ideal component to house site-wide 
+        <a
+          href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head"
+          rel="noreferrer"
+          target="_blank"
+        >
+          document head
+        </a>
+         tags. To leverage this in new layouts, follow the example set by 
+        <span
+          className="highlight"
+        >
+          app/Layout
+        </span>
+        : wrap the contents of the layout in 
+        <span
+          className="highlight"
+        >
+          app/HTMLBody
+        </span>
+         and invoke the hook 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/hooks/README.md#useresetscroll"
+          rel="noreferrer"
+          target="_blank"
+        >
+          useResetScroll
+        </a>
+         to ensure proper scroll behavior on route change.
+      </p>
+      <p>
+        A custom hook, 
+        <a
+          href="https://github.com/chichiwang/tamsui/blob/main/app/hooks/README.md#useroutehead"
+          rel="noreferrer"
+          target="_blank"
+        >
+          app/hooks/useRouteHead
+        </a>
+        , has been created for use in 
+        <span
+          className="highlight"
+        >
+          app/Head
+        </span>
+         to retrieve the contents of a route's PageHandle 
+        <span
+          className="highlight"
+        >
+          head
+        </span>
+         property if it exists.
+      </p>
+      <p>
+        To add a 
+        <span
+          className="highlight"
+        >
+          PageHandle
+        </span>
+         to a data route:
+      </p>
+      <div
+        className="codeBlock"
+      >
+        <div
+          className="copyContainer copyButton"
+        >
+          <div
+            className="copyWrapper lightMode"
+          >
+            <div
+              className="message"
+            >
+              <div
+                className="successMessage"
+              >
+                <span>
+                  Copied!
+                </span>
+              </div>
+              <div
+                className="errorMessage"
+              >
+                <span>
+                  Failed!
+                </span>
+              </div>
+            </div>
+            <button
+              aria-label="Copy text"
+              className="copyButton"
+              onClick={[Function]}
+              type="button"
+            >
+              <svg
+                className="copyIcon"
+                height="1em"
+                viewBox="0 0 24 24"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g
+                  fill="none"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                >
+                  <path
+                    d="M7 9.667A2.667 2.667 0 0 1 9.667 7h8.666A2.667 2.667 0 0 1 21 9.667v8.666A2.667 2.667 0 0 1 18.333 21H9.667A2.667 2.667 0 0 1 7 18.333z"
+                  />
+                  <path
+                    d="M4.012 16.737A2 2 0 0 1 3 15V5c0-1.1.9-2 2-2h10c.75 0 1.158.385 1.5 1"
+                  />
+                </g>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p>
+          <span
+            className="grey"
+          >
+            // dataRoutes.js
+          </span>
+          <br />
+          <span
+            className="red"
+          >
+            import
+          </span>
+           
+          <span
+            className="orange"
+          >
+            Home
+          </span>
+           
+          <span
+            className="red"
+          >
+            from
+          </span>
+           
+          <span
+            className="blue"
+          >
+            'pages/Home'
+          </span>
+          ;
+          <br />
+          <span
+            className="red"
+          >
+            import
+          </span>
+           
+          <span
+            className="orange"
+          >
+            About
+          </span>
+           
+          <span
+            className="red"
+          >
+            from
+          </span>
+           
+          <span
+            className="blue"
+          >
+            'pages/About'
+          </span>
+          ;
+          <br />
+          <br />
+          <span
+            className="red"
+          >
+            const
+          </span>
+           dataRoutes 
+          <span
+            className="darkBlue"
+          >
+            =
+          </span>
+           [{
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            path
+          </span>
+          : 
+          <span
+            className="blue"
+          >
+            '/'
+          </span>
+          ,
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            Component
+          </span>
+          : 
+          <span
+            className="orange"
+          >
+            Home
+          </span>
+          ,
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            handle
+          </span>
+          : {
+          <br />
+              
+          <span
+            className="darkBlue"
+          >
+            head
+          </span>
+          : {
+          <br />
+                
+          <span
+            className="darkBlue"
+          >
+            title
+          </span>
+          : 
+          <span
+            className="blue"
+          >
+            'Welcome to my homepage!'
+          </span>
+          ,
+          <br />
+                
+          <span
+            className="darkBlue"
+          >
+            tags
+          </span>
+          : (
+          <br />
+                  
+          <span
+            className="darkBlue"
+          >
+            &lt;&gt;
+          </span>
+          <br />
+                    
+          <span
+            className="darkBlue"
+          >
+            &lt;
+          </span>
+          <span
+            className="green"
+          >
+            meta
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            property =
+          </span>
+          <span
+            className="blue"
+          >
+            "og:title"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            content =
+          </span>
+          <span
+            className="blue"
+          >
+            "Check out my website!"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            /&gt;
+          </span>
+          <br />
+                    
+          <span
+            className="darkBlue"
+          >
+            &lt;
+          </span>
+          <span
+            className="green"
+          >
+            meta
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            property =
+          </span>
+          <span
+            className="blue"
+          >
+            "og:description"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            content =
+          </span>
+          <span
+            className="blue"
+          >
+            "I think it might be the best website ever made."
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            /&gt;
+          </span>
+          <br />
+                  
+          <span
+            className="darkBlue"
+          >
+            &lt;/&gt;
+          </span>
+          <br />
+                ),
+          <br />
+              
+          },
+          <br />
+            
+          },
+          <br />
+          }, {
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            path
+          </span>
+          : 
+          <span
+            className="blue"
+          >
+            '/about'
+          </span>
+          ,
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            Component
+          </span>
+          : 
+          <span
+            className="orange"
+          >
+            About
+          </span>
+          ,
+          <br />
+            
+          <span
+            className="darkBlue"
+          >
+            handle
+          </span>
+          : {
+          <br />
+              
+          <span
+            className="darkBlue"
+          >
+            head
+          </span>
+          : {
+          <br />
+                
+          <span
+            className="darkBlue"
+          >
+            title
+          </span>
+          : 
+          <span
+            className="blue"
+          >
+            'Some things about my website'
+          </span>
+          ,
+          <br />
+                
+          <span
+            className="darkBlue"
+          >
+            tags
+          </span>
+          : (
+          <br />
+                  
+          <span
+            className="darkBlue"
+          >
+            &lt;&gt;
+          </span>
+          <br />
+                    
+          <span
+            className="darkBlue"
+          >
+            &lt;
+          </span>
+          <span
+            className="green"
+          >
+            meta
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            property =
+          </span>
+          <span
+            className="blue"
+          >
+            "og:title"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            content =
+          </span>
+          <span
+            className="blue"
+          >
+            "Learn about the best website"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            /&gt;
+          </span>
+          <br />
+                    
+          <span
+            className="darkBlue"
+          >
+            &lt;
+          </span>
+          <span
+            className="green"
+          >
+            meta
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            property =
+          </span>
+          <span
+            className="blue"
+          >
+            "og:description"
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            content =
+          </span>
+          <span
+            className="blue"
+          >
+            "10 reasons this site is best."
+          </span>
+           
+          <span
+            className="darkBlue"
+          >
+            /&gt;
+          </span>
+          <br />
+                  
+          <span
+            className="darkBlue"
+          >
+            &lt;/&gt;
+          </span>
+          <br />
+                ),
+          <br />
+              
+          },
+          <br />
+            
+          },
+          <br />
+          }];
+          <br />
+          <br />
+          <span
+            className="red"
+          >
+            export default
+          </span>
+           dataRoutes;
+        </p>
+      </div>
+      <p>
+        These 
+        <span
+          className="highlight"
+        >
+          title
+        </span>
+        s and 
+        <span
+          className="highlight"
+        >
+          tags
+        </span>
+         will be rendered into the document head only for their respective routes.
       </p>
     </article>
   </section>
