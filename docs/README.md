@@ -237,7 +237,7 @@ A `PageHandle` object can be passed into a given data route's `handle` field. If
 
 **NOTE**: [app/Head](../app/Head/index.tsx) is rendered by [app/HTMLBody](../app/HTMLBody/index.tsx), which rendered by [app/Layout](../app/Layout/index.tsx). This makes `app/Head` the ideal component to house site-wide [document head](https://developer.mozilla.org/en-US/docs/Web/API/Document/head) tags. To leverage this in new layouts, follow the example set by `app/Layout`: wrap the contents of the layout in `app/HTMLBody` and invoke the hook [useResetScroll](../app/hooks/README.md#useresetscroll) to ensure proper scroll behavior on route change.
 
-A custom hook, [app/hooks/useRouteHead](../app/hooks/README.md#useroutehead) has been created for use in `app/Head` to retrieve the contents of a route's PageHandle `head` property if it exists.
+A custom hook, [app/hooks/useRouteHead](../app/hooks/README.md#useroutehead), has been created for use in `app/Head` to retrieve the contents of a route's PageHandle `head` property if it exists.
 
 To add a `PageHandle` to a data route:
 
@@ -269,14 +269,14 @@ const dataRoutes = [{
       tags: (
         <>
           <meta property="og:title" content="Learn about the best website" />
-          <meta property="og:description" content="A well-reasoned thesis on what makes this website the best one." />
+          <meta property="og:description" content="10 reasons this site is best." />
         </>
       ),
     },
   },
 }];
 
-export default dataRoutes
+export default dataRoutes;
 ```
 
 These `title`s and `tags` will be rendered into the document head only for their respective routes.
