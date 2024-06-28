@@ -1,7 +1,7 @@
 import React from 'react';
 import { Manifest } from 'app/types';
 
-import ManifestContext from 'app/context/ManifestContext';
+import ManifestContext from 'app/contexts/ManifestContext';
 
 import 'app/global.module.scss';
 

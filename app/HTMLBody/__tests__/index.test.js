@@ -1,7 +1,7 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import ManifestContext from 'app/context/ManifestContext';
+import ManifestContext from 'app/contexts/ManifestContext';
 
 import HTMLBody from '../index';
 
