@@ -1,7 +1,7 @@
 /* global PROJECT_URL */
 import React, { useContext } from 'react';
 
-import ManifestContext from 'app/context/ManifestContext';
+import ManifestContext from 'app/contexts/ManifestContext';
 import useRouteHead from 'app/hooks/useRouteHead';
 import type { Manifest } from 'app/types';
 
