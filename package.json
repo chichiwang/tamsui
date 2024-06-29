@@ -1,8 +1,8 @@
 {
   "name": "tamsui",
-  "version": "0.0.0",
+  "version": "v1.0.0",
   "description": "An Express/React universal application boilerplate",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "analyze": "webpack-bundle-analyzer stats.json",
     "analyze:dev": "run-s build:dev analyze",
