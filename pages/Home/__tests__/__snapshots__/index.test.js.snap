@@ -650,40 +650,30 @@ exports[`Home Component matches snapshot 1`] = `
           Tamsui is a 
           <a
             href="https://nodejs.org/en"
-            rel="noreferrer"
-            target="_blank"
           >
             Node.js
           </a>
            boilerplate using 
           <a
             href="https://www.typescriptlang.org/"
-            rel="noreferrer"
-            target="_blank"
           >
             TypeScript
           </a>
            and 
           <a
             href="https://react.dev/"
-            rel="noreferrer"
-            target="_blank"
           >
             React
           </a>
           . It provides server-side rendering using an 
           <a
             href="https://expressjs.com/"
-            rel="noreferrer"
-            target="_blank"
           >
             Express
           </a>
            webserver for a client-side 
           <a
             href="https://react.dev/"
-            rel="noreferrer"
-            target="_blank"
           >
             React
           </a>
@@ -693,16 +683,12 @@ exports[`Home Component matches snapshot 1`] = `
           Tamsui renders a React application to a 
           <a
             href="https://nodejs.org/api/stream.html"
-            rel="noreferrer"
-            target="_blank"
           >
             Node.js stream
           </a>
            utilizing React 18's 
           <a
             href="https://react.dev/reference/react-dom/server/renderToPipeableStream"
-            rel="noreferrer"
-            target="_blank"
           >
             renderToPipeableStream method
           </a>
@@ -765,8 +751,6 @@ exports[`Home Component matches snapshot 1`] = `
             for building out a client served by a webserver that acts as a 
           <a
             href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends"
-            rel="noreferrer"
-            target="_blank"
           >
             backend for frontend
           </a>
@@ -780,16 +764,12 @@ exports[`Home Component matches snapshot 1`] = `
             Technical decisions will be documented in 
           <a
             href="https://github.com/chichiwang/tamsui/pulls?q=is%3Aclosed"
-            rel="noreferrer"
-            target="_blank"
           >
             pull request descriptions
           </a>
           , project decisions documented in a 
           <a
             href="https://github.com/users/chichiwang/projects/1"
-            rel="noreferrer"
-            target="_blank"
           >
             project board
           </a>
@@ -848,24 +828,18 @@ exports[`Home Component matches snapshot 1`] = `
           Tamsui is an 
           <a
             href="https://en.wikipedia.org/wiki/Isomorphic_JavaScript"
-            rel="noreferrer"
-            target="_blank"
           >
             isomorphic JavaScript
           </a>
            application. The 
           <a
             href="https://expressjs.com/"
-            rel="noreferrer"
-            target="_blank"
           >
             Express
           </a>
            server that renders the application is intended to serve as a simple 
           <a
             href="https://learn.microsoft.com/en-us/azure/architecture/patterns/backends-for-frontends"
-            rel="noreferrer"
-            target="_blank"
           >
             backend for frontend
           </a>
@@ -944,8 +918,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://nodejs.org/en"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Node.js
                 </a>
@@ -955,8 +927,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://expressjs.com/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Express
                 </a>
@@ -966,8 +936,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://react.dev/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   React
                 </a>
@@ -977,8 +945,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://reactrouter.com/en/main/guides/ssr"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   React Router
                 </a>
@@ -988,8 +954,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://getpino.io/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Pino
                 </a>
@@ -1012,8 +976,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://react.dev/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   React
                 </a>
@@ -1023,8 +985,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://reactrouter.com/en/main/guides/ssr"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   React Router
                 </a>
@@ -1047,8 +1007,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://www.typescriptlang.org/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   TypeScript
                 </a>
@@ -1058,8 +1016,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://sass-lang.com/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Sass
                 </a>
@@ -1069,8 +1025,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://webpack.js.org/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Webpack
                 </a>
@@ -1080,8 +1034,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://babeljs.io/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Babel
                 </a>
@@ -1091,8 +1043,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://jestjs.io/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Jest
                 </a>
@@ -1102,8 +1052,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://testing-library.com/docs/react-testing-library/intro/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   React Testing Library
                 </a>
@@ -1113,8 +1061,6 @@ exports[`Home Component matches snapshot 1`] = `
               >
                 <a
                   href="https://eslint.org/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Eslint
                 </a>

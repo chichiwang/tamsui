@@ -42,8 +42,6 @@ exports[`Layout/Nav Component matches snapshot 1`] = `
     >
       <a
         href="https://github.com/chichiwang/tamsui"
-        rel="noreferrer"
-        target="_blank"
       >
         <img
           alt="Github logo"

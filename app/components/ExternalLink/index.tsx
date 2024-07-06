@@ -11,7 +11,7 @@ function ExternalLink({
   href,
 }: ExternalLinkProps) {
   return (
-    <a className={className} href={href} rel="noreferrer" target="_blank">
+    <a className={className} href={href}>
       {children}
     </a>
   );

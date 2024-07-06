@@ -25,16 +25,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         Documentation is also provided in the 
         <a
           href="https://github.com/chichiwang/tamsui"
-          rel="noreferrer"
-          target="_blank"
         >
           Github repository
         </a>
          in the README file 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/docs/README.md"
-          rel="noreferrer"
-          target="_blank"
         >
           /docs/README.md
         </a>
@@ -188,8 +184,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             Clone the 
             <a
               href="https://github.com/chichiwang/tamsui"
-              rel="noreferrer"
-              target="_blank"
             >
               repository
             </a>
@@ -540,8 +534,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           >
             <a
               href="https://docs.github.com/en/get-started/getting-started-with-git/managing-remote-repositories#changing-a-remote-repositorys-url"
-              rel="noreferrer"
-              target="_blank"
             >
               Reset the git remote
             </a>
@@ -593,8 +585,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
             If using 
             <a
               href="https://github.com/nvm-sh/nvm"
-              rel="noreferrer"
-              target="_blank"
             >
               nvm
             </a>
@@ -658,8 +648,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
              to see the version of 
             <a
               href="https://nodejs.org/"
-              rel="noreferrer"
-              target="_blank"
             >
               Node.js
             </a>
@@ -853,8 +841,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Run 
                 <a
                   href="https://www.npmjs.com/package/webpack-bundle-analyzer"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   webpack-bundle-analyzer
                 </a>
@@ -940,8 +926,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Build dev assets and run 
                 <a
                   href="https://www.npmjs.com/package/webpack-bundle-analyzer"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   webpack-bundle-analyzer
                 </a>
@@ -1021,8 +1005,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Build prod assets and run 
                 <a
                   href="https://www.npmjs.com/package/webpack-bundle-analyzer"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   webpack-bundle-analyzer
                 </a>
@@ -1506,8 +1488,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Build dev assets and run the webserver, running server logs through 
                 <a
                   href="https://github.com/pinojs/pino-pretty"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   pino-pretty
                 </a>
@@ -1587,8 +1567,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Run 
                 <a
                   href="https://eslint.org/"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   ESLint
                 </a>
@@ -1667,8 +1645,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Build prod assets and run the webserver, running server logs through 
                 <a
                   href="https://github.com/pinojs/pino-pretty"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   pino-pretty
                 </a>
@@ -1974,8 +1950,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
                 Update snapshots with 
                 <a
                   href="https://github.com/pinojs/pino-pretty"
-                  rel="noreferrer"
-                  target="_blank"
                 >
                   Jest
                 </a>
@@ -2260,16 +2234,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          uses environment-aware configurations via 
         <a
           href="https://webpack.js.org/plugins/define-plugin/"
-          rel="noreferrer"
-          target="_blank"
         >
           Webpack's DefinePlugin
         </a>
         . This behavior is instrumented in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/webpack/define.js"
-          rel="noreferrer"
-          target="_blank"
         >
           webpack/define.js
         </a>
@@ -2334,16 +2304,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
            (string): The intended deployment URL of the application in each environment, used to set 
           <a
             href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel#canonical"
-            rel="noreferrer"
-            target="_blank"
           >
             canonical links
           </a>
            and 
           <a
             href="https://ogp.me/"
-            rel="noreferrer"
-            target="_blank"
           >
             Open Graph
           </a>
@@ -2495,16 +2461,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         Then add a 
         <a
           href="https://www.typescriptlang.org/docs/handbook/2/type-declarations.html"
-          rel="noreferrer"
-          target="_blank"
         >
           type declaration
         </a>
          for the new configuration variable to 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/global.d.ts"
-          rel="noreferrer"
-          target="_blank"
         >
           app/global.d.ts
         </a>
@@ -2594,8 +2556,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         To avoid running afoul of ESLint's 
         <a
           href="https://eslint.org/docs/latest/rules/no-undef"
-          rel="noreferrer"
-          target="_blank"
         >
           no-undef
         </a>
@@ -2737,8 +2697,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          passed into the 
         <a
           href="https://webpack.js.org/plugins/define-plugin/#usage"
-          rel="noreferrer"
-          target="_blank"
         >
           DefinePlugin
         </a>
@@ -2911,8 +2869,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          object, or adding the variable to the 
         <a
           href="https://jestjs.io/docs/configuration#globals-object"
-          rel="noreferrer"
-          target="_blank"
         >
           Jest globals object
         </a>
@@ -2943,8 +2899,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          (as appropriate) in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/jest.config.js"
-          rel="noreferrer"
-          target="_blank"
         >
           jest.config.js
         </a>
@@ -3024,8 +2978,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          will run the server output through 
         <a
           href="https://github.com/pinojs/pino-pretty"
-          rel="noreferrer"
-          target="_blank"
         >
           pino-pretty
         </a>
@@ -3091,8 +3043,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          At the moment it only contains the entrypoint file, which 
         <a
           href="https://react.dev/reference/react-dom/client/hydrateRoot"
-          rel="noreferrer"
-          target="_blank"
         >
           mounts and hydrates the root application
         </a>
@@ -3109,32 +3059,24 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          the html root, head, and body. The routes are housed in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
-          rel="noreferrer"
-          target="_blank"
         >
           app/dataRoutes
         </a>
          as a 
         <a
           href="https://reactrouter.com/en/main/route/route"
-          rel="noreferrer"
-          target="_blank"
         >
           data routes object
         </a>
         . The reason the routes are not declared in 
         <a
           href="https://react.dev/learn/writing-markup-with-jsx"
-          rel="noreferrer"
-          target="_blank"
         >
           JSX
         </a>
          is for compatibility with rendering 
         <a
           href="https://react.dev/reference/react-dom/server/renderToPipeableStream"
-          rel="noreferrer"
-          target="_blank"
         >
           React to a Node.js stream
         </a>
@@ -3151,8 +3093,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          application via the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
-          rel="noreferrer"
-          target="_blank"
         >
           dataRoutes object
         </a>
@@ -3169,8 +3109,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          directories. 
         <a
           href="https://getpino.io/"
-          rel="noreferrer"
-          target="_blank"
         >
           Pino
         </a>
@@ -3368,8 +3306,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
            should be updated in the 
           <a
             href="https://github.com/chichiwang/tamsui/blob/main/webpack/resolve.js"
-            rel="noreferrer"
-            target="_blank"
           >
             Webpack configs
           </a>
@@ -3379,16 +3315,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           The 
           <a
             href="https://github.com/johvin/eslint-import-resolver-alias?tab=readme-ov-file#usage"
-            rel="noreferrer"
-            target="_blank"
           >
             alias mapping
           </a>
            should be added to the 
           <a
             href="https://github.com/chichiwang/tamsui/blob/main/.eslintrc.js"
-            rel="noreferrer"
-            target="_blank"
           >
             eslint configuration
           </a>
@@ -3398,8 +3330,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           The alias should be updated in the 
           <a
             href="https://www.typescriptlang.org/tsconfig#paths"
-            rel="noreferrer"
-            target="_blank"
           >
             paths configuration
           </a>
@@ -3409,16 +3339,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           The alias should be updated in the 
           <a
             href="https://jestjs.io/docs/configuration#modulenamemapper-objectstring-string--arraystring"
-            rel="noreferrer"
-            target="_blank"
           >
             moduleNameMapper configuration
           </a>
            in the 
           <a
             href="https://github.com/chichiwang/tamsui/blob/main/jest.config.js"
-            rel="noreferrer"
-            target="_blank"
           >
             Jest configuration
           </a>
@@ -3491,8 +3417,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         The directory 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/static"
-          rel="noreferrer"
-          target="_blank"
         >
           static/
         </a>
@@ -3639,40 +3563,30 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          implements a basic 
         <a
           href="https://react.dev/reference/react/Component#catching-rendering-errors-with-an-error-boundary"
-          rel="noreferrer"
-          target="_blank"
         >
           React Error Boundary
         </a>
          in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/ErrorBoundary"
-          rel="noreferrer"
-          target="_blank"
         >
           app/ErrorBoundary
         </a>
         . This error boundary is configured as an 
         <a
           href="https://reactrouter.com/en/main/route/error-element"
-          rel="noreferrer"
-          target="_blank"
         >
           errorElement
         </a>
          in the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes"
-          rel="noreferrer"
-          target="_blank"
         >
           dataRoutes
         </a>
          object. It is recommended all root routes are wrapped in this error boundary. A utility, 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes/withErrorBoundary.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           withErrorBoundary
         </a>
@@ -3860,16 +3774,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         , 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/server/appHandler.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           configured by default
         </a>
          to be the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/pages/ErrorPage"
-          rel="noreferrer"
-          target="_blank"
         >
           application's error page
         </a>
@@ -3879,8 +3789,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         On the client, an error in a page will render the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/pages/ErrorPage"
-          rel="noreferrer"
-          target="_blank"
         >
           ErrorPage component
         </a>
@@ -3899,16 +3807,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/server/appHandler.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           server/appHandler.tsx
         </a>
         . Make sure you define this route in the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/dataRoutes/index.ts"
-          rel="noreferrer"
-          target="_blank"
         >
           app/dataRoutes/index.ts
         </a>
@@ -3918,8 +3822,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         Alternatively, keep the error page path and just replace the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/pages/ErrorPage"
-          rel="noreferrer"
-          target="_blank"
         >
           ErrorPage component
         </a>
@@ -3981,8 +3883,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          utilizes 
         <a
           href="https://jestjs.io/"
-          rel="noreferrer"
-          target="_blank"
         >
           Jest
         </a>
@@ -4009,8 +3909,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         The default 
         <a
           href="https://jestjs.io/docs/configuration#coveragethreshold-object"
-          rel="noreferrer"
-          target="_blank"
         >
           coverage threshold
         </a>
@@ -4023,8 +3921,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          field in the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/jest.config.js"
-          rel="noreferrer"
-          target="_blank"
         >
           config
         </a>
@@ -4040,8 +3936,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         . To update 
         <a
           href="https://jestjs.io/docs/snapshot-testing"
-          rel="noreferrer"
-          target="_blank"
         >
           Jest snapshots
         </a>
@@ -4112,16 +4006,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         Layouts can be directly applied to routes in 
         <a
           href="https://reactrouter.com/en/main"
-          rel="noreferrer"
-          target="_blank"
         >
           React Router
         </a>
          using 
         <a
           href="https://reactrouter.com/en/main/start/concepts#layout-routes"
-          rel="noreferrer"
-          target="_blank"
         >
           Layout Routes
         </a>
@@ -4373,8 +4263,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         In the boilerplate, a default Layout has been created in 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/Layout"
-          rel="noreferrer"
-          target="_blank"
         >
           app/Layout
         </a>
@@ -4389,32 +4277,24 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         A solution has been implemented in this boilerplate in the form of a 
         <a
           href="https://react.dev/learn/reusing-logic-with-custom-hooks"
-          rel="noreferrer"
-          target="_blank"
         >
           custom react hook
         </a>
         : 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/hooks/README.md#useresetscroll"
-          rel="noreferrer"
-          target="_blank"
         >
           useResetScroll
         </a>
         . This hook needs to be invoked by any layouts in use, and 
         <a
           href="https://reactrouter.com/en/main/components/link"
-          rel="noreferrer"
-          target="_blank"
         >
           Links
         </a>
          to pages that need the scroll reset need to pass a 
         <a
           href="https://reactrouter.com/en/main/components/link#state"
-          rel="noreferrer"
-          target="_blank"
         >
           state
         </a>
@@ -4433,8 +4313,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         . A reusable component 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/components/InternalLink"
-          rel="noreferrer"
-          target="_blank"
         >
           InternalLink
         </a>
@@ -4496,16 +4374,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          uses a React Router 
         <a
           href="https://reactrouter.com/en/main/routers/router-provider"
-          rel="noreferrer"
-          target="_blank"
         >
           data router
         </a>
         . A route can be passed a 
         <a
           href="https://reactrouter.com/en/main/route/route#handle"
-          rel="noreferrer"
-          target="_blank"
         >
           handle
         </a>
@@ -4513,8 +4387,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          component using the 
         <a
           href="https://reactrouter.com/en/main/hooks/use-matches"
-          rel="noreferrer"
-          target="_blank"
         >
           useMatches
         </a>
@@ -4524,8 +4396,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         This boilerplate has a baseline implementation of this usage in place, passing a 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/types.ts"
-          rel="noreferrer"
-          target="_blank"
         >
           PageHandle
         </a>
@@ -4693,8 +4563,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          then these values will be used by the 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/Head/index.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           app/Head
         </a>
@@ -4707,24 +4575,18 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         : 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/Head/index.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           app/Head
         </a>
          is rendered by 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/HTMLBody/index.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           app/HTMLBody
         </a>
         , which rendered by 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/Layout/index.tsx"
-          rel="noreferrer"
-          target="_blank"
         >
           app/Layout
         </a>
@@ -4737,8 +4599,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          the ideal component to house site-wide 
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/API/Document/head"
-          rel="noreferrer"
-          target="_blank"
         >
           document head
         </a>
@@ -4757,8 +4617,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          and invoke the hook 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/hooks/README.md#useresetscroll"
-          rel="noreferrer"
-          target="_blank"
         >
           useResetScroll
         </a>
@@ -4768,8 +4626,6 @@ exports[`Documentation Page Component matches snapshot 1`] = `
         A custom hook, 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/app/hooks/README.md#useroutehead"
-          rel="noreferrer"
-          target="_blank"
         >
           app/hooks/useRouteHead
         </a>
@@ -5345,16 +5201,12 @@ exports[`Documentation Page Component matches snapshot 1`] = `
          contains a 
         <a
           href="https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/creating-a-pull-request-template-for-your-repository"
-          rel="noreferrer"
-          target="_blank"
         >
           Github Pull Request template
         </a>
          that is intended to provide a scaffold for a thorough pull request. 
         <a
           href="https://github.com/chichiwang/tamsui/blob/main/.github/pull_request_template.md"
-          rel="noreferrer"
-          target="_blank"
         >
           This template
         </a>
@@ -5471,32 +5323,24 @@ exports[`Documentation Page Component matches snapshot 1`] = `
        contains a 
       <a
         href="https://docs.github.com/en/actions/using-workflows/about-workflows"
-        rel="noreferrer"
-        target="_blank"
       >
         Github workflow
       </a>
        configured to 
       <a
         href="https://github.com/chichiwang/tamsui/blob/main/.github/workflows/lint-test.yml"
-        rel="noreferrer"
-        target="_blank"
       >
         run the linter and test runner
       </a>
        on 
       <a
         href="https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#push"
-        rel="noreferrer"
-        target="_blank"
       >
         push events
       </a>
       . If this is not desired, 
       <a
         href="https://docs.github.com/en/actions/using-workflows/disabling-and-enabling-a-workflow#disabling-a-workflow"
-        rel="noreferrer"
-        target="_blank"
       >
         disable the workflow in Github
       </a>
