@@ -8,6 +8,7 @@ import styles from './styles.module.scss';
 
 interface HeadingProps extends React.PropsWithChildren {
   center?: boolean,
+  children: string,
   className?: string,
   id?: string,
   level: HeadingLevel,
@@ -63,7 +64,12 @@ function Heading({
           typeof id === 'undefined'
             ? null
             : (
-              <a id={id} className={styles.link} href={`#${id}`} aria-labelledby={id}>
+              <a
+                id={id}
+                className={styles.link}
+                href={`#${id}`}
+                aria-label={`Link to this section: ${children}`}
+              >
                 <LinkIcon width="1.75rem" height="1.75rem" />
               </a>
             )

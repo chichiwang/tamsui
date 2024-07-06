@@ -47,7 +47,7 @@ exports[`Heading component matches id snapshot 1`] = `
       H2 Heading with ID
     </h2>
     <a
-      aria-labelledby="FooBaz"
+      aria-label="Link to this section: H2 Heading with ID"
       className="link"
       href="#FooBaz"
       id="FooBaz"
