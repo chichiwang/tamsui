@@ -114,7 +114,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Starting a Project
         </h2>
         <a
-          aria-labelledby="Starting-a-Project"
+          aria-label="Link to this section: Starting a Project"
           className="link"
           href="#Starting-a-Project"
           id="Starting-a-Project"
@@ -737,7 +737,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           NPM Scripts
         </h2>
         <a
-          aria-labelledby="NPM-Scripts"
+          aria-label="Link to this section: NPM Scripts"
           className="link"
           href="#NPM-Scripts"
           id="NPM-Scripts"
@@ -2082,7 +2082,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Developing Locally
         </h2>
         <a
-          aria-labelledby="Developing-Locally"
+          aria-label="Link to this section: Developing Locally"
           className="link"
           href="#Developing-Locally"
           id="Developing-Locally"
@@ -2223,7 +2223,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Project Configurations
         </h3>
         <a
-          aria-labelledby="Project-Configurations"
+          aria-label="Link to this section: Project Configurations"
           className="link"
           href="#Project-Configurations"
           id="Project-Configurations"
@@ -2969,7 +2969,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Running the Application
         </h3>
         <a
-          aria-labelledby="Running-the-Application"
+          aria-label="Link to this section: Running the Application"
           className="link"
           href="#Running-the-Application"
           id="Running-the-Application"
@@ -3050,7 +3050,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Project Directories
         </h3>
         <a
-          aria-labelledby="Project-Directories"
+          aria-label="Link to this section: Project Directories"
           className="link"
           href="#Project-Directories"
           id="Project-Directories"
@@ -3195,7 +3195,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Adding an Application Directory
         </h3>
         <a
-          aria-labelledby="Adding-an-Application-Directory"
+          aria-label="Link to this section: Adding an Application Directory"
           className="link"
           href="#Adding-an-Application-Directory"
           id="Adding-an-Application-Directory"
@@ -3457,7 +3457,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Static Files
         </h3>
         <a
-          aria-labelledby="Static-Files"
+          aria-label="Link to this section: Static Files"
           className="link"
           href="#Static-Files"
           id="Static-Files"
@@ -3602,7 +3602,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Error Boundary
         </h3>
         <a
-          aria-labelledby="Error-Boundary"
+          aria-label="Link to this section: Error Boundary"
           className="link"
           href="#Error-Boundary"
           id="Error-Boundary"
@@ -3944,7 +3944,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Testing
         </h3>
         <a
-          aria-labelledby="Testing"
+          aria-label="Link to this section: Testing"
           className="link"
           href="#Testing"
           id="Testing"
@@ -4078,7 +4078,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Application Layouts
         </h3>
         <a
-          aria-labelledby="Application-Layouts"
+          aria-label="Link to this section: Application Layouts"
           className="link"
           href="#Application-Layouts"
           id="Application-Layouts"
@@ -4459,7 +4459,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Route-Specific Data
         </h3>
         <a
-          aria-labelledby="Route-Specific-Data"
+          aria-label="Link to this section: Route-Specific Data"
           className="link"
           href="#Route-Specific-Data"
           id="Route-Specific-Data"
@@ -5308,7 +5308,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Pull Request Template
         </h3>
         <a
-          aria-labelledby="Pull-Request-Template"
+          aria-label="Link to this section: Pull Request Template"
           className="link"
           href="#Pull-Request-Template"
           id="Pull-Request-Template"
@@ -5435,7 +5435,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Github Workflow
         </h3>
         <a
-          aria-labelledby="Github-Workflow"
+          aria-label="Link to this section: Github Workflow"
           className="link"
           href="#Github-Workflow"
           id="Github-Workflow"
@@ -5520,7 +5520,7 @@ exports[`Documentation Page Component matches snapshot 1`] = `
           Building for Production
         </h2>
         <a
-          aria-labelledby="Building-for-Production"
+          aria-label="Link to this section: Building for Production"
           className="link"
           href="#Building-for-Production"
           id="Building-for-Production"
