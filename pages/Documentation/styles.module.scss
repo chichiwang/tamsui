@@ -9,7 +9,7 @@ $indent-unit: map.get(var.$content, 'padding');
 
 .highlight {
   padding: calc(map.get(var.$content, 'padding') / 8) calc(map.get(var.$content, 'padding') / 4);
-  color: map.get(var.$colors, 'white');
+  color: map.get(var.$colors, 'black');
   border-radius: 0.25rem;
   background-color: map.get(var.$colors, 'grey');
 }
