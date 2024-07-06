@@ -713,7 +713,7 @@ exports[`Home Component matches snapshot 1`] = `
             Mission Intent
           </h2>
           <a
-            aria-label="Link to this section: Mission Intent"
+            aria-label="URL of this section: Mission Intent"
             className="link"
             href="#Mission-Intent"
             id="Mission-Intent"
@@ -794,7 +794,7 @@ exports[`Home Component matches snapshot 1`] = `
             What Tamsui Is Not
           </h3>
           <a
-            aria-label="Link to this section: What Tamsui Is Not"
+            aria-label="URL of this section: What Tamsui Is Not"
             className="link"
             href="#What-Tamsui-Is-Not"
             id="What-Tamsui-Is-Not"
@@ -869,7 +869,7 @@ exports[`Home Component matches snapshot 1`] = `
             Tech Stack
           </h2>
           <a
-            aria-label="Link to this section: Tech Stack"
+            aria-label="URL of this section: Tech Stack"
             className="link"
             href="#Tech-Stack"
             id="Tech-Stack"
@@ -1087,7 +1087,7 @@ exports[`Home Component matches snapshot 1`] = `
             Usage
           </h2>
           <a
-            aria-label="Link to this section: Usage"
+            aria-label="URL of this section: Usage"
             className="link"
             href="#Usage"
             id="Usage"

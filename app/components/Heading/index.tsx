@@ -68,7 +68,7 @@ function Heading({
                 id={id}
                 className={styles.link}
                 href={`#${id}`}
-                aria-label={`Link to this section: ${children}`}
+                aria-label={`URL of this section: ${children}`}
               >
                 <LinkIcon width="1.75rem" height="1.75rem" />
               </a>
