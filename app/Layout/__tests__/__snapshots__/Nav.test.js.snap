@@ -11,6 +11,7 @@ exports[`Layout/Nav Component matches snapshot 1`] = `
       className="segment home"
     >
       <a
+        aria-labelledby="Site-Name"
         className="menuLink"
         href="/"
         onClick={[Function]}
@@ -18,7 +19,9 @@ exports[`Layout/Nav Component matches snapshot 1`] = `
         <div
           data-testid="mock-logo"
         />
-        <span>
+        <span
+          id="Site-Name"
+        >
           Tamsui
         </span>
       </a>
