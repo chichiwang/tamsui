@@ -69,7 +69,6 @@ describe('Layout/Nav Component', () => {
       render(<RouterWrappedNav />);
 
       expect(screen.getByRole('link', { name: 'Github logo' })).toHaveAttribute('href', 'https://github.com/chichiwang/tamsui');
-      expect(screen.getByRole('link', { name: 'Github logo' })).toHaveAttribute('target', '_blank');
     });
   });
 });

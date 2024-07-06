@@ -141,8 +141,6 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
           >
             <a
               href="https://github.com/chichiwang/tamsui"
-              rel="noreferrer"
-              target="_blank"
             >
               <img
                 alt="Github logo"
@@ -181,8 +179,6 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
           Created by 
           <a
             href="https://github.com/chichiwang"
-            rel="noreferrer"
-            target="_blank"
           >
             Chi-chi Wang
           </a>
