@@ -12,9 +12,9 @@ function Nav() {
     <nav className={styles.navbar}>
       <div className={styles.contents}>
         <div className={classNames(styles.segment, styles.home)}>
-          <InternalLink className={styles.menuLink} to="/">
+          <InternalLink className={styles.menuLink} aria-labelledby="Site-Name" to="/">
             <Logo className={styles.logo} height="30px" />
-            <span>Tamsui</span>
+            <span id="Site-Name">Tamsui</span>
           </InternalLink>
         </div>
         <div className={classNames(styles.segment, styles.pages)}>

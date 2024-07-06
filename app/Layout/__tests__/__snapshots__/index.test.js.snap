@@ -23,6 +23,7 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
             className="segment home"
           >
             <a
+              aria-labelledby="Site-Name"
               className="menuLink"
               href="/"
               onClick={[Function]}
@@ -118,7 +119,9 @@ exports[`Layout Component - default matches no-child snapshot 1`] = `
                   />
                 </svg>
               </div>
-              <span>
+              <span
+                id="Site-Name"
+              >
                 Tamsui
               </span>
             </a>
