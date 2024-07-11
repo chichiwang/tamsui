@@ -216,7 +216,7 @@ exports[`NotFound Component matches snapshot 1`] = `
   <p
     className="notFoundMessage"
   >
-    This page does not exit!
+    This page does not exist!
   </p>
   <p
     className="notFoundMessage"

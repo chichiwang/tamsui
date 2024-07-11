@@ -14,7 +14,7 @@ export default function NotFound(): React.ReactElement {
       </div>
       <h1 className={styles.notFoundHeading}>Page Not Found!</h1>
       <p className={styles.notFoundMessage}>
-        This page does not exit!
+        This page does not exist!
       </p>
       <p className={styles.notFoundMessage}>
         <Link to="/">Return to Home</Link>
