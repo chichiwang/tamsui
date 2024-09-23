@@ -13,6 +13,7 @@ const app: Express = express();
 const port: Number = PORT;
 
 app.use(httpLogger);
+app.use('/.well_known', express.static(path.resolve(__dirname, 'static', '.well_known')));
 
 if (SERVE_STATIC) {
   app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
