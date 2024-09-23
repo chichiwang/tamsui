@@ -95,17 +95,17 @@ describe('server', () => {
 
   describe('SERVE_STATIC config set to true', () => {
     test('has the expected number of middleware and static asset routes', () => {
-      expect(mockAppUse).toHaveBeenCalledTimes(4);
+      expect(mockAppUse).toHaveBeenCalledTimes(5);
     });
 
     test('serves the correct number of static routes', () => {
-      expect(express.static).toHaveBeenCalledTimes(3);
+      expect(express.static).toHaveBeenCalledTimes(4);
     });
 
     test('/scripts directory is served statically', () => {
       expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/scripts$/));
 
-      const scriptsPath = express.static.mock.calls[0][0];
+      const scriptsPath = express.static.mock.calls[1][0];
 
       expect(mockAppUse).toHaveBeenCalledWith('/scripts', mockExpressStatic(scriptsPath));
     });
@@ -113,7 +113,7 @@ describe('server', () => {
     test('/styles directory is served statically', () => {
       expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/styles$/));
 
-      const stylesPath = express.static.mock.calls[1][0];
+      const stylesPath = express.static.mock.calls[2][0];
 
       expect(mockAppUse).toHaveBeenCalledWith('/styles', mockExpressStatic(stylesPath));
     });
@@ -121,9 +121,9 @@ describe('server', () => {
     test('/static directory is served statically', () => {
       expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/static/));
 
-      const stylesPath = express.static.mock.calls[2][0];
+      const staticPath = express.static.mock.calls[3][0];
 
-      expect(mockAppUse).toHaveBeenCalledWith('/static', mockExpressStatic(stylesPath));
+      expect(mockAppUse).toHaveBeenCalledWith('/static', mockExpressStatic(staticPath));
     });
   });
 
@@ -139,11 +139,19 @@ describe('server', () => {
     });
 
     test('has the expected number of middleware and static asset routes', () => {
-      expect(mockAppUse).toHaveBeenCalledTimes(1);
+      expect(mockAppUse).toHaveBeenCalledTimes(2);
     });
 
-    test('does not set up any static routes', () => {
-      expect(express.static).not.toHaveBeenCalled();
+    test('sets up a single static route', () => {
+      expect(express.static).toHaveBeenCalledTimes(1);
+    });
+
+    test('/.well_known directory is served statically', () => {
+      expect(express.static).toHaveBeenCalledWith(expect.stringMatching(/\.well_known/));
+
+      const wellKnownPath = express.static.mock.calls[0][0];
+
+      expect(mockAppUse).toHaveBeenCalledWith('/.well_known', mockExpressStatic(wellKnownPath));
     });
   });
 
