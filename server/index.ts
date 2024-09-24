@@ -1,5 +1,6 @@
 /* global PORT, SERVE_STATIC */
 import path from 'node:path';
+import serveStatic from 'serve-static';
 
 import express, {
   Express,
@@ -13,7 +14,7 @@ const app: Express = express();
 const port: Number = PORT;
 
 app.use(httpLogger);
-app.use('/.well_known', express.static(path.resolve(__dirname, 'static', '.well_known')));
+app.use(serveStatic(path.resolve(__dirname, 'static')));
 
 if (SERVE_STATIC) {
   app.use('/scripts', express.static(path.resolve(__dirname, 'scripts')));
